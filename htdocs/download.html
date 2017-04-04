@@ -1,0 +1,203 @@
+<!doctype html>
+
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en">
+    <!--
+  <![endif]-->
+    <head>
+        <meta charset="utf-8"> 
+
+        <meta http-equiv=”Pragma” content=”no-cache”>
+        <meta http-equiv="expires" content="-1" />
+        <meta http-equiv="cache-control" content="no-store" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <!--For use in production only... compile to css before release
+        <link rel="stylesheet/less" href="less/style.less">
+        <script src="js/libs/less-1.3.0.min.js"></script>-->
+
+        <!-- Use SimpLESS (Win/Linux/Mac) or LESS.app (Mac) to compile your .less files
+        to style.css, and replace the 2 lines above by this one:
+        -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="less/style.css?v=1.3">
+
+
+        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+
+    </head>
+    <body>
+        <div id="TopMenu"></div>
+        <div class="container main-content">
+            <div class="row">
+                <div style="text-align:center">
+                    <h1>Integrated Genome Browser 9.0.0</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <center> <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
+                        <form id="linuxDownload" class="hide"  method="get" action="releases/current/IGB_unix_current.sh">
+                            <button class="btn btn-custom btn-md btn-download">
+                                <h2>
+                                    <span class="glyphicon glyphicon-cloud-download" ></span>                           
+                                    &nbsp;Linux 64 bit
+                                </h2>
+                            </button>
+                        </form>
+                    </center>
+                    <center>
+                        <form id="osxDownload" class="hide"  method="get" action="releases/current/IGB_macos_current.dmg">
+                            <button class="btn btn-custom btn-md btn-download">
+                                <h2>
+                                    <span class="glyphicon glyphicon-cloud-download" ></span>                           
+                                    &nbsp;Mac OS X
+                                </h2>
+                            </button>         
+                        </form>
+                    </center>
+                    <center>
+                        <form id="windows64Download" class="hide"  method="get" action="releases/current/IGB_windows-x64_current.exe">
+                            <button class="btn btn-custom btn-md btn-download">
+                                <h2>
+                                    <span class="glyphicon glyphicon-cloud-download" ></span>                           
+                                    &nbsp;Windows 64 bit
+
+                                </h2>
+                            </button>
+                        </form>
+                    </center>
+                    <center>
+                        <form id="windows32Download" class="hide" style="padding-top: 5px;" method="get" action="releases/current/IGB_windows_current.exe" >
+                            <button class="btn btn-custom btn-md btn-download" data-toggle="tooltip" data-placement="right" title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
+                                <h2>
+                                    <span class="glyphicon glyphicon-cloud-download" ></span>   
+                                    &nbsp;Windows 32 bit
+                                </h2>
+                            </button>
+                        </form>
+                    </center>
+
+                </div>
+            </div>            
+            <p style="text-align:center">
+                Click 
+                <a href="otherDownloads.html">here</a> for other ways to download IGB
+            </p>
+             <div class="row">
+                <div id="supportLetter" class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" style="font-size: 2em;">
+                                Good news!
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                Funding for IGB was renewed August, 2016 thanks to you. Simply by using IGB, you helped convince our funders that IGB deserves support.</p>
+                            <p>
+                                We are especially grateful to researchers, students, and educators who wrote letters of support for our funding application. Your letters nailed it. <b>Thank you!</b> 
+                            </p>
+            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+<!--            <div class="row-fluid">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">IGB 8.4 Preview</div>
+                        <div class="panel-body">
+                            An experimental preview version of IGB version 8.4 is now available. IGB power users: Please <a href="igb_release_candidate.html" target="_blank">try it out</a> and tell us what you think.
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <div id="footer" class="container">
+            </div>
+        </div>
+        <!-- /container -->
+
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+        <!-- scripts concatenated and minified via ant build script-->
+        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="js/script.js?v=12392829    "></script>
+        <script src="js/ua-parser.min.js?v=12392829"></script>
+        <script>
+            $(window).load(function () {
+                var parser = new UAParser();
+                var os = parser.getOS().name;
+                var architecture = parser.getCPU();
+                if (os == "Linux" || os == "CentOS" || os == "Fedora" || os == "FreeBSD" || os == "Debian" || os == "DragonFly" || os == "RedHat" || os == "Mint" || os == "GNU" || os == "Ubuntu") {
+                    $("#linuxDownload").removeClass("hide");
+                }
+                if (os == "Windows [Phone/Mobile]" || os == "Windows") {
+                    if (architecture == "amd64" || architecture == "ia64" || architecture == "arm64" || architecture == "irix64" || architecture == "mips64" || architecture == "sparc64") {
+                        $("#windows64Download").removeClass("hide");
+                    } else {
+                        $("#windows64Download").removeClass("hide");
+                        $("#windows32Download").removeClass("hide");
+                    }
+                    $("#windows_warning").removeClass("hide");
+                }
+                if (os == "Mac OS X" || os == "Mac OS") {
+                    $("#osxDownload").removeClass("hide");
+                }
+
+            });
+
+
+        </script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-33977587-2', 'bioviz.org');
+            ga('send', 'pageview');
+        </script>
+        <!-- end scripts-->
+
+    </body>
+
+</html>
+
+

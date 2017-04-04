@@ -1,0 +1,177 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">BioViz</a>
+        </div>
+        <div class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="overview.html">Overview</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Learn More<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://wiki.transvar.org/display/igbman/Home" target="_blank">User's Guide</a>
+                        </li>
+                        <li>
+                            <a href="news.html">IGB news</a>
+                        </li>
+                        <li>
+                            <a href="cite.html">How to cite IGB</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC0DA2d3YdbQ55ljkRKHRBkg" target="_blank">Video tutorials</a>
+                        </li>
+                        <li>
+                            <a href="credits.html">Credits</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="download.html">Download</a>
+                </li>
+                <li>
+                    <a href="help.html">Get Help</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">For Developers<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://wiki.transvar.org/display/igbdevelopers/Home" target="_blank" class="external-link">Developer's Guide</a>
+                        </li>
+                        <li>
+                          <a href="https://jira.transvar.org/secure/RapidBoard.jspa?rapidView=7">IGB Agile Board (Jira)</a>
+                        </li>  
+                        <li class="nav-divider"></li>
+                        <li>
+                            <a href="http://bioviz.org/apidocs/" class="external-link">IGB JavaDoc Reference</a>
+                        </li>
+                        <li>
+                            <a href="http://bioviz.org/genoviz/apidocs/" class="external-link">GenoViz SDK JavaDoc Reference</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!--div class="navbar-form btn-group">
+                <a class="btn btn-primary" href="support.html"><strong>Write a support letter</strong> <i class="fa fa-envelope" style="margin-left: 8px"></i></a>
+            </div-->
+            <div id="downloadButton" class="navbar-form navbar-right btn-group">
+                <button id="dropdown-btn-toolbar" type="button" class="dropdown-toggle btn btn-custom dropdown-toggle pill js-activated red" data-toggle="dropdown">
+                    Download Now &nbsp;&nbsp;&nbsp;&nbsp;
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li id="linuxDownloadMenu" class="hide js-activated">
+                        <a id="linuxDownloadLink" href="#">
+                            Linux 64 bit
+                            <img src="img/linux_icon_small.png" width="32" height="32" style="text-align: justify;">
+                        </a>
+                    </li>
+                    <li id="osxDownloadMenu" class="hide js-activated">
+                        <a id="osxDownloadLink" href="#">
+                            Mac OS X
+                        </a>
+                    </li>
+                    <li id="windows64DownloadMenu" class="hide js-activated">
+                        <a id="windows64DownloadLink" href="#">
+                            Windows 64 bit
+                        </a>
+                    </li>
+                    <li id="windows32DownloadMenu" class="hide js-activated">
+                        <a id="windows32DownloadLink" href="#">
+                            Windows 32 bit
+                        </a>
+                    </li> 
+                    <li class="divider"></li>
+                    <li>
+                        <a href="download.html">
+                            Go To Downloads Page
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<script src="js/ua-parser.min.js"></script>
+<script src="bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var currentPage = window.location.pathname.substr(5);
+        $('.js-activated').dropdownHover().dropdown();
+        if (currentPage == "download.html" || currentPage == "otherDownloads.html" || currentPage == "oldWebstartDownloads.html") {
+            $('#downloadButton').hide();
+        }
+
+        var parser = new UAParser();
+        var os = parser.getOS().name;
+        var architecture = parser.getCPU();
+        if (os == "Linux" || os == "CentOS" || os == "Fedora" || os == "FreeBSD" || os == "Debian" || os == "DragonFly" || os == "RedHat" || os == "Mint" || os == "GNU" || os == "Ubuntu") {
+            $("#linuxDownloadMenu").removeClass("hide");
+        }
+        if (os == "Windows [Phone/Mobile]" || os == "Windows") {
+            if (architecture == "amd64" || architecture == "ia64" || architecture == "arm64" || architecture == "irix64" || architecture == "mips64" || architecture == "sparc64") {
+                $("#windows64DownloadMenu").removeClass("hide");
+            } else {
+                $("#windows64DownloadMenu").removeClass("hide");
+                $("#windows32DownloadMenu").removeClass("hide");
+            }
+        }
+        if (os == "Mac OS X" || os == "Mac OS") {
+            $("#osxDownloadMenu").removeClass("hide");
+        }
+    });
+    $("#linuxDownloadLink").click(function () {
+        // // hope the server sets Content-Disposition: attachment!
+        window.location = 'releases/current/IGB_unix_current.sh';
+    });
+    $("#osxDownloadLink").click(function () {
+        // // hope the server sets Content-Disposition: attachment!
+        window.location = 'releases/current/IGB_macos_current.dmg';
+    });
+    $("#windows64DownloadLink").click(function () {
+        // // hope the server sets Content-Disposition: attachment!
+        window.location = 'releases/current/IGB_windows-x64_current.exe';
+    });
+    $("#windows32DownloadLink").click(function () {
+        // // hope the server sets Content-Disposition: attachment!
+        window.location = 'releases/current/IGB_windows_current.exe';
+    });
+</script>
+<script type="text/javascript" src="https://jira.transvar.org/s/d41d8cd98f00b204e9800998ecf8427e/en_US-pwbpt-1988229788/6265/4/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=b04cfbf9"></script>
+<script type="text/javascript" src="https://jira.transvar.org/s/d41d8cd98f00b204e9800998ecf8427e/en_US-w52nn0-1988229788/6265/4/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=b4dc1860"></script>
+<script type="text/javascript">
+        window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+            // ==== Feedback/bug Letter collector ====
+            'b04cfbf9': {
+                triggerFunction: function (showCollectorDialog) {
+                    $('.reportBug').click(function (e) {
+                        e.preventDefault();
+                        showCollectorDialog();
+                    });
+                }
+            }
+            // ==== Support Letter collector ====
+            , 'b4dc1860': {
+                // === custom trigger function ===
+                triggerFunction: function (showCollectorDialog) {
+                    $('.supportBtn').click(function (e) {
+                        e.preventDefault();
+                        showCollectorDialog();
+                    });
+                },
+                 fieldValues: {
+                    summary: 'Support Letter'
+                }
+            }
+        }
+        );
+</script>

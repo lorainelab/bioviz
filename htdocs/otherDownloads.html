@@ -1,0 +1,246 @@
+<!doctype html>
+
+<!--[if lt IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+
+<![endif]-->
+<!--[if IE 7]>
+
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+
+<![endif]-->
+<!--[if IE 8]>
+
+<html class="no-js lt-ie9" lang="en">
+
+<![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en">
+    <!--
+  <![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <!--For use in production only... compile to css before release
+        <link rel="stylesheet/less" href="less/style.less">
+        <script src="js/libs/less-1.3.0.min.js"></script>-->
+
+        <!-- Use SimpLESS (Win/Linux/Mac) or LESS.app (Mac) to compile your .less files
+        to style.css, and replace the 2 lines above by this one:
+        -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="less/style.css?v=1.3">
+
+
+        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+
+    </head>
+    <body>
+        <div id="TopMenu"></div>
+        <div class="container main-content">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div style="text-align:center">
+                    <h1>Integrated Genome Browser 9.0.0</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <img src="img/linux_icon_small.png" width="32" height="32" style="text-align: justify;"> Linux Platform 
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">                    
+                                <form id="linuxDownload"  method="get" action="releases/current/IGB_unix_current.sh">
+                                    <button class="btn btn-custom btn-small btn-download">
+                                        <h1>
+                                            <span class="glyphicon glyphicon-cloud-download"></span>                           
+                                            &nbsp;Linux 64 bit
+                                        </h1>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <img src="img/osx_small.png" width="32" height="32" style="text-align: justify;"> Mac OS X Platform 
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                                <form id="osxDownload"  method="get" action="releases/current/IGB_macos_current.dmg">
+                                    <button class="btn btn-custom btn-small btn-download">
+                                        <h1>
+                                            <span class="glyphicon glyphicon-cloud-download" ></span>                           
+                                            &nbsp;Mac OS X
+                                        </h1>
+                                    </button>         
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <img src="img/windows_logo_small.png" width="32" height="32" style="text-align: justify;"> Windows Platform 
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                                <form id="windows64Download"  method="get" action="releases/current/IGB_windows-x64_current.exe">
+                                    <button class="btn btn-custom btn-small btn-download">
+                                        <h1>
+                                            <span class="glyphicon glyphicon-cloud-download" ></span>                           
+                                            &nbsp;Windows 64 bit
+
+                                        </h1>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row" >
+                            <div class="col-md-4 col-md-offset-4">
+                                <form id="windows32Download"  method="get" action="releases/current/IGB_windows_current.exe" >
+                                    <button class="btn btn-custom btn-small btn-download" data-toggle="tooltip" data-placement="right" title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
+                                        <h1>
+                                            <span class="glyphicon glyphicon-cloud-download" ></span>   
+                                            &nbsp;Windows 32 bit
+
+                                        </h1>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Zip Download
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+
+                        <p>
+                            We strongly advise you to try to use the native installer of IGB for your operating system so you are able to get updates and bug fixes from us as they are released;
+                            however, we understand some users prefer other options. You can download the latest stable IGB release as a
+                            <a href="http://www.bioviz.org/igb/releases/current/igb.zip">zip file</a>
+                            . Unpack the zip file and double-click run_igb.bat (Windows) or run_igb.command
+                            (Mac, Unix) to start IGB.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Old Downloads
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+
+                        <p>
+                            Older releases of IGB are available at <a href="http://sourceforge.net/projects/genoviz/files/?source=navbar">sourceforge</a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel panel-default col-md-10 col-md-offset-1 jnlp-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Java Web Start
+                        </h3>
+
+                    </div>
+                    <div class="panel-body">
+
+                        <p>
+                            If you prefer to continue using IGB 8.2.3 with Java Web Start, you can access this version from <a href="oldWebstartDownloads.html">this page</a>.  Please be aware we advise against using this version.
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+
+                </div>
+            </div>
+            <hr>
+            <div id="footer" class="container">
+            </div>
+        </div>
+        <!-- /container -->
+
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+        <!-- scripts concatenated and minified via ant build script-->
+        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="js/script.js?v=12392829"></script>
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-33977587-2', 'bioviz.org');
+            ga('send', 'pageview');
+        </script>
+        <!-- end scripts-->
+
+    </body>
+
+</html>
+
+
