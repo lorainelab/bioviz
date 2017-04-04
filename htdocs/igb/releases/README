@@ -1,0 +1,43 @@
+IGB automated build and release process copies 
+new content into this directory.
+
+Nothing here (except for this README) should be
+version controlled.
+
+A symlink called "current" points to the most
+recent release of IGB.
+
+An XML file called "updates.xml" should reside in 
+"current".
+
+Example:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<updateDescriptor baseUrl="">
+  <entry targetMediaFileId="23" updatableVersionMin="" updatableVersionMax="" fi
+leName="IGB_windows-x64_9_0_0.exe" newVersion="9.0.0" newMediaFileId="23" fileSi
+ze="97014944" bundledJre="windows-amd64-1.8.0_66" archive="false">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="25" updatableVersionMin="" updatableVersionMax="" fi
+leName="IGB_unix_9_0_0.sh" newVersion="9.0.0" newMediaFileId="25" fileSize="1037
+65854" bundledJre="linux-amd64-1.8.0_65" archive="false">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="179" updatableVersionMin="" updatableVersionMax="" f
+ileName="IGB_windows_9_0_0.exe" newVersion="9.0.0" newMediaFileId="179" fileSize
+="93353120" bundledJre="windows-x86-1.8.0_66" archive="false">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="552" updatableVersionMin="" updatableVersionMax="" f
+ileName="IGB_macos_9_0_0.dmg" newVersion="9.0.0" newMediaFileId="552" fileSize="
+95477895" bundledJre="macosx-amd64-1.8.0_66" archive="false">
+    <comment language="en" />
+  </entry>
+</updateDescriptor>
+
+Ann's understanding of this (not sure) is that this file is accessed
+by IGB every time it launches.
+
+If it doesn't match the version of IGB running on the user's computer,
+then user will see screens inviting them to update their version.
