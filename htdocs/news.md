@@ -344,4 +344,673 @@ Today we released IGB 8.2.1.  This release included resolutions for the followin
 
 * * *
 
-###
+### December 15, 2014: IGB 8.2 released
+
+The IGB development team is pleased to announce the immediate availability of the new IGB 8.2 major release. This release contains resolutions to over 200 issues, including many bug fixes and new features.
+Major New Features:
+
+*    Paired End Visualization for NGS data
+*    Addition of the latest fruit fly genome
+
+Usability Improvement Highlights:
+
+*    New tooltips
+*    New Right Click Context Menu available in track "whitespace"
+*    Right-click menu re-organization (easier to find stuff)
+*    Improved custom genome loading widget
+*    Improved Image Export widgets
+
+Power User Highlights:
+
+*    New feature available for controlling IGB from R (Sample code available at https://bitbucket.org/lorainelab/rtoigb)
+
+Engineering Notes:
+
+*    Migration of build system from ant to maven with many significant improvements for developers
+*    *    Maven is more natural fit for our modular osgi project and having a plugin archetype reduces the technical burden to community contributors
+*    *    OSGI manifest files no longer need to be manually managed since the maven bundle plugin leverages a projects declared dependencies and classpath to populate the manifest
+*    *    project dependencies are formalized and versions are now tracked (a major improvement over a set of jars in a lib directory)
+*    *    hosted maven repository contains project artifacts
+*    Upgraded internal logging system to use standard slf4j api (with logback implementation)
+*    *    SLF4j is a powerful api which greatly improves on java.util.logging and will improve our code quality and help reduce the time it takes to debug complex issues
+*    Fixed External Contributor Plugin Repository System
+*    *    This is a repository which makes available plugins which are not turned on by default in IGB. These plugins are not on by default either because they are not yet stable enough to be a part of the core project or because they add functionality not needed by the majority of our users. Restoring our projects ability to support community plugins was an important development priority for us while preparing IGB 8.2.
+
+* * *
+
+### December 8, 2014: IGB 8.1.13 released
+
+In preparation for our upcoming IGB 8.2 release, we have released a minor release with some minor bug fixes to our update notification system. With this notification system we will be able to notify users when we release IGB 8.2. This is important, because major releases cannot be pushed out silently, and require users to download a fresh copy of our software.
+
+*    Patch bug in Notification System so it can be leveraged to notify user's of IGB 8.2 release (IGBF-282)
+
+* * *
+
+###  December 1, 2014: Updated JNLP Generator Service Released
+
+In preparation for our upcoming IGB 8.2 release, we have released an updated and simplified jnlp generator web service. For more information, see: JNLP Generator Service
+
+* * *
+
+###  November 25, 2014: IGB 8.1.12 Released
+
+We have released a minor patch to ensure our blast functionality is not impacted by an upcoming NCBI blast URL change, For more information, see:
+
+*   NCBI BLAST url is changing on Dec. 1, 2014 (IGBF-267)
+
+* * *
+
+### September 10, 2014: IGB 8.1.11 Released
+
+The IGB team is pleased to announce a new release of IGB. This new version fixes an error in SVG image export. Thank you to everyone who reported it. This new release also fixes BLAST search on gene models. Last but not least, we've modified our backup QuickLoad server code. Now, if the main IGBQuickLoad.org site is unavailable, IGB will automatically switch over to our mirror site. For more information on these changes and why we needed them, see:
+
+*   Mirror site failover (IGBF-141)
+*   BLAST search fix (IGBF-186)
+*   SVG export functionality (IGBF-185)
+
+* * *
+
+### Sept 2, 2014: Welcome aboard Nowlan Freese
+
+Today we welcome Nowlan Freese, Ph.D., who joins the IGB team as a postdoctoral trainee. Nowlan will help us reach out to new users and also help existing users get greater value from IGB. Nowlan studied developmental biology as a graduate student at Clemson University and most recently did postdoctoral work at the Max Planck Institute. During his postdoc, Nowlan plans to build expertise in bioinformatics data analysis, using IGB and other tools.
+
+* * *
+
+### July 30, 2014: IGB 8.1.10 Released
+
+Today we released IGB 8.1.10, a minor release which includes a patch for the following bug
+
+*   IGB will no longer launch using Java Web Start on Windows 7/8 platform after release of latest Java version (IGBF-136)
+
+* * *
+
+### July 30, 2014: Notice: Windows 7/8 Java Webstart Bug introduced with Java 7 update 65 and Java 8 update 11
+
+We have been able to confirm the latest releases of Java 7 and Java 8 have introduced a windows specific Java Web Start bug which is unfortunately currently impacting our users. This new bug impacts all past web start releases of IGB. We have submitted a bug report to Oracle, but will be releasing a workaround later today to resolve this issue for our users.
+
+For more details on the bug see our Jira Issue (IGBF-136)
+
+* * *
+
+### July 21, 2014: IGB 8.1.9 Released
+
+Today we released IGB 8.1.9, a minor release which includes a patch for the following
+
+*   Typo in View menu entry for "Show Zoom Stripe" (IGBF-124)
+
+* * *
+
+### July 08, 2014: IGB 8.1.8 Released
+
+Today we released IGB 8.1.8, a minor release which includes a patch for the following bug
+
+*   Adding local QuickLoad site fails (IGBF-95)
+
+* * *
+
+### June 16, 2014: IGB 8.1.7 Released
+
+Today we released IGB 8.1.7, a minor release which includes a patch for the following bug
+
+*   Unable to load gzipped wig files over https (IGBE-171)
+
+* * *
+
+### June 10, 2014: IGB 8.1.5 Released
+
+Today we released IGB 8.1.5, a minor release which addresses many small bugs and improves stability. The list below highlights some of the improvements.
+
+*   Starting IGB without an Internet connection no longer causes servers to be permanently disabled
+*   Quickload mirror site failover has been restored
+*   IGB Bookmarks embedded in a web page again return an http 204 response code
+*   The image export widget has been enhanced to improve integration with Mac OS X
+
+* * *
+
+### May 30, 2014: IGB 8.1.4 Released
+
+Today we released IGB 8.1.4, a minor release which a bug impacting the proper loading of BAM files from https locations
+
+* * *
+
+### May 29, 2014: IGB 8.1.3 Released
+
+Today we released IGB 8.1.3, a minor release which resolves several bugs and enhances the look and feel of several widgets for MAC OSX users.
+
+*   Fix for track name bug when bed files had the same trackline name information (IGBE-160)
+*   Fix for annotation name black rectangle bug (IGBF-31)
+*   Fix for read sequence rendering bug (IGBF-31)
+*   Workaround for Safari caching Galaxy External View links bug addedIGBF-44
+
+* * *
+
+### April 16, 2014: IGB 8.1.2 Released
+
+Today we released IGB 8.1.2, a minor release which resolves a critical bug
+
+* * *
+
+### April 15, 2014: IGB 8.1 Released
+
+Today we released IGB 8.1, a major release which includes enhanced integration with Galaxy.
+
+* * *
+
+### March 19, 2014: IGB 8.0.4 Released
+
+Today we released IGB 8.0.4, a minor release which retracts some functionality which was not meant to be included in the 8.0.3 release.
+
+* * *
+
+### March 18, 2014: IGB 8.0.3 Released
+
+Today we released IGB 8.0.3, a minor release which includes a few bug fixes as well as added support for custom jnlp launch files. We have also added a new JNLP Generation Service to bioviz.org to help facilitate the generation of custom jnlp launch files.
+
+* * *
+
+### March 7, 2014: Dec 2013 human genome release (hg38) now supported in IGB
+
+Today we add the latest human genome assembly (hg38) as H_sapiens_Dec_2013 to the IGB QuickLoad data repository. Now, when you visit the latest human genome by clicking the Mona Lisa image on the IGB start screen, the Dec. 2013 human genome assembly and RefGene annotations will automatically load. You can still view older versions by selecting them in the Current Genome tab. If you have questions, please feel free to get in touch! Send us a tweet or post a message on the IGB Discussion forum at SourceForge.
+
+* * *
+
+### March 3, 2014: IGB moved to git repository hosted at BitBucket.org
+
+Today, after many years of using svn, we migrated the IGB source code to a new git repository hosted on BitBucket. Using a distributed version control system git will make it easier for developers to contribute new ideas and new features to the project. Thank you David for managing the transition.
+
+* * *
+
+### March 3, 2014: IGB 8.0.2 released
+
+Today we released IGB 8.0.2, a minor release that corrects issues affecting heatmap graph style display, search, and bookmark exporting.
+
+* * *
+
+### Feb. 24, 2014: IGB team welcomes new lead developer David Norris
+
+UNC Charlotte Computer Science graduate David Norris re-joined the team today, taking over from Hiral Vora as lead developer on the IGB project. In his previous position, David worked at Red Hat on multiple projects and gained valuable experience in many aspects of open source software development. In his new position, he looks forward to using his knowledge and skill to improve IGB functionality for users. Welcome to the team!
+
+* * *
+
+### Feb. 8, 2014: SR gene annotations updated for Arabidopsis TAIR10 genome
+
+SR genes encode RNA-binding proteins that regulated and help to catalyze splicing. We've updated the gene symbols and descriptions for Arabidopsis SR genes so that IGB now follows the nomenclature recommendations from Barta et al (2010) Plant Cell. Code used to modify the annotation files is freely available from this repository at BitBucket.org.
+
+* * *
+
+### Feb. 6, 2014: Older human genomes supported in IGBQuickload.org
+
+In response to user requests, we've added two archival human genome assemblies (hg17 and hg18) to the IGBQuickload site. This will enable you to view gene model (refGene) annotations with HUGO gene symbols for these older releases similar to the latest release.
+
+* * *
+
+### Jan. 3, 2014: Farewell Hiral
+
+Today was Hiral's last day on the IGB team. After four years of great work, he is leaving for a new position at Deutsches Bank in the Research Triangle Park area. Thank you for your many outstanding efforts helping scientists get the most value from their data. Good luck in your new position!
+
+* * *
+
+### Dec. 18, 2013: DAS2 retired
+
+Today we retired the DAS2 servers hosted on IGBQuickload.org and BioViz.org. We also retired the Affymetrix Arabidopsis tiling array data sets as well as Affymetrix microarray probe set visualizations for most genome versions. Note that IGB can still open Affymetrix "link.psl" files, and so if you need to visualize the probe sets, you can download the files from Affymetrix and open them in IGB.
+
+* * *
+
+### Dec. 17, 2013: Farewall Alyssa!
+
+Today we say a sad "goodbye" to IGB Outreach and Testing Coordinator Alyssa Gulledge, who leaves us for a new opportunities in Atlanta. Thank you Alyssa for your many efforts and we wish you the best of luck. We will miss you!
+
+* * *
+
+### Dec. 6, 2013: IGB 8 released
+
+This new version of IGB has many improvements, including:
+
+*   Faster data loading. New optimizations enable gene models to load even faster from IGBQuickLoad servers.
+*   Track filters. New track filters let you hide or show reads and other features based on attributes like splicing and score.
+*   Color by score improved. IGB's new Cytoscape-inspired gradient color chooser lets you choose a range of colors to indicate scores. This is especially useful for analyzing ChIP-Seq results and output from programs like MACS.
+*   Right-click blast searches. Now you can right-click a gene model or other features and search its protein or spliced nucleotide sequence against the NCBI nr protein database (inspired by Apollo)
+
+* * *
+
+### Oct. 30 - Nov. 2, 2013: IGB at Genome Informatics, CSHL
+
+Ann presented a poster and gave demos introducing IGB 8 to attendees at the Cold Spring Harbor Genome Informatics Meeting. To test-run IGB 8, download and run IGB 8 preview.
+
+* * *
+
+### Oct. 29, 2013: Focus on a Feature - Introducing IGB 8
+
+This month hosted two sessions of IGB Focus on a Feature to introduce new features of IGB 8, scheduled for release in December. To test-run IGB 8, download and run IGB 8 preview.
+
+In this live tutorial, we showed how to:
+
+*   Load your own custom genome into IGB
+*   Load and filter RNA-Seq data
+*   Color-code features by score
+*   Run BLASTX searches at NCBI
+*   And more...
+
+Also see the Announcement on the BioStars message board.
+
+* * *
+
+### Sept. 25, 2013: Focus on a Feature - Working with Sequence Data
+
+Alyssa Gulledge and Ann Loraine led an hour-long on-line Focus on a Feature webinar that introduced participants to some neat tricks you can do with the IGB Advanced Search tab, such as searching for transcription factor binding sites and mapping and visualizing PCR primer sequences. Ann started the webinar with a quick review of moving and zooming in IGB, and then Alyssa showed off the sequence manipulation and analysis features. Due to technical problems, we were only able to record Alyssa's part of the presentation. We'll post a video on the IGB YouTube channel as soon as we finish editing it. For a description of the webinar, see our announcement on the Biostars Web site.
+
+* * *
+
+### Sept. 9, 2013: IGB 7.0.4 released
+
+Today a new bug fix release debuted on the Bioviz Web site. No new features were introduced, only corrections to existing features and optimizations to improve IGB performance and stability.
+
+* * *
+
+### Aug. 28, 2013: First Focus on a Feature - Graphs
+
+To help IGB users get more out IGB, we've started a new monthly Focus on a Feature webinar to be held at 1:30 pm Eastern time on the last Wednesday of every month. The first Focus on a Feature event covered genome graphs and graph manipulations.
+
+* * *
+
+### July 22, 2013: IGB 7.0.3 released
+
+A new bug fix release was released today. As always, this release contains no new features, just fixes for bugs reported by users or the IGB testing team.
+
+* * *
+
+### May 17, 2013: IGB Workshop at WiNGS
+
+The IGB team led a hands-on workshop demonstrating how to use IGB at the Workshop in Next-Generation Sequencing and Metabolomics (WiNGS) held at the UNC Charlotte Center City campus on May 17. This two-hour workshop described using IGB to explore RNA-Seq data set from pollen, based on our article titled RNA-seq of Arabidopsis pollen uncovers novel transcription and alternative splicing. A step-by-step Web-based tutorial from the workshop is available.
+
+* * *
+
+### April 30, 2013: IGB 7.0.2 released
+
+Today we released a new "bug fix" release of IGB. This releases introduces no new features, just fixes for bugs reported by users or the IGB testing team.
+
+* * *
+
+### April, 2013: New IGB QuickLoad site for pollen
+
+A new IGB QuickLoad site for pollen-related data sets is now available at igbquickload.org/pollen. The inaugural data set on the site is a 75-base, single-end RNA-Seq dataset from Arabidopsis pollen and seedlings. An in-depth analysis of these data appears in RNA-Seq of Arabidopsis pollen uncovers novel transcription and alternative splicing, published on-line in the journal Plant Physiology.
+
+* * *
+
+### Feb. 11, 2013: IGB 7.0.1 released
+
+A new minor release was released. This releases introduces no new features, just fixes for bugs reported by users or the IGB testing team. For the release announcement, visit this post on the GenoViz developers' list.
+
+* * *
+
+### January 28, 2013: IGB 7.0 released
+
+A new major release of IGB is available for download. Some of the new features in IGB 7.0 include:
+
+*   IGB sessions : You can now save and load IGB sessions, which helps you save your place in a long-term analysis or share your work with others.
+*   Sequence viewer : The Sequence Viewer now supports saving and copying protein sequences.
+*   Autoscroll : IGB autoscroll is now easier to configure, start, and stop, which helps in scanning large regions.
+*   Better-looking, more informative gene models : Gene models now have optional intron arrow marks to show strand, and when you load the genomic sequence and zoom in, protein translations appear.
+*   Annotation tab : A new Annotation tab makes configuring and styling annotation tracks much easier. Use the new operations menus to copy, summarize, and compare tracks.
+*   Toolbar : A new configurable toolbar provides one-click access to the most useful IGB functions.
+*   Stack and track height : New options for setting the height of tracks give you more control over the amount and size of data to be shown.
+*   Better searching : Easier, faster searching helps you find genes by gene name or keyword.
+*   Better color by score : You can now set the range of values to show under the color by score annotation setting.
+*   Selection Info box : A new selection info box reports the name or number of annotations you've selected, making it easier to explore your data.
+*   Countless internal improvements : The IGB developers added many improvements to the IGB code base, making IGB 7.0 the most robust IGB ever.
+
+For more information, visit New in IGB 7.0.
+
+* * *
+
+### July 5, 2012: Fragaria vesca available in IGB QuickLoad
+
+Fragaria vesca, also known as the woodland strawberry, is now supported at IGBQuickLoad.org as genome version F_vesca_Sep_2011. Currently, genomic sequence and gene predictions are available. We were able to add the data thanks to advice from Stephen Ficklin of the Main Lab at Washington State University. Note that the Main lab develops genome database resources for the rosaceae, also known as the rosids, including peach, apple, cherry as well as strawberry. For more information, visit GDR - Genome Database for Rosaceae.
+
+* * *
+
+### June 5, 2012: IGB 6.7.2 released
+
+A new minor release of IGB is available. This new release fixes a couple of reported bugs and adds new features, including:
+
+*   support for SVG image format output
+*   an option to specify IGB bookmark server port (see this IGB forum post)
+
+* * *
+
+### June 5, 2012: Nematostella vectensis genome available in IGB QuickLoad
+
+The IGB QuickLoad site now supports the Nematostella vectensis genome and annotations. We collected sequence data and annotations from Metazome, a database similar to 
+Phytozome that provides access to a variety of animal genomes. Data provided include sequence along with gene model annotations, with linkouts to Google and Metazome.
+
+* * *
+
+### May 17-18, 2012: IGB workshop at WiNGS
+
+The IGB team at UNC Charlotte presented at the UNC Charlotte Bioinformatics and Genomics Department Workshop in Next-Generation Sequencing (WiNGS). On Thursday, Ann gave a talk describing IGB features and demonstrated using IGB to examine splice variants with RNA-Seq data. On Friday, she presented a two-hour interactive workshop on using IGB to view RNA-Seq data from Arabidopsis. Alyssa Gulledge helped organize the WiNGS workshop; she arranged practise talks for speakers, trained students, and helped keep things running smoothly. IGB slides and workshop materials are available for download:
+
+*   Slides from IGB presentation
+*   Workshop tutorial: Introducing IGB
+*   Workshop tutorial: Novel Splicing
+
+If you would like to use the tutorials or slides in teaching, please let us know. We would be happy to share the originals with you so that you can customize the tutorials for your students.
+
+* * *
+
+### April 13, 2012: Sorghum RNASeq data set added to IGBQuickload
+
+We added a new RNAseq data set to the main IGBQuickLoad.org/quickload data site. The data are from an article titled Functional annotation of the transcriptome of Sorghum bicolor in response to osmotic stress and abscisic acid published in Oct., 2011.
+
+These data include three replicates per sample type of sorghum root and shoot samples undergoing simulated drought stress and ABA treatments and their corresponding controls. This data set offers a unique look at the stress-regulated transcriptome of this highly drought-tolerant and hardy plant.
+
+To deploy the data set, we downloaded the raw data files as .sra files, converted them to FASTQ format, and then aligned them onto the January 2009 release of the Sorghum bicolor genome using TopHat 1.3.3. We subdivided the alignments files into read alignments that mapped once (SM) or more than once (MM) onto the genome. We also generated tabix-indexed coverage (.bedgraph) and TopHat junction (.bed.gz) files for each sample.
+
+To access the data in IGB, load the Sorghum bicolor genome Jan 2009. Open the folder named RNASeq. Data sets appear in subfolders SM (single- mapping), MM (multi-mapping), ALL (both multi- and single-mapping), and Juncs, junctions predicted by TopHat from spliced alignments.
+
+* * *
+
+### Feb 9, 2012: IGB 6.7 released
+
+Today we released a new version of IGB, which contains many new features and improvements. Just of few of these include:
+
+*   Improved Data Access Panel : We moved species and genome version selection menus to the Current Genome tab, opening up more space for data set display. We also added new ways to configure tracks via the Data Management Table (formerly called the Load Mode Table).
+*   Take notes with bookmarks : We added the ability to associate notes with bookmarks. We also redesigned the Bookmarks tab and made it easier to sort, delete, and organize your bookmarks.
+*   Better image export functions : You can now specify image resolution and size when you save images from IGB. The Image Export window now also shows you an image preview. We also added the ability to export images from the Genomic Sequence Viewer as well as the Main View and the Sliced View.
+*   Better ways to display results from sequence searches : You can now overlay the results from multiple searches onto the genomic sequence, making it much easier to view PCR primer sequences, promoter motifs, and other items of interest in the same view.
+*   New start screen : IGB now displays image shortcuts you can click to quickly go to your genome of interest.
+*   Better data loading : When you access a file, a "blank" track appears letting you know that IGB recognized your file.
+
+* * *
+
+### Feb 6, 2012: New tutorials on working with RNA-Seq data available
+
+Many users have asked us how to create files for visualization in IGB. This can be a daunting task, particularly when working with results from high-throughput sequenicng experiments.
+
+To help users and the bioinformatics personnel who support their research, we have published two new tutorials describing how to use bioinformatics tools such as tophat, samtools, Jim Kent's faToTwoBit, and tabix to process and share next-generation sequencing data sets with lab members and collaborators using IGB and the simple IGB QuickLoad system.
+
+To view the tutorials, visit the IGB Developer's Guide section titled Sharing data sets .
+
+In the next few weeks we hope to add more tutorials that will help users make better use of their data and also get more familiar with the rich set of features IGB offers for visualization and analysis of genomic data sets.
+
+If you have questions or suggestions, please let us know. Email aloraine - at - uncc.edu with your comments and requests. We will do our best to respond quickly and thoroughly to all enquiries.
+
+* * *
+
+### Feb 3, 2012: NetAffx data back on line, hosted at UNC Charlotte
+
+The data formerly available via the NetAffx DAS2 data source, including probe set alignments for Affymetrix array products, RefSeq genes, and chromosome bandingb patterns ("cytobands"), are now available again from the new DAS2 data source hosted at IGBQuickLoad.org.
+
+As a convenience to users, we have re-activated automatic loading of gene models (the RefSeq genes data sets) and cytological bands for certain genomes, including the human genome. If you experience any further problems with these data sets, please let us know - email aloraine --at-- uncc.edu.
+
+Many thanks are due to Scott Wood (UNCC College of Computing and Informatics) who helped us a huge amount in setting up the new site. Thanks are also due to IGB developer Hiral Vora who updated the DAS2 servlet code to support the Affymetrix data. Last but not least, we are also grateful to Dr. Ron Shigeta of Affymetrix for sending us the Affymetrix data. Thank you Ron, Scott, and Hiral for your efforts on behalf of the IGB user community!
+
+* * *
+
+### January 31, 2012: Temporary service outage for IGBQuickload.org
+
+We apologize for the inconvenience.
+
+Starting around 1 pm EST today, the IGB QuickLoad resource will become temporary unavailable.
+
+We are adding more memory to the server and installing some new software. We don't expect to be off-line for more than a couple of hours at the most.
+
+You may have noticed that the NetAffx DAS2 data source is no longer responding. Unfortunately, there was an irrecoverable failure in the DAS2 data source hosted at Affymetrix. We are working on a solution and should have the data sets Affymetrix was hosting back on line; we are moving the data to a virtual server residing at UNC Charlotte.
+
+In the meantime, we've deactivated the NetAffx DAS2 data source as one of the default IGB data sources. Hopefully by the end of the week you will have full access to the data once again.
+
+* * *
+
+### January, 2012: IGB 6.7 alpha available on BioViz Web site.
+
+A preview (alpha) release version of IGB 6.7 is now available on the BioViz Web site. Just visit the Download Page to get a copy.
+
+Note to programmers : The IGB 6.7 release version is now branched in the subversion repository on sourceforge.
+
+New features coming soon in IGB 6.7 include:
+
+*   Better data loading : When you access a file, a "blank" track appears letting you know that IGB recognized your file.
+*   Better bookmarks : Now, when you make a bookmark, you can add a note describing it. You can also more easily edit, move, delete, and share your bookmarks.
+*   All-new start screen : We added shortcuts to the IGB start screen, making it easier than ever to find your genome of interest.
+*   Better support for image export : We improved the way that images are created, adding the ability to increase or decrease image quality. Now it's easy to create high-quality (300 dpi or better) images for publication.
+
+* * *
+
+### October, 2011: IGB 6.6 released
+
+IGB version 6.6 is released on the BioViz Web site. To read about new features and improvements in this new version of IGB, see New in IGB 6.6 in the IGB User's Guide.
+
+New features in IGB 6.6 include:
+
+*   Improved Data Access Panel . You can now use the Data Access Panel to change track colors, hide or show tracks, or double-click in the Track Name column to re-name a track.
+*   New Options for Configuring Tracks . You can now use arrows or color to indicate strand for features and/or sequence read alignments. You can also increase or decrease the font track label font. Choose File->Preferences to configure tracks, or just right-click a track label and choose the Configure option.
+
+* * *
+
+### June, 2011: IGB team at ICAR 2011
+
+The IGB team is hosting a booth at the International Conference on Arabidopsis Research in Madison, WI. We'll be giving one-on-one demos and answering questions about using IGB in research.
+
+Ann gave a talk on IGB - slides are available here. David Norris and the IGB team presented a poster.
+
+* * *
+
+### April, 2011: IGB 6.5 released
+
+IGB version 6.5 is now available for download from the BioViz Web site. For details, see: New in IGB 6.5 in the IGBbUser's Guide.
+
+New features available in IGB 6.5 include:
+
+*   Sequence Viewer . View, translate and copy sequence in a new user-friendly interface.
+*   More ways to zoom and pan. Use the new grab tool to move the display up or down, left or right.
+*   Insertions and deletions . View insertions and deletions in alignment (BAM) files.
+*   Expanded support for plant genomes . The IGB QuickLoad site now hosts data for publicly available plant geomes including grape, soy, rice, Arabidopsis lyrata, and more.
+
+* * *
+
+### January 15-19, 2011: IGB at the Plant Animal Genomes Conference
+
+Ann is attending PAG XIX and giving a live demo of IGB at 10:30 am on Wednesday in the Computer Demo Room. Please read the abstract from the demo. We hope to see you there!
+
+* * *
+
+### November 22, 2010: IGB 6.4 released
+
+Thank you to everyone who tried IGB 6.4 Alpha and gave us your feedback. IGB 6.4 is now available and incorporates many of your suggestions.
+
+* * *
+
+### October 22, 2010: IGB 6.4 Alpha released - Please try it out!
+
+IGB 6.4 ALPHA is now available for preview on BioViz. Please visit the IGB 6.4 preview page to download a copy.
+
+Thank you very much to everyone who responded to the IGB survey back in April 2010. You contributed many great ideas to improve IGB and we were able to implement many of them in IGB 6.4. Check it out and let us know what you think!
+
+As always, please report any problems you encounter - just choose "Report a bug" or "Request a feature" from the IGB Help Menu. We now have a dedicated testing group for IGB, but we continue to rely on YOU for help making certain IGB performs well for your research.
+
+New features available in IGB 6.4 include:
+
+*   Better Bookmarks . You can now bookmark data sets and current view settings. With new and improved IGB bookmarks, you can retrieve not just the region, but also the data together with color, display name, and other settings.
+*   Data Access tab You can now delete tracks. You can also refresh one track at a time without having to change the Load Mode settings in the Data Access Panel.
+*   Tracks and Tiers . When you mouse over a track label or feature in a track, you'll see a tooltip showing the same information as what appears in the Selection Info table. But if it's too much information, you can turn off the tooltips using the View menu.
+*   Searching . Now searching works for all feature properties, not just names. Note: This only works for data that you've already loaded.
+*   Loading data - for power users . If you're sharing a genome using an IGB QuickLoad data server, you can now use BNIB or 2BIT sequence file formats on your site and your users will be able to click the Load Sequence in View button to get just the sequence in view. (This happens via partial HTTP requests.) We also now support PSLX file format, an alignment format similar to PSL but which also includes query sequence.
+*   Scripting - for power users . We fixed some synchronization issues that were forcing some of you to tell IGB to wait before completing a script.
+
+* * *
+
+### September 27, 2010: IGB 6.3.1 released
+
+IGB 6.3.1 incorporates several bugfixes to IGB 6.3.
+
+* * *
+
+### September 22, 2010: Alyssa Gulledge joins IGB team
+
+The IGB team here at UNC Charlotte welcomes Alyssa Gulledge, Ph.D., our new testing, outreach, and documentation coordinator. Before joining us, Alyssa worked as a scientist and postdoctoral researcher at UNC Chapel Hill and UNC Charlotte.
+
+* * *
+
+### July 21, 2010: IGB 6.3 released
+
+Some new client features are listed below:
+
+*   BAM parser
+*   *   (Be sure you've sorted and indexed your BAM files!)
+*   *   Shows gapped alignments and properties.
+*   *   When zoomed in, shows residues. If partial or full reference sequence is loaded, shows only differing residues.
+*   Local files and QuickLoad: allow partial (chromosome) feature loading for most formats.
+*   Local files and QuickLoad: allow region-based feature loading for BAM, BED, Wiggle, Sgr, Gr, Fasta, and others.
+*   Drag and Drop for files and (file or QuickLoad) URLs.
+*   "Load from URL" menu item. Allows region-based feature loading for BAM.
+*   Scripting options for IGB. See this Wiki page for more details.
+*   Deletion of tracks.
+*   Ensembl external browser (also loadable via DAS).
+*   Load View: combo box hints for species (common name) and genomes (synonyms).
+*   Whole genome view for all organisms.
+*   Sort chromosome list by contig/chromosome size
+*   Centralized server caching of common requests from slower servers (mostly UCSC and Ensembl).
+
+As always, old versions of IGB are also available from our download page.
+
+* * *
+
+### July 19, 2010: Slime mold Dictyostelium discoideum strain Ax4 genome data added
+
+Using data and advice kindly provided by the dictyBase team, we created BED and sequence data files so that Dictyostelium researchers can view their data in IGB. The BioViz DAS2 data source now provides DAS2-style access to Dicty Ax4 sequence data, and the BioViz QuickLoad site now provides access to BED format files for dictyBase Dictyostelium discoideum strain Ax4 gene annotations. When you view the data in IGB, you can right-click on gene models and choose the "DictyBase" option to view the corresponding record in dictyBase.
+
+For more information about the data, visit the Dicty May 2009 QuickLoad Web directory.
+
+* * *
+
+### June 25, 2010: IGB 6.3 Beta released
+
+* * *
+
+### April 8, 2010: IGB 6.2.1 released
+
+Some new client features are listed below:
+
+*   DAS/1 support
+*   External UCSC browser tab
+*   Localization
+*   GUI and Preferences bugfixes and enhancements
+*   USeq support
+
+* * *
+
+### March 26, 2010: IGB at the ASPB meeting
+
+Ann gave an IGB demo at the Mid-Atlantic Section American Society of Plant Biologists Annual Spring Meeting, held at Bowie State University in Maryland. Slides from the talk are available on-line.
+
+* * *
+
+### January 9-13, 2010: IGB at the Plant Animal Genomes Conference
+
+Ann attended PAG XVIII, gave a live demo of IGB, and presented this poster.
+
+* * *
+
+### January 6, 2010: IGB 6.1 released
+
+Some new client features are listed below:
+
+*   major memory improvements for graphs (SGR, Wiggle, etc.)
+*   ability to parse large Wiggle files
+*   better handling for large files over network
+*   customizable coloring for residues
+*   "whole chromosome" mode for DAS/2; only activated when data is refreshed
+*   enhanced DAS/1 support (Ensembl can now be accessed)
+*   assorted GUI enhancements and bugfixes
+
+* * *
+
+### September 29, 2009: IGB 6.0 released
+
+Some new features are listed below:
+
+IGB client features:
+
+*   compiled with Java 6
+*   enhanced data source preferences page
+*   unification of "Pattern Search", "Name Search", and "Annotation Browser" tabs
+*   auto-loading of features (if specified by DAS/2 server)
+*   data provider hyperlinks and icons
+*   feature hyperlinks and description tooltips
+*   QuickLoad annots.xml file (similar to DAS/2)
+*   GFF and BED parsing bugfixes
+*   warnings for chromosome conflicts
+*   assorted GUI enhancements and bugfixes
+
+DAS/2 server features:
+
+*   file indexing: reduces memory requirements by up to 90%, often reducing startup time as well.
+*   improved ID searches: reduces network traffic, thus speeding up client-side search.
+*   warnings for chromosome conflicts
+*   additional annots.xml properties
+
+* * *
+
+### September 11, 2009: IGB Wikipedia article published
+
+* * *
+
+### August 25, 2009: Genoviz SDK article published in BMC Bioinformatics
+
+Helt, G.A., Nicol, J.W., Erwin, E., Blossom, E., Blanchard, S.G., Chervitz, S.A., Harmon, C. & Loraine, A.E. The Genoviz Software Development Kit: A Java toolkit for building genomics visualization applications. BMC Bioinformatics 10, 266 (2009).doi: 10.1186/1471-2105-10-266
+
+* * *
+
+### August 4, 2009: IGB article published in Bioinformatics
+
+Nicol, J.W., Helt, G.A., Blanchard, S.G., Raja, A. & Loraine, A.E. The Integrated Genome Browser: Free software for distribution and exploration of genome-scale data sets. Bioinformatics (2009).doi: 10.1093/bioinformatics/btp472
+
+* * *
+
+### June 16, 2009: IGB version 5.5 released.
+
+This release features improved memory management, allowing users to load even more data into the viewer, as well as further streamlining of the user interface. Other improvements include support for adding new Quickload or DAS servers via the Preferences Tab and better image export support (print to file) for many formats, including PDF, PNG, EPS, PS, and others. For more details, see the IGB Release Notes.
+
+* * *
+
+### May, 2009: The IGB team welcomes four new students and bids farewall to Lokeshvar
+
+The IGB team welcomes two new students from the UNC Charlotte Professional Science Masters Program who are doing their internships with us this summer. Archana Raja is working on documentation, testing the user interface, and collecting tiling array data sets for our DAS2 server. Nathaniel Watson is collecting data sets from sequenced plant genomes so that we can support other plant species in addition to Arabidopsis . We also welcome two new undergraduate summer interns: Kristen Sagliani, a chemistry/math double major from UNC Charlotte and Roshonda Barner, a math/economics double major from NC A & T. Kristen and Roshonda are helping develop an on-line programming course that demonstrates bioinformatics programming concepts using data set from the Bioviz DAS2 and Quickload servers. We also bid farewell to Lokeshvar, who starts a new internship at Wachovia this summer. Good luck with your new job and thank you for your great work on IGB.
+
+* * *
+
+### March 26, 2009: IGB version 5.4 released
+
+We are pleased to announce the release of version 5.4 of IGB, which features a much improved mechanism for loading data into the browser. Users can now access Affymetrix DAS2, Bioviz DAS2, and Bioviz Quickload data sources using the same easy-to-use interface. For details on how this works, see the FAQ item describing how to load data into IGB.
+
+* * *
+
+### March 12, 2009: Welcome aboard, Lokeshvar
+
+The IGB team welcomes Lokeshvar Iyanar, who starts his new position as test and automation engineer today. Lokeshvar is working toward his masters' degree in Computer Science from the University of North Carolina at Charlotte. Previously, he worked as a Performance Test Analyst at for Wachovia and as a Student Technical Specialist at the Mosaic Lab at UNCC.
+
+* * *
+
+### March 9, 2009: TableView Support
+
+We have added a new Java Launch page for James (Jim) Johnson's TableView application, originally hosted at the University of Minnesota's Center for Computational Genomics and Bioinformatics, which closed in 2008. Jim's software is very useful for visualizing interactive scatter plots, a feature many IGB users may find helpful when working with expression array data. To download TableView, visit TableView launch page. Let us know if you have questions or comments!
+
+* * *
+
+### Jan. 7, 2009: IGB supports Arabidopsis EST data.
+
+We used Jim Kent's genomic alignment tool blat to align around 1.5 million Arabidopsis thaliana ESTs harvested from Genbank in December 2008 onto the TAIR8 Arabidopsis genome assembly. We then applied a simple quality-control filter, following the same specification the UCSC Genome Informatics team uses to generate their "all EST" data set, with one important difference: We divided the alignments into two separate data sets:
+
+*   single mappers: ESTs that aligned once to the genome
+*   multi-mappers: ESTs that aligned more than once to the genome
+
+* * *
+
+### Dec. 10, 2008: IGB poster at UNC Charlotte Bioinformatics and Genomics Retreat
+
+IGB developer John Nicol presented a poster describing his contributions to the IGB and Genoviz projects at the UNC Charlotte Bioinformatics and Genomics Retreat. Here John discusses his work with an attendee at the event.
+
+
+![IGB Poster](img/jn_big_retreat2.jpg)
+
+John Nicol and BiG Retreat attendee
+
