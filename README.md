@@ -32,7 +32,7 @@ sudo yum install httpd
 
 ```
 cd /var/www/html/
-sudo git clone https://aloraine@bitbucket.org/lorainelab/bioviz.git
+sudo git clone https://your.user@bitbucket.org/lorainelab/bioviz.git
 ```
 
 * Use git (local repository) to track site configuration changes. 
@@ -43,7 +43,7 @@ git init .
 git add conf/httpd.conf
 ```
 
-* For future convenience, create a .gitignore file
+* For future convenience, create a .gitignore file.
 
 ```
 *~
@@ -53,14 +53,14 @@ run
 module
 ```
 
-* Edit httpd.conf. 
+* Edit httpd.conf to configure the site.
 
 ```
 some stuff
 ```
 
 
-Whe
+
 
 sudo git clone https://aloraine@bitbucket.org/lorainelab/bioviz.git
 ```
