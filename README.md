@@ -6,14 +6,14 @@ The site has three main goals:
 
 * Serve as a download site for Integrated Genome Browser. 
 * Provide links to IGB documentation. 
-* Provide a javascript bridge that lets users open files hosted on external sites (see galaxy.html, bar.html)
+* Provide a javascript bridge that lets IGB open and display files hosted on external sites (see galaxy.html, bar.html)
 
-The javascript bridge functionality is the trickiest to test because you'll need test copies of the external sites, or
+**Note**: The javascript bridge functionality is the trickiest to test because you'll need test copies of the external sites, or
 some kind of simple mockup of their functionality.
 
 To understand how this works, look at:
 
-* galaxy.html - bridge page for flowing data from Galaxy into IGB
+* galaxy.html - bridge page for flowing data from [Galaxy](http://usegalaxy.org) into IGB
 * js/galaxy.js - Galaxy bridge code
 * bar.html - bridge page for flowing data from [BioAnalytic Resource](http://bar.utoronto.ca) RNA-Seq browser into IGB
 * js/bar.js - BAR bridge code
@@ -28,43 +28,56 @@ The directions below assume you are using the Apache Web server and AWS for host
 
 ### Setting up - AWS ###
 
-- Launch micro EC2 image. Amazon Linux AMI image is fine. This example assumes you are running CentoOS, e.g.,
+* Launch micro EC2 image. 
+
+Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine. 
+This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux, the first option listed at the
+time this documnetatoin was written. 
+
+To find out what Linux variant your EC2 instances is running, view `/etc/
 
 ```
 $ cat /etc/*release | grep ID_LIKE
 ID_LIKE="rhel fedora"
 ```
 
-Configure the host. Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
+* Configure the host. 
+
+Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
 
 ```
-sudo yum update
-sudo yum install git
-sudo yum install emacs 
-sudo yum install httpd
+$ sudo yum update
+$ sudo yum install git
+$ sudo yum install emacs 
+$ sudo yum install httpd
 ```
 
-Clone this repository. The `htdocs` directory will become the Web server's DOCUMENT_ROOT.
+* Clone this repository into the Web servers default `DOCUMENT_ROOT` directory. 
+
+On CentOS this is `/etc/www/html`.
 
 ```
-cd /var/www/html/
-sudo git clone https://your.user@bitbucket.org/lorainelab/bioviz.git
+$ cd /var/www/html/
+$ sudo git clone https://your.user@bitbucket.org/lorainelab/bioviz.git
 ```
 
-It's useful to tracks changes you make to local configuration files. Use git to create a local
-repository in `/etc/httpd` for saving configurations you make to the server. 
+* Track server configurations with git.
 
-Note that you don't need to do anything with ssl.conf unless you need to support https URLs (SSL).
+It's useful to track changes you make to local configuration files. Use git to create a local
+repository out of `/etc/httpd` for tracking configuration changes. If you do this, you can 
+easily retrieve older versions for trouble-shooting.
+
+Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL).
 
 ```
-cd /etc/httpd
-git init .
-git add conf/httpd.conf
-git add conf.d/ssl.conf
-git commit -m "Track changes to httpd configuration files httpd.conf and ssl.conf"
+$ cd /etc/httpd
+$ git init .
+$ git add conf/httpd.conf
+$ git add conf.d/ssl.conf
+$ git commit -m "Track out of box configurations"
 ```
 
-For convenience, create a .gitignore file in /etc/httpd. Add it to your local repository.
+* For convenience, create a .gitignore file in /etc/httpd. Add it to your local repository.
 
 ```
 *~
@@ -74,25 +87,89 @@ run
 module
 ```
 
-Edit httpd.conf to configure the site. The default document root is /var/www/html. Change
-this /var/www/html/bioviz/htdocs.
+* Edit `httpd.conf` to configure the site. 
+
+The default document root is `/var/www/html`. Change this to `/var/www/html/bioviz/htdocs`. 
 
 ```
-cd /etc/httpd/conf
-sed -i 's/var\/www\/html/var\/www\/html\/bioviz\/htdocs/g' httpd.conf
+$ cd /etc/httpd/conf
+$ sudo sed -i 's/\(var\/www\/html\)/\1\/bioviz\/htdocs/g' httpd.conf
 ```
+
+To see your changes thus far, use `git diff`.
+
+```
+]$ git diff httpd.conf 
+diff --git a/conf/httpd.conf b/conf/httpd.conf
+index 5ec1006..c0b6628 100644
+--- a/conf/httpd.conf
++++ b/conf/httpd.conf
+@@ -290,7 +290,7 @@ UseCanonicalName Off
+ # documents. By default, all requests are taken from this directory, but
+ # symbolic links and aliases may be used to point to other locations.
+ #
+-DocumentRoot "/var/www/html"
++DocumentRoot "/var/www/html/bioviz/htdocs"
+ 
+ #
+ # Each directory to which Apache has access can be configured with respect
+@@ -315,7 +315,7 @@ DocumentRoot "/var/www/html"
+ #
+ # This should be changed to whatever you set DocumentRoot to.
+ #
+-<Directory "/var/www/html">
++<Directory "/var/www/html/bioviz/htdocs">
+ 
+ #
+ # Possible values for the Options directive are "None", "All",
+ ```
+ 
+If you plan to do a lot of work with the site, ask Dr. Loraine to assign it a bioviz.org subdomain,
+e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
+
+The following example assumes the server's name is test.bioviz.org. 
+
+```
+$ cd /etc/httpd/conf
+$ sudo sed -i 's/#ServerName www.example.com:80/ServerName test.bioviz.org:80/g' httpd.conf
+```
+
+* Check your changes thus far. 
+
+```
+$ sudo service httpd configtest
+Syntax OK
+```
+
+## Supporting https URLs (SSL) ##
 
 If you're supporting https URLs (SSL), you'll need to install three files: 
 
-* a signed certificate issued for you from a trusted signing authority like Digicert
-* your server's private key, created when you made the certificate signing request for the signing authority
-* the signed certificate from the signing authority
+#signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
+#your server's private key, created when you made the certificate signing request for the signing authority
+#signed certificate (.crt) file from the signing authority
 
-See also: (Digicert documentation)[https://www.digicert.com/csr-ssl-installation/apache-openssl.htm] on how to configure SSL.
+See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation/apache-openssl.htm) on how to configure SSL.
 
-Transfer the files to the server. Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`.
+* Transfer the files to the server. 
 
+Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`.
 
+For example, assume the private key is named `private.key` and the certificates are named `mysite.crt` and `DigiCertCA.crt` 
+and that you've uploaded them to your user home directory.
+
+```
+$ sudo mv ~/private.key /etc/pki/tls/private/.
+$ sudo mv ~/DigiCertCA.crt /etc/pki/tls/certs/.
+$ sudo mv ~/mysite.crt /etc/pki/tls/certs/.
+```
+
+* Edit `/etc/httpd/conf.d/ssl.conf` to point to these files. 
+
+```
+$ cd /etc/httpd/conf.d
+$ sudo sed -i 's/#\(SSLCertificateChainFile \/etc\/pki\/tls\/\certs\/\)\(server-chain.crt\)/$1DigiCertCA.crt
+```
 
 ### Contact ###
 
