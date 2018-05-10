@@ -8,10 +8,10 @@ The site has three main goals:
 * Provide links to IGB documentation. 
 * Provide a javascript bridge that lets IGB open and display files hosted on external sites (see galaxy.html, bar.html)
 
-**Note**: The javascript bridge functionality is the trickiest to test because you'll need test copies of the external sites, or
+**Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against copies of the external sites, or
 some kind of simple mockup of their functionality.
 
-To understand how this works, look at:
+To understand how the bridge code works, look at:
 
 * galaxy.html - bridge page for flowing data from [Galaxy](http://usegalaxy.org) into IGB
 * js/galaxy.js - Galaxy bridge code
