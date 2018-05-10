@@ -20,7 +20,7 @@ To understand how this works, look at:
 
 ### Developing this site ###
 
-The site is designed to be cloned into Web-accessible directories for development, testing, and deployment
+The site is designed to be cloned into Web-accessible directories for development, testing, and (ultimately) deployment
 on the main bioviz.org site. 
 
 To update or add content, clone this repository and deploy the cloned content using a Web server of your choice.
