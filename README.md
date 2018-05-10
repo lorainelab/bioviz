@@ -2,7 +2,7 @@ BioViz.org Web content - version-controlled for easy deployment and testing.
 
 ### About ###
 
-The site has three main goals:
+BioViz.org sites have three main goals:
 
 * Serve as a download site for Integrated Genome Browser. 
 * Provide links to IGB documentation. 
