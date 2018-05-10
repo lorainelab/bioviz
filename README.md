@@ -30,7 +30,7 @@ The directions below assume you are using the Apache Web server and AWS for host
 
 * Launch micro EC2 image. 
 
-Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine. 
+Log into the AWS console and launch one of the pre-configured images. Pick the smallest option - micro. There are many options and most are fine. 
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux, the first option listed at the
 time this documnetatoin was written. 
 
