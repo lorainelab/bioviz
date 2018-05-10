@@ -147,9 +147,9 @@ Syntax OK
 
 If you're supporting https URLs (SSL), you'll need to install three files: 
 
-#signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
-#your server's private key, created when you made the certificate signing request for the signing authority
-#signed certificate (.crt) file from the signing authority
+1) signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
+2) your server's private key, created when you made the certificate signing request for the signing authority
+3) signed certificate (.crt) file from the signing authority
 
 See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation/apache-openssl.htm) on how to configure SSL.
 
@@ -188,7 +188,27 @@ $ sudo service httpd configtest
 $ sudo service httpd start
 ```
 
-Visit the site in your Web browser. 
+* Test by visting the site in your Web browser. 
+
+If you don't see the BioViz content or if there is some other problems, look at the server logs to diagnose the problem.
+
+```
+$ sudo cat /var/log/httpd/error_log
+$ cat /var/log/httpd/access_log
+```
+
+* If everything is fine, commit your edits to the configuration files.
+
+```
+$ cd /etc/httpd
+$ sudo git add conf/httpd.conf
+$ sudo git add conf.d/ssl.conf
+$ sudo commit -m "Configure site"
+```
+
+```
+
+
 
 ### Questions? ###
 
