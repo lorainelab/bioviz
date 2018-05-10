@@ -30,7 +30,9 @@ The directions below assume you are using the Apache Web server and AWS for host
 
 * Launch micro EC2 image. 
 
-Log into the AWS console and launch one of the pre-configured images. Pick the smallest option - micro. There are many options and most are fine. 
+Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine, but pick the smallest 
+(and cheapest) option available.
+
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux, the first option listed at the
 time this documnetatoin was written. 
 
@@ -122,7 +124,7 @@ index 5ec1006..c0b6628 100644
  
  #
  # Possible values for the Options directive are "None", "All",
- ```
+```
  
 If you plan to do a lot of work with the site, ask Dr. Loraine to assign it a bioviz.org subdomain,
 e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
@@ -168,9 +170,26 @@ $ sudo mv ~/mysite.crt /etc/pki/tls/certs/.
 
 ```
 $ cd /etc/httpd/conf.d
-$ sudo sed -i 's/#\(SSLCertificateChainFile \/etc\/pki\/tls\/\certs\/\)\(server-chain.crt\)/$1DigiCertCA.crt
+$ sudo sed -i 's/#\(SSLCertificateChainFile \/etc\/pki\/tls\/certs\/\)server-chain.crt/\1DigiCertCA.crt/g' ssl.conf
+$ sudo sed -i 's/\(SSLCertificateFile \/etc\/pki\/tls\/certs\/\)localhost.crt/\1mysite.crt/g' ssl.conf
+$ sudo sed -i 's/\(SSLCertificateKeyFile \/etc\/pki\/tls\/private\/\)localhost.key/\1private.key/g' ssl.conf
 ```
 
-### Contact ###
+As before, use `git diff` and `service httpd configtest` to confirm and check your changes.
 
-* Ann Loraine
+```
+$ git diff ssl.conf
+$ sudo service httpd configtest
+```
+
+* Start the server and test it.
+
+```
+$ sudo service httpd start
+```
+
+Visit the site in your Web browser. 
+
+### Questions? ###
+
+Contact Ann Loraine.
