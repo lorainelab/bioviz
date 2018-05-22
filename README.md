@@ -52,6 +52,7 @@ $ sudo yum update
 $ sudo yum install git
 $ sudo yum install emacs 
 $ sudo yum install httpd
+$ sudo yum install mod_ssl
 ```
 
 * Clone this repository into the Web servers default `DOCUMENT_ROOT` directory. 
