@@ -48,23 +48,32 @@ ID_LIKE="rhel fedora"
 Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
 
 ```
-$ sudo yum update
-$ sudo yum install git
-$ sudo yum install emacs 
-$ sudo yum install httpd
-$ sudo yum install mod_ssl
+$ sudo yum update -y 
+$ sudo yum install -y git emacs httpd mod_ssl
 ```
 
-* Clone this repository into the Web servers default `DOCUMENT_ROOT` directory. 
+* Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
+
+See [documentation](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html#SetupanSSHkey-ssh2).
+
+```
+$ ssh-keygen # makes ~/.ssh/id_rsa.pub, copy this to your bitbucket account
+$ git config --global user.name "bbuser" # bitbucket user id
+$ git config --global user.email "user@example.com" # your email address
+$ sudo git config --global user.name "bbuser" # do it for root user too
+$ sudo git config --global user.email "user@example.com" 
+```
+
+* Clone this repository into your home directory (~ec2-user) and copy it to the Web servers default `DOCUMENT_ROOT` directory. 
 
 On CentOS this is `/etc/www/html`.
 
 ```
-$ cd /var/www/html/
-$ sudo git clone https://your.user@bitbucket.org/lorainelab/bioviz.git
+$ git clone git@bitbucket.org:lorainelab/bioviz.git
+$ sudo mv bioviz /var/www/html/.
 ```
 
-* Track server configurations with git.
+* Track server configurations with using a *local* git repo. 
 
 It's useful to track changes you make to local configuration files. Use git to create a local
 repository out of `/etc/httpd` for tracking configuration changes. If you do this, you can 
@@ -74,23 +83,30 @@ Note that you don't need to do anything with `ssl.conf` unless you need to suppo
 
 ```
 $ cd /etc/httpd
-$ git init .
-$ git add conf/httpd.conf
-$ git add conf.d/ssl.conf
-$ git commit -m "Track out of box configurations"
+$ sudo git init .
+$ sudo git add conf/httpd.conf
+$ sudo git add conf.d/ssl.conf
+$ sudo git commit -m "Track out of box configurations"
 ```
 
-* For convenience, create a .gitignore file in /etc/httpd. Add it to your local repository.
+* For convenience, create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
+
+.gitignore:
 
 ```
 *~
 *#
 logs
 run
+modules
+notrace.conf
+README
+welcome.conf
+conf/magic
 module
 ```
 
-* Edit `httpd.conf` to configure the site. 
+* Edit `httpd.conf` to configure the site. If you make a mistake, use git checkout to recover the original version.
 
 The default document root is `/var/www/html`. Change this to `/var/www/html/bioviz/htdocs`. 
 
@@ -127,7 +143,7 @@ index 5ec1006..c0b6628 100644
  # Possible values for the Options directive are "None", "All",
 ```
  
-If you plan to do a lot of work with the site, ask Dr. Loraine to assign it a bioviz.org subdomain,
+Ask Dr. Loraine to assign your site a bioviz.org subdomain,
 e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
 
 The following example assumes the server's name is test.bioviz.org. 
@@ -158,13 +174,13 @@ See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation
 
 Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`.
 
-For example, assume the private key is named `private.key` and the certificates are named `mysite.crt` and `DigiCertCA.crt` 
+For example, assume the private key is named `star_bioviz_org.key` and the certificates are named `star_bioviz_org.crt` and `DigiCertCA.crt` 
 and that you've uploaded them to your user home directory.
 
 ```
-$ sudo mv ~/private.key /etc/pki/tls/private/.
+$ sudo mv ~/star_bioviz_org.key /etc/pki/tls/private/.
 $ sudo mv ~/DigiCertCA.crt /etc/pki/tls/certs/.
-$ sudo mv ~/mysite.crt /etc/pki/tls/certs/.
+$ sudo mv ~/star_bioviz_org.crt /etc/pki/tls/certs/.
 ```
 
 * Edit `/etc/httpd/conf.d/ssl.conf` to point to these files. 
@@ -172,8 +188,8 @@ $ sudo mv ~/mysite.crt /etc/pki/tls/certs/.
 ```
 $ cd /etc/httpd/conf.d
 $ sudo sed -i 's/#\(SSLCertificateChainFile \/etc\/pki\/tls\/certs\/\)server-chain.crt/\1DigiCertCA.crt/g' ssl.conf
-$ sudo sed -i 's/\(SSLCertificateFile \/etc\/pki\/tls\/certs\/\)localhost.crt/\1mysite.crt/g' ssl.conf
-$ sudo sed -i 's/\(SSLCertificateKeyFile \/etc\/pki\/tls\/private\/\)localhost.key/\1private.key/g' ssl.conf
+$ sudo sed -i 's/\(SSLCertificateFile \/etc\/pki\/tls\/certs\/\)localhost.crt/\1star_bioviz_org.crt/g' ssl.conf
+$ sudo sed -i 's/\(SSLCertificateKeyFile \/etc\/pki\/tls\/private\/\)localhost.key/\1star_bioviz_org.key/g' ssl.conf
 ```
 
 As before, use `git diff` and `service httpd configtest` to confirm and check your changes.
@@ -191,7 +207,7 @@ $ sudo service httpd start
 
 * Test by visting the site in your Web browser. 
 
-If you don't see the BioViz content or if there is some other problems, look at the server logs to diagnose the problem.
+If you don't see the BioViz content, look at the server logs to diagnose the problem.
 
 ```
 $ sudo cat /var/log/httpd/error_log
@@ -208,8 +224,6 @@ $ sudo commit -m "Configure site"
 ```
 
 ```
-
-
 
 ### Questions? ###
 
