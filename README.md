@@ -84,8 +84,7 @@ Note that you don't need to do anything with `ssl.conf` unless you need to suppo
 ```
 $ cd /etc/httpd
 $ sudo git init .
-$ sudo git add conf/httpd.conf
-$ sudo git add conf.d/ssl.conf
+$ sudo git add conf/httpd.conf conf.d/ssl.conf
 $ sudo git commit -m "Track out of box configurations"
 ```
 
@@ -218,11 +217,8 @@ $ cat /var/log/httpd/access_log
 
 ```
 $ cd /etc/httpd
-$ sudo git add conf/httpd.conf
-$ sudo git add conf.d/ssl.conf
-$ sudo commit -m "Configure site"
-```
-
+$ sudo git add conf/httpd.conf conf.d/ssl.conf
+$ sudo git commit -m "Configure site"
 ```
 
 ### Questions? ###
