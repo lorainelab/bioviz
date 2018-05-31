@@ -2,16 +2,16 @@ BioViz.org Web content - version-controlled for easy deployment and testing.
 
 ### About ###
 
-BioViz.org sites have three main goals:
+BioViz.org sites:
 
-* Serve as a download site for Integrated Genome Browser. 
-* Provide links to IGB documentation. 
+* Distribute Integrated Genome Browser installers (free download), 
+* Link to IGB documentation, and
 * Provide a javascript bridge that lets IGB open and display files hosted on external sites (see galaxy.html, bar.html)
 
 **Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against copies of the external sites, or
 some kind of simple mockup of their functionality.
 
-To understand how the bridge code works, look at:
+To understand bridge code, look at:
 
 * galaxy.html - bridge page for flowing data from [Galaxy](http://usegalaxy.org) into IGB
 * js/galaxy.js - Galaxy bridge code
@@ -21,12 +21,22 @@ To understand how the bridge code works, look at:
 ### Developing this site ###
 
 The site is designed to be cloned into Web-accessible directories for development, testing, and (ultimately) deployment
-on the main bioviz.org site. 
+via git pull commands on the main bioviz.org site. 
 
-To update or add content, clone this repository and deploy the cloned content using a Web server of your choice.
+To update or add content:
+
+* fork this repository
+* clone this repository onto a staging site (e.g., EC2)
+* make a branch and edit
+* check your staging site using a Web browser 
+* push the branch to to your fork
+* issue a pull request from your branch to master on the team repo
+
+*Note*: Include the address of your staging site with your pull request.
+
+### Setting up a staging site ###
+
 The directions below assume you are using the Apache Web server and AWS for hosting. 
-
-### Setting up - AWS ###
 
 * Launch micro EC2 image. 
 
@@ -34,7 +44,7 @@ Log into the AWS console and launch one of the pre-configured images. There are 
 (and cheapest) option available.
 
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux, the first option listed at the
-time this documnetatoin was written. 
+time this documnetation was written. 
 
 To find out what Linux variant your EC2 instances is running, view `/etc/
 
