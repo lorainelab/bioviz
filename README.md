@@ -26,8 +26,8 @@ via git pull commands on the main bioviz.org site.
 To update or add content:
 
 * fork this repository
-* clone this repository onto a staging site (e.g., EC2)
-* make a branch and edit
+* clone your fork onto a staging site (e.g., EC2)
+* make a branch on your staging site and edit
 * check your staging site using a Web browser 
 * push the branch to to your fork
 * issue a pull request from your branch to master on the team repo
