@@ -4,9 +4,9 @@
 
 BioViz.org sites:
 
-* Distribute Integrated Genome Browser installers (free download), 
+* Distribute Integrated Genome Browser installers (free download, see igb/releases), 
 * Link to IGB documentation, and
-* Implement a javascript bridge that channels data from external sites into IGB 
+* Implement a javascript bridge that channels data from external sites into IGB.
 
 **Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against live copies or mockups of the external sites.
 
@@ -19,7 +19,7 @@ To understand bridge code, look at:
 
 ### Developing this site ###
 
-The site is designed to be cloned into Web-accessible directories for development, testing, and (ultimately) deployment
+The site is designed to be deployed as-is into Web-accessible directories for development, testing, and (ultimately) deployment
 via git pull commands on the main bioviz.org site. 
 
 To update or add content:
@@ -31,9 +31,9 @@ To update or add content:
 * push the branch to to your fork
 * issue a pull request from your branch to master on the team (main) repo
 
-**Note**: Include the address of your staging site with your pull request.
+**Note**: Make note of your staging site URL in your pull request.
 
-**Note**: If you deploy following instructions below, edits you make will appear on the staging site automatically. 
+**Note**: If you deploy as described below, your edits will appear on the staging site automatically. 
 
 ### Setting up a staging site ###
 
@@ -46,14 +46,14 @@ Log into the AWS console and launch one of the pre-configured images. There are 
 
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux.
 
-To find out what Linux variant your EC2 instances is running, view `/etc/
+**Tip**: To find out what Linux variant your EC2 instances is running, view `/etc/
 
 ```
 $ cat /etc/*release | grep ID_LIKE
 ID_LIKE="rhel fedora"
 ```
 
-* Configure the host. 
+* Install software.
 
 Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
 
@@ -79,17 +79,20 @@ $ sudo git config --global user.email "user@example.com"
 On CentOS this is `/etc/www/html`.
 
 ```
-$ git clone git@bitbucket.org:lorainelab/bioviz.git
-$ sudo mv bioviz /var/www/html/.
+$ git clone git@bitbucket.org:bbuser/bioviz.git # clone your fork
+$ sudo mv bioviz /var/www/html/. # move cloned repo to Web directories
 ```
 
-* Track server configurations using a *local* git repo. (Optional, but highly recommended)
+* Configure Apache (httpd) to serve bioviz content from the cloned bioviz/htdocs directory
+* Also, start tracking server configurations using a second git repo *local* to your host. (Optional, but highly recommended)
 
-It's useful to track changes you make to local configuration files. Use git to create a local
-repository out of `/etc/httpd` for tracking configuration changes. If you do this, you can 
-easily retrieve older versions for trouble-shooting.
+It's useful to track changes you make to local configuration files. If you do this, you can 
+easily retrieve older versions for trouble-shooting. Use git to create a local
+repository out of `/etc/httpd` for tracking configuration changes. 
 
-Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL).
+Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL). However, the main bioviz site
+is using https, so you should, too.
+
 These instructions assume you will configure the site to use SSL.
 
 ```
@@ -153,8 +156,7 @@ index 5ec1006..c0b6628 100644
  # Possible values for the Options directive are "None", "All",
 ```
  
-Ask Dr. Loraine to assign your site a bioviz.org subdomain,
-e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
+* Ask Dr. Loraine to assign your site a bioviz.org subdomain, e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
 
 The following example assumes the server's name is test.bioviz.org. 
 
