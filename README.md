@@ -128,34 +128,8 @@ $ cd /etc/httpd/conf
 $ sudo sed -i 's/\(var\/www\/html\)/\1\/bioviz\/htdocs/g' httpd.conf
 ```
 
-To see your changes thus far, use `git diff`.
+**Note**: To see your changes thus far, use `git diff`.
 
-```
-]$ git diff httpd.conf 
-diff --git a/conf/httpd.conf b/conf/httpd.conf
-index 5ec1006..c0b6628 100644
---- a/conf/httpd.conf
-+++ b/conf/httpd.conf
-@@ -290,7 +290,7 @@ UseCanonicalName Off
- # documents. By default, all requests are taken from this directory, but
- # symbolic links and aliases may be used to point to other locations.
- #
--DocumentRoot "/var/www/html"
-+DocumentRoot "/var/www/html/bioviz/htdocs"
- 
- #
- # Each directory to which Apache has access can be configured with respect
-@@ -315,7 +315,7 @@ DocumentRoot "/var/www/html"
- #
- # This should be changed to whatever you set DocumentRoot to.
- #
--<Directory "/var/www/html">
-+<Directory "/var/www/html/bioviz/htdocs">
- 
- #
- # Possible values for the Options directive are "None", "All",
-```
- 
 * Ask Dr. Loraine to assign your site a bioviz.org subdomain, e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
 
 The following example assumes the server's name is test.bioviz.org. 
