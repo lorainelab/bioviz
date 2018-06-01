@@ -68,7 +68,7 @@ See [documentation](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key
 
 ```
 $ ssh-keygen # makes ~/.ssh/id_rsa.pub, copy this to your bitbucket account
-$ git config --global user.name "bbuser" # bitbucket user id
+$ git config --global user.name "bbuser" # you bitbucket user id
 $ git config --global user.email "user@example.com" # your email address
 $ sudo git config --global user.name "bbuser" # do it for root user too
 $ sudo git config --global user.email "user@example.com" 
@@ -207,6 +207,35 @@ $ cd /etc/httpd
 $ sudo git add conf/httpd.conf conf.d/ssl.conf
 $ sudo git commit -m "Configure site"
 ```
+
+* Configure upstream repository (for synchronizing with the team repository)
+
+Add the main (team) BioViz repository to your clone as a new remote called upstream. 
+
+```
+$ cd /etc/httpd/www/bioviz
+$ git remote add upstream git@bitbucket.org:lorainelab/bioviz.git
+```
+
+* Other conveniences
+
+It's nice to have an alias that lets you change quickly into your cloned repository. Add an alias to your .bash_profile file:
+
+```
+echo 'alias go="cd /var/www/html/bioviz/htdocs"' >> ~/.bash_profile
+```
+
+If you like emacs, make it your default editor:
+
+```
+echo 'export EDITOR=emacs` >> ~/.bash_profile'
+```
+
+## Test your knowledge ##
+
+Do this: To make sure you understand the site and to update it, add your name to the list of contributors on the BioViz Web site. Then issue a pull request.
+
+Good luck!
 
 ### Questions? ###
 
