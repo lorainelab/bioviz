@@ -45,8 +45,7 @@ The directions below assume you are using the Apache Web server and AWS for host
 Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine, but pick the smallest 
 (and cheapest) option available.
 
-This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux, the first option listed at the
-time this documnetation was written. 
+This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux.
 
 To find out what Linux variant your EC2 instances is running, view `/etc/
 
@@ -85,13 +84,14 @@ $ git clone git@bitbucket.org:lorainelab/bioviz.git
 $ sudo mv bioviz /var/www/html/.
 ```
 
-* Track server configurations with using a *local* git repo. 
+* Track server configurations using a *local* git repo. (Optional, but highly recommended)
 
 It's useful to track changes you make to local configuration files. Use git to create a local
 repository out of `/etc/httpd` for tracking configuration changes. If you do this, you can 
 easily retrieve older versions for trouble-shooting.
 
 Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL).
+These instructions assume you will configure the site to use SSL.
 
 ```
 $ cd /etc/httpd
@@ -185,8 +185,8 @@ See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation
 
 Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`.
 
-For example, assume the private key is named `star_bioviz_org.key` and the certificates are named `star_bioviz_org.crt` and `DigiCertCA.crt` 
-and that you've uploaded them to your user home directory.
+For example, assume the private key file is `star_bioviz_org.key`, the certificates files are `star_bioviz_org.crt` and `DigiCertCA.crt`,
+and both are in your user home directory.
 
 ```
 $ sudo mv ~/star_bioviz_org.key /etc/pki/tls/private/.
@@ -222,7 +222,7 @@ If you don't see the BioViz content, look at the server logs to diagnose the pro
 
 ```
 $ sudo cat /var/log/httpd/error_log
-$ cat /var/log/httpd/access_log
+$ sudo cat /var/log/httpd/access_log
 ```
 
 * If everything is fine, commit your edits to the configuration files.
