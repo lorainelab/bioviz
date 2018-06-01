@@ -233,7 +233,9 @@ echo 'export EDITOR=emacs` >> ~/.bash_profile'
 
 ## Test your knowledge ##
 
-Do this: To make sure you understand the site and to update it, add your name to the list of contributors on the BioViz Web site. Then issue a pull request.
+To make sure you understand the site and how to update it, do this:
+
+* Add your name to the list of contributors on the BioViz Web site. Then issue a pull request.
 
 Good luck!
 
