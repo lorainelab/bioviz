@@ -1,4 +1,4 @@
-BioViz.org Web content - version-controlled for easy deployment and testing. 
+[BioViz.org](https://bioviz.org) Web content - version-controlled for easy deployment and testing. 
 
 ### About ###
 
@@ -6,10 +6,9 @@ BioViz.org sites:
 
 * Distribute Integrated Genome Browser installers (free download), 
 * Link to IGB documentation, and
-* Provide a javascript bridge that lets IGB open and display files hosted on external sites (see galaxy.html, bar.html)
+* Implement a javascript bridge that channels data from external sites into IGB 
 
-**Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against copies of the external sites, or
-some kind of simple mockup of their functionality.
+**Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against live copies or mockups of the external sites.
 
 To understand bridge code, look at:
 
