@@ -28,7 +28,7 @@ To update or add content:
 * clone your fork onto a staging site (configured as below)
 * make a branch on your staging site and edit 
 * check edits by visiting your staging site in a Web browser 
-* push the branch to to your fork
+* push the branch to your fork
 * issue a pull request from your branch to master on the team (main) repo
 
 **Note**: Make note of your staging site URL in your pull request.
