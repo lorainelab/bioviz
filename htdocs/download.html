@@ -153,12 +153,12 @@
             $(window).load(function () {
                 var parser = new UAParser();
                 var os = parser.getOS().name;
-                var architecture = parser.getCPU();
+                var systemConfig = parser.getCPU();
                 if (os == "Linux" || os == "CentOS" || os == "Fedora" || os == "FreeBSD" || os == "Debian" || os == "DragonFly" || os == "RedHat" || os == "Mint" || os == "GNU" || os == "Ubuntu") {
                     $("#linuxDownload").removeClass("hide");
                 }
                 if (os == "Windows [Phone/Mobile]" || os == "Windows") {
-                    if (architecture == "amd64" || architecture == "ia64" || architecture == "arm64" || architecture == "irix64" || architecture == "mips64" || architecture == "sparc64") {
+                    if (systemConfig.architecture == "amd64" || systemConfig.architecture == "ia64" || systemConfig.architecture == "arm64" || systemConfig.architecture == "irix64" || systemConfig.architecture == "mips64" || systemConfig.architecture == "sparc64") {
                         $("#windows64Download").removeClass("hide");
                     } else {
                         $("#windows64Download").removeClass("hide");
