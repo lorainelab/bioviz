@@ -1,25 +1,5 @@
 <!doctype html>
-
-<!--[if lt IE 7]>
-
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
-
-<![endif]-->
-<!--[if IE 7]>
-
-<html class="no-js lt-ie9 lt-ie8" lang="en">
-
-<![endif]-->
-<!--[if IE 8]>
-
-<html class="no-js lt-ie9" lang="en">
-
-<![endif]-->
-<!--[if gt IE 8]>
-<!-->
 <html class="no-js" lang="en">
-    <!--
-  <![endif]-->
     <head>
         <meta charset="utf-8"> 
 
@@ -34,21 +14,9 @@
 
         <meta name="viewport" content="width=device-width">
 
-        <!--For use in production only... compile to css before release
-        <link rel="stylesheet/less" href="less/style.less">
-        <script src="js/libs/less-1.3.0.min.js"></script>-->
-
-        <!-- Use SimpLESS (Win/Linux/Mac) or LESS.app (Mac) to compile your .less files
-        to style.css, and replace the 2 lines above by this one:
-        -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="less/style.css?v=1.3">
-
-
-        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
-
+        <!--For use in production only... compile to css before release-->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="less/style.css">
     </head>
     <body>
         <div id="TopMenu"></div>
@@ -127,26 +95,15 @@
                 </div>
             </div>
             <hr>
-<!--            <div class="row-fluid">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">IGB 8.4 Preview</div>
-                        <div class="panel-body">
-                            An experimental preview version of IGB version 8.4 is now available. IGB power users: Please <a href="igb_release_candidate.html" target="_blank">try it out</a> and tell us what you think.
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
             <div id="footer" class="container">
             </div>
         </div>
         <!-- /container -->
-
+        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 
         <!-- scripts concatenated and minified via ant build script-->
-        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/script.js?v=12392829    "></script>
         <script src="js/ua-parser.min.js?v=12392829"></script>
         <script>
@@ -196,5 +153,3 @@
     </body>
 
 </html>
-
-
