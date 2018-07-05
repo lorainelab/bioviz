@@ -101,14 +101,17 @@
         </div>
         <!-- /container -->
         <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
 
         <!-- scripts concatenated and minified via ant build script-->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/script.js?v=12392829    "></script>
         <script src="js/ua-parser.min.js?v=12392829"></script>
         <script>
-            $(window).load(function () {
+            $(window).on("load",function (e) {
                 var parser = new UAParser();
                 var os = parser.getOS().name;
                 var systemConfig = parser.getCPU();

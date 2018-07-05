@@ -487,3 +487,7 @@ img.largeImage{
   		display:block !important;
 	}
 }
+
+.cursorpointer {
+    cursor: pointer;
+}
