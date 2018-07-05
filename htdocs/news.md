@@ -7,17 +7,17 @@
 A new version of IGB is available that fixes some errors present in
 9.0.0 and introduces new features.
 
-New features and improvements:
+#### New features and improvements: ####
 
 * IGB now allows decimal values in "Filter by Score" filtering functions for BAM, BED, etc (annotation) tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
-* We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. 
+* We improved aspects of IGB's heatmap-related features. We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. ([IGBF-1205](https://jira.transvar.org/browse/IGBF-1205)) Also new in IGB 9.0.1: heatmap settings for tracks will now persist between sessions. ([IGBF-1126](https://jira.transvar.org/browse/IGBF-1126))
 * Working with the [Renaissance Computing Institute](http://renci.org/) and the and the [SciDas.org project](http://scidas.org/), we added new data delivery Quickload sites to take advantage of top-speed data transfers provided by RENCI for users. ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
 * We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.transvar.org/browse/IGBF-1218)) 
 * We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154)), and several more. 
 
 For the full list with links to detailed notes and more, see [IGB 9.0.1 Release Documentation](https://wiki.transvar.org/display/ITD/9.0.1).
 
-Other Highlights:
+#### Other Highlights: ####
 
 Behind the scenes, we improved our software development workflow, making it more open and transparent for continuing and potential contributors. Now, we label every issue with a tag indicating level of difficulty, so that students and project newcomers will have a way to get started as a contributors. We also organize two levels of code review, which helps us all learn the code better while also protecting against accidental introduction of bugs. Thanks to code review, we also learn more about each other's problem-solving techniques, which makes us better coders. (One of the best ways to improve your coding skills is to study how other coders write code and solve problems!)
 
