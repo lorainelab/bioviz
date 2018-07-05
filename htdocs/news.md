@@ -1,41 +1,34 @@
 # IGB NEWS 
 
+### July 5, 2018: IGB 9.0.1 released
+
+A new version of IGB is available that fixes some errors present in
+9.0.0 and also adds new data sources for RNA-Seq data.
+
+Some of Improvements include:
+
+* Allowing decimals in filter by score for annotation tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
+* New Quickload sites hosted by RENCI resources, a collaboration with the [SciDas.org project](http://scidas.org/) ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
+* Fix slowdown when viewing Oxford Nanoport long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173))
+* Fix error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154))
+
+Behind the scenes, we invested major efforts in streamlining the IGB
+build and release process, reducing depenencies on resources provided
+by a single institution. Ideally, this makes the IGB code base easier to
+maintain and more consistent with open source community practices.
+
 * * *
 
-### June 7, 2016: IGB-fx prototype available - Great new features on the way
+### June 7, 2016: IGB-fx prototype available
 
-The IGB team is buildig a new version of IGB that uses JavaFX
+The IGB team is built a new version of IGB that uses JavaFX
 and 100% modular, services-based programming with OSGi. 
 A prototype version for developers is available from the
 [IGB-fx source code repository](https://bitbucket.org/lorainelab/igb-fx).
 
-We're building this new version of IGB from the ground up, focusing
+We're built this new version of IGB from the ground up, focusing
 on transforming IGB into a platform even beginning programmers can
-use to create stunning new visualizations for new types of genomic data - 
-like 2-dimensional genome graphs from Hi-C data. 
-
-By using JavaFX - an advanced graphics toolkit that replaces Java
-Swing - we can implement many sophisticated new user interface
-features, like new and improved panning scrollbars that adjust the
-scroll rate for the zoom level. JavaFX also lets us continue to provide
-fast, animated, one-D zooming from chromosome to base pair and back again.
-
-Another new development is that we're improving our favorite method of
-sharing and publishing data - IGB Quickload. Starting with IGB-fx,
-you'll be able to open and load data from cloud storage accounts like
-Google Drive and Dropbox. 
-
-You'll also be able to share your data with colleagues and
-collaborators, using the same user-friendly access controls you
-already use to share ordinary documents. When you change
-track colors, names and otherwise modify the appearance of data, you
-have the option to save your settings so that other people will see
-the same thing when they open your files.
-
-At least for now, academic users with Google accounts through their 
-insitutions have no limits on the amount of data they can store. We're
-excited about helping IGB users take full advantage of this exciting 
-feature. 
+use to create stunning new visualizations for new types of genomic data.
 
 * * *
 
