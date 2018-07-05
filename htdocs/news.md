@@ -1,21 +1,31 @@
 # IGB NEWS 
 
+* * *
+
 ### July 5, 2018: IGB 9.0.1 released
 
 A new version of IGB is available that fixes some errors present in
-9.0.0 and also adds new data sources for RNA-Seq data.
+9.0.0 and introduces new features.
 
-Some of Improvements include:
+New features and improvements:
 
-* Allowing decimals in filter by score for annotation tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
-* New Quickload sites hosted by RENCI resources, a collaboration with the [SciDas.org project](http://scidas.org/) ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
-* Fix slowdown when viewing Oxford Nanoport long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173))
-* Fix error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154))
+* IGB now allows decimal values in "Filter by Score" filtering functions for BAM, BED, etc (annotation) tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
+* We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. 
+* Working with the [Renaissance Computing Institute](http://renci.org/) and the and the [SciDas.org project](http://scidas.org/), we added new data delivery Quickload sites to take advantage of top-speed data transfers provided by RENCI for users. ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
+* We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.transvar.org/browse/IGBF-1218)) 
+* We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154)), and several more. 
 
-Behind the scenes, we invested major efforts in streamlining the IGB
-build and release process, reducing depenencies on resources provided
-by a single institution. Ideally, this makes the IGB code base easier to
-maintain and more consistent with open source community practices.
+For the full list with links to detailed notes and more, see [IGB 9.0.1 Release Documentation](https://wiki.transvar.org/display/ITD/9.0.1).
+
+Other Highlights:
+
+Behind the scenes, we improved our software development workflow, making it more open and transparent for continuing and potential contributors. Now, we label every issue with a tag indicating level of difficulty, so that students and project newcomers will have a way to get started as a contributors. We also organize two levels of code review, which helps us all learn the code better while also protecting against accidental introduction of bugs. Thanks to code review, we also learn more about each other's problem-solving techniques, which makes us better coders. (One of the best ways to improve your coding skills is to study how other coders write code and solve problems!)
+
+In the spirit of all of us getting better at writing code, we developed a free, on-line course called [Open source programming with IGB](https://canvas.instructure.com/courses/1164217) using the open (and free!) Canvas platform. Some IGB graduate students have added some new case studies describing bugs and features they fixed or added. 
+
+Last but not least, we switched from using Jenkins to Bitbucket pipelines to build IGB. Now, whenever one of the team pushs a new branch, the pipeline automatically builds a fresh IGB installer and copies it to their fork's Downloads section. (This requires some specialized setup - if you want to try it, get in touch.) Thanks to this, we can very quickly release custom versions of IGB on demand for users who request it. This could be a great way for a research team (or company?) to distribute custom versions of IGB with their own Quickload sites already pre-configured, for example.
+
+As always, if you have questions or comments, please get in touch!
 
 * * *
 
