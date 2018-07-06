@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(window).on("load", function (e) {
 
     $('#TopMenu').load('menu.html?v=12392829', function () {
         highlightCurrentPage();
