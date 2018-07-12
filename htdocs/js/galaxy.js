@@ -4,18 +4,12 @@
  *
  * Credit to Nick Schurch and Kyle Suttlemyre for inspiration of js/igb communication 
  */
-
 var igbIsRunning = false;
 var count = 0;
-var refreshId = setInterval(function()
-{
-    checkDataLoadStatus(refreshId, count++);
-}, 2000);
-
 
 //shim to add endsWith to strings
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
+    String.prototype.endsWith = function(searchString, position) {
       var subjectString = this.toString();
       if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
         position = subjectString.length;
@@ -23,7 +17,7 @@ if (!String.prototype.endsWith) {
       position -= searchString.length;
       var lastIndex = subjectString.indexOf(searchString, position);
       return lastIndex !== -1 && lastIndex === position;
-  };
+    };
 }
 
 
@@ -131,6 +125,10 @@ function initializeIgbStatus() {
         if (xhr.status == 200) {
             igbIsRunning = true;
             $("#igbIsRunningBlock").removeClass("hide");
+            var refreshId = setInterval(function()
+            {
+                checkDataLoadStatus(refreshId, count++);
+            }, 2000);
         } else {
             $("#igbIsNotRunningBlock").removeClass("hide");
         }
@@ -173,17 +171,28 @@ function checkDataLoadStatus(refreshId, count) {
     if (!xhr) {
         return;
     }
+
     xhr.onload = function() {
-        if (xhr.responseText == 'loading') {
-            //do nothing
-        } else if (xhr.responseText == 'complete') {
+        if (xhr.responseText == 'complete') {
             $("#dataLoadSpinner").remove();
             $("#loadingBlockFooter").removeClass("hide");
+            $("#loadingErrorBlock").addClass("hide");
             $("#dataLoadMessage").html("Your data is ready to view.");
             $("#dataLoadCheckmark").removeClass("hide");
             clearInterval(refreshId);
+        } else {
+            $("#dataLoadSpinner").remove();
+            $("#loadingBlockFooter").addClass("hide");
+            $("#loadingErrorBlock").removeClass("hide");
         }
+    }
+
+    xhr.onerror = function() {
+        $("#dataLoadSpinner").remove();
+        $("#loadingErrorBlock").removeClass("hide");
+        $("#loadingBlockFooter").addClass("hide");
     };
+
     xhr.send();
     count++;
 }
