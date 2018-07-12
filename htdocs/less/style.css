@@ -187,7 +187,7 @@ div.center {
     list-style: none;
 }
 .flexslider .slides img {
-    max-height: auto;
+    max-height: 450px;
     max-width: auto;
     display: block;
 }
