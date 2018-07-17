@@ -1,9 +1,5 @@
-<!doctype html> <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!doctype html>
 <html class="no-js" lang="en">
-    <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,9 +10,8 @@
 
         <meta name="viewport" content="width=device-width">
         <!--For use in production only... compile to css before release -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" 
+        rel="stylesheet">
         <link rel="stylesheet" href="less/style.css">
         <style>
             @media (min-width: 992px) {
@@ -25,7 +20,6 @@
                 }
             }
         </style>
-        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <div id="TopMenu"></div>
@@ -56,6 +50,10 @@
                                 <img id="dataLoadSpinner" class="hide" src="img/jquerySpinner.gif" alt="jqeurySpinner.gif"/>
 
                                 <img id="dataLoadCheckmark" class="hide" src="img/checkmark.png" alt="jqeurySpinner.gif"/>
+
+                                <p id="loadingBarErrorBlock" class="hide">
+                                    Data loading takes a while. If it doesn't load in a minute 
+                                    then, Please go back to bar site and try again!</p>
                             </div>            
                         </div>
                         <div id="loadingBlockFooter" class="panel-footer hide">
@@ -163,11 +161,12 @@
             </div>
         </div>
 
-
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
-
-        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/script.js"></script>
         <script src="js/purl.js"></script>
@@ -175,23 +174,21 @@
         <script src="js/bar.js"></script>
 
         <script>
-                                    (function (i, s, o, g, r, a, m) {
-                                        i['GoogleAnalyticsObject'] = r;
-                                        i[r] = i[r] || function () {
-                                            (i[r].q = i[r].q || []).push(arguments)
-                                        }, i[r].l = 1 * new Date();
-                                        a = s.createElement(o),
-                                                m = s.getElementsByTagName(o)[0];
-                                        a.async = 1;
-                                        a.src = g;
-                                        m.parentNode.insertBefore(a, m)
-                                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                                    ga('create', 'UA-33977587-2', 'bioviz.org');
-                                    ga('send', 'pageview');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+                        ga('create', 'UA-33977587-2', 'bioviz.org');
+                        ga('send', 'pageview');
         </script>
 
     </body>
 
 </html>
-
