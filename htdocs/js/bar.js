@@ -7,11 +7,6 @@
 
 var igbIsRunning = false;
 var count = 0;
-var refreshId = setInterval(function()
-{
-    checkDataLoadStatus(refreshId, count++);
-}, 2000);
-
 
 //shim to add endsWith to strings
 if (!String.prototype.endsWith) {
@@ -27,7 +22,7 @@ if (!String.prototype.endsWith) {
 }
 
 
-$(window).load(function() {
+$(window).on("load",function(e) {
     initializeIgbStatus();
     var version = $.url().param('version');
     var source = $.url().attr('source');
@@ -131,6 +126,10 @@ function initializeIgbStatus() {
         if (xhr.status == 200) {
             igbIsRunning = true;
             $("#igbIsRunningBlock").removeClass("hide");
+            var refreshId = setInterval(function()
+            {
+                checkDataLoadStatus(refreshId, count++);
+            }, 2000);
         } else {
             $("#igbIsNotRunningBlock").removeClass("hide");
         }
@@ -166,7 +165,7 @@ function checkDataLoadStatus(refreshId, count) {
             clearInterval(refreshId);
         }
     }
-    var dataSetUrl = getParameterByName('feature_url_0');
+    var dataSetUrl = getParameterByName('feature_url_1');
     var loadStatusParam = 'checkLoadStatusForDataSet';
     var statusCheckUrl = 'http://127.0.0.1:7085/igbStatusCheck?' + loadStatusParam + '=' + dataSetUrl;
     var xhr = createCORSRequest('GET', statusCheckUrl);
@@ -174,16 +173,26 @@ function checkDataLoadStatus(refreshId, count) {
         return;
     }
     xhr.onload = function() {
-        if (xhr.responseText == 'loading') {
-            //do nothing
-        } else if (xhr.responseText == 'complete') {
+        if (xhr.responseText == 'complete') {
             $("#dataLoadSpinner").remove();
+            $("#loadingBarErrorBlock").addClass("hide");
             $("#loadingBlockFooter").removeClass("hide");
             $("#dataLoadMessage").html("Your data is ready to view.");
             $("#dataLoadCheckmark").removeClass("hide");
             clearInterval(refreshId);
         }
+        else {
+            $("#dataLoadSpinner").remove();
+            $("#loadingBlockFooter").addClass("hide");
+            $("#loadingBarErrorBlock").removeClass("hide");
+         }
     };
+
+    xhr.onerror = function() {
+        $("#dataLoadSpinner").remove();
+        $("#loadingBarErrorBlock").removeClass("hide");
+        $("#loadingBlockFooter").addClass("hide");
+     };
     xhr.send();
     count++;
 }
@@ -191,6 +200,6 @@ function checkDataLoadStatus(refreshId, count) {
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
+    results = regex.exec(location.search);
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
