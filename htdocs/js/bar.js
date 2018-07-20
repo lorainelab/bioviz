@@ -4,9 +4,7 @@
  *
  * Credit to Nick Schurch and Kyle Suttlemyre for inspiration of js/igb communication 
  */
-
 var igbIsRunning = false;
-var count = 0;
 
 //shim to add endsWith to strings
 if (!String.prototype.endsWith) {
@@ -44,12 +42,6 @@ $(window).on("load",function(e) {
                     //note this variable is defined in the response from IGB
                     if (remoteFileExists) {
                         $("#main-container").removeClass("hide");
-                        var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
-                        $("#bookmarkUrl").val(bookmarkUrl);
-                        loadBookmark(bookmarkUrl);
-                        $("#customLaunchBtn").click(function() {
-                            downloadURL($("#jarName").val());
-                        });
                     } else {
                         $("#main-container").hide();
                         $("#fileNotFoundError").removeClass("hide");
@@ -69,12 +61,6 @@ $(window).on("load",function(e) {
         }
     } else {
         $("#main-container").removeClass("hide");
-        var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
-        $("#bookmarkUrl").val(bookmarkUrl);
-        loadBookmark(bookmarkUrl);
-        $("#customLaunchBtn").click(function() {
-            downloadURL($("#jarName").val());
-        });
         if(source.endsWith('bar.html')){
              $("#main-container").hide();
              $("#bridge-info-container").removeClass("hide");
@@ -86,18 +72,6 @@ $(window).on("load",function(e) {
     }
 
 });
-
-var downloadURL = function downloadURL(url) {
-    var hiddenIFrameID = 'hiddenDownloader',
-            iframe = document.getElementById(hiddenIFrameID);
-    if (iframe === null) {
-        iframe = document.createElement('iframe');
-        iframe.id = hiddenIFrameID;
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-    }
-    iframe.src = url;
-};
 
 // Create the XHR object.
 function createCORSRequest(method, url) {
@@ -126,10 +100,7 @@ function initializeIgbStatus() {
         if (xhr.status == 200) {
             igbIsRunning = true;
             $("#igbIsRunningBlock").removeClass("hide");
-            var refreshId = setInterval(function()
-            {
-                checkDataLoadStatus(refreshId, count++);
-            }, 2000);
+            setTimeout(checkDataLoadStatus(),3000);
         } else {
             $("#igbIsNotRunningBlock").removeClass("hide");
         }
@@ -141,48 +112,25 @@ function initializeIgbStatus() {
     xhr.send();
 }
 
-function loadBookmark(bookmarkurl) {
-    var xhr = createCORSRequest('GET', bookmarkurl);
-    if (!xhr) {
-        return;
+function checkDataLoadStatus() {
+    var queryElements = parseQuery(location.search.substring(1));
+    var geneResult = getTrackDataforGeneID(queryElements['gene_id']);
+    if(geneResult) {
+        var loadingdataUrl = constructURL(geneResult, queryElements);
     }
-    xhr.onload = function() {
-        if (xhr.status == 200) {
-            $("#dataLoadSpinner").removeClass("hide");
-            //do nothing
-        } else {
-            //do nothing for now...
-        }
-    };
-    xhr.send();
-
-}
-
-
-function checkDataLoadStatus(refreshId, count) {
-    if (count > 3) {
-        if (!igbIsRunning) {
-            clearInterval(refreshId);
-        }
-    }
-    var dataSetUrl = getParameterByName('feature_url_1');
-    var loadStatusParam = 'checkLoadStatusForDataSet';
-    var statusCheckUrl = 'http://127.0.0.1:7085/igbStatusCheck?' + loadStatusParam + '=' + dataSetUrl;
+    
+    var statusCheckUrl = loadingdataUrl;
     var xhr = createCORSRequest('GET', statusCheckUrl);
     if (!xhr) {
         return;
     }
     xhr.onload = function() {
-        if (xhr.responseText == 'complete') {
-            $("#dataLoadSpinner").remove();
+        if (xhr.status == 204) {
             $("#loadingBarErrorBlock").addClass("hide");
             $("#loadingBlockFooter").removeClass("hide");
-            $("#dataLoadMessage").html("Your data is ready to view.");
             $("#dataLoadCheckmark").removeClass("hide");
-            clearInterval(refreshId);
         }
         else {
-            $("#dataLoadSpinner").remove();
             $("#loadingBlockFooter").addClass("hide");
             $("#loadingBarErrorBlock").removeClass("hide");
          }
@@ -194,12 +142,68 @@ function checkDataLoadStatus(refreshId, count) {
         $("#loadingBlockFooter").addClass("hide");
      };
     xhr.send();
-    count++;
 }
 
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-    results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+/* This method splits query string into key value pairs */
+function parseQuery(str) {
+    var ret = {};
+    $.each(str.split("&"), function() {
+        var data = this.split('='),
+            name = decodeURIComponent(data.shift()),
+            val = decodeURIComponent(data.join("=")).replace('+', ' '),
+            nameVal = name.match(/(.*)\[(.*)\]/);
+
+        if (nameVal === null) {
+            ret[name] = val;
+        }
+        else {
+            name = nameVal[1];
+            nameVal = nameVal[2];
+            if (!ret[name]) {
+                ret[name] = nameVal ? {} : [];
+            }
+            if ($.isPlainObject(ret[name])) {
+                ret[name][nameVal] = val;
+            }
+            else if($.isArray(ret[name])){
+                ret[name].push(val);
+            }
+        }
+    });
+    return ret;
+}
+
+/* method returns the data with seq_id, start and end attributes.
+It takes geneId from bar site as a parameter */
+function getTrackDataforGeneID(geneId) {
+    var trackData = {};
+    var trackUrl = "http://52.91.39.225/cgi-bin/geneIdLookup.py?gene_id="+geneId;
+    var xhr = createCORSRequest('GET', trackUrl);
+    if (!xhr) {
+        return;
+    }
+    xhr.onload = function(res) {
+        trackData = res;
+        return trackData;
+    };
+
+    xhr.onerror = function(err) {
+        console.log(err);
+     };
+    xhr.send();
+    return trackData;
+}
+
+/* constructs URL compatible to IGB */
+function constructURL(geneResult, queryElements) {
+    var fullURL = "http://localhost:7085/IGBControl?version=A_thaliana_Jun_2009&seq_id="
+    +geneResult.seq_id+"&start="+geneResult.start+"&end="+geneResult.end
+    +"&server_url=http://lorainelab-quickload.scidas.org/bar"
+    +"&loadresidues=True";
+    for(var key in queryElements){
+        if(/feature_url_/.test(key)) {
+            fullURL += "&"+key+"="+queryElements[key]+"&query_url="+queryElements[key];
+        }
+    }
+    return fullURL;
 }
