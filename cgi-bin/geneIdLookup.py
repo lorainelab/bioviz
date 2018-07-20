@@ -42,7 +42,7 @@ def getGeneRegion(gene_id="AT1G07350"):
     if not start or not end or not seq_id:
         raise ValueError("Can't find location of %s\n",gene_id)
     else:
-        d={"seq_id":seq_id,"start":start,"end":end}
+        d={"gene_id":gene_id,"seq_id":seq_id,"start":start,"end":end}
         return d
 
 def getGeneId():
