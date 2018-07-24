@@ -30,7 +30,7 @@ $(window).on("load",function(e) {
         query_url = 'http://localhost:7085/igbStatusCheck?' + 'query_url' + '=' + query_url;
         var reqTimeout = setTimeout(function()
         {
-            $("#main-container").hide();
+            $("#landing-page").hide();
             $("#fileNotFoundError").removeClass("hide");
         }, 4000);
         $.ajax({
@@ -41,9 +41,9 @@ $(window).on("load",function(e) {
                 200: function(r) {
                     //note this variable is defined in the response from IGB
                     if (remoteFileExists) {
-                        $("#main-container").removeClass("hide");
+                        $("#landing-page").removeClass("hide");
                     } else {
-                        $("#main-container").hide();
+                        $("#landing-page").hide();
                         $("#fileNotFoundError").removeClass("hide");
                     }
                 }
@@ -51,22 +51,22 @@ $(window).on("load",function(e) {
         }).done(function() {
             clearTimeout(reqTimeout);
         }).fail(function(jqXHR, textStatus) {
-            $("#main-container").hide();
+            $("#landing-page").hide();
             $("#fileNotFoundError").removeClass("hide");
         });
 
         if (version == null || version.length === 0 || version == '?') {
-            $("#main-container").hide();
+            $("#landing-page").hide();
             $("#error-container").removeClass("hide");
         }
     } else {
-        $("#main-container").removeClass("hide");
+        $("#landing-page").removeClass("hide");
         if(source.endsWith('bar.html')){
-             $("#main-container").hide();
+             $("#landing-page").hide();
              $("#bridge-info-container").removeClass("hide");
         }
         else if (version == null || version.length === 0 || version == '?') {
-            $("#main-container").hide();
+            $("#landing-page").hide();
             $("#error-container").removeClass("hide");
         }
     }
