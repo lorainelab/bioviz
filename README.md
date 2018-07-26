@@ -231,6 +231,61 @@ If you like emacs, make it your default editor:
 echo 'export EDITOR=emacs` >> ~/.bash_profile'
 ```
 
+
+## Set up logging for your site ##
+
+The default logging system for our http files is "daily".
+
+So, every day the log files are generated. To see the log files, execute the following 
+
+command in prompt.
+
+```
+ls - l /var/log/httpd/*log
+
+```
+
+
+
+The list shows access log files and error log files. 
+
+Dates are appended with the log files for easy identification.
+
+To edit the current logrotate configurations, follow the steps below.
+
+Open the file (/etc/logrotate.d/httpd) in write mode and we can see the current config as
+
+```
+/var/log/httpd/*log { 
+
+daily
+
+dateext
+    
+... }
+```
+
+You can add new configurations to this file as follows.
+
+Append <your_config_parameter> as parameter to the above block,
+
+```
+/var/log/httpd/*log
+
+{ your_config_parameter daily dateext... } and save the file.
+```
+
+To test the changes, execute
+
+```
+logrotate -d /etc/logrotate.d/httpd
+
+```
+
+You can see detailed instructions and configuration parameters [here](https://www.techrepublic.com/article/manage-linux-log-files-with-logrotate/).
+
+
+
 ## Test your knowledge ##
 
 To make sure you understand the site and how to update it, do this:
