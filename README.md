@@ -55,7 +55,7 @@ ID_LIKE="rhel fedora"
 
 * Install software.
 
-Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
+Install system updates, the Apache Web server, git, SSL support, and whatever editor you prefer. (Dr. Loraine likes emacs.)
 
 ```
 $ sudo yum update -y 
@@ -90,11 +90,6 @@ It's useful to track changes you make to local configuration files. If you do th
 easily retrieve older versions for trouble-shooting. Use git to create a local
 repository out of `/etc/httpd` for tracking configuration changes. 
 
-Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL). However, the main bioviz site
-is using https, so you should, too.
-
-These instructions assume you will configure the site to use SSL.
-
 ```
 $ cd /etc/httpd
 $ sudo git init .
@@ -102,7 +97,7 @@ $ sudo git add conf/httpd.conf conf.d/ssl.conf
 $ sudo git commit -m "Track out of box configurations"
 ```
 
-* For convenience, create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
+* Create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
 
 .gitignore:
 
