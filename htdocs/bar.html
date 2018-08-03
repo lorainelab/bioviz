@@ -24,7 +24,7 @@
     <body>
         <div id="TopMenu"></div>
 
-        <div id="main-container" class="container main-content hide">
+        <div id="main-container" class="container main-content">
             <div id="welcomeMessage" align='center'>
                 <h1 class="">
                     Integrated Genome Browser
@@ -34,7 +34,7 @@
                 </h2>
             </div>
             <hr/>
-            <div class="row">
+            <div class="row hide" id="landing-page">
                 <div id="igbIsRunningBlock" class="col-md-8 col-md-offset-2 hide">
                     <div class="panel panel-default panel-primary">
                         <div class="panel-heading">
@@ -111,12 +111,6 @@
                 </div>
             </div>
 -->
-            <div class="row" style="margin-top:50px;"></div>      
-            <hr/> 
-
-
-            <div id="footer" class="container"></div>
-        </div>
         <div id ="fileNotFoundError" class="container main-content hide">
             <h1 style="font-size: 3em;">Welcome BAR User</h1>
             <div class="row">
@@ -158,6 +152,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+            <div class="row" style="margin-top:50px;"></div>      
+            <hr/>
+            <div id="footer" class="container"></div>
         </div>
 
         <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
