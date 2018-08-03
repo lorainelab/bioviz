@@ -22,10 +22,10 @@ To understand bridge code, look at:
 The site is designed to be deployed as-is into Web-accessible directories for development, testing, and (ultimately) deployment
 via git pull commands on the main bioviz.org site. 
 
-To update or add content:
+Recommended workflow to update or add content:
 
 * fork this repository
-* clone your fork onto a staging site (configured as below)
+* clone your fork to a staging site (configured as below)
 * make a branch on your staging site and edit 
 * check edits by visiting your staging site in a Web browser 
 * push the branch to your fork
@@ -55,7 +55,7 @@ ID_LIKE="rhel fedora"
 
 * Install software.
 
-Install system updates, the Apache Web server, git, SSL support if you are using it, and whatever editor you prefer. (Dr. Loraine likes emacs.)
+Install system updates, the Apache Web server, git, SSL support, and whatever editor you prefer. (Dr. Loraine likes emacs.)
 
 ```
 $ sudo yum update -y 
@@ -74,13 +74,13 @@ $ sudo git config --global user.name "bbuser" # do it for root user too
 $ sudo git config --global user.email "user@example.com" 
 ```
 
-* Clone this repository into your home directory (~ec2-user) and copy it to the Web servers default `DOCUMENT_ROOT` directory. 
+* Clone this repository into your home directory (~ec2-user) and copy it to the Web servers default web directory. 
 
-On CentOS this is `/etc/www/html`.
+On CentOS this is `/etc/www`.
 
 ```
 $ git clone git@bitbucket.org:bbuser/bioviz.git # clone your fork
-$ sudo mv bioviz /var/www/html/. # move cloned repo to Web directories
+$ sudo mv bioviz /var/www/. # move cloned repo to Web directories
 ```
 
 * Configure Apache (httpd) to serve bioviz content from the cloned bioviz/htdocs directory
@@ -90,11 +90,6 @@ It's useful to track changes you make to local configuration files. If you do th
 easily retrieve older versions for trouble-shooting. Use git to create a local
 repository out of `/etc/httpd` for tracking configuration changes. 
 
-Note that you don't need to do anything with `ssl.conf` unless you need to support https URLs (SSL). However, the main bioviz site
-is using https, so you should, too.
-
-These instructions assume you will configure the site to use SSL.
-
 ```
 $ cd /etc/httpd
 $ sudo git init .
@@ -102,7 +97,7 @@ $ sudo git add conf/httpd.conf conf.d/ssl.conf
 $ sudo git commit -m "Track out of box configurations"
 ```
 
-* For convenience, create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
+* Create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
 
 .gitignore:
 
@@ -121,16 +116,23 @@ module
 
 * Edit `httpd.conf` to configure the site. If you make a mistake, use git checkout to recover the original version.
 
-The default document root is `/var/www/html`. Change this to `/var/www/html/bioviz/htdocs`. 
+The default document root is `/var/www/html`. Change this to `/var/www/bioviz/htdocs`. 
 
 ```
 $ cd /etc/httpd/conf
-$ sudo sed -i 's/\(var\/www\/html\)/\1\/bioviz\/htdocs/g' httpd.conf
+$ sudo sed -i 's/\(var\/www\)\/html/\1\/bioviz\/htdocs/g' httpd.conf
+```
+
+The default script alias is `/var/www/cgi-bin`. Change this to `/var/www/bioviz/cgi-bin`.
+
+```
+$ cd /etc/httpd/conf
+$ sudo sed -i 's/\(var\/www\)\/cgi-bin/\1\/bioviz\/cgi-bin/g' httpd.conf
 ```
 
 **Note**: To see your changes thus far, use `git diff`.
 
-* Ask Dr. Loraine to assign your site a bioviz.org subdomain, e.g., yourname.bioviz.org. If you do that, add the domain name to `/etc/httpd/conf/httpd.conf`.
+* Ask Dr. Loraine to assign your site a bioviz.org subdomain, e.g., yourname.bioviz.org. Add the domain name to `/etc/httpd/conf/httpd.conf`.
 
 The following example assumes the server's name is test.bioviz.org. 
 
@@ -146,9 +148,9 @@ $ sudo service httpd configtest
 Syntax OK
 ```
 
-## Supporting https URLs (SSL) ##
+## Support https URLs (SSL) ##
 
-If you're supporting https URLs (SSL), you'll need to install three files: 
+Install three files:
 
 1) signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
 2) your server's private key, created when you made the certificate signing request for the signing authority
@@ -231,13 +233,31 @@ If you like emacs, make it your default editor:
 echo 'export EDITOR=emacs` >> ~/.bash_profile'
 ```
 
-## Test your knowledge ##
+## Logging ##
 
-To make sure you understand the site and how to update it, do this:
+By default, Apache stores daily logs for one week in `/var/log/httpd`. Access and error logs are both stored. 
+When the week rolls over (rotates), the previous week's logs are over-written.
 
-* Add your name to the list of contributors on the BioViz Web site. Then issue a pull request.
+To change this, edit the logrotate configurations, as described below.
 
-Good luck!
+Edit `/etc/logrotate.d/httpd`. Default configuration is:
+
+```
+/var/log/httpd/*log { 
+
+daily
+
+dateext
+    
+... }
+```
+
+To test changes, execute:
+
+```
+logrotate -d /etc/logrotate.d/httpd
+
+```
 
 ### Questions? ###
 

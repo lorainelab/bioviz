@@ -1,25 +1,6 @@
 <!doctype html>
-
-<!--[if lt IE 7]>
-
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
-
-<![endif]-->
-<!--[if IE 7]>
-
-<html class="no-js lt-ie9 lt-ie8" lang="en">
-
-<![endif]-->
-<!--[if IE 8]>
-
-<html class="no-js lt-ie9" lang="en">
-
-<![endif]-->
-<!--[if gt IE 8]>
-<!-->
 <html class="no-js" lang="en">
-    <!--
-  <![endif]-->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,9 +12,8 @@
 
         <meta name="viewport" content="width=device-width">
         <!--For use in production only... compile to css before release -->
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-glyphicons.css?v=1.3" rel="stylesheet">
-        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" 
+        rel="stylesheet">
         <link rel="stylesheet" href="less/style.css?v=1.3">
         <link rel="stylesheet" href="bower_components/lightbox2/dist/css/lightbox.css">
         <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js?v=1.3">
@@ -45,13 +25,16 @@
 
         <div class="container main-content">            
             <div id="markupOutput"> </div>
-
+        </div>
         <!-- /container -->
-
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
-        <!-- scripts concatenated and minified via ant build script-->
-        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js?v=1.3">
+        </script>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
+        </script>
         <script src="js/script.js?v=12392829">
         </script>
         <script src="bower_components/marked/marked.min.js"></script>
