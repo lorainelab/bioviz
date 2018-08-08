@@ -5,9 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
         <title>Welcome BAR User</title>
-        <meta name="description" content="">
-        <meta name="author" content="dcnorris">
-
+        <meta name="description" content="Flow data into Integrated Genome Browser">
+        <meta name="author" content="Loraine Lab">
         <meta name="viewport" content="width=device-width">
         <!--For use in production only... compile to css before release -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" 
@@ -23,42 +22,42 @@
     </head>
     <body>
         <div id="TopMenu"></div>
-
         <div id="main-container" class="container main-content">
             <div id="welcomeMessage" align='center'>
                 <h1 class="">
                     Integrated Genome Browser
                 </h1>
                 <h2>
-                    Visualization for genome-scale data
+                    Visualizing genome-scale data
                 </h2>
             </div>
             <hr/>
-            <div class="row hide" id="landing-page">
-                <div id="igbIsRunningBlock" class="col-md-8 col-md-offset-2 hide">
+            <div class="row">
+                <div id="noParametersBlock" class="col-md-8 col-md-offset-2 hide">
+                    <div class="panel panel-default panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title" style="font-size: 2em;">
+                                Welcome to the IGB to Bio-Analytic Resource bridge
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p>This page uses REST endpoints to channel data from the <a href="http://bar.utoronto.ca/">Bio-Analytic Resource</a> to IGB.</p>
+			    <p>If IGB is running, this page sends requests as REST-style URLs to IGB. Here are some examples. Click the links below and see what happens.</p>
+			    <p>Open Arabidopsis thaliana genome:<br><a href="./bar.html?version=A_thaliana_Jun_2009">./bar.html?version=A_thaliana_Jun_2009</a>.</p>
+			    <p>...and show a region surrounding Araport11 gene AT1G07350:<br><a href="./bar.html?version=A_thaliana_Jun_2009&annotation_set=Araport11&gene_id=AT1G07350">./bar.html?version=A_thaliana_Jun_2009&gene_id=AT1G07350</a></p>
+			    <p>...and load data from a Quickload site:<br><a href="./bar.html?version=A_thaliana_Jun_2009&annotation_set=Araport11&gene_id=AT1G07350&server_url=bar&feaure_url_1=http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/ERR274310/accepted_hits.bam">./bar.html?version=A_thaliana_Jun_2009&gene_id=AT1G07350&feature_url_1=http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/ERR274310/accepted_hits.bam&server_url=http://lorainelab-quickload.scidas.org/bar</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="wrongParametersBlock" class="col-md-8 col-md-offset-2 hide">
                     <div class="panel panel-default panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title" style="font-size: 2em;">
-                                Welcome BAR User
+			      Error in IGB to Bio-Analytics Resource bridge
                             </h3>
                         </div>
                         <div class="panel-body">
-                            <div class='' align='center'>
-                                <h3>
-                                    Thank you for using IGB! 
-                                </h3>
-
-                                <img id="dataLoadCheckmark" class="hide" src="img/checkmark.png" alt="jqeurySpinner.gif"/>
-
-                                <p id="loadingBarErrorBlock" class="hide">
-                                    Data loading takes a while. If it doesn't load in a minute 
-                                    then, Please go back to bar site and try again!</p>
-                            </div>            
-                        </div>
-                        <div id="loadingBlockFooter" class="panel-footer hide">
-                            <div class="text-center">
-                                <a class='btn btn-default btn-lg btn-primary' href='http://localhost:7085/bringIGBToFront'>Click to go to IGB</a>                                
-                            </div>
+                            <p>Sorry. I don't understand your request.</p>
                         </div>
                     </div>
                 </div>
@@ -81,84 +80,64 @@
                                 can <a onclick="location.reload();">refresh this page</a> to send BAR data to IGB.
                             </p>
                         </div>
-
                     </div>
                 </div>
-            </div>
-<!---
-            <div class="row">
-                <div id="supportLetter" class="col-md-8 col-md-offset-2">
-                    <div class="panel panel-default panel-default">
+                <div id="igbIsRunningBlock" class="col-md-8 col-md-offset-2 hide">
+                    <div class="panel panel-default panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title" style="font-size: 2em;">
-                                We need your help!
+                                Welcome BAR User
                             </h3>
                         </div>
                         <div class="panel-body">
-                            <p>
-                                Funding for IGB expires July 2020, so we're submitting grant applications requesting new funds for the IGB project. 
-                            </p>
-                            <p>
-                                If you like using IGB to view BAR data, <strong>please help</strong> by writing us a letter of support. See <a href="support.html" target="_blank"><b>write a support letter</b></a> for details. 
-                            <div class="text-center">
-                                <a class="btn btn-lg btn-primary supportBtn"><strong>Upload your letter</strong></a>
-                            </div>
-
-                            </p>
+			  <div id="dataAreLoading" class="hide" align="center">
+			    <p>
+                              <h3>
+                                Data are loading... 
+                              </h3>
+			      <img src="img/jquerySpinner.gif"/>
+			    </p>
+			  </div>
+			  <div id="dataLoaded" class="hide" align="center">
+			    <p>
+                              <h3>
+                                Thank you for using IGB! 
+                              </h3>
+			      <img src="img/checkmark.png"/>
+			    </p>
+			    <hr>
+                            <a class="btn btn-default btn-lg btn-primary" href="http://localhost:7085/bringIGBToFront">Go to IGB</a>                                       
+			  </div>
+			  <div id="dataLoadingError" class="hide" align="center">
+			    <p>
+			      <h4>Sorry - there was an error. Please reload the page to try again.
+			      </h4>
+			    </p>
+			  </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
--->
-        <div id ="fileNotFoundError" class="container main-content hide">
-            <h1 style="font-size: 3em;">Welcome BAR User</h1>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 alert alert-warning" style="font-size: 2em;">
-                    <p>
-                        IGB can't find the file you're trying to view. This error can occur with the Safari Web browser.
-                    </p>
-                    <p>
-                        If this happens, try using a different web browser or clearing your browser cache.
-                    </p>
-                    <p> If you experience other problems, please let us know! Contact <a href="mailto:aloraine@uncc.edu">Ann Loraine</a> to report an error or get help.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div id ="error-container" class="container main-content hide">
-            <h1 style="font-size: 4em;">Welcome BAR User</h1>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 alert alert-warning" style="font-size: 2em;">
-                    The file you are trying to view does not have a genome version associated with it. Please contact us for help. 
-                </div>
-            </div>
-        </div>
-        <div id ="bridge-info-container" class="container main-content hide">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="panel panel-default panel-default">
+		<div id="errorBlock" class="col-md-8 col-md-offset-2 hide">
+                    <div class="panel panel-default panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title" style="font-size: 2em;">
-                                Welcome to the IGB to Bio-Analytic Resource bridge page.
+                                Welcome BAR User
                             </h3>
                         </div>
                         <div class="panel-body">
-                            <p>
-                                This page uses REST endpoints to channel data from the <a href="http://bar.utoronto.ca/">Bio-Analytic Resource</a> to IGB. View the page source to learn more about it.
-                            </p>
+                            <div class='' align='center'>
+                                <h3>
+                                    Very sorry! There was an error. 
+                                </h3>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-
-            <div class="row" style="margin-top:50px;"></div>      
+        <div class="row" style="margin-top:50px;"></div>      
             <hr/>
             <div id="footer" class="container"></div>
         </div>
-
         <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
         <script
           src="https://code.jquery.com/jquery-3.3.1.min.js"
