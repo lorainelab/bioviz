@@ -224,7 +224,7 @@ $ git remote add upstream git@bitbucket.org:lorainelab/bioviz.git
 It's nice to have an alias that lets you change quickly into your cloned repository. Add an alias to your .bash_profile file:
 
 ```
-echo 'alias go="cd /var/www/html/bioviz/htdocs"' >> ~/.bash_profile
+echo 'alias go="cd /var/www/bioviz"' >> ~/.bash_profile
 ```
 
 If you like emacs, make it your default editor:
