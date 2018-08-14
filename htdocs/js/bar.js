@@ -66,8 +66,10 @@ function contactIgb() {
 function loadData() {
     var query_elements = parseQuery(location.search.substring(1));
     var server_url = query_elements['server_url']; // any Quickload site URL
-    if (server_url == 'bar') { // syntactic sugar for BAR developer convenience
-	igb_params['server_url']='http://lorainelab-quickload.scidas.org/bar';
+    var bar_quickload_url = "http://lorainelab-quickload.scidas.org/bar/"
+    if (server_url.match(/bar/i)) { 
+	// requires exact match to Quickload site as appears in IGB Preferences > Data Sources 
+	igb_params['server_url']=bar_quickload_url;
     }
     // Note: To deploy a new BAR Quickload site, run makeBarQuickload.py
     // https://bitbucket.org/lorainelab/igbquickload/raw/master/makeBarQuickload.py
@@ -92,7 +94,13 @@ function loadData() {
     //        if not, ignore it
     for (index in query_elements) {
 	if (index.startsWith('feature_url_')) {
-	    igb_params[index]=query_elements[index];
+	    // Quickload site not using https
+	    // Quickload site file URL must match BAR link
+	    var value = query_elements[index];
+	    if (value.startsWith("https")) {
+		value = value.replace("https","http");
+	    }
+	    igb_params[index]=value;
 	}
     }
     // seq_id is optional
