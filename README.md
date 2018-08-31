@@ -46,7 +46,7 @@ Log into the AWS console and launch one of the pre-configured images. There are 
 
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux.
 
-**Tip**: To find out what Linux variant your EC2 instances is running, do:
+**Tip**: To find out what Linux variant your EC2 instance is running, do:
 
 ```
 $ cat /etc/*release | grep ID_LIKE
