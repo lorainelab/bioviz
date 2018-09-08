@@ -7,10 +7,10 @@
 Supports:
    genome - IGB genome assembly version code; required; e.g., A_thaliana_Jun_2009
    version - synonym for genome 
-   seq_id, start, end - optional, but if one of these three is provided, all three must be provided;
+   seqid, start, end - optional, but if one of these three is provided, all three must be provided;
                         location coordinates in genome assembly specified by version
    gene_id - optional, must be an AGI code for a gene locus from annotation_set, ignored if
-             seq_id, start, end are provided
+             seqid, start, end are provided
    annotation_set - code indicating annotation set that gene_id belongs to; required if 
                     gene_id is provided; e.g., Araport11
                     If provided and it matches a known annotation set, infer version if version
@@ -103,15 +103,15 @@ function loadData() {
 	    igb_params[index]=value;
 	}
     }
-    // seq_id is optional
-    var seq_id = query_elements['seq_id'];
-    if (seq_id) {  
-	igb_params['seq_id']=seq_id
+    // seqid is optional
+    var seqid = query_elements['seqid'];
+    if (seqid) {  
+	igb_params['seqid']=seqid
 	var start = query_elements['start'];
 	var end = query_elements['end'];
 	if (start & end) {
-	    igb_params['start']=start;
-	    igb_params['end']=end;
+	    igb_params['start']=parseInt(start);
+	    igb_params['end']=parseInt(end);
 	    makeAndOpenIgbUrl();
 	    return;
 	}
@@ -124,7 +124,7 @@ function loadData() {
     }
     else {
 	gene_id=query_elements['gene_id']
-	if (gene_id) { // need to look up seq_id, start, end for this gene
+	if (gene_id) { // need to look up seqid, start, end for this gene
 	    addCoordinatesForGeneId(gene_id); 
 	    // Note: calls back to makeAndOpenIgbUrl in REST call's onload method 
 	}
@@ -188,7 +188,7 @@ function makeAndOpenIgbUrl() {
 }
 
 
-// Look up seq_id, start, and end for the given geneId
+// Look up seqid, start, and end for the given geneId
 // Add these values to global variable igb_params
 function addCoordinatesForGeneId(geneId) {
     // Note: geneIdLookup.py is version-controlled in bioviz repository
@@ -200,9 +200,9 @@ function addCoordinatesForGeneId(geneId) {
     xhr.onload = function() {
         if (xhr.status=200){
             gene_coords = JSON.parse(this.response);
-	    igb_params["start"]=gene_coords["start"];
-	    igb_params["end"]=gene_coords["end"];
-	    igb_params["seq_id"]=gene_coords["seq_id"];
+	    igb_params["start"]=parseInt(gene_coords["start"])-500;
+	    igb_params["end"]=parseInt(gene_coords["end"])+500;
+	    igb_params["seqid"]=gene_coords["seqid"];
             makeAndOpenIgbUrl();
         }
     };
