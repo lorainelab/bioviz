@@ -46,7 +46,7 @@ Log into the AWS console and launch one of the pre-configured images. There are 
 
 This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux.
 
-**Tip**: To find out what Linux variant your EC2 instances is running, do:
+**Tip**: To find out what Linux variant your EC2 instance is running, do:
 
 ```
 $ cat /etc/*release | grep ID_LIKE
@@ -68,7 +68,7 @@ See [documentation](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key
 
 ```
 $ ssh-keygen # makes ~/.ssh/id_rsa.pub, copy this to your bitbucket account
-$ git config --global user.name "bbuser" # you bitbucket user id
+$ git config --global user.name "bbuser" # your bitbucket user id
 $ git config --global user.email "user@example.com" # your email address
 $ sudo git config --global user.name "bbuser" # do it for root user too
 $ sudo git config --global user.email "user@example.com" 
@@ -141,13 +141,6 @@ $ cd /etc/httpd/conf
 $ sudo sed -i 's/#ServerName www.example.com:80/ServerName test.bioviz.org:80/g' httpd.conf
 ```
 
-* Check your changes thus far. 
-
-```
-$ sudo service httpd configtest
-Syntax OK
-```
-
 ## Support https URLs (SSL) ##
 
 Install three files:
@@ -180,12 +173,19 @@ $ sudo sed -i 's/\(SSLCertificateFile \/etc\/pki\/tls\/certs\/\)localhost.crt/\1
 $ sudo sed -i 's/\(SSLCertificateKeyFile \/etc\/pki\/tls\/private\/\)localhost.key/\1star_bioviz_org.key/g' ssl.conf
 ```
 
-As before, use `git diff` and `service httpd configtest` to confirm and check your changes.
+* Use `git diff` to check your changes.
 
 ```
 $ git diff ssl.conf
-$ sudo service httpd configtest
 ```
+
+* Use `configtest` to check your server configurations.
+
+```
+$ sudo service httpd configtest
+Syntax OK
+```
+
 
 * Start the server and test it.
 
@@ -215,7 +215,7 @@ $ sudo git commit -m "Configure site"
 Add the main (team) BioViz repository to your clone as a new remote called upstream. 
 
 ```
-$ cd /etc/httpd/www/bioviz
+$ cd /var/www/bioviz
 $ git remote add upstream git@bitbucket.org:lorainelab/bioviz.git
 ```
 
