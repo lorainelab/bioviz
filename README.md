@@ -210,6 +210,12 @@ $ sudo git add conf/httpd.conf conf.d/ssl.conf
 $ sudo git commit -m "Configure site"
 ```
 
+* Ensure Web server starts when you reboot the image.
+
+```
+sudo chkconfig httpd on
+```
+
 * Configure upstream repository (for synchronizing with the team repository)
 
 Add the main (team) BioViz repository to your clone as a new remote called upstream. 
@@ -221,16 +227,16 @@ $ git remote add upstream git@bitbucket.org:lorainelab/bioviz.git
 
 * Other conveniences
 
-It's nice to have an alias that lets you change quickly into your cloned repository. Add an alias to your .bash_profile file:
+It's nice to have an alias that lets you change quickly into your cloned repository. Add this line to ~/.bash_profile:
 
 ```
-echo 'alias go="cd /var/www/bioviz"' >> ~/.bash_profile
+alias go="cd /var/www/bioviz"
 ```
 
-If you like emacs, make it your default editor:
+If you like emacs, make it your default editor by adding this line to ~/.bash_profile:
 
 ```
-echo 'export EDITOR=emacs` >> ~/.bash_profile'
+export EDITOR=emacs` >> ~/.bash_profile'
 ```
 
 ## Logging ##
