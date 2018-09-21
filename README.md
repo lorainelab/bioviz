@@ -227,7 +227,22 @@ $ git remote add upstream git@bitbucket.org:lorainelab/bioviz.git
 
 * Other conveniences
 
-It's nice to have an alias that lets you change quickly into your cloned repository. Add this line to ~/.bash_profile:
+Add git aliases to make viewing your git commit history more convenient:
+
+```
+git config --global alias.ll log --decorate --numstat
+git config alias.ls log --decorate --oneline
+```
+
+With these, you can type `git ll` or `git ls` to view and understand the commit history for whichever git clone you are currently in.
+
+Add a git alias to view your current git aliases:
+
+```
+git config --global alias.alias config --get-regexp ^alias\.
+```
+
+It's nice to have an shell (not git) alias that lets you change quickly into your cloned repository. Add this line to ~/.bash_profile:
 
 ```
 alias go="cd /var/www/bioviz"
