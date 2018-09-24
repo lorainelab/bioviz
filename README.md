@@ -229,7 +229,7 @@ Add git aliases to make viewing your git commit history more convenient:
 
 ```
 git config --global alias.ll 'log --decorate --numstat'
-git config alias.ls 'log --decorate --oneline'
+git config --global alias.ls 'log --decorate --oneline'
 ```
 
 With these, you can type `git ll` or `git ls` to view and understand the commit history for whichever git clone you are currently in.
