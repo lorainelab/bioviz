@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteRule ^folder1.*$ http://example.com/folder2/ [R=301,L]
+#RewriteRule /igb/news.html /news.html 
+Redirect 301 /igb/news.html /news.html
