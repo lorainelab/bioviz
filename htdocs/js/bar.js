@@ -135,7 +135,7 @@ function loadData() {
 }
 
 function makeAndOpenIgbUrl() {
-    var igb_url="http://localhost:7085/IGBControl?";
+    var igb_url="http://127.0.0.1:7085/IGBControl?";
     feature_urls=0;
     for (var index in igb_params) { // igb_params is global; should be fully populated by now
 	if (igb_url.endsWith("?")) {
