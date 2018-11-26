@@ -252,6 +252,19 @@ If you like emacs, make it your default editor by adding this line to ~/.bash_pr
 export EDITOR=emacs
 ```
 
+## Other configurations ##
+
+Older versions of IGB link to now-obsolete URLs on the BioViz.org Web site. To handle these gracefully,
+add Redirect rules to httpd.conf in the appropropriate section of the file.
+
+```
+Redirect /igb/news.html https://bioviz.org/news.html
+Redirect /igb/help.html https://bioviz.org/help.html
+```
+
+The `news.html` link appears in the IGB installer window when it asks users to download a new version of IGB. 
+The `help.html` link appears when users (in IGB) select *Help > Report a bug or provide feedback*. 
+
 ## Logging ##
 
 By default, Apache stores daily logs for one week in `/var/log/httpd`. Access and error logs are both stored. 
