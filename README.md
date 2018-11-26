@@ -290,6 +290,45 @@ To test changes, execute:
 logrotate -d /etc/logrotate.d/httpd
 
 ```
+## Add release directories ##
+
+The main BioViz site contains directories and symbolic links that are not version-controlled.
+
+They are created as part of the IGB release process. 
+
+They include:
+
+* Symbolic link to the current release:
+
+```
+igb/releases/current
+```
+
+* Release directories containing installers and other artifacts:
+
+```
+igb/releases/igb-9.0.0/
+igb/releases/igb-9.0.1/
+```
+
+* File containing information about any current surveys being done as part of IGB. See IGB code base for details.
+
+```
+igb/releases/surveys.xml
+```
+
+* IGB Apps directory, at the same level is the `igb` directory. These Apps appear in the IGB App Manager, available from the IGB Tools menu:
+
+```
+igbserver/
+```
+
+* Support page, used by older versions of IGB.
+
+```
+igb/support.html
+```
+
 
 ### Questions? ###
 
