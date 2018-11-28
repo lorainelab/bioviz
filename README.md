@@ -2,20 +2,11 @@
 
 ### About ###
 
-BioViz.org sites:
+BioViz.org is the chief distribution site for Integrated Genome Browser.
 
-* Distribute Integrated Genome Browser installers (free download, see igb/releases), 
-* Link to IGB documentation, and
-* Implement a javascript bridge that channels data from external sites into IGB.
+This repository contains Web content for BioViz.org, along with javascript bridge code that lets users flow data from sites like Galaxy into IGB. 
 
-**Note**: The javascript bridge functionality is the trickiest to test because you'll need to test against live copies or mockups of the external sites.
-
-To understand bridge code, look at:
-
-* galaxy.html - bridge page for flowing data from [Galaxy](http://usegalaxy.org) into IGB
-* js/galaxy.js - Galaxy bridge code
-* bar.html - bridge page for flowing data from [BioAnalytic Resource](http://bar.utoronto.ca) RNA-Seq browser into IGB
-* js/bar.js - BAR bridge code
+For IGB source code, see [https://bitbucket.org/lorainelab/integrated-genome-browser](https://bitbucket.org/lorainelab/integrated-genome-browser)
 
 ### Developing this site ###
 
@@ -24,7 +15,7 @@ via git pull commands on the main bioviz.org site.
 
 Recommended workflow to update or add content:
 
-* fork this repository
+* fork this repository on bitbucket
 * clone your fork to a staging site (configured as below)
 * make a branch on your staging site and edit 
 * check edits by visiting your staging site in a Web browser 
@@ -37,24 +28,18 @@ Recommended workflow to update or add content:
 
 ### Setting up a staging site ###
 
-The directions below assume you are using the Apache Web server and AWS for hosting. 
+The directions below assume you are using CentOS, Apache Web server and AWS for hosting. 
 
 * Launch micro EC2 image. 
 
 Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine, but pick the smallest 
 (and cheapest) option available.
 
-This documentation assumes you're using an Amazon Linux AMI image and CentOS Linux.
-
-**Tip**: To find out what Linux variant your EC2 instance is running, do:
-
-```
-cat /etc/*release | grep ID_LIKE
-```
+This documentation assumes you're using CentOS Linux.
 
 * Install software.
 
-Install system updates, the Apache Web server, git, SSL support, and whatever editor you prefer. (Dr. Loraine likes emacs.)
+Install system updates, the Apache Web server, git, SSL support, and whatever editor you prefer. (The example below installs emacs.)
 
 ```
 sudo yum update -y 
