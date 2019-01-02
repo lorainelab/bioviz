@@ -1,5 +1,7 @@
 [BioViz.org](https://bioviz.org) Web content - version-controlled for easy deployment and testing. 
 
+**Note**: This branch (cyverse-dev) is for linking IGB and CyVerse IT infrastructure. 
+
 ### About ###
 
 BioViz.org is the chief distribution site for Integrated Genome Browser.
