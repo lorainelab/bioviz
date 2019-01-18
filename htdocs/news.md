@@ -2,6 +2,23 @@
 
 * * *
 
+### Nov. 26, 2018
+
+IGB 9.0.2 is now available for download. 
+
+This minor release mainly corrects errors reported by users and updates external libraries IGB is using. In addition, we added new Quickload data sources, along with new backup mirror sites for core data sets. 
+
+#### Improvements include: ####
+
+* The IGB installers are updated to fix some security errors that occurred when installing on MacOS Mojave. Thank you to everyone who reported this!
+* We added new backup Quickload sites for the RNA-Seq, ChIP-Seq, and DNA-Seq data sources.
+* New genomes are available for rat, mouse, and potato.
+* IGB now supports newer VCF versions. 
+* We improved how IGB loads data from Quickload sites using position bookmarks.
+* IGB is now using the latest build of Java 1.8 and up-to-date BAM and tabix parsing code from the htsjdk project.
+
+* * *
+
 ### July 5, 2018: IGB 9.0.1 released
 
 A new version of IGB is available that fixes some errors present in

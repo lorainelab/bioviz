@@ -23,7 +23,7 @@ def getGeneRegion(gene_id="AT1G07350"):
     "Look up location of gene region."
     start=None
     end=None
-    seq_id=None
+    seqid=None
     with open("Araport11.bed") as csv_file:
         csv_reader=csv.reader(csv_file,delimiter="\t")
         for row in csv_reader:
@@ -34,15 +34,15 @@ def getGeneRegion(gene_id="AT1G07350"):
                     start=int(row[1])
                 if not end or int(row[2])>end:
                     end=int(row[2])
-                if not seq_id:
-                    seq_id=row[0]
+                if not seqid:
+                    seqid=row[0]
                 else:
-                    if not row[0]==seq_id:
+                    if not row[0]==seqid:
                         raise ValueError("Gene %s is on more than 1 chromosome\n",gene_id)
-    if not start or not end or not seq_id:
+    if not start or not end or not seqid:
         raise ValueError("Can't find location of %s\n",gene_id)
     else:
-        d={"gene_id":gene_id,"seq_id":seq_id,"start":start,"end":end}
+        d={"gene_id":gene_id,"seqid":seqid,"start":start,"end":end}
         return d
 
 def getGeneId():
