@@ -1,66 +1,56 @@
 #!/usr/bin/env python
 
+#IGBF-1495 - Re-factor geneIdLookup.py to query dynamodb table instead of reading flat file
 import cgi
 import csv
 import re
 import json
 import sys
-#import cgitb; cgitb.enable()  # for troubleshooting
-
-
-def getJsonString(d=None):
-    return json.dumps(d)
+import boto3
+import os
+from decimal import Decimal
+from boto3.dynamodb.conditions import Key, Attr
+# import cgitb; cgitb.enable()  # for troubleshooting
+import cgitb
+cgitb.enable()
 
 def checkId(gene_id=None):
     "Make sure user did not enter bogus id."
-    regex=re.compile("^AT[1-5CM]G\d{5}$")
+    regex = re.compile("^AT[1-5CM]G\d{5}$")
     if not regex.match(gene_id):
-        raise ValueError("Illegal gene id: %s\n"%gene_id)
+        raise ValueError("Illegal gene id: %s\n" % gene_id)
     else:
         return gene_id
 
-def getGeneRegion(gene_id="AT1G07350"):
-    "Look up location of gene region."
-    start=None
-    end=None
-    seqid=None
-    with open("Araport11.bed") as csv_file:
-        csv_reader=csv.reader(csv_file,delimiter="\t")
-        for row in csv_reader:
-            transcript_id=row[3]
-            toks=transcript_id.split('.')
-            if toks[0]==gene_id:
-                if not start or int(toks[1])<start:
-                    start=int(row[1])
-                if not end or int(row[2])>end:
-                    end=int(row[2])
-                if not seqid:
-                    seqid=row[0]
-                else:
-                    if not row[0]==seqid:
-                        raise ValueError("Gene %s is on more than 1 chromosome\n",gene_id)
-    if not start or not end or not seqid:
-        raise ValueError("Can't find location of %s\n",gene_id)
-    else:
-        d={"gene_id":gene_id,"seqid":seqid,"start":start,"end":end}
-        return d
+
+def getGeneRegion(gene_id):
+    #get data from dynamodb using gene-id
+    dynamodb = boto3.resource('dynamodb',region_name='us-east-1')
+    # table is an object for Araport11 dynamodb table
+    table = dynamodb.Table('Araport11')
+    response1 = table.query(KeyConditionExpression=Key('GeneId').eq(str(gene_id)))
+    response = response1['Items']
+    d= {"gene_id":response[0]['GeneId'],"seqid":response[0]['Chromosome'],"start": int(response[0]['Start']) ,"end": int(response[0]['End'])}
+    return(d)
 
 def getGeneId():
-    arguments=cgi.FieldStorage()
+    #get gene-id from the link
+    arguments = cgi.FieldStorage()
     if arguments:
-        gene_id=None
+        gene_id = None
         for key in arguments.keys():
-            if key=="gene_id":
+            if key == "gene_id":
                 return checkId(arguments[key].value)
     else:
-        return checkId("AT1G07350") # for testing
+        return checkId("AT1G01180")  # for testing
 
-def doIt():
+
+def main():
     sys.stdout.write('Content-Type: application/json\n\n')
     gene_id=getGeneId()
-    d = getGeneRegion(gene_id=gene_id)
-    json.dump(d,sys.stdout)
-    sys.stdout.write("\n")
+    d = json.dumps(getGeneRegion(gene_id))
+    sys.stdout.write(d)
+    sys.stdout.write('\n')
 
 
-doIt()
+main()
