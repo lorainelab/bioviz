@@ -39,12 +39,16 @@ This documentation assumes you're using CentOS Linux.
 
 * Install software.
 
-Install system updates, the Apache Web server, git, SSL support, and whatever editor you prefer. (The example below installs emacs.)
+Install system updates, the Apache Web server, git, boto3(AWS SDK), SSL support, and whatever editor you prefer. (The example below installs emacs.)
 
 ```
 sudo yum update -y 
 sudo yum install -y git emacs httpd mod_ssl
+sudo pip install boto3
 ```
+* Make sure that an IAM role with "AmazonDynamoDBReadOnlyAccess" policy is attached to your EC2 instance
+
+This role helps geneIdLookup.py cgi script to access dynamoDb tables. Contact Dr.Ann Loraine for more information.
 
 * Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
 
