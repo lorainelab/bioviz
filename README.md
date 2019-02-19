@@ -62,9 +62,9 @@ sudo git config --global user.name "bbuser" # do it for root user too
 sudo git config --global user.email "user@example.com" 
 ```
 
-* Clone this repository into your home directory (~ec2-user) and copy it to the Web servers default web directory. 
+* Clone this repository into your home directory (~ec2-user) and copy it to the Web server's default web directory. 
 
-On CentOS this is `/etc/www`.
+On CentOS this is `/var/www`.
 
 ```
 git clone git@bitbucket.org:bbuser/bioviz.git # clone your fork

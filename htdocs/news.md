@@ -2,7 +2,7 @@
 
 * * *
 
-### Nov. 26, 2018
+### Nov. 26, 2018: IGB 9.0.2 released
 
 IGB 9.0.2 is now available for download. 
 
