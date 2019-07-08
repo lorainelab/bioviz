@@ -97,7 +97,7 @@ body {
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) inset, 0 1px 0 #ffffff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) inset, 0 1px 0 #ffffff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) inset, 0 1px 0 #ffffff;
-}  
+}
 .nav-download {
     float: right;
     padding-top: 10px;
@@ -343,8 +343,8 @@ html[xmlns] .slides {
     color: white;
     text-decoration: bold;
 }
-.btn-custom.disabled:hover, .btn-custom.disabled:focus, .btn-custom.disabled:active, .btn-custom.disabled.active, .btn-custom[disabled]:hover, .btn-custom[disabled]:focus, 
-.btn-custom[disabled]:active, .btn-custom[disabled].active, fieldset[disabled] .btn-custom:hover, fieldset[disabled] .btn-custom:focus, fieldset[disabled] .btn-custom:active, fieldset[disabled] 
+.btn-custom.disabled:hover, .btn-custom.disabled:focus, .btn-custom.disabled:active, .btn-custom.disabled.active, .btn-custom[disabled]:hover, .btn-custom[disabled]:focus,
+.btn-custom[disabled]:active, .btn-custom[disabled].active, fieldset[disabled] .btn-custom:hover, fieldset[disabled] .btn-custom:focus, fieldset[disabled] .btn-custom:active, fieldset[disabled]
 .btn-custom.active {
     background-color: #db6963;
     border-color: #db6963;
@@ -435,7 +435,7 @@ img.largeImage{
     margin-bottom: 25px;
 }
 .padding-bottom-5{
-    padding-bottom: 5px;    
+    padding-bottom: 5px;
 }
 
 .wrapper {
@@ -486,6 +486,10 @@ img.largeImage{
     .collapse.in{
   		display:block !important;
 	}
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #c1c1c1;
 }
 
 .cursorpointer {
