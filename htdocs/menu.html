@@ -1,3 +1,4 @@
+<script src="https://use.fontawesome.com/0d653db34b.js"></script>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -11,45 +12,42 @@
         <div class="collapse navbar-collapse">
 
             <ul class="nav navbar-nav">
-                <li>
+                <li class="cursorpointer">
                     <a href="overview.html">Overview</a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle">Learn More<b class="caret"></b></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle cursorpointer">Learn More<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li>
+                        <li class="cursorpointer">
                             <a href="https://wiki.transvar.org/display/igbman/Home" target="_blank">User's Guide</a>
                         </li>
-                        <li>
+                        <li class="cursorpointer">
                             <a href="news.html">IGB news</a>
                         </li>
-                        <li>
+                        <li class="cursorpointer">
                             <a href="cite.html">How to cite IGB</a>
                         </li>
-                        <li>
+                        <li class="cursorpointer">
                             <a href="https://www.youtube.com/channel/UC0DA2d3YdbQ55ljkRKHRBkg" target="_blank">Video tutorials</a>
                         </li>
-                        <li>
+                        <li class="cursorpointer">
                             <a href="credits.html">Credits</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="download.html">Download</a>
-                </li>
-                <li>
+                <li class="cursorpointer">
                     <a href="help.html">Get Help</a>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle">For Developers<b class="caret"></b></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle cursorpointer">For Developers<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-			<li>
-			  <a href="https://canvas.instructure.com/courses/1164217">On-line class: Open source programming with IGB</a>
-			</li>
-                        <li>
+                  			<li class="cursorpointer">
+                  			  <a href="https://canvas.instructure.com/courses/1164217">On-line class: Open source programming with IGB</a>
+                  			</li>
+                        <li class="cursorpointer">
                           <a href="https://jira.transvar.org/secure/RapidBoard.jspa?rapidView=11">IGB Kanban Board (Jira)</a>
-                        </li>  
-                        <li>
+                        </li>
+                        <li class="cursorpointer">
                             <a href="http://bitbucket.org/lorainelab/integrated-genome-browser" class="external-link">Team repository on Bitbucket</a>
                         </li>
                     </ul>
@@ -58,39 +56,11 @@
             <!--div class="navbar-form btn-group">
                 <a class="btn btn-primary" href="support.html"><strong>Write a support letter</strong> <i class="fa fa-envelope" style="margin-left: 8px"></i></a>
             </div-->
-            <div id="downloadButton" class="navbar-form navbar-right btn-group">
-                <button id="dropdown-btn-toolbar" type="button" class="dropdown-toggle btn btn-custom dropdown-toggle pill js-activated red" data-toggle="dropdown">
-                    Download Now &nbsp;&nbsp;&nbsp;&nbsp;
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li id="linuxDownloadMenu" class="hide js-activated cursorpointer">
-                        <a id="linuxDownloadLink">
-                            Linux 64 bit
-                            <img src="img/linux_icon_small.png" width="32" height="32" style="text-align: justify;">
-                        </a>
-                    </li>
-                    <li id="osxDownloadMenu" class="hide js-activated cursorpointer">
-                        <a id="osxDownloadLink">
-                            Mac OS X
-                        </a>
-                    </li>
-                    <li id="windows64DownloadMenu" class="hide js-activated cursorpointer">
-                        <a id="windows64DownloadLink">
-                            Windows 64 bit
-                        </a>
-                    </li>
-                    <li id="windows32DownloadMenu" class="hide js-activated cursorpointer">
-                        <a id="windows32DownloadLink">
-                            Windows 32 bit
-                        </a>
-                    </li> 
-                    <li class="divider"></li>
-                    <li>
-                        <a href="download.html">
-                            Go To Downloads Page
-                        </a>
-                    </li>
-                </ul>
+            <div class="navbar-form navbar-right btn-group">
+                <a type="button" class="btn btn-custom btn-warning" href="download.html">
+                    Download Now &nbsp;&nbsp;
+                    <i class="fa fa-download"></i>
+                </a>
             </div>
         </div>
         <!--/.nav-collapse -->
