@@ -2,6 +2,25 @@
 
 * * *
 
+### November 21, 2019: IGB 9.1.0 released
+
+IGB 9.1.0 is now available for [download](https://bioviz.org/download.html).
+
+This new version of IGB fixes minor bugs present in v9.0.2 and introduces several new features.
+
+#### New features and improvements: ####
+
+* IGB now shows soft-clipping as a distinct element of relevant alignment reads. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
+* _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes are now available.
+* We have improved feedback for files that cannot be opened in IGB by adding an error window, which shows the stack trace root cause and provides a link to the IGB help page.
+* The data sources table now contains an option to view more information about Quickload sites.
+* We have enabled opening files in IGB without your first having to select a genome.
+* IGB handles CIGAR strings in BAM files in a better way.
+
+For the full list with links to detailed notes and more, see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
+
+* * *
+
 ### Nov. 26, 2018: IGB 9.0.2 released
 
 IGB 9.0.2 is now available for download. 
