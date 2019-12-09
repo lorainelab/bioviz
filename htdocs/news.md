@@ -14,7 +14,8 @@ IGB 9.1.0 is coming soon!
 * **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB. 
 * **Easier to open files.** We added new capability to open and view files in IGB without your first having to select a genome.
 * **Fixed file parsing errors.** We fixed some errors in how IGB opens and reads alignment files in BAM (binary alignment) format. Now, IGB does a better job of reading those files and displaying alignments.
-* **IGB App Store.** Last but not least, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community. 
+* **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform. 
+* **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community. 
 
 For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
 
