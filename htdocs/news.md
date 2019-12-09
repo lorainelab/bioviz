@@ -2,9 +2,9 @@
 
 * * *
 
-### Dec. 9, 2019: IGB 9.1.0 coming soon!
+### Dec. 9, 2019: <a href="./download.html">IGB 9.1.0</a> released!
 
-IGB 9.1.0 is coming soon!
+IGB 9.1.0 is now available for download! 
 
 #### New features and improvements: ####
 
