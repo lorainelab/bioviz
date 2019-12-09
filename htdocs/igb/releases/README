@@ -4,6 +4,8 @@
 
 2) Add release artifacts into release directory, including:
 
+Pre-9.1.0:
+
 * IGB_macos_M_N_P.dmg    
 * IGB_windows_M_N_P.exe
 * IGB_windows_x64_M_N_P.exe
@@ -12,33 +14,70 @@
 * updates.xml
 * optional/[app]-M-N-P.jar
 
+Post-9.1.0:
+
+* IGB-windows-x64-$version.exe - 64bit Windows release
+* IGB-windows-$version.exe - 32 bit Windows release
+* IGB-unix-$version.sh - Linux release
+* IGB-macos-$version.dmg - MacOS release
+* md5sums
+* updates.xml
+
 Release artifacts are in Downloads section of:
 
 https://bitbucket.org/lorainelab/integrated-genome-browser
 
 Note: Installers (dmg, exe files) need to have been build with 
-correct codeBaseUrl setting in Install4J configuration file. To
-test that the update process is working as expected, re-rebuild
-intallers using address of test server. 
+correct codeBaseUrl setting in Install4J configuration file.
+
+For example:
+
+<variable name="codeBaseUrl" 
+          value="https://bioviz.org/igb/releases/current" 
+          description="Directory containing updates.xml file." 
+          category="" 
+/>
+
+To test that the update process is working as expected, re-rebuild
+intallers using address of test server.
  
 3) Create symbolic links in release directory:
 
 e.g., 
 
-IGB_macos_current.dmg -> IGB_macos_9_0_1.dmg
-IGB_unix_current.sh -> IGB_unix_9_0_1.sh
-IGB_windows_current.exe -> IGB_windows_9_0_1.exe
-IGB_windows-x64_current.exe -> IGB_windows-x64_9_0_1.exe
+IGB_macos_current.dmg -> Mac installer
+IGB_unix_current.sh -> Linux installer
+IGB_windows_current.exe -> 32-bit Windows installer
+IGB_windows-x64_current.exe -> 64-bit Windows installer
 
-BioViz Web pages point to these symbolic links to avoid hard-coding
-release numbers.
+We do this to avoid hard-coding release (version) numbers in 
+BioViz Web pages.
+
+However, the updates.xml file references the actual file names. 
+
+For example: 
+
+ <entry targetMediaFileId="23" 
+        updatableVersionMin="" 
+        updatableVersionMax="" 
+        fileName="IGB-windows-x64-9.1.0.exe" 
+        newVersion="9.1.0" 
+        newMediaFileId="23" 
+        fileSize="115966832" 
+        md5Sum="df865fb2bd741df2f45963849d2e42b4" 
+        bundledJre="windows-amd64-1.8.0_212" 
+        archive="false" 
+        singleBundle="false">
+        <comment language="en" />
+ </entry>
 
 4) Update igb/current to point to new release directory
 
 Now, anyone with IGB already installed will be asked to
 update their installation when they launch IGB.
 
-5) Edit downloads.html to indicate the new release.
+5) Edit downloads.html to indicate the new release number.
 
-
+6) Update Bioviz to include news item explaining what's new
+   in this new release of IGB.
 
