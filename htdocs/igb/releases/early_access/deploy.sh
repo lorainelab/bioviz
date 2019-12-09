@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # run this to deploy IGB early access (master branch)
-release="master"
-installers="$release.dmg $release.sh $release.exe"
+# assumes bitbucket custom pipeline build-master-branch-installers was run on master branch
+branch="master"
+installers="$branch.dmg $branch.sh $branch.exe $branch-32bit.exe"
 base="https://bitbucket.org/lorainelab/integrated-genome-browser/downloads"
 for installer in $installers;
 do
     url="$base/$installer"
-    cmd="wget -O $installer.tmp $url"
+    cmd="wget -O $installer $url"
     $cmd
-    mv $installer.tmp IGB-$installer
+    mv $installer IGB-$installer
 done
