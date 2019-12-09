@@ -2,22 +2,22 @@
 
 * * *
 
-### November 21, 2019: IGB 9.1.0 released
+### Dec. 9, 2019: <a href="./download.html">IGB 9.1.0</a> released!
 
-IGB 9.1.0 is now available for [download](https://bioviz.org/download.html).
-
-This new version of IGB fixes minor bugs present in v9.0.2 and introduces several new features.
+IGB 9.1.0 is now available for download! 
 
 #### New features and improvements: ####
 
-* IGB now shows soft-clipping as a distinct element of relevant alignment reads. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
-* _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes are now available.
-* We have improved feedback for files that cannot be opened in IGB by adding an error window, which shows the stack trace root cause and provides a link to the IGB help page.
-* The data sources table now contains an option to view more information about Quickload sites.
-* We have enabled opening files in IGB without your first having to select a genome.
-* IGB handles CIGAR strings in BAM files in a better way.
+* **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
+* **New genome versions.** New genomes added to the IGB Quickload data sharing system include _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes. If you would like more to be added, just let us know!
+* **Better feedback when things go wrong.** We improved the error and alert messages you see when IGB can't read your files for some reason. We hope this will help you figure out the problem yourself or gives us information that will help us solve the problems for you. 
+* **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB. 
+* **Easier to open files.** We added new capability to open and view files in IGB without your first having to select a genome.
+* **Fixed file parsing errors.** We fixed some errors in how IGB opens and reads alignment files in BAM (binary alignment) format. Now, IGB does a better job of reading those files and displaying alignments.
+* **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform. 
+* **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community. 
 
-For the full list with links to detailed notes and more, see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
+For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
 
 * * *
 
