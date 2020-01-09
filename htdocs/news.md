@@ -2,6 +2,26 @@
 
 * * *
 
+### Jan. 9, 2020: <a href="./download.html">IGB 9.1.2</a> (bug fix) released
+
+This release fixes an error that occurred when opening bigwig format
+files on some Windows computers. This problem did **not** affect IGB
+version 9.0.2.
+
+The IGB team is grateful to IGB community members who reported the
+error.  You have saved a lot of time and effort for many people by
+alerting us to this problem!
+
+We are especially grateful to Nadya Fursova and colleagues at the
+University of Oxford who shared error messages that helped us find a
+solution. Thank you also for helping us test this new version.
+
+To get the new version, download the latest installer. Also, if you 
+run IGB version 9.1.0 or earlier, you will see a message inviting you
+to upgrade to this new version.
+
+* * *
+
 ### Dec. 9, 2019: <a href="./download.html">IGB 9.1.0</a> released!
 
 IGB 9.1.0 is now available for download! 
