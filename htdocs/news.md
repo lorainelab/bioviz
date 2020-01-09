@@ -12,9 +12,11 @@ The IGB team is grateful to IGB community members who reported the
 error.  You have saved a lot of time and effort for many people by
 alerting us to this problem!
 
-We are especially grateful to Nadya Fursova and colleagues at the
-University of Oxford who shared error messages that helped us find a
-solution. Thank you also for helping us test this new version.
+We are especially grateful to Nadya Fursova and colleagues in the
+[Klose Lab](http://kloselab.co.uk/) at the University of Oxford who
+played a key role in fixing the error by sharing error messages,
+answering follow-up questions about the problem, and then testing the
+IGB 9.1.2 release candidate.
 
 To get the new version, download the latest installer. Also, if you 
 run IGB version 9.1.0 or earlier, you will see a message inviting you
