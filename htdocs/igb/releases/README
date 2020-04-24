@@ -83,8 +83,8 @@ update their installation when they launch IGB.
 
 7) Upload new artifacts to SF
 
-a) Log in to SF
-b) Go to Genoviz project
+a) Log in to SF 
+b) Go to Genoviz project - https://sourceforge.net/projects/genoviz/
 c) Click Files
 d) Create a new folder
 e) Upload artifacts using sfp
