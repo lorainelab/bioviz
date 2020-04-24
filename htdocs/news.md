@@ -2,6 +2,28 @@
 
 * * *
 
+### April 6, 2020: <a href="./download.html">IGB 9.1.4</a> released
+
+This release improves on how IGB communicates with the <a href="https://apps.bioviz.org">App Store for IGB</a>.
+
+Many thanks are due to UNC Charlotte graduate student developers
+Sameer Shanbhag, Noor Zahara, Pooja Nikhare, and Shamika Kulkarne
+along with Alex Sullivan (University of Toronto) for their efforts to
+identify, implement, and test the required improvements.
+
+This release also includes changes to IGB's bookmarks REST API to
+allow IGB to communicate with <a href="https://cyverse.org">CyVerse
+cloud resources</a> via the soon-to-be-released BioViz Connect Web
+site. Many thanks are due to Dr. Nowlan Freese and UNC Charlotte
+graduate students Chaitanya Kintali and Karthik Raveendran for their
+work on BioViz Connect.
+
+Lastly, this release contains improvements to IGB's BAI file parsing
+code, developed by Sai Charan Reddy Vallapureddy and Pawan Bole in
+collaboration with Dr. Nowlan Freese.
+
+* * *
+
 ### Jan. 9, 2020: <a href="./download.html">IGB 9.1.2</a> (bug fix) released
 
 This release fixes an error that occurred when opening bigwig format
