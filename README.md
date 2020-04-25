@@ -45,7 +45,20 @@ sudo pip install boto3
 * Attach an IAM role with "AmazonDynamoDBReadOnlyAccess" policy to your EC2 instance
 
 The CGI script geneIdLookup.py provides a Web service used by bar.js. It queries a dynamoDb table. 
-If you are not working on this aspect of the site, you can ignore this step.
+If you are not working on this aspect of the site, you can ignore this step. 
+
+To check that it's working, open it in a browser. For example:
+
+```
+http://bioviz.org/cgi-bin/geneIdLookup.py?gene_id=AT1G07350
+```
+
+returns this:
+
+```
+{"start": 2257383, "seqid": "Chr1", "end": 2260187, "gene_id": "AT1G07350"}
+```
+
 
 * Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
 
