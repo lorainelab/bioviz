@@ -116,9 +116,9 @@ sudo sed -i 's/#ServerName www.example.com:80/ServerName test.bioviz.org:80/g' h
 
 Install three files:
 
-1) signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
-2) your server's private key, created when you made the certificate signing request for the signing authority
-3) signed certificate (.crt) file from the signing authority
+1. signed certificate (.crt) file issued for you from a trusted signing authority like Digicert
+2. your server's private key, created when you made the certificate signing request for the signing authority
+3. signed certificate (.crt) file from the signing authority
 
 See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation/apache-openssl.htm) on how to configure SSL.
 
