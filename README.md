@@ -26,11 +26,16 @@ To update or add content:
 
 ### Setting up a staging site ###
 
+Dr. Loraine has written ansible playbooks to automate bioviz site setup.
+
+If she is not available to help you with this, you can run the following steps to set 
+up and configure a bioviz staging site.
+
 The directions below assume you are using CentOS, Apache Web server and AWS for hosting. 
 
-* Launch "free tier" micro EC2 image. 
+* Launch "free tier" micro EC2 image - ami-0fc61db8544a617ed
 
-This documentation assumes you're using CentOS Linux.
+This image is CentOS Linux. Other images with the same OS family should be fine. 
 
 * Install software.
 
@@ -42,12 +47,14 @@ sudo yum install -y git emacs httpd mod_ssl
 sudo pip install boto3
 ```
 
-* Attach an IAM role with "AmazonDynamoDBReadOnlyAccess" policy to your EC2 instance
+* Configure access to DynamoDb table - optional
 
-The CGI script geneIdLookup.py provides a Web service used by bar.js. It queries a dynamoDb table. 
-If you are not working on this aspect of the site, you can ignore this step. 
+The BioViz CGI script geneIdLookup.py provides a Web service used by bar.js. It queries a dynamoDb table. For 
+this to work, the EC2 hosting the site needs to be assigned a role that allows read access to this table. 
+Dr. Loraine will need to give you this access, or you can re-create the same table in your account. If you 
+are not working on this aspect of the site, you can ignore this step. 
 
-To check that it's working, open it in a browser. For example:
+To check that it's working, open the URL in a browser. For example:
 
 ```
 http://bioviz.org/cgi-bin/geneIdLookup.py?gene_id=AT1G07350
@@ -58,7 +65,6 @@ returns this:
 ```
 {"start": 2257383, "seqid": "Chr1", "end": 2260187, "gene_id": "AT1G07350"}
 ```
-
 
 * Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
 
@@ -120,8 +126,8 @@ See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation
 
 Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`. 
 
-For example, assume the private key file is `star_bioviz_org.key`, the certificates files are `star_bioviz_org.crt` and `DigiCertCA.crt`,
-and both are in your user home directory.
+In the following example, the private key file is `star_bioviz_org.key` and the certificates files are `star_bioviz_org.crt` and `DigiCertCA.crt`. 
+All three are in the user's home directory.
 
 ```
 sudo mv ~/star_bioviz_org.key /etc/pki/tls/private/localhost.key
@@ -186,7 +192,7 @@ git config --global alias.alias 'config --get-regexp ^alias\.'
 It's nice to have an shell (not git) alias that lets you change quickly into your cloned repository. Add this line to ~/.bash_profile:
 
 ```
-alias go="cd /var/www/bioviz"
+alias go="cd /var/www/bioviz/htdocs"
 ```
 
 If you like emacs, make it your default editor by adding this line to ~/.bash_profile:
@@ -254,24 +260,11 @@ igb/releases/igb-9.0.0/
 igb/releases/igb-9.0.1/
 ```
 
-* File containing information about any current surveys being done as part of IGB. See IGB code base for details.
-
-```
-igb/releases/surveys.xml
-```
-
 * IGB Apps directory, at the same level is the `igb` directory. These Apps appear in the IGB App Manager, available from the IGB Tools menu:
 
 ```
 igbserver/
 ```
-
-* Support page, used by older versions of IGB.
-
-```
-igb/support.html
-```
-
 
 ### Questions? ###
 
