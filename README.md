@@ -13,7 +13,7 @@ For IGB source code, see [https://bitbucket.org/lorainelab/integrated-genome-bro
 The site is designed to be deployed as-is into Web-accessible directories for development, testing, and (ultimately) deployment
 via git pull commands on the main bioviz.org site. 
 
-Recommended workflow to update or add content:
+To update or add content:
 
 * fork this repository on bitbucket
 * clone your fork to a staging site (configured as below)
@@ -22,33 +22,30 @@ Recommended workflow to update or add content:
 * push the branch to your fork
 * issue a pull request from your branch to master on the team (main) repo
 
-**Note**: Make note of your staging site URL in your pull request.
-
-**Note**: If you deploy as described below, your edits will appear on the staging site automatically. 
+**Note**: Include staging site URL in your pull request to make testing and reviewing easier.
 
 ### Setting up a staging site ###
 
 The directions below assume you are using CentOS, Apache Web server and AWS for hosting. 
 
-* Launch micro EC2 image. 
-
-Log into the AWS console and launch one of the pre-configured images. There are many options and most are fine, but pick the smallest 
-(and cheapest) option available.
+* Launch "free tier" micro EC2 image. 
 
 This documentation assumes you're using CentOS Linux.
 
 * Install software.
 
-Install system updates, the Apache Web server, git, boto3(AWS SDK), SSL support, and whatever editor you prefer. (The example below installs emacs.)
+Install system updates, the Apache Web server, git, boto3 (AWS SDK), and SSL support. 
 
 ```
 sudo yum update -y 
 sudo yum install -y git emacs httpd mod_ssl
 sudo pip install boto3
 ```
-* Make sure that an IAM role with "AmazonDynamoDBReadOnlyAccess" policy is attached to your EC2 instance
 
-This role helps geneIdLookup.py cgi script to access dynamoDb tables. Contact Dr. Loraine for more information.
+* Attach an IAM role with "AmazonDynamoDBReadOnlyAccess" policy to your EC2 instance
+
+The CGI script geneIdLookup.py provides a Web service used by bar.js. It queries a dynamoDb table. 
+If you are not working on this aspect of the site, you can ignore this step.
 
 * Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
 
@@ -71,9 +68,7 @@ git clone git@bitbucket.org:bbuser/bioviz.git # clone your fork
 sudo mv bioviz /var/www/. # move cloned repo to Web directories
 ```
 
-* Configure Apache (httpd) to serve bioviz content from the cloned bioviz/htdocs directory
-
-* Edit `httpd.conf` to configure the site. If you make a mistake, use git checkout to recover the original version.
+* Configure Apache (httpd) to serve bioviz content from the cloned bioviz/htdocs directory by editing `httpd.conf`
 
 The default document root is `/var/www/html`. Change this to `/var/www/bioviz/htdocs`. 
 
@@ -110,7 +105,7 @@ See also: [Digicert documentation](https://www.digicert.com/csr-ssl-installation
 
 * Transfer the files to the server. 
 
-Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`.
+Put the private key file (.key) in `/etc/pki/tls/private` and the two certificate files (.crt) in `/etc/pki/tls.private`. 
 
 For example, assume the private key file is `star_bioviz_org.key`, the certificates files are `star_bioviz_org.crt` and `DigiCertCA.crt`,
 and both are in your user home directory.
