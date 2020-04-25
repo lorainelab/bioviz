@@ -48,7 +48,7 @@ sudo pip install boto3
 ```
 * Make sure that an IAM role with "AmazonDynamoDBReadOnlyAccess" policy is attached to your EC2 instance
 
-This role helps geneIdLookup.py cgi script to access dynamoDb tables. Contact Dr.Ann Loraine for more information.
+This role helps geneIdLookup.py cgi script to access dynamoDb tables. Contact Dr. Loraine for more information.
 
 * Configure git. Make an ssh key and add it to your bitbucket user account settings. Tell git to use your Bitbucket user name.
 
@@ -72,35 +72,6 @@ sudo mv bioviz /var/www/. # move cloned repo to Web directories
 ```
 
 * Configure Apache (httpd) to serve bioviz content from the cloned bioviz/htdocs directory
-* Also, start tracking server configurations using a second git repo *local* to your host. (Optional, but highly recommended)
-
-It's useful to track changes you make to local configuration files. If you do this, you can 
-easily retrieve older versions for trouble-shooting. Use git to create a local
-repository out of `/etc/httpd` for tracking configuration changes. 
-
-```
-cd /etc/httpd
-sudo git init .
-sudo git add conf/httpd.conf conf.d/ssl.conf
-sudo git commit -m "Track out of box configurations"
-```
-
-* Create a .gitignore file in /etc/httpd. Add and commit it to your local repository.
-
-.gitignore:
-
-```
-*~
-*#
-logs
-run
-modules
-notrace.conf
-README
-welcome.conf
-conf/magic
-module
-```
 
 * Edit `httpd.conf` to configure the site. If you make a mistake, use git checkout to recover the original version.
 
@@ -117,8 +88,6 @@ The default script alias is `/var/www/cgi-bin`. Change this to `/var/www/bioviz/
 cd /etc/httpd/conf
 sudo sed -i 's/\(var\/www\)\/cgi-bin/\1\/bioviz\/cgi-bin/g' httpd.conf
 ```
-
-**Note**: To see your changes thus far, use `git diff`.
 
 * Ask Dr. Loraine to assign your site a bioviz.org subdomain, e.g., yourname.bioviz.org. Add the domain name to `/etc/httpd/conf/httpd.conf`.
 
@@ -147,24 +116,9 @@ For example, assume the private key file is `star_bioviz_org.key`, the certifica
 and both are in your user home directory.
 
 ```
-sudo mv ~/star_bioviz_org.key /etc/pki/tls/private/.
-sudo mv ~/DigiCertCA.crt /etc/pki/tls/certs/.
-sudo mv ~/star_bioviz_org.crt /etc/pki/tls/certs/.
-```
-
-* Edit `/etc/httpd/conf.d/ssl.conf` to point to these files. 
-
-```
-cd /etc/httpd/conf.d
-sudo sed -i 's/#\(SSLCertificateChainFile \/etc\/pki\/tls\/certs\/\)server-chain.crt/\1DigiCertCA.crt/g' ssl.conf
-sudo sed -i 's/\(SSLCertificateFile \/etc\/pki\/tls\/certs\/\)localhost.crt/\1star_bioviz_org.crt/g' ssl.conf
-sudo sed -i 's/\(SSLCertificateKeyFile \/etc\/pki\/tls\/private\/\)localhost.key/\1star_bioviz_org.key/g' ssl.conf
-```
-
-* Use `git diff` to check your changes.
-
-```
-git diff ssl.conf
+sudo mv ~/star_bioviz_org.key /etc/pki/tls/private/localhost.key
+sudo mv ~/DigiCertCA.crt /etc/pki/tls/certs/server-chain.crt
+sudo mv ~/star_bioviz_org.crt /etc/pki/tls/certs/localhost.crt
 ```
 
 * Use `configtest` to check your server configurations.
@@ -187,14 +141,6 @@ If you don't see the BioViz content, look at the server logs to diagnose the pro
 ```
 sudo cat /var/log/httpd/error_log
 sudo cat /var/log/httpd/access_log
-```
-
-* If everything is fine, commit your edits to the configuration files.
-
-```
-cd /etc/httpd
-sudo git add conf/httpd.conf conf.d/ssl.conf
-sudo git commit -m "Configure site"
 ```
 
 * Ensure Web server starts when you reboot the image.
