@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #IGBF-1495 - Re-factor geneIdLookup.py to query dynamodb table instead of reading flat file
 import cgi
