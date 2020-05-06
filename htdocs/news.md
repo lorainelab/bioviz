@@ -2,6 +2,50 @@
 
 * * *
 
+### April 6, 2020: <a href="./download.html">IGB 9.1.4</a> released
+
+This release improves on how IGB communicates with the <a href="https://apps.bioviz.org">App Store for IGB</a>.
+
+Many thanks are due to UNC Charlotte graduate student developers
+Sameer Shanbhag, Noor Zahara, Pooja Nikhare, and Shamika Kulkarne
+along with Alex Sullivan (University of Toronto) for their efforts to
+identify, implement, and test the required improvements.
+
+This release also includes changes to IGB's bookmarks REST API to
+allow IGB to communicate with <a href="https://cyverse.org">CyVerse
+cloud resources</a> via the soon-to-be-released BioViz Connect Web
+site. Many thanks are due to Dr. Nowlan Freese and UNC Charlotte
+graduate students Chaitanya Kintali and Karthik Raveendran for their
+work on BioViz Connect.
+
+Lastly, this release contains improvements to IGB's BAI file parsing
+code, developed by Sai Charan Reddy Vallapureddy and Pawan Bole in
+collaboration with Dr. Nowlan Freese.
+
+* * *
+
+### Jan. 9, 2020: <a href="./download.html">IGB 9.1.2</a> (bug fix) released
+
+This release fixes an error that occurred when opening bigwig format
+files on some Windows computers. This problem did **not** affect IGB
+version 9.0.2.
+
+The IGB team is grateful to IGB community members who reported the
+error.  You have saved a lot of time and effort for many people by
+alerting us to this problem!
+
+We are especially grateful to Nadya Fursova and colleagues in the
+[Klose Lab](http://kloselab.co.uk/) at the University of Oxford who
+played a key role in fixing the error by sharing error messages,
+answering follow-up questions about the problem, and then testing the
+IGB 9.1.2 release candidate.
+
+To get the new version, download the latest installer. Also, if you 
+run IGB version 9.1.0 or earlier, you will see a message inviting you
+to upgrade to this new version.
+
+* * *
+
 ### Dec. 9, 2019: <a href="./download.html">IGB 9.1.0</a> released!
 
 IGB 9.1.0 is now available for download! 

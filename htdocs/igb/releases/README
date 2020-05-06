@@ -81,3 +81,26 @@ update their installation when they launch IGB.
 6) Update Bioviz to include news item explaining what's new
    in this new release of IGB.
 
+7) Upload new artifacts to SF
+
+a) Log in to SF 
+b) Go to Genoviz project - https://sourceforge.net/projects/genoviz/
+c) Click Files
+d) Create a new folder
+e) Upload artifacts using sfp
+
+For example:
+
+  sftp loraine@frs.sourceforge.net
+  cd /home/frs/project/genoviz
+  cd "IGB 9.1.0"
+  put IGB-macos-9.1.0.dmg
+
+8) Update latest release message
+
+a) In the SF UI, open the folder with new artifacts
+b) Click "i" next to each file
+c) Check that box that says default download for platform 
+
+9) Using Bitbucket pipelines on the main repository, release
+   artifacts to nexus repository
