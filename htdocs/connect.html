@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>BioViz Connect</title>
+    <link rel="icon" href="img/connect/icon.png">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!--For use in production only... compile to css before release -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="less/style.css">
+</head>
+<body>
+
+<div id="TopMenu"></div>
+<div class="container main-content">
+    <br/>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <img src="img/connect/logoSmall.png" alt="BioViz Connect Logo" class="img-responsive"/>
+            <h4>
+                <br>
+                Annotate, analyze, and visualize your CyVerse data in IGB
+                <br>
+                <br>
+                <br>
+            </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+                <button onclick="window.location.href = 'https://connect.bioviz.org';" class="btn btn-primary">
+                    <h3>
+                      Sign in with your CyVerse ID
+                    </h3>
+                </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center marginBottom25">
+                <br>
+                <em>
+                Create a free CyVerse account <a href="https://user.cyverse.org/register">here</a><br>
+                    BioViz does not store your CyVerse password</em>
+                <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+            <a href="img/connect/homeFull.png" data-lightbox="image-1">
+                <img class="img-responsive center-block" src="img/connect/homeSmall.png" alt="BioViz Connect Home Layout"/>
+            </a>
+        <div class="col-md-8 col-md-offset-2">
+            <p class="text-center marginBottom25">
+                <br>
+                BioViz Connect is a new way to view and interact with your CyVerse Discovery Environment data.
+                Now you can add IGB specific annotations like genome version and track color, create scaled
+                genome-wide coverage graphs, and then view in IGB with a click of a button.
+                <br>
+            </p>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <hr>
+    <div id="footer" class="container">
+    </div>
+</div>
+
+    <!-- container -->
+    <script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- scripts concatenated and minified via ant build script-->
+
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js?v=12392829"></script>
+    <script src="js/lightbox.min.js"></script>
+    <!-- end scripts-->
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-33977587-2', 'bioviz.org');
+        ga('send', 'pageview');
+    </script>
+
+<!-- end scripts-->
+</body>
+
+</html>
