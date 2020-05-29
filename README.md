@@ -25,6 +25,6 @@ For testing and review, deploy your branch on a staging site. Include a link to 
 
 ### Setting up a staging site ###
 
-Dr. Loraine has written ansible playbooks to automate bioviz site setup.
+Dr. Loraine has written ansible playbooks to automate bioviz site setup using AWS infrastructure. The playbooks allow you to deploy a fully-functional bioviz.org mirror within your AWS account, minus the bioviz.org certificates. 
 
 See: https://bitbucket.org/lorainelab/bioviz-playbooks
