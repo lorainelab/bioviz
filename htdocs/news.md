@@ -42,10 +42,22 @@ Previously, we called this site CyVerse Data, but later we changed the name to
 
 To see it in action, check out <a href="https://www.youtube.com/watch?v=okbsr4XYgn4">this video</a> by Dr. Nowlan Freese, BioViz <em>Connect</em> project manager.
 
-Links:
+#### FAQ
+* **What can I do with BioViz <em>Connect</em>?** View your CyVerse Discovery Environment in an all new dashboard-style application. Stream data to IGB for visualization or use cloud computing to create all new visualizations. Add IGB specific annotations such as genome version and track color to control how data will look once loaded in IGB. Create public links to share and collaborate.
+ 
+* **What is BioViz <em>Connect</em>?** BioViz <em>Connect</em> is an all new web application created by the BioViz team for annotating, analyzing and visualizing CyVerse Discovery Environment data in IGB.
+ 
+* **What is CyVerse?** CyVerse is funded by the National Science Foundation with a mission to design, deploy, and expand national Cyberinfrastructure for Life Sciences research.
+ 
+* **What is the Discovery Environment?** The Discovery Environment provides a web interface for cloud based computing and data storage.
+ 
+* **How do I log in to BioViz <em>Connect</em>?** Use your CyVerse Discovery Environment credentials to <a href="https://www.bioviz.org/connect.html">log in</a>.
+ 
+* **How do I get a CyVerse Discovery Environment account?** Create a free <a href="https://user.cyverse.org/register">CyVerse Discovery Environment account</a>.
+ 
+* **How does BioViz <em>Connect</em> work?** BioViz <em>Connect</em> uses the CyVerse Terrain APIs to retrieve data, add annotations, and analyze data.
 
-* <a href="https://bitbucket.org/lorainelab/bioviz-connect">Source code</a>
-* <a href="./connect.html">BioViz <em>Connect</em></a>
+* **Where can I find the source code?** <a href="https://bitbucket.org/lorainelab/bioviz-connect">Source code</a> is available on BitBucket.
 
 * * *
 
