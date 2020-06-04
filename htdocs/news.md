@@ -2,6 +2,53 @@
 
 * * *
 
+### May 29, 2020: <a href="./genome-dashboard">IGB Genomes Dashboard</a>
+
+To make it easier for IGB users to find and load genome versions, we created
+a <a href="./genome-dashboard">IGB Genomes</a>, which shows you every species and
+genome assembly version available to load into IGB.
+
+UNC Charlotte graduate students Sameer Shanbhag (CS MS) and later Philip Badzuh
+(Bioinformatics PhD) developed the site.
+
+Links:
+
+* <a href="https://bitbucket.org/lorainelab/genome-dashboard">Source code</a>
+
+* * *
+
+### May 16, 2020: BioViz <em>Connect</em> <a href="https://www.biorxiv.org/content/10.1101/2020.05.15.098533v1.article-info">paper on BioRxiv</a>
+
+Today we uploaded and released <a href="https://www.biorxiv.org/content/10.1101/2020.05.15.098533v1.article-info">a
+new article</a> describing <a href="./connect.html">BioViz
+<em>Connect</em></a>, a service that lets IGB users visualize their
+data stored in CyVerse, a free cloud service for life scientists.
+
+Congratulations to Loraine Lab graduate students Karthik Raveendran,
+Chaitanya Kintali, Srishti Tiwari, and Pawan Bole whose work on <a
+href="./connect.html">BioViz <em>Connect</em></a> is featured in this
+paper.
+
+* * *
+
+### May 1, 2020: BioViz <em>Connect</em> released
+
+<a href="./connect.html">BioViz <em>Connect</em></a> is a new add-on
+for our Web site that lets you use Integrated Genome Browser to
+visually analyse data stored in your CyVerse cloud account.
+
+Previously, we called this site CyVerse Data, but later we changed the name to
+<em>Connect</em>, since it literally connects IGB with CyVerse.
+
+To see it in action, check out <a href="https://www.youtube.com/watch?v=okbsr4XYgn4">this video</a> by Dr. Nowlan Freese, BioViz <em>Connect</em> project manager.
+
+Links:
+
+* <a href="https://bitbucket.org/lorainelab/bioviz-connect">Source code</a>
+* <a href="./connect.html">BioViz <em>Connect</em></a>
+
+* * *
+
 ### April 6, 2020: <a href="./download.html">IGB 9.1.4</a> released
 
 This release improves on how IGB communicates with the <a href="https://apps.bioviz.org">App Store for IGB</a>.
