@@ -2,7 +2,7 @@
  * Galaxy/IGB Bridge
  * by Loraine Lab
  *
- * Credit to Nick Schurch and Kyle Suttlemyre for inspiration of js/igb communication 
+ * Credit to Nick Schurch and Kyle Suttlemyre for inspiration of js/igb communication
  */
 var igbIsRunning = false;
 var count = 0;
@@ -21,7 +21,7 @@ if (!String.prototype.endsWith) {
 }
 
 
-$(window).load(function() {
+$(window).on("load", (function() {
     initializeIgbStatus();
     var version = $.url().param('version');
     var source = $.url().attr('source');
@@ -84,7 +84,7 @@ $(window).load(function() {
         }
     }
 
-});
+}));
 
 var downloadURL = function downloadURL(url) {
     var hiddenIFrameID = 'hiddenDownloader',

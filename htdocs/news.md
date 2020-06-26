@@ -1,4 +1,4 @@
-# IGB NEWS 
+# IGB NEWS
 
 * * *
 
@@ -44,17 +44,17 @@ To see it in action, check out <a href="https://www.youtube.com/watch?v=okbsr4XY
 
 #### FAQ
 * **What can I do with BioViz <em>Connect</em>?** View your CyVerse Discovery Environment in an all new dashboard-style application. Stream data to IGB for visualization or use cloud computing to create all new visualizations. Add IGB specific annotations such as genome version and track color to control how data will look once loaded in IGB. Create public links to share and collaborate.
- 
+
 * **What is BioViz <em>Connect</em>?** BioViz <em>Connect</em> is an all new web application created by the BioViz team for annotating, analyzing and visualizing CyVerse Discovery Environment data in IGB.
- 
+
 * **What is CyVerse?** CyVerse is funded by the National Science Foundation with a mission to design, deploy, and expand national Cyberinfrastructure for Life Sciences research.
- 
+
 * **What is the Discovery Environment?** The Discovery Environment provides a web interface for cloud based computing and data storage.
- 
+
 * **How do I log in to BioViz <em>Connect</em>?** Use your CyVerse Discovery Environment credentials to <a href="https://www.bioviz.org/connect.html">log in</a>.
- 
+
 * **How do I get a CyVerse Discovery Environment account?** Create a free <a href="https://user.cyverse.org/register">CyVerse Discovery Environment account</a>.
- 
+
 * **How does BioViz <em>Connect</em> work?** BioViz <em>Connect</em> uses the CyVerse Terrain APIs to retrieve data, add annotations, and analyze data.
 
 * **Where can I find the source code?** <a href="https://bitbucket.org/lorainelab/bioviz-connect">Source code</a> is available on BitBucket.
@@ -99,7 +99,7 @@ played a key role in fixing the error by sharing error messages,
 answering follow-up questions about the problem, and then testing the
 IGB 9.1.2 release candidate.
 
-To get the new version, download the latest installer. Also, if you 
+To get the new version, download the latest installer. Also, if you
 run IGB version 9.1.0 or earlier, you will see a message inviting you
 to upgrade to this new version.
 
@@ -107,18 +107,18 @@ to upgrade to this new version.
 
 ### Dec. 9, 2019: <a href="./download.html">IGB 9.1.0</a> released!
 
-IGB 9.1.0 is now available for download! 
+IGB 9.1.0 is now available for download!
 
 #### New features and improvements: ####
 
 * **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
 * **New genome versions.** New genomes added to the IGB Quickload data sharing system include _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes. If you would like more to be added, just let us know!
-* **Better feedback when things go wrong.** We improved the error and alert messages you see when IGB can't read your files for some reason. We hope this will help you figure out the problem yourself or gives us information that will help us solve the problems for you. 
-* **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB. 
+* **Better feedback when things go wrong.** We improved the error and alert messages you see when IGB can't read your files for some reason. We hope this will help you figure out the problem yourself or gives us information that will help us solve the problems for you.
+* **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB.
 * **Easier to open files.** We added new capability to open and view files in IGB without your first having to select a genome.
 * **Fixed file parsing errors.** We fixed some errors in how IGB opens and reads alignment files in BAM (binary alignment) format. Now, IGB does a better job of reading those files and displaying alignments.
-* **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform. 
-* **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community. 
+* **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform.
+* **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community.
 
 For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
 
@@ -126,16 +126,16 @@ For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](
 
 ### Nov. 26, 2018: IGB 9.0.2 released
 
-IGB 9.0.2 is now available for download. 
+IGB 9.0.2 is now available for download.
 
-This minor release mainly corrects errors reported by users and updates external libraries IGB is using. In addition, we added new Quickload data sources, along with new backup mirror sites for core data sets. 
+This minor release mainly corrects errors reported by users and updates external libraries IGB is using. In addition, we added new Quickload data sources, along with new backup mirror sites for core data sets.
 
 #### Improvements include: ####
 
 * The IGB installers are updated to fix some security errors that occurred when installing on MacOS Mojave. Thank you to everyone who reported this!
 * We added new backup Quickload sites for the RNA-Seq, ChIP-Seq, and DNA-Seq data sources.
 * New genomes are available for rat, mouse, and potato.
-* IGB now supports newer VCF versions. 
+* IGB now supports newer VCF versions.
 * We improved how IGB loads data from Quickload sites using position bookmarks.
 * IGB is now using the latest build of Java 1.8 and up-to-date BAM and tabix parsing code from the htsjdk project.
 
@@ -151,8 +151,8 @@ A new version of IGB is available that fixes some errors present in
 * IGB now allows decimal values in "Filter by Score" filtering functions for BAM, BED, etc (annotation) tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
 * We improved aspects of IGB's heatmap-related features. We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. ([IGBF-1205](https://jira.transvar.org/browse/IGBF-1205)) Also new in IGB 9.0.1: heatmap settings for tracks will now persist between sessions. ([IGBF-1126](https://jira.transvar.org/browse/IGBF-1126))
 * Working with the [Renaissance Computing Institute](http://renci.org/) and the and the [SciDas.org project](http://scidas.org/), we added new data delivery Quickload sites to take advantage of top-speed data transfers provided by RENCI for users. ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
-* We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.transvar.org/browse/IGBF-1218)) 
-* We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154)), and several more. 
+* We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.transvar.org/browse/IGBF-1218))
+* We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154)), and several more.
 
 For the full list with links to detailed notes and more, see [IGB 9.0.1 Release Documentation](https://wiki.transvar.org/display/ITD/9.0.1).
 
@@ -160,7 +160,7 @@ For the full list with links to detailed notes and more, see [IGB 9.0.1 Release 
 
 Behind the scenes, we improved our software development workflow, making it more open and transparent for continuing and potential contributors. Now, we label every issue with a tag indicating level of difficulty, so that students and project newcomers will have a way to get started as a contributors. We also organize two levels of code review, which helps us all learn the code better while also protecting against accidental introduction of bugs. Thanks to code review, we also learn more about each other's problem-solving techniques, which makes us better coders. (One of the best ways to improve your coding skills is to study how other coders write code and solve problems!)
 
-In the spirit of all of us getting better at writing code, we developed a free, on-line course called [Open source programming with IGB](https://canvas.instructure.com/courses/1164217) using the open (and free!) Canvas platform. Some IGB graduate students have added some new case studies describing bugs and features they fixed or added. 
+In the spirit of all of us getting better at writing code, we developed a free, on-line course called [Open source programming with IGB](https://canvas.instructure.com/courses/1164217) using the open (and free!) Canvas platform. Some IGB graduate students have added some new case studies describing bugs and features they fixed or added.
 
 Last but not least, we switched from using Jenkins to Bitbucket pipelines to build IGB. Now, whenever one of the team pushs a new branch, the pipeline automatically builds a fresh IGB installer and copies it to their fork's Downloads section. (This requires some specialized setup - if you want to try it, get in touch.) Thanks to this, we can very quickly release custom versions of IGB on demand for users who request it. This could be a great way for a research team (or company?) to distribute custom versions of IGB with their own Quickload sites already pre-configured, for example.
 
@@ -171,7 +171,7 @@ As always, if you have questions or comments, please get in touch!
 ### June 7, 2016: IGB-fx prototype available
 
 The IGB team is built a new version of IGB that uses JavaFX
-and 100% modular, services-based programming with OSGi. 
+and 100% modular, services-based programming with OSGi.
 A prototype version for developers is available from the
 [IGB-fx source code repository](https://bitbucket.org/lorainelab/igb-fx).
 
@@ -183,7 +183,7 @@ use to create stunning new visualizations for new types of genomic data.
 
 ### June 6, 2016: IGB 9.0.0 released
 
-Today we released IGB 9.0.0, a major version release that includes API improvements, performance improvements, and bug fixes. 
+Today we released IGB 9.0.0, a major version release that includes API improvements, performance improvements, and bug fixes.
 
 * New Menu API (see [developers guide](https://wiki.transvar.org/display/igbdevelopers))
 * Better support for narrowPeak files - from ChIP-Seq experiments ([IGBF-1115](https://jira.transvar.org/browse/IGBF-1115))
@@ -241,8 +241,8 @@ Ann and Nowlan are giving several presentations on IGB and ProtAnnot during the 
 * Live demos of IGB and ProtAnnot (Ann and Nowlan) during the <a href="https://pag.confex.com/pag/xxiv/meetingapp.cgi/Session/3271">Wed afternoon Computer Demo</a> session
 * A talk on the blueberry genome featuring IGB (Ann) during the <a href="https://pag.confex.com/pag/xxiv/meetingapp.cgi/Session/3094">Fruits and Nuts</a> session - <a href="http://www.slideshare.net/AnnLoraine/rnaseq-analysis-of-blueberry-fruit-development-and-ripening">slides on Slideshare</a>
 
-We'll post links to slides and videos as soon as they're available. 
- 
+We'll post links to slides and videos as soon as they're available.
+
 * * *
 
 ### December 21, 2015: IGB 8.5.2 released
@@ -265,18 +265,18 @@ Today we released IGB 8.5.2, a minor release that includes several bug fixes and
 
 Today we released IGB 8.5.1, a minor release that includes a single bug fix.
 
-* Remote Wig File loading fails ([IGBF-1046](https://jira.transvar.org/browse/IGBF-1046)) 
+* Remote Wig File loading fails ([IGBF-1046](https://jira.transvar.org/browse/IGBF-1046))
 
 * * *
 ### November 20, 2015: IGB 8.5.0 released
 
-Today we released IGB 8.5.0, a major release that includes many new features and improvements. 
+Today we released IGB 8.5.0, a major release that includes many new features and improvements.
 
 * Introduced support for narrowPeak and broadPeak file formats ([IGBF-1005](https://jira.transvar.org/browse/IGBF-1005))
 * Introduced a new caching system to improve performance and speed up data access of commonly accessed files ([IGBF-442](https://jira.transvar.org/browse/IGBF-442))
 * Introduced a App Manager created with JavaFx ([IGBF-959](https://jira.transvar.org/browse/IGBF-959))
 <div>
-<a href="img/appmanager.png" data-lightbox="example-1"><img src="img/appmanager.png" alt="image-1" style="height:400px"/></a>
+<a href="images/appmanager.png" data-lightbox="example-1"><img src="images/appmanager.png" alt="image-1" style="height:400px"/></a>
 </div>
 * Added a bundled JRE for the linux distribution ([IGBF-1000](https://jira.transvar.org/browse/IGBF-1000))
 * Added support for a new index attribute to the quickload annots.xml file tag ([IGBF-445](https://jira.transvar.org/browse/IGBF-445))
@@ -290,7 +290,7 @@ Today we released IGB 8.5.0, a major release that includes many new features and
 * * *
 ### September 15, 2015: New IGB paper
 
-A new paper describing IGB is available as [a preprint on BioRXiv.org](http://bit.ly/1KQEfga). Highlights include all new visual analytics tools for high throughput 
+A new paper describing IGB is available as [a preprint on BioRXiv.org](http://bit.ly/1KQEfga). Highlights include all new visual analytics tools for high throughput
 sequence data and the ability to add new features as IGB Apps (plug-ins), such as [ProtAnnot](http://bit.ly/1M9DQ5X).
 
 * * *
@@ -312,8 +312,8 @@ Today we released IGB 8.4.4, a minor release that includes a patch for performan
 * * *
 ### September 2, 2015: IGB 8.4.3 released
 
-Today we released IGB 8.4.3, a minor release that includes a few enhancements to existing features, and patches for defects. 
-A noteworthy patch is included for a serious bug in Ubuntu which causes the JVM to crash whenever a file chooser widget was presented for loading local files. 
+Today we released IGB 8.4.3, a minor release that includes a few enhancements to existing features, and patches for defects.
+A noteworthy patch is included for a serious bug in Ubuntu which causes the JVM to crash whenever a file chooser widget was presented for loading local files.
 We have reverted to using a non-native file chooser on Ubuntu as a workaround.
 
 * IGB returns to default chromosome after removing any track. (local files only)  ([IGBF-915](https://jira.transvar.org/browse/IGBF-915))
@@ -331,24 +331,24 @@ Today we released IGB 8.4.2, a minor release which includes a variety of small b
 
 * Improve user feedback when adding broken quickload sites ([IGBF-808](https://jira.transvar.org/browse/IGBF-808))
 * Local species.txt is parsed incorrectly ([IGBF-796](https://jira.transvar.org/browse/IGBF-796))
-* Spaces getting converted to "%20" in Data Sources table ([IGBF-748](https://jira.transvar.org/browse/IGBF-748)) 
+* Spaces getting converted to "%20" in Data Sources table ([IGBF-748](https://jira.transvar.org/browse/IGBF-748))
 * Editing URL of secured quickoad sites causes strange behavior in IGB including the inability to remove a data source ([IGBF-868](https://jira.transvar.org/browse/IGBF-868))
-* Not selecting "Save Password" checkbox when adding two secured Quickoad sites causes too many popups to appear during a session ([IGBF-866](https://jira.transvar.org/browse/IGBF-866)) 
-* Working with multiple secure quickload sites causes authentication popup to trigger unexpectedly ([IGBF-840](https://jira.transvar.org/browse/IGBF-840)) 
+* Not selecting "Save Password" checkbox when adding two secured Quickoad sites causes too many popups to appear during a session ([IGBF-866](https://jira.transvar.org/browse/IGBF-866))
+* Working with multiple secure quickload sites causes authentication popup to trigger unexpectedly ([IGBF-840](https://jira.transvar.org/browse/IGBF-840))
 
 * * *
 
 ### July 25, 2015: MI bundle plug-in for IGB
 
-Dr. Arnaud Céol from the Center for Genomic Science at the Italian Institute of Technology published a paper on the MI bundle, an IGB plug-in 
-for mapping and visualizing genomic regions in molecular interactions structures. This plug-in allows researchers to identify potential functional 
+Dr. Arnaud Céol from the Center for Genomic Science at the Italian Institute of Technology published a paper on the MI bundle, an IGB plug-in
+for mapping and visualizing genomic regions in molecular interactions structures. This plug-in allows researchers to identify potential functional
 impacts caused by mutations. The paper can be found at [http://bit.ly/1MpYkKH] (http://bit.ly/1MpYkKH), and more information at [http://cru.genomics.iit.it/igbmibundle/] (http://cru.genomics.iit.it/igbmibundle/).
 
 * * *
 
 ### July 8, 2015: IGB 8.4.1 released
 
-Today we released IGB 8.4.1, a minor release which resolves one significant regression in the IGB 8.4.0 release related to failing to properly preserve the track order. 
+Today we released IGB 8.4.1, a minor release which resolves one significant regression in the IGB 8.4.0 release related to failing to properly preserve the track order.
 We have also included a few more minor improvements with this release.
 
 *   Track Order is reverting to load order on chromosome change ([IGBF-793](https://jira.transvar.org/browse/IGBF-793))
@@ -359,9 +359,9 @@ We have also included a few more minor improvements with this release.
 * * *
 ### July 6, 2015: IGB 8.4.0 released
 
-Today we released IGB 8.4.0, a major release which includes several significant software architectural improvements. 
-The improvements included in this release have mostly been aimed at enhancing the APIs exposed to plugin developers 
-and making our code base more developer friendly; however, the release also contains many usability improvements 
+Today we released IGB 8.4.0, a major release which includes several significant software architectural improvements.
+The improvements included in this release have mostly been aimed at enhancing the APIs exposed to plugin developers
+and making our code base more developer friendly; however, the release also contains many usability improvements
 and bug fixes.
 
 *   DataProvider API introduced as a full replacement for SeverTypeI ([IGBF-663](https://jira.transvar.org/browse/IGBF-663))
@@ -405,9 +405,9 @@ Today we released IGB 8.3.2, a minor release which includes bug fixes and some i
 
 *   Add support for other FASTA file extensions ([IGBF-414](https://jira.transvar.org/browse/IGBF-414))
 *   Open Custom Genome improvements ([IGBF-479](https://jira.transvar.org/browse/IGBF-479))
-*   Refactor and simplify Open File feature ([IGBF-377](https://jira.transvar.org/browse/IGBF-377)) 
-*   Update Bundled JRE to resolve intermittent crashes on Mac OS X ([IGBF-380](https://jira.transvar.org/browse/IGBF-380)) 
-*   Add "delete all tracks" IGB scripting command) ([IGBF-472](https://jira.transvar.org/browse/IGBF-472)) 
+*   Refactor and simplify Open File feature ([IGBF-377](https://jira.transvar.org/browse/IGBF-377))
+*   Update Bundled JRE to resolve intermittent crashes on Mac OS X ([IGBF-380](https://jira.transvar.org/browse/IGBF-380))
+*   Add "delete all tracks" IGB scripting command) ([IGBF-472](https://jira.transvar.org/browse/IGBF-472))
 *   Bed Parser Minor Improvements to resolve issues related to optional bin field ([IGBF-512](https://jira.transvar.org/browse/IGBF-512))
 *   GFF3 Tooltip duplicates removed ([IGBF-513](https://jira.transvar.org/browse/IGBF-513))
 *   Advanced Search Tab "Gene Name" column should be renamed to Title and mapped to correct property ([IGBF-514](https://jira.transvar.org/browse/IGBF-514))
@@ -417,8 +417,8 @@ Today we released IGB 8.3.2, a minor release which includes bug fixes and some i
 Today we released IGB 8.3.1, a minor release which includes several bug fixes and small improvements
 
 *   Added Customize option back to track label context menu ([IGBF-379](https://jira.transvar.org/browse/IGBF-379))
-*   Open File Diaolog modifications made for native look and feel ([IGBF-377](https://jira.transvar.org/browse/IGBF-377)) 
-*   Search indexing problem with GFF file format vs. BED-detail ([IGBF-23](https://jira.transvar.org/browse/IGBF-23)) 
+*   Open File Diaolog modifications made for native look and feel ([IGBF-377](https://jira.transvar.org/browse/IGBF-377))
+*   Search indexing problem with GFF file format vs. BED-detail ([IGBF-23](https://jira.transvar.org/browse/IGBF-23))
 *   Moved igb-command-socket module into optional plugins ([IGBF-417](https://jira.transvar.org/browse/IGBF-417))
 *   Genome load mode doesn’t indicate loading has happened for chromosomes for which there was no data ([IGBF-378](https://jira.transvar.org/browse/IGBF-378))
 *   Set home as default location for Open File dialogs ([IGBF-405](https://jira.transvar.org/browse/IGBF-405))
@@ -428,7 +428,7 @@ Today we released IGB 8.3.1, a minor release which includes several bug fixes an
 
 ### January 22, 2015: IGB 8.3.0 released
 
-Today we released IGB 8.3.0, a milestone major release for the IGB project introducing native platform installers for Windows, Mac, and Linux.  This release does not contain any new major features, 
+Today we released IGB 8.3.0, a milestone major release for the IGB project introducing native platform installers for Windows, Mac, and Linux.  This release does not contain any new major features,
 but does include many bug fixes.
 
 *   Create Native Installers ([IGBF-347](https://jira.transvar.org/browse/IGBF-347))
@@ -459,7 +459,7 @@ We are planning to release native installers for Windows/Mac/Linux very soon and
 
 ### January 8, 2015: IGB 8.2.3 released
 
-Today we released IGB 8.2.3 which resolves a small bug with IGB's cache system. 
+Today we released IGB 8.2.3 which resolves a small bug with IGB's cache system.
 
 *   File name too long IOException from igbquickload server ([IGBF-342](https://jira.transvar.org/browse/IGBF-342))
 
@@ -467,7 +467,7 @@ Today we released IGB 8.2.3 which resolves a small bug with IGB's cache system.
 
 ### January 7, 2015: IGB 8.2.2 released
 
-Today we released IGB 8.2.2.  This release includes resolutions for the following issues: 
+Today we released IGB 8.2.2.  This release includes resolutions for the following issues:
 
 *   Fix startup bug affecting users running IGB from bash script ([IGBF-341](https://jira.transvar.org/browse/IGBF-341))
 
@@ -475,7 +475,7 @@ Today we released IGB 8.2.2.  This release includes resolutions for the followin
 
 ### December 18, 2014: IGB 8.2.1 released
 
-Today we released IGB 8.2.1.  This release included resolutions for the following issues: 
+Today we released IGB 8.2.1.  This release included resolutions for the following issues:
 
 *   Bam Flag Interpreter does not properly handle combinations of flag values ([IGBF-321](https://jira.transvar.org/browse/IGBF-321))
 *   Misleading message after opening a Custom Genome ([IGBF-306](https://jira.transvar.org/browse/IGBF-306))
@@ -822,7 +822,7 @@ A new minor release of IGB is available. This new release fixes a couple of repo
 
 ### June 5, 2012: Nematostella vectensis genome available in IGB QuickLoad
 
-The IGB QuickLoad site now supports the Nematostella vectensis genome and annotations. We collected sequence data and annotations from Metazome, a database similar to 
+The IGB QuickLoad site now supports the Nematostella vectensis genome and annotations. We collected sequence data and annotations from Metazome, a database similar to
 Phytozome that provides access to a variety of animal genomes. Data provided include sequence along with gene model annotations, with linkouts to Google and Metazome.
 
 * * *
@@ -1152,7 +1152,6 @@ We used Jim Kent's genomic alignment tool blat to align around 1.5 million Arabi
 IGB developer John Nicol presented a poster describing his contributions to the IGB and Genoviz projects at the UNC Charlotte Bioinformatics and Genomics Retreat. Here John discusses his work with an attendee at the event.
 
 
-![IGB Poster](img/jn_big_retreat2.jpg)
+![IGB Poster](images/jn_big_retreat2.jpg)
 
 John Nicol and BiG Retreat attendee
-

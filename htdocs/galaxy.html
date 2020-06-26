@@ -13,11 +13,11 @@
         <meta name="author" content="dcnorris">
 
         <meta name="viewport" content="width=device-width">
-        <!--For use in production only... compile to css before release -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
-        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="less/style.css">
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css?v=1.3">
         <style>
             @media (min-width: 992px) {
                 .col-md-5 > .panel > .panel-body {
@@ -51,19 +51,19 @@
                         <div class="panel-body">
                             <div class='' align='center'>
                                 <h3>
-                                    Thank you for using IGB! 
+                                    Thank you for using IGB!
                                 </h3>
-                                <img id="dataLoadSpinner" class="hide" src="img/jquerySpinner.gif" alt="jqeurySpinner.gif"/>
+                                <img id="dataLoadSpinner" class="hide" src="images/jquerySpinner.gif" alt="jqeurySpinner.gif"/>
 
-                                <img id="dataLoadCheckmark" class="hide" src="img/checkmark.png" alt="jqeurySpinner.gif"/>
+                                <img id="dataLoadCheckmark" class="hide" src="images/checkmark.png" alt="jqeurySpinner.gif"/>
 
                                 <p id="loadingErrorBlock" class="hide">
                                     Your data will appear in IGB as a new (empty) track. When you see the new track, zoom in and click <b>Load Data</b>.</p>
-                            </div>            
+                            </div>
                         </div>
                         <div id="loadingBlockFooter" class="panel-footer hide">
                             <div class="text-center">
-                                <a class='btn btn-default btn-lg btn-primary' href='http://localhost:7085/bringIGBToFront'>Click to go to IGB</a>                                
+                                <a class='btn btn-default btn-lg btn-primary' href='http://localhost:7085/bringIGBToFront'>Click to go to IGB</a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                                 If you have not yet installed IGB, please visit our <a href="download.html" target="_new">Download Page</a> to download and start IGB. IGB is free and open source, and no registration is required.
                             </p>
                             <p>
-                                Once you start IGB, you 
+                                Once you start IGB, you
                                 can <a onclick="location.reload();">refresh this page</a> to send your Galaxy data to IGB.
                             </p>
                         </div>
@@ -102,10 +102,10 @@
                         </div>
                         <div class="panel-body">
                             <p>
-                                Funding for IGB expires July 2016, so we're submitting grant applications requesting new funds for the IGB project. 
+                                Funding for IGB expires July 2016, so we're submitting grant applications requesting new funds for the IGB project.
                             </p>
                             <p>
-                                If you like using IGB to view your Galaxy data, <strong>please help</strong> by writing us a letter of support. See <a href="support.html" target="_blank"><b>write a support letter</b></a> for details. 
+                                If you like using IGB to view your Galaxy data, <strong>please help</strong> by writing us a letter of support. See <a href="support.html" target="_blank"><b>write a support letter</b></a> for details.
                             <div class="text-center">
                                 <a class="btn btn-lg btn-primary supportBtn"><strong>Upload your letter</strong></a>
                             </div>
@@ -117,8 +117,8 @@
                 </div>
             </div>
 -->
-            <div class="row" style="margin-top:50px;"></div>      
-            <hr/> 
+            <div class="row" style="margin-top:50px;"></div>
+            <hr/>
 
 
             <div id="footer" class="container"></div>
@@ -128,11 +128,11 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 alert alert-warning" style="font-size: 2em;">
                     <p>
-                        IGB can't find the file you're trying to view. This error can occur with the Safari Web browser 
-                        if you rename a file in your Galaxy history. 
+                        IGB can't find the file you're trying to view. This error can occur with the Safari Web browser
+                        if you rename a file in your Galaxy history.
                     </p>
                     <p>
-                        If this happens, try using a different web browser or clearing your browser cache if you rename 
+                        If this happens, try using a different web browser or clearing your browser cache if you rename
                         a file.
                     </p>
                     <p> If you experience other problems, please let us know! Contact <a href="mailto:aloraine@uncc.edu">Ann Loraine</a>
@@ -170,34 +170,44 @@
         </div>
 
 
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-
-
-        <script src="js/libs/bootstrap/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/purl.js"></script>
-        <script src="js/ua-parser.min.js"></script>
-        <script src="js/galaxy.js"></script>
-
-        <script>
-                                    (function (i, s, o, g, r, a, m) {
-                                        i['GoogleAnalyticsObject'] = r;
-                                        i[r] = i[r] || function () {
-                                            (i[r].q = i[r].q || []).push(arguments)
-                                        }, i[r].l = 1 * new Date();
-                                        a = s.createElement(o),
-                                                m = s.getElementsByTagName(o)[0];
-                                        a.async = 1;
-                                        a.src = g;
-                                        m.parentNode.insertBefore(a, m)
-                                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                                    ga('create', 'UA-33977587-2', 'bioviz.org');
-                                    ga('send', 'pageview');
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.min.js"
+          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+          crossorigin="anonymous">
         </script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous">
+        </script>
+        <!-- Render menu bar -->
+        <script src="js/script.js?v=12392829"></script>
+        <!-- Galaxy to IGB bridge -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
+        <script src="js/galaxy.js"></script>
+        <!-- Jira support form -->
+        <script type="text/javascript" src="https://jira.transvar.org/s/d41d8cd98f00b204e9800998ecf8427e/en_US-w52nn0-1988229788/6265/4/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=b4dc1860"></script>
+        <script type="text/javascript">
+                window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+                    // ==== Support Letter collector ====
+                    'b4dc1860': {
+                        // === custom trigger function ===
+                        triggerFunction: function (showCollectorDialog) {
+                            $('.supportBtn').click(function (e) {
+                                e.preventDefault();
+                                showCollectorDialog();
+                            });
+                        },
+                         fieldValues: {
+                            summary: 'Support Letter'
+                        }
+                    }
+                });
+        </script>
+        <!-- Google analytics -->
+        <script> src="js/googleAnalytics.js"</script>
 
     </body>
 
 </html>
-
