@@ -1,14 +1,8 @@
-$(window).on("load", function (e) {
+// Render menu bar
+$(window).on("load", () => {
 
-    $('#TopMenu').load('menu.html?v=12392829', function () {
-        highlightCurrentPage();
-    });
+    $('#TopMenu').load('menu.html?v=12392829')
 
     $('#footer').load('footer.html?v=12392829');
 
 });
-
-function highlightCurrentPage() {
-    var currentPage = window.location.pathname.substr(5);
-    $('a[href="' + currentPage + '"]').parent('li').addClass('active');
-}

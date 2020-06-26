@@ -1,4 +1,5 @@
-<script src="https://use.fontawesome.com/0d653db34b.js"></script>
+<!-- Template used by js/script.js -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -67,7 +68,7 @@
                     <a href="connect.html"><font size=+1 color="lightblue"><b>BioViz <em>Connect</em></b></font></a>
                 </li>
             </ul>
-            <!--div class="navbar-form btn-group">
+            <!-- <div class="navbar-form btn-group">
                 <a class="btn btn-primary" href="support.html"><strong>Write a support letter</strong> <i class="fa fa-envelope" style="margin-left: 8px"></i></a>
             </div-->
             <div class="navbar-form navbar-right btn-group">
@@ -77,81 +78,5 @@
                 </a>
             </div>
         </div>
-        <!--/.nav-collapse -->
     </div>
 </div>
-<script src="js/ua-parser.min.js"></script>
-<script src="bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        var currentPage = window.location.pathname.substr(5);
-        $('.js-activated').dropdownHover().dropdown();
-        if (currentPage == "download.html" || currentPage == "otherDownloads.html" || currentPage == "oldWebstartDownloads.html") {
-            $('#downloadButton').hide();
-        }
-
-        var parser = new UAParser();
-        var os = parser.getOS().name;
-        var architecture = parser.getCPU();
-        if (os == "Linux" || os == "CentOS" || os == "Fedora" || os == "FreeBSD" || os == "Debian" || os == "DragonFly" || os == "RedHat" || os == "Mint" || os == "GNU" || os == "Ubuntu") {
-            $("#linuxDownloadMenu").removeClass("hide");
-        }
-        if (os == "Windows [Phone/Mobile]" || os == "Windows") {
-            if (architecture == "amd64" || architecture == "ia64" || architecture == "arm64" || architecture == "irix64" || architecture == "mips64" || architecture == "sparc64") {
-                $("#windows64DownloadMenu").removeClass("hide");
-            } else {
-                $("#windows64DownloadMenu").removeClass("hide");
-                $("#windows32DownloadMenu").removeClass("hide");
-            }
-        }
-        if (os == "Mac OS X" || os == "Mac OS") {
-            $("#osxDownloadMenu").removeClass("hide");
-        }
-    });
-    $("#linuxDownloadLink").click(function () {
-        // // hope the server sets Content-Disposition: attachment!
-        window.location = 'igb/releases/current/IGB_unix_current.sh';
-    });
-    $("#osxDownloadLink").click(function () {
-        // // hope the server sets Content-Disposition: attachment!
-        window.location = 'igb/releases/current/IGB_macos_current.dmg';
-    });
-    $("#windows64DownloadLink").click(function () {
-        // // hope the server sets Content-Disposition: attachment!
-        window.location = 'igb/releases/current/IGB_windows-x64_current.exe';
-    });
-    $("#windows32DownloadLink").click(function () {
-        // // hope the server sets Content-Disposition: attachment!
-        window.location = 'igb/releases/current/IGB_windows_current.exe';
-    });
-</script>
-<script type="text/javascript" src="https://jira.transvar.org/s/d41d8cd98f00b204e9800998ecf8427e/en_US-pwbpt-1988229788/6265/4/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=b04cfbf9"></script>
-<script type="text/javascript" src="https://jira.transvar.org/s/d41d8cd98f00b204e9800998ecf8427e/en_US-w52nn0-1988229788/6265/4/1.4.7/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=b4dc1860"></script>
-<script type="text/javascript">
-        window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
-            // ==== Feedback/bug Letter collector ====
-            'b04cfbf9': {
-                triggerFunction: function (showCollectorDialog) {
-                    $('.reportBug').click(function (e) {
-                        e.preventDefault();
-                        showCollectorDialog();
-                    });
-                }
-            }
-            // ==== Support Letter collector ====
-            , 'b4dc1860': {
-                // === custom trigger function ===
-                triggerFunction: function (showCollectorDialog) {
-                    $('.supportBtn').click(function (e) {
-                        e.preventDefault();
-                        showCollectorDialog();
-                    });
-                },
-                 fieldValues: {
-                    summary: 'Support Letter'
-                }
-            }
-        }
-        );
-</script>
