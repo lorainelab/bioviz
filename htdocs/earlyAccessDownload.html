@@ -1,122 +1,122 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
 
-        <meta http-equiv=”Pragma” content=”no-cache”>
-        <meta http-equiv="expires" content="-1" />
-        <meta http-equiv="cache-control" content="no-store" />
+<head>
+  <meta charset="utf-8">
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="author" content="">
+  <meta http-equiv=”Pragma” content=”no-cache”>
+  <meta http-equiv="expires" content="-1" />
+  <meta http-equiv="cache-control" content="no-store" />
 
-        <meta name="viewport" content="width=device-width">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-        crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css?v=1.3">
-    </head>
-    <body>
-        <div id="TopMenu"></div>
-        <div class="container main-content">
-            <div class="row">
-                <div class="col-md text-center">
-                    <h1>Integrated Genome Browser - <font color="#BF0000"><i>Early Access</i></font></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md text-center">
-                    <center> <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
-                        <form id="linuxDownload" method="get" action="/igb/releases/early_access/IGB-master.sh">
-                            <button class="btn btn-custom btn-download d-none">
-                                <h2>
-                                    <span class="fa fa-cloud-download" ></span>
-                                    &nbsp;Linux 64 bit
-                                </h2>
-                            </button>
-                        </form>
-                    </center>
-                    <center>
-                        <form id="osxDownload" method="get" action="/igb/releases/early_access/IGB-master.dmg">
-                            <button class="btn btn-custom btn-download d-none">
-                                <h2>
-                                    <span class="fa fa-cloud-download" ></span>
-                                    &nbsp;Mac OS X
-                                </h2>
-                            </button>
-                        </form>
-                    </center>
-                    <center>
-                        <form id="windows64Download" method="get" action="/igb/releases/early_access/IGB-master.exe">
-                            <button class="btn btn-custom btn-download d-none">
-                                <h2>
-                                    <span class="fa fa-cloud-download" ></span>
-                                    &nbsp;Windows 64 bit
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-                                </h2>
-                            </button>
-                        </form>
-                    </center>
-                    <center>
-                        <form id="windows32Download" class="hide" style="padding-top: 5px;" method="get" action="/igb/releases/early_access/IGB-master-32bit.exe" >
-                            <button class="btn btn-custom btn-download d-none" data-toggle="tooltip" data-placement="right" title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
-                                <h2>
-                                    <span class="fa fa-cloud-download" ></span>
-                                    &nbsp;Windows 32 bit
-                                </h2>
-                            </button>
-                        </form>
-                    </center>
+  <meta name="viewport" content="width=device-width">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css?v=1.3">
+</head>
 
-                </div>
-            </div>
-            <div class="col-md text-center">
-              <p>
-                  Click
-                  <a href="download.html">here</a> for the released (and fully tested) version of IGB.
-              </p>
-            </div>
-             <div class="row">
-                <div id="supportLetter" class="col-md text-center">
-                    <div class="panel panel-default panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title" style="font-size: 2em;">
-                                Early Access? What's that?
-                            </h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>Early Access releases are the latest development version of IGB, which includes the latest improvements, including many requests from users. However, this early access version has not been thoroughly tested.</p>
-			    <p>To get the latest stable version of IGB, visit the <a href="download.html">IGB download page</a>.<p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div id="footer" class="container">
-            </div>
+<body>
+  <div id="TopMenu"></div>
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-md text-center">
+        <h1>Integrated Genome Browser - <font color="#BF0000"><i>Early Access</i></font>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md text-center">
+        <center>
+          <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
+          <form id="linuxDownload" method="get" action="/igb/releases/early_access/IGB-master.sh">
+            <button class="btn btn-custom btn-download d-none">
+              <h2>
+                <span class="fa fa-cloud-download"></span>
+                &nbsp;Linux 64 bit
+              </h2>
+            </button>
+          </form>
+        </center>
+        <center>
+          <form id="osxDownload" method="get" action="/igb/releases/early_access/IGB-master.dmg">
+            <button class="btn btn-custom btn-download d-none">
+              <h2>
+                <span class="fa fa-cloud-download"></span>
+                &nbsp;Mac OS X
+              </h2>
+            </button>
+          </form>
+        </center>
+        <center>
+          <form id="windows64Download" method="get" action="/igb/releases/early_access/IGB-master.exe">
+            <button class="btn btn-custom btn-download d-none">
+              <h2>
+                <span class="fa fa-cloud-download"></span>
+                &nbsp;Windows 64 bit
+
+              </h2>
+            </button>
+          </form>
+        </center>
+        <center>
+          <form id="windows32Download" class="hide" style="padding-top: 5px;" method="get" action="/igb/releases/early_access/IGB-master-32bit.exe">
+            <button class="btn btn-custom btn-download d-none" data-toggle="tooltip" data-placement="right"
+              title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
+              <h2>
+                <span class="fa fa-cloud-download"></span>
+                &nbsp;Windows 32 bit
+              </h2>
+            </button>
+          </form>
+        </center>
+
+      </div>
+    </div>
+    <div class="col-md text-center">
+      <p>
+        Click
+        <a href="download.html">here</a> for the released (and fully tested) version of IGB.
+      </p>
+    </div>
+    <div class="row">
+      <div id="supportLetter" class="col-md text-center">
+        <div class="panel panel-default panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="font-size: 2em;">
+              Early Access? What's that?
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>Early Access releases are the latest development version of IGB, which includes the latest improvements, including many requests from users. However, this early access version has not been thoroughly tested.</p>
+            <p>To get the latest stable version of IGB, visit the <a href="download.html">IGB download page</a>.
+            <p>
+          </div>
         </div>
+      </div>
+    </div>
+    <hr>
+    <div id="footer" class="container">
+    </div>
+  </div>
 
-        <script
-          src="https://code.jquery.com/jquery-3.5.1.min.js"
-          integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-          crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous">
-        </script>
-        <!-- Render menu bar -->
-        <script src="js/script.js?v=12392829"></script>
-        <!-- Download based on OS -->
-        <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>        <
-        <!-- Show download button based on OS -->
-        <script src="js/renderDownloadButton.js"></script>
-        <!-- Google analytics -->
-        <script> src="js/googleAnalytics.js"</script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <!-- Render menu bar -->
+  <script src="js/script.js?v=12392829"></script>
+  <!-- Download based on OS -->
+  <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
+  < <!-- Show download button based on OS -->
+    <script src="js/renderDownloadButton.js"></script>
+    <!-- Google analytics -->
+    <script>
+      src = "js/googleAnalytics.js"
+    </script>
 
-    </body>
+</body>
 
 </html>
