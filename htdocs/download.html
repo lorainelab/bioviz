@@ -13,9 +13,9 @@
         <meta name="author" content="">
 
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
         crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css?v=1.3">
     </head>
@@ -23,47 +23,47 @@
         <div id="TopMenu"></div>
         <div class="container main-content">
             <div class="row">
-                <div style="text-align:center">
+                <div class="col-md text-center">
 	            <h1>Integrated Genome Browser 9.1.4</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-md-offset-4">
+                <div class="col-md text-center">
                     <center> <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
-                        <form id="linuxDownload" class="hide"  method="get" action="igb/releases/current/IGB_unix_current.sh">
-                            <button class="btn btn-custom btn-md btn-download">
-                                <h2 style="margin-bottom: 20px;">
-                                    <span class="glyphicon glyphicon-cloud-download" ></span>
+                        <form id="linuxDownload" method="get" action="igb/releases/current/IGB_unix_current.sh">
+                            <button class="btn btn-custom btn-download d-none">
+                                <h2>
+                                    <span class="fa fa-cloud-download" ></span>
                                     &nbsp;Linux 64 bit
                                 </h2>
                             </button>
                         </form>
                     </center>
                     <center>
-                        <form id="osxDownload" class="hide"  method="get" action="igb/releases/current/IGB_macos_current.dmg">
-                            <button class="btn btn-custom btn-md btn-download">
-                                <h2 style="margin-bottom: 20px;">
-                                    <span class="glyphicon glyphicon-cloud-download" ></span>
+                        <form id="osxDownload" method="get" action="igb/releases/current/IGB_macos_current.dmg">
+                            <button class="btn btn-custom btn-download d-none">
+                                <h2>
+                                    <span class="fa fa-cloud-download" ></span>
                                     &nbsp;Mac OS X
                                 </h2>
                             </button>
                         </form>
                     </center>
                     <center>
-                        <form id="windows64Download" class="hide"  method="get" action="igb/releases/current/IGB_windows-x64_current.exe">
-                            <button class="btn btn-custom btn-md btn-download">
-                                <h2 style="margin-bottom: 20px;">
-                                    <span class="glyphicon glyphicon-cloud-download" ></span>
+                        <form id="windows64Download" method="get" action="igb/releases/current/IGB_windows-x64_current.exe">
+                            <button class="btn btn-custom btn-download d-none">
+                                <h2>
+                                    <span class="fa fa-cloud-download" ></span>
                                     &nbsp;Windows 64 bit
                                 </h2>
                             </button>
                         </form>
                     </center>
                     <center>
-                        <form id="windows32Download" class="hide" style="padding-top: 5px;" method="get" action="igb/releases/current/IGB_windows_current.exe" >
-                            <button class="btn btn-custom btn-md btn-download" data-toggle="tooltip" data-placement="right" title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
-                                <h2 style="margin-bottom: 20px;">
-                                    <span class="glyphicon glyphicon-cloud-download" ></span>
+                        <form id="windows32Download"style="padding-top: 5px;" method="get" action="igb/releases/current/IGB_windows_current.exe" >
+                            <button class="btn btn-custom btn-download d-none" data-toggle="tooltip" data-placement="right" title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
+                                <h2>
+                                    <span class="fa fa-cloud-download" ></span>
                                     &nbsp;Windows 32 bit
                                 </h2>
                             </button>
@@ -72,12 +72,13 @@
 
                 </div>
             </div>
-            <p style="text-align:center">
-                Click
-                <a href="otherDownloads.html">here</a> for other ways to download IGB
-            </p>
+            <div class="col-md text-center">
+              <p>
+                  Click <a href="otherDownloads.html">here</a> for other ways to download IGB
+              </p>
+            </div>
              <div class="row">
-                <div id="supportLetter" class="col-md-8 col-md-offset-2">
+                <div id="supportLetter" class="col-md text-center">
                     <div class="panel panel-default panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title" style="font-size: 2em;">
@@ -93,9 +94,9 @@
 
                     </div>
                 </div>
-            </div>
             <hr>
             <div id="footer" class="container">
+            </div>
             </div>
         </div>
 
@@ -104,36 +105,16 @@
           integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
           crossorigin="anonymous">
         </script>
-        <script
-          src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-          crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous">
         </script>
         <!-- Render menu bar -->
         <script src="js/script.js?v=12392829"></script>
-        <!-- Download based on OS -->
-        <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>        <script>
-            $(window).on("load",function (e) {
-                var parser = new UAParser();
-                var os = parser.getOS().name;
-                var systemConfig = parser.getCPU();
-                if (os == "Linux" || os == "CentOS" || os == "Fedora" || os == "FreeBSD" || os == "Debian" || os == "DragonFly" || os == "RedHat" || os == "Mint" || os == "GNU" || os == "Ubuntu") {
-                    $("#linuxDownload").removeClass("hide");
-                }
-                if (os == "Windows [Phone/Mobile]" || os == "Windows") {
-                    if (systemConfig.architecture == "amd64" || systemConfig.architecture == "ia64" || systemConfig.architecture == "arm64" || systemConfig.architecture == "irix64" || systemConfig.architecture == "mips64" || systemConfig.architecture == "sparc64") {
-                        $("#windows64Download").removeClass("hide");
-                    } else {
-                        $("#windows64Download").removeClass("hide");
-                        $("#windows32Download").removeClass("hide");
-                    }
-                    $("#windows_warning").removeClass("hide");
-                }
-                if (os == "Mac OS X" || os == "Mac OS") {
-                    $("#osxDownload").removeClass("hide");
-                }
-            });
-        </script>
+        <!-- Determine OS -->
+        <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
+        <!-- Show download button based on OS -->
+        <script src="js/renderDownloadButton.js"></script>
         <!-- Google analytics -->
         <script> src="js/googleAnalytics.js"</script>
 

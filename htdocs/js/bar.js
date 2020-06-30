@@ -6,12 +6,12 @@
 /**
 Supports:
    genome - IGB genome assembly version code; required; e.g., A_thaliana_Jun_2009
-   version - synonym for genome 
+   version - synonym for genome
    seqid, start, end - optional, but if one of these three is provided, all three must be provided;
                         location coordinates in genome assembly specified by version
    gene_id - optional, must be an AGI code for a gene locus from annotation_set, ignored if
              seqid, start, end are provided
-   annotation_set - code indicating annotation set that gene_id belongs to; required if 
+   annotation_set - code indicating annotation set that gene_id belongs to; required if
                     gene_id is provided; e.g., Araport11
                     If provided and it matches a known annotation set, infer version if version
                     not provided.
@@ -25,7 +25,7 @@ var igb_params = {};
 $(window).on("load",function(e) {
     var source = $.url().attr('source');
     if (source.endsWith('bar.html')) {
-        $("#noParametersBlock").removeClass("hide");
+        $("#noParametersBlock").removeClass("d-none");
     }
     else {
 	contactIgb();
@@ -33,7 +33,7 @@ $(window).on("load",function(e) {
 });
 
 
-// If IGB is running, open REST URL to IGB. 
+// If IGB is running, open REST URL to IGB.
 // Otherwise, invite user to download and launch IGB.
 function contactIgb() {
     var statusCheckUrl = 'http://127.0.0.1:7085/igbStatusCheck';
@@ -45,19 +45,19 @@ function contactIgb() {
         if (xhr.status == 200) {
 	    // IGB answered with response code 200 and JSON data
             igbIsRunning = true;
-            $("#igbIsRunningBlock").removeClass("hide");
-            $("#dataAreLoading").removeClass("hide");
+            $("#igbIsRunningBlock").removeClass("d-none");
+            $("#dataAreLoading").removeClass("d-none");
 	    loadData();
             //setTimeout(loadData(),3000);
         } else {
 	    // IGB answered but response code not 200
-            $("#igbIsNotRunningBlock").removeClass("hide");
+            $("#igbIsNotRunningBlock").removeClass("d-none");
 	    igbIsRunning = false;
         }
     };
     xhr.onerror = function() {
 	// IGB did not answer (is not running)
-        $("#igbIsNotRunningBlock").removeClass("hide");
+        $("#igbIsNotRunningBlock").removeClass("d-none");
 	igbIsRunning = false;
     };
     xhr.send();
@@ -67,8 +67,8 @@ function loadData() {
     var query_elements = parseQuery(location.search.substring(1));
     var server_url = query_elements['server_url']; // any Quickload site URL
     var bar_quickload_url = "http://lorainelab-quickload.scidas.org/bar/"
-    if (server_url.match(/bar/i)) { 
-	// requires exact match to Quickload site as appears in IGB Preferences > Data Sources 
+    if (server_url.match(/bar/i)) {
+	// requires exact match to Quickload site as appears in IGB Preferences > Data Sources
 	igb_params['server_url']=bar_quickload_url;
     }
     // Note: To deploy a new BAR Quickload site, run makeBarQuickload.py
@@ -77,7 +77,7 @@ function loadData() {
     if (!version) {
 	version = query_elements['genome']; // more syntactic sugar
     }
-    var annotation_set = query_elements['annotation_set']; 
+    var annotation_set = query_elements['annotation_set'];
     if (!version & annotation_set == 'Araport11') {
 	version = 'A_thaliana_Jun_2009';
     }
@@ -86,9 +86,9 @@ function loadData() {
     }
     else {
 	// version is required; need to know which genome to load
-	$("#dataAreLoading").addClass("hide");
-	$("wrongParametersBlock").removeClass("hide");
-	return; 
+	$("#dataAreLoading").addClass("d-none");
+	$("wrongParametersBlock").removeClass("d-none");
+	return;
     }
     // TO-DO: make sure suffix is 0 or a positive integer
     //        if not, ignore it
@@ -105,7 +105,7 @@ function loadData() {
     }
     // seqid is optional
     var seqid = query_elements['seqid'];
-    if (seqid) {  
+    if (seqid) {
 	igb_params['seqid']=seqid
 	var start = query_elements['start'];
 	var end = query_elements['end'];
@@ -117,16 +117,16 @@ function loadData() {
 	}
 	if (start || end) {
 	    // can't have one without the other
-	    $("#dataAreLoading").addClass("hide");
-	    $("wrongParametersBlock").removeClass("hide");
+	    $("#dataAreLoading").addClass("d-none");
+	    $("wrongParametersBlock").removeClass("d-none");
 	    return;
 	}
     }
     else {
 	gene_id=query_elements['gene_id']
 	if (gene_id) { // need to look up seqid, start, end for this gene
-	    addCoordinatesForGeneId(gene_id); 
-	    // Note: calls back to makeAndOpenIgbUrl in REST call's onload method 
+	    addCoordinatesForGeneId(gene_id);
+	    // Note: calls back to makeAndOpenIgbUrl in REST call's onload method
 	}
 	else {
 	    makeAndOpenIgbUrl(); // no need to query web service
@@ -144,7 +144,7 @@ function makeAndOpenIgbUrl() {
 	else {
 	    igb_url = igb_url + "&" + index + "=" +igb_params[index];
 	}
-	// note: we can tolerate anything with prefix feature_url_ 
+	// note: we can tolerate anything with prefix feature_url_
 	if (index.startsWith('feature_url_')) {
 	    // this is horrible - fix it in IGB
 	    // see comment in IGBF-1367
@@ -152,7 +152,7 @@ function makeAndOpenIgbUrl() {
 	}
     }
     if (igb_params['start']) {
-	// note: need to check if IGB asks user if they want to 
+	// note: need to check if IGB asks user if they want to
 	// cache sequence if bookmarks being used
 	igb_url = igb_url + '&loadresidues=True';
     }
@@ -171,17 +171,17 @@ function makeAndOpenIgbUrl() {
 	    // load the residues, etc. Also, we need to make sure that
 	    // IGB does not bother the user with any dialogs, e.g.,
 	    // useless notifications to zoom in or accept a certificate.
-            $("#dataAreLoading").addClass("hide");
-            $("#dataLoaded").removeClass("hide");
+            $("#dataAreLoading").addClass("d-none");
+            $("#dataLoaded").removeClass("d-none");
         }
         else {
-            $("#dataAreLoading").addClass("hide");
-            $("#dataLoadingError").removeClass("hide");
+            $("#dataAreLoading").addClass("d-none");
+            $("#dataLoadingError").removeClass("d-none");
         }
     };
     xhr.onerror = function() {
-        $("#dataAreLoading").addClass("hide");
-        $("#dataLoadingError").removeClass("hide");
+        $("#dataAreLoading").addClass("d-none");
+        $("#dataLoadingError").removeClass("d-none");
     };
     console.log("Opening IGB Url: " + igb_url);
     xhr.send();
@@ -257,5 +257,3 @@ function parseQuery(str) {
     });
     return ret;
 }
-
-

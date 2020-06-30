@@ -32,7 +32,7 @@ $(window).on("load", (function() {
         var reqTimeout = setTimeout(function()
         {
             $("#main-container").hide();
-            $("#fileNotFoundError").removeClass("hide");
+            $("#fileNotFoundError").removeClass("d-none");
         }, 4000);
         $.ajax({
             type: "GET",
@@ -42,7 +42,7 @@ $(window).on("load", (function() {
                 200: function(r) {
                     //note this variable is defined in the response from IGB
                     if (remoteFileExists) {
-                        $("#main-container").removeClass("hide");
+                        $("#main-container").removeClass("d-none");
                         var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
                         $("#bookmarkUrl").val(bookmarkUrl);
                         loadBookmark(bookmarkUrl);
@@ -51,7 +51,7 @@ $(window).on("load", (function() {
                         });
                     } else {
                         $("#main-container").hide();
-                        $("#fileNotFoundError").removeClass("hide");
+                        $("#fileNotFoundError").removeClass("d-none");
                     }
                 }
             }
@@ -59,15 +59,15 @@ $(window).on("load", (function() {
             clearTimeout(reqTimeout);
         }).fail(function(jqXHR, textStatus) {
             $("#main-container").hide();
-            $("#fileNotFoundError").removeClass("hide");
+            $("#fileNotFoundError").removeClass("d-none");
         });
 
         if (version == null || version.length === 0 || version == '?') {
             $("#main-container").hide();
-            $("#error-container").removeClass("hide");
+            $("#error-container").removeClass("d-none");
         }
     } else {
-        $("#main-container").removeClass("hide");
+        $("#main-container").removeClass("d-none");
         var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
         $("#bookmarkUrl").val(bookmarkUrl);
         loadBookmark(bookmarkUrl);
@@ -76,11 +76,11 @@ $(window).on("load", (function() {
         });
         if(source.endsWith('galaxy.html')){
              $("#main-container").hide();
-             $("#bridge-info-container").removeClass("hide");
+             $("#bridge-info-container").removeClass("d-none");
         }
         else if (version == null || version.length === 0 || version == '?') {
             $("#main-container").hide();
-            $("#error-container").removeClass("hide");
+            $("#error-container").removeClass("d-none");
         }
     }
 
@@ -124,18 +124,18 @@ function initializeIgbStatus() {
     xhr.onload = function() {
         if (xhr.status == 200) {
             igbIsRunning = true;
-            $("#igbIsRunningBlock").removeClass("hide");
+            $("#igbIsRunningBlock").removeClass("d-none");
             var refreshId = setInterval(function()
             {
                 checkDataLoadStatus(refreshId, count++);
             }, 2000);
         } else {
-            $("#igbIsNotRunningBlock").removeClass("hide");
+            $("#igbIsNotRunningBlock").removeClass("d-none");
         }
     };
 
     xhr.onerror = function() {
-        $("#igbIsNotRunningBlock").removeClass("hide");
+        $("#igbIsNotRunningBlock").removeClass("d-none");
     };
     xhr.send();
 }
@@ -147,7 +147,7 @@ function loadBookmark(bookmarkurl) {
     }
     xhr.onload = function() {
         if (xhr.status == 200) {
-            $("#dataLoadSpinner").removeClass("hide");
+            $("#dataLoadSpinner").removeClass("d-none");
             //do nothing
         } else {
             //do nothing for now...
@@ -175,22 +175,22 @@ function checkDataLoadStatus(refreshId, count) {
     xhr.onload = function() {
         if (xhr.responseText == 'complete') {
             $("#dataLoadSpinner").remove();
-            $("#loadingBlockFooter").removeClass("hide");
-            $("#loadingErrorBlock").addClass("hide");
+            $("#loadingBlockFooter").removeClass("d-none");
+            $("#loadingErrorBlock").addClass("d-none");
             $("#dataLoadMessage").html("Your data is ready to view.");
-            $("#dataLoadCheckmark").removeClass("hide");
+            $("#dataLoadCheckmark").removeClass("d-none");
             clearInterval(refreshId);
         } else {
             $("#dataLoadSpinner").remove();
-            $("#loadingBlockFooter").addClass("hide");
-            $("#loadingErrorBlock").removeClass("hide");
+            $("#loadingBlockFooter").addClass("d-none");
+            $("#loadingErrorBlock").removeClass("d-none");
         }
     }
 
     xhr.onerror = function() {
         $("#dataLoadSpinner").remove();
-        $("#loadingErrorBlock").removeClass("hide");
-        $("#loadingBlockFooter").addClass("hide");
+        $("#loadingErrorBlock").removeClass("d-none");
+        $("#loadingBlockFooter").addClass("d-none");
     };
 
     xhr.send();
