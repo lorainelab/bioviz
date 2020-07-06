@@ -84,3 +84,12 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Hide install button when on download page
+    if (document.URL.split('/').splice(-1) == "download.html") {
+      $('.navbar .btn-group').hide();
+    } else {
+      $('.navbar .btn-group').show();
+    }
+  </script>
