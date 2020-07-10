@@ -276,7 +276,7 @@ Today we released IGB 8.5.0, a major release that includes many new features and
 * Introduced a new caching system to improve performance and speed up data access of commonly accessed files ([IGBF-442](https://jira.transvar.org/browse/IGBF-442))
 * Introduced a App Manager created with JavaFx ([IGBF-959](https://jira.transvar.org/browse/IGBF-959))
 <div>
-<a href="images/appmanager.png" data-lightbox="example-1"><img src="images/appmanager.png" alt="image-1" style="height:400px"/></a>
+<a href="images/appmanager.png" data-lightbox="example-1"><img src="images/appmanager.png" alt="image-1" style="width:100%; height:auto"/></a>
 </div>
 * Added a bundled JRE for the linux distribution ([IGBF-1000](https://jira.transvar.org/browse/IGBF-1000))
 * Added support for a new index attribute to the quickload annots.xml file tag ([IGBF-445](https://jira.transvar.org/browse/IGBF-445))
@@ -371,7 +371,7 @@ and bug fixes.
 *   Fix for bug in the fasta parser ([IGBF-540](https://jira.transvar.org/browse/IGBF-540))
 *   Annotation Font Label Options panel added to allow user to control the behavior of font label rendering ([IGBF-784](https://jira.transvar.org/browse/IGBF-784))
 *   Export Image widget has been updated and several small bugs were resolved ([IGBF-719](https://jira.transvar.org/browse/IGBF-719), [IGBF-755](https://jira.transvar.org/browse/IGBF-755), [IGBF-719](https://jira.transvar.org/browse/IGBF-719))
-*   IGB developer's guide updated to include examples of how to get started developing IGB plugins ([Developer's Guide] (https://wiki.transvar.org/display/igbdevelopers/IGB%27s+Modular+Architecture))
+*   IGB developer's guide updated to include examples of how to get started developing IGB plugins ([Developer's Guide](https://wiki.transvar.org/display/igbdevelopers/IGB%27s+Modular+Architecture))
 
 * * *
 ### May 12, 2015: IGB 8.3.4 released
@@ -1151,7 +1151,8 @@ We used Jim Kent's genomic alignment tool blat to align around 1.5 million Arabi
 
 IGB developer John Nicol presented a poster describing his contributions to the IGB and Genoviz projects at the UNC Charlotte Bioinformatics and Genomics Retreat. Here John discusses his work with an attendee at the event.
 
-
-![IGB Poster](images/jn_big_retreat2.jpg)
+<div>
+<a href="images/appmanager.png" data-lightbox="example-1"><img src="images/jn_big_retreat2.jpg" alt="image-1" style="width:100%; height:auto"/></a>
+</div>
 
 John Nicol and BiG Retreat attendee
