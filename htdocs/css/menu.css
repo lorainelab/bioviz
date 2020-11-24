@@ -8,6 +8,12 @@
   background-color: #222;
 }
 
+.navbar-header{
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .navbar .container {
   height: -webkit-fill-available;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -177,3 +183,10 @@
     padding: 0 0 20px 15px;
   }
 }
+
+.btn-custom {
+    color: white;
+    background-color: #db6963;
+    border-color: #db6963;
+}
+
