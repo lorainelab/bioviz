@@ -1,0 +1,2261 @@
+<files>
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/ERR274310/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of long-day-grown 4-leaf-stage seedling with mock (NaCl) treatment / ERR274310 Aerial part of long-day-grown 4-leaf-stage seedling with mock (NaCl) treatment"
+    description="29098868 reads. E-MTAB-1668:24hCS-RNA"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=ERR274310"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR547531/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Transcription profiling of Arabidopsis plants overexpressing SlHsfA3 (thale cress) / SRR547531 Transcription profiling of Arabidopsis plants overexpressing SlHsfA3 (thale cress)"
+    description="13627154 reads. GSM798296: mRNASeq_WT_rep2"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR547531"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR548277/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of 4-week-old plant / SRR548277 Aerial part of 4-week-old plant"
+    description="10647001 reads. GSM994838; SRA: SRS360059"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR548277"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR847503/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of 3-week-old soil-grown plant / SRR847503 Aerial part of 3-week-old soil-grown plant"
+    description="19012222 reads. Seedling1,SRA: SRS419144"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847503"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR847504/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of 3-week-old soil-grown plant / SRR847504 Aerial part of 3-week-old soil-grown plant"
+    description="17652623 reads. Seedling1,SRA: SRS419144"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847504"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR847505/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of 3-week-old soil-grown plant / SRR847505 Aerial part of 3-week-old soil-grown plant"
+    description="14547829 reads. Seedling2, SRA: SRS419145"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847505"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/SRR847506/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of 3-week-old soil-grown plant / SRR847506 Aerial part of 3-week-old soil-grown plant"
+    description="14547829 reads. Seedling2, SRA: SRS419145"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847506"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/carpel/SRR1207194/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Carpels collected manually from stage 8-13 flowers / SRR1207194 Carpels collected manually from stage 8-13 flowers"
+    description="41295666 reads. carpel, GSM1359146, SRA: SRS583574"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1207194"
+    foreground="FFFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/carpel/SRR1207195/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Carpels collected manually from stage 8-13 flowers / SRR1207195 Carpels collected manually from stage 8-13 flowers"
+    description="39074103 reads. carpel, GSM1359146, SRA: SRS583574"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1207195"
+    foreground="FFFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR1019436/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 5do etiolated seedling / SRR1019436 5do etiolated seedling"
+    description="22144930 reads. Etiolated wild type (Col-0) seedlings, GSM1252262, SRA: SRS494530"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1019436"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR1019437/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 5do etiolated seedling / SRR1019437 5do etiolated seedling"
+    description="24158853 reads. Etiolated wild type (Col-0) seedlings, GSM1252262, SRA: SRS494530"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1019437"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR1049784/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7do dark-grown seedling / SRR1049784 7do dark-grown seedling"
+    description="51665293 reads. 7d Seedling, GSM1289365, SRA: SRS515184"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1049784"
+    foreground="989800"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR477075/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 5do dark-grown seedling / SRR477075 5do dark-grown seedling"
+    description="33569708 reads. Col-0 RNA-Seq, GSM912634, SRA: SRS308731"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR477075"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR477076/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 5do dark-grown seedling / SRR477076 5do dark-grown seedling"
+    description="20201654 reads. Col-0 RNA-Seq, GSM912635, SRA: SRS308732"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR477076"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR493237/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 3do etiolated seedling / SRR493237 3do etiolated seedling"
+    description="27039911 reads. Col-0 air 3-day, SRA: SRS311825"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493237"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/dark/SRR493238/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 3do etiolated seedling / SRR493238 3do etiolated seedling"
+    description="25704434 reads. Col-0 air 3-day, SRA: SRS311825"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493238"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/flower/SRR314815/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / stage-12 floral buds from long-day grown plant / SRR314815 stage-12 floral buds from long-day grown plant"
+    description="25509908 reads. stage 12 floral bud, Col-0, GSM764079, SRA: SRS228279"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR314815"
+    foreground="FFFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/flower/SRR800753/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / stage-12 floral bud / SRR800753 stage-12 floral bud"
+    description="7506384 reads. flowers, GSM1111913, SRA: SRS405938"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR800753"
+    foreground="FFFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/flower/SRR800754/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / stage-12 floral bud / SRR800754 stage-12 floral bud"
+    description="7063908 reads. flowers, GSM1111914, SRA: SRS405939"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR800754"
+    foreground="FFFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR1105822/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 3-week-old long-day-grown plant / SRR1105822 Leaf of 3-week-old long-day-grown plant"
+    description="38483470 reads. wildtype rep2 Columbia 0, SRA: SRS528136"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1105822"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR1105823/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 3-week-old long-day-grown plant / SRR1105823 Leaf of 3-week-old long-day-grown plant"
+    description="30583559 reads. wildtype rep3 Columbia 0,SRA: SRS552303"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1105823"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR1159821/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 20-day-old plant / SRR1159821 Leaf of 20-day-old plant"
+    description="19343538 reads. adult leaf tissue, GSM1321694, SRA: SRS552303"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1159821"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR1159827/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 20-day-old plant / SRR1159827 Leaf of 20-day-old plant"
+    description="9138919 reads. adult leaf tissue, GSM1321700, SRA: SRS552309"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1159827"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR1159837/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 20-day-old plant / SRR1159837 Leaf of 20-day-old plant"
+    description="5659168 reads. adult leaf tissue,  GSM1321710, SRA: SRS552319"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1159837"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR314813/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 11-day-old plant / SRR314813 Leaf of 11-day-old plant"
+    description="26044624 reads. 11-day-old seedling, Col-0, GSM764077, SRA: SRS228277"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR314813"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446027/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 1h post-infiltration / SRR446027 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 1h post-infiltration"
+    description="31481295 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SRS292180"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446027"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446028/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 1h post-infiltration / SRR446028 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 1h post-infiltration"
+    description="42228711 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SRS292181"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446028"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446033/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 6h post-infiltration / SRR446033 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 6h post-infiltration"
+    description="61481964 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SRS293915"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446033"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446034/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 6h post-infiltration / SRR446034 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 6h post-infiltration"
+    description="63386459 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SRS293916"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446034"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446039/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 12h post-infiltration / SRR446039 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 12h post-infiltration"
+    description="60325368 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SRS293921"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446039"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446040/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 12h post-infiltration / SRR446040 Leaf of 6-week-old short-day-grown plant infiltrated with mock (virulent bacterium) and harvested 12h post-infiltration"
+    description="74683660 reads. Leaves of six week-old Arabidopsis Columbia (Col-0) wild type, SRA: SSRS293922"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446040"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446484/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Non-dividing tissues (oldest 4-6 leaves) of 4-week-old short-day-grown plant / SRR446484 Non-dividing tissues (oldest 4-6 leaves) of 4-week-old short-day-grown plant"
+    description="30583559 reads. Oldest 4 to 6 leaves, GSM897684;, SRA: SRS301779"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446484"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446485/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Dividing tissues (meristem and younger leaves) of 4-week-old short-day-grown plant / SRR446485 Dividing tissues (meristem and younger leaves) of 4-week-old short-day-grown plant"
+    description="35231736 reads. Meristem and younger leaves, GSM897685;, SRA: SRS301780"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446485"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446486/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Non-dividing tissues (oldest 4-6 leaves) of 4-week-old short-day-grown plant / SRR446486 Non-dividing tissues (oldest 4-6 leaves) of 4-week-old short-day-grown plant"
+    description="31078655 reads. Oldest 4 to 6 leaves, GSM897686, SRA: SRS301781"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446486"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR446487/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Dividing tissues (meristem and younger leaves) of 4-week-old short-day-grown plant / SRR446487 Dividing tissues (meristem and younger leaves) of 4-week-old short-day-grown plant"
+    description="34996434 reads. Meristem and younger leaves, GSM897687, SRA: SRS301782"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR446487"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR493036/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 2-week-old plant / SRR493036 Leaf of 2-week-old plant"
+    description="21043986 reads. leaf tissue, wild type, mRNA,  GSM925644, SRA: SRS311724"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493036"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR493097/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 5-week-old short-day-grown plant / SRR493097 Leaf of 5-week-old short-day-grown plant"
+    description="31976667 reads. Col-0 Untreated Adult Plants, SRA: SRS311683"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493097"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR493098/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 5-week-old short-day-grown plant / SRR493098 Leaf of 5-week-old short-day-grown plant"
+    description="13408363 reads. Col-0 Untreated Adult Plants, SRA: SRS311683"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493098"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR493101/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 5-week-old short-day-grown plant / SRR493101 Leaf of 5-week-old short-day-grown plant"
+    description="7679343 reads. Col-0 Untreated Adult Plants, SRA: SRS311683"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR493101"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR764885/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 4-week-old long-day-grown plant / SRR764885 Leaf of 4-week-old long-day-grown plant"
+    description="50380962 reads. WT 4wks leaves RNA-seq, GSM1088166, SRA: SRS398009"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR764885"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR924656/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 3-week-old plant / SRR924656 Leaf of 3-week-old plant"
+    description="39590367 reads.  Col-0 WT1, SRA: SRS454429"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR924656"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR934391/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 2-week-old long-day-grown plant / SRR934391 Leaf of 2-week-old long-day-grown plant"
+    description="36196662 reads. leaves of wild type Arabidopsis, GSM1185649, SRA: SRS457504"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR934391"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/leaf/SRR942022/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Leaf of 3-week-old long-day-grown plant / SRR942022 Leaf of 3-week-old long-day-grown plant"
+    description="17975524 reads. 3 week leaf tissue, GSM1193626, SRA: SRS463362"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR942022"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR070570/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 4-day-old 24h-light-grown seedling / SRR070570 4-day-old 24h-light-grown seedling"
+    description="8793425 reads. whole seedling, WT, GSM613465, SRA: SRS118358"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR070570"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR070571/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 4-day-old 24h-light-grown seedling / SRR070571 4-day-old 24h-light-grown seedling"
+    description="8590680 reads. whole seedling, WT, GSM613465, SRA: SRS118358"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR070571"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR1001909/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-old long-day plate-grown seedling / SRR1001909 10-day-old long-day plate-grown seedling"
+    description="8168891 reads. 10d-old seedling, GSM1239087, SRA: SRS487056"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1001909"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR1001910/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-old long-day plate-grown seedling / SRR1001910 10-day-old long-day plate-grown seedling"
+    description="8168891 reads. 10d-old seedling, GSM1239088, SRA: SRS487057"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1001910"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR1019221/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 15-d-old long-day plate-grown / SRR1019221 15-d-old long-day plate-grown"
+    description="49462416 reads. 14-d-old entire seedlings, GSM1252086, SRA: SRS494447"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1019221"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR345561/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown long-day seedlings / SRR345561 7-day-old plate-grown long-day seedlings"
+    description="17838931 reads. Seedling, GSM798295, SRA: SRS261467"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR345561"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR345562/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown long-day seedlings / SRR345562 7-day-old plate-grown long-day seedlings"
+    description="13627154 reads. Seedling, GSM798296, SRA: SRS261468"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR345562"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR346552/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown long-day seedlings / SRR346552 7-day-old plate-grown long-day seedlings"
+    description="19200418 reads. two week old seedling, GSM800621, SRA: SRS265285"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR346552"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR346553/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown long-day seedlings / SRR346553 7-day-old plate-grown long-day seedlings"
+    description="23724986 reads. two week old seedling, GSM800622, SRA: SRS265286"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR346553"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR394082/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-old long-day plate-grown seedling / SRR394082 10-day-old long-day plate-grown seedling"
+    description="46284902 reads. 10 day seedlings, GSM856058, SRA: SRS284668"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR394082"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR504179/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 2-week-old long-day seedling / SRR504179 2-week-old long-day seedling"
+    description="25512109 reads. 2-3 week seedlings, GSM941528, SRA: SRS344127"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR504179"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR504180/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 2-week-old long-day seedling / SRR504180 2-week-old long-day seedling"
+    description="21115421 reads. 2-3 week seedlings, GSM941529, SRA: SRS344128"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR504180"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR504181/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 2-week-old long-day seedling / SRR504181 2-week-old long-day seedling"
+    description="37241776 reads. 2-3 week seedlings, GSM941530, SRA: SRS344129"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR504181"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR515073/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown, long-day-grown seedling / SRR515073 7-day-old plate-grown, long-day-grown seedling"
+    description="5196385 reads. Arabidopsis thaliana seedlings, SRA: SRS346091"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR515073"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR515074/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old plate-grown, long-day-grown seedling / SRR515074 7-day-old plate-grown, long-day-grown seedling"
+    description="4527721 reads. Arabidopsis thaliana seedlings, SRA: SRS346091"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR515074"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR527164/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old, plate-grown, long-day-grown seedling / SRR527164 7-day-old, plate-grown, long-day-grown seedling"
+    description="19992786 reads. Col-0 repl1, SRA: SRS351292"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR527164"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR527165/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 7-day-old, plate-grown, long-day-grown seedling / SRR527165 7-day-old, plate-grown, long-day-grown seedling"
+    description="19917758 reads.  Col-0 repl2, SRA: SRS351293"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR527165"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR584115/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 11-day-old light-grown plate-grown seedling / SRR584115 11-day-old light-grown plate-grown seedling"
+    description="25097748 reads. seedling, GSM1017156, SRA: SRS367537"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR584115"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR584121/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 11-day-old light-grown plate-grown seedling / SRR584121 11-day-old light-grown plate-grown seedling"
+    description="39243947 reads. seedling, GSM1017162, SRA: SRS367543"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR584121"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR584129/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 11-day-old light-grown plate-grown seedling / SRR584129 11-day-old light-grown plate-grown seedling"
+    description="41360269 reads. seedlings, GSM1017170, SRA: SRS367551"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR584129"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR584134/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 11-day-old light-grown plate-grown seedling / SRR584134 11-day-old light-grown plate-grown seedling"
+    description="40452559 reads. seedlings, GSM1017175, SRA: SRS367556"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR584134"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653555/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old 24h-light-grown seedling / SRR653555 9 day-old 24h-light-grown seedling"
+    description="13572463 reads. LL, WT rep 1, GSM1072464, SRA: SRS388017"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653555"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653556/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old 24h-light-grown seedling / SRR653556 9 day-old 24h-light-grown seedling"
+    description="16154755 reads. LL, WT rep 2, GSM1072465, SRA: SRS388018"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653556"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653557/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old 24h-light-grown seedling / SRR653557 9 day-old 24h-light-grown seedling"
+    description="13556594 reads. LL, WT rep 3, GSM1072466, SRA: SRS388019"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653557"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653561/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653561 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="10241986 reads. Long days WT, ZT2, rep 1, GSM1072470, SRA: SRS388023"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653561"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653562/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653562 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="15917411 reads. Long days WT, ZT2, rep 2, GSM1072471, SRA: SRS388024"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653562"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653563/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653563 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="8824547 reads. Long days WT, ZT2, rep 3, GSM1072472, SRA: SRS388025"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653563"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653564/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653564 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="11800058 reads. Long days WT, ZT6, rep 1, GSM1072473, SRA: SRS388026"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653564"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653565/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653565 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="11623867 reads. Long days WT, ZT6, rep 2, GSM1072474, SRA: SRS388027"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653565"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653566/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day / SRR653566 9 day-old long-day-grown seedling harvested 2h after light on on the 9th day"
+    description="10246632 reads. Long days WT, ZT6, rep 3, GSM1072475, SRA: SRS388028"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653566"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653567/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653567 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="10750893 reads. Long days WT, ZT10, rep 1, GSM1072476, SRA: SRS388029"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653567"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653568/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653568 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="9057212 reads. Long days WT, ZT10, rep 2, GSM1072477, SRA: SRS388030"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653568"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653569/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653569 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="14316928 reads. Long days WT, ZT10, rep 3, GSM1072478, SRA: SRS388031"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653569"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653570/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653570 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="9656892 reads. Long days WT, ZT14, rep 1, GSM1072479, SRA: SRS388032"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653570"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653571/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653571 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="10805755 reads. Long days WT, ZT14, rep 2, GSM1072480, SRA: SRS388033"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653571"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653572/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653572 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="8849410 reads. Long days WT, ZT14, rep 3,  GSM1072481, SRA: SRS388034"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653572"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653573/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653573 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="10559600 reads. Long days WT, ZT18, rep 1, GSM1072482, SRA: SRS388035"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653573"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653574/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653574 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="11134265 reads. Long days WT, ZT18, rep 2, GSM1072483, SRA: SRS388036"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653574"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653575/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653575 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="10916285 reads. Long days WT, ZT18, rep 3, GSM1072484, SRA: SRR653575"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653575"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653576/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653576 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="12643682 reads. Long days WT, ZT22, rep 1, GSM1072485, SRA: SRS388038"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653576"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653577/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653577 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="9781713 reads. Long days WT, ZT22, rep 2, GSM1072486, SRA: SRS388039"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653577"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR653578/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day / SRR653578 9 day-old long-day-grown seedling harvested 10h after light on on the 9th day"
+    description="12201145 reads. Long days WT, ZT22, rep 3,  GSM1072487, SRA: SRS388040"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR653578"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR797194/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-old plate-grown 24-light-grown seedling with mock (cytokinin) treatment / SRR797194 10-day-old plate-grown 24-light-grown seedling with mock (cytokinin) treatment"
+    description="54048815 reads. 10 day old seedings treated with DMSO for 120 minutes, SRA: SRS404292"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR797194"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR797230/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-old plate-grown 24-light-grown seedling with mock (cytokinin) treatment / SRR797230 10-day-old plate-grown 24-light-grown seedling with mock (cytokinin) treatment"
+    description="51421658 reads. 10 day old seedings treated with DMSO for 120 minutes, SRA: SRS404291"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR797230"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/light/SRR833246/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / 10-day-olde plate-grown 24-light-grown seedling with mock (cytokinin) treatment / SRR833246 10-day-olde plate-grown 24-light-grown seedling with mock (cytokinin) treatment"
+    description="57084121 reads. 10 day old seedings treated with DMSO for 120 minutes, SRA: SRS404294"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR833246"
+    foreground="98FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/pollen/SRR847501/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Mature pollen / SRR847501 Mature pollen"
+    description="57084121 reads. Pollen, SRA: SRS419143"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847501"
+    foreground="FF0000"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/pollen/SRR847502/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Mature pollen / SRR847502 Mature pollen"
+    description="20633235 reads. Pollen, SRA: SRS419143"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR847502"
+    foreground="FF0000"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/RAM/SRR1260032/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root tip from 3-day-old seedling / SRR1260032 Root tip from 3-day-old seedling"
+    description="41362473 reads. 3 day old root, SRA: SRS597085"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1260032"
+    foreground="BD7740"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/RAM/SRR1260033/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root tip from 3-day-old seedling / SRR1260033 Root tip from 3-day-old seedling"
+    description="38879470 reads. 3 day old root, SRA: SRS597086"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1260033"
+    foreground="BD7740"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/RAM/SRR1261509/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root tip (about 4 mm) from 4-day-old seedling / SRR1261509 Root tip (about 4 mm) from 4-day-old seedling"
+    description="46745857 reads. primary root tip, SRA: SRS597256"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1261509"
+    foreground="BD7740"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401413/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401413 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="13365743 reads. Stage 15 flower receptacles Col-0 WT, GSM865212, SRA: SRS290073"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401413"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401414/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401414 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="9535671 reads. Stage 15 flower receptacles Col-0 WT, GSM865212, SRA: SRS290073"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401414"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401415/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401415 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="15780686 reads. Stage 15 flower receptacles Col-0 WT, GSM865212, SRA: SRS290073"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401415"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401416/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401416 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="16555068 reads. Stage 15 flower receptacles Col-0 WT, GSM865213, SRA: SRS290074"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401416"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401417/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401417 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="11954841 reads. Stage 15 flower receptacles Col-0 WT, GSM865213, SRA: SRS290074"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401417"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401418/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401418 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="19982775 reads. Stage 15 flower receptacles Col-0 WT, GSM865213, SRA: SRS290074"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401418"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401419/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401419 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="13267215 reads. Stage 15 flower receptacles Col-0 WT, GSM865214;, SRA: SRS290075"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401419"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401420/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401420 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="9409649 reads. Stage 15 flower receptacles Col-0 WT, GSM865214, SRA: SRS290075"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401420"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/receptacle/SRR401421/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Receptacle from base of stage 15 flower of long-day-grown plant / SRR401421 Receptacle from base of stage 15 flower of long-day-grown plant"
+    description="15714100 reads. Stage 15 flower receptacles Col-0 WT, GSM865214, SRA: SRS290075"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR401421"
+    foreground="CCFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/ERR274309/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 4-leaf-stage seedling with mock (NaCl) treatment / ERR274309 Root from 4-leaf-stage seedling with mock (NaCl) treatment"
+    description="29192485 reads. root, SRA: ERS244693ERS244693"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=ERR274309"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR1046909/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 10-day-old seedling / SRR1046909 Root from 10-day-old seedling"
+    description="5254981 reads. 10 day old root, Col-0, GSM1287167, SRA: SRS513532"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1046909"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR1046910/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 10-day-old seedling / SRR1046910 Root from 10-day-old seedling"
+    description="5367327 reads. 10 day old root, Col-0, GSM1287168, SRA: SRS513533"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1046910"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR1524935/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days / SRR1524935 Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days"
+    description="21855410 reads. root, SRA: SRS673307"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1524935"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR1524938/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days / SRR1524938 Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days"
+    description="16760164 reads. root, SRA: SRS673308"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1524938"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR1524940/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days / SRR1524940 Root from 10-day-old plate-grown 24h-light-grown seedling transferred to iron sufficient agar plant for 3 days"
+    description="14685479 reads. root, SRA: SRS673309"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR1524940"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/root/SRR314814/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Root from 11-day-old seedling / SRR314814 Root from 11-day-old seedling"
+    description="23367623 reads. 10 day old root, Col-0, GSM764078, SRA: SRS228278"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR314814"
+    foreground="CCCC97"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/SAM/SRR949956/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition / SRR949956 Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition"
+    description="4537769 reads. Col sun 1, SRA: SRS468598"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR949956"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/SAM/SRR949965/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition / SRR949965 Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition"
+    description="3984129 reads. Col sun 1, GSM764079, SRA: SRS468598"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR949965"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/SAM/SRR949988/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition / SRR949988 Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition"
+    description="4955792 reads. Col sun 4, SRA: SRS468626"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR949988"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/SAM/SRR949989/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition / SRR949989 Shoot apical meristem/young leaf from 14-day-old plant grown in simulated sun condition"
+    description="4717225 reads. Col_sun_4, SRA: SRS468626"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=SRR949989"
+    foreground="999999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581899/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Senescent internode / SRR3581899 Senescent internode"
+    description="33897511 reads. IN.sn, First elongated internode (from last rosette leaf to first cauline leaf). Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581899"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581898/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Senescent silique 2 / SRR3581898 Senescent silique 2"
+    description="29689795 reads. SL.sn2, Whole senescent silique 2. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581898"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581897/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the senescent silique 1 / SRR3581897 Pod of the senescent silique 1"
+    description="29523454 reads. POD.sn1, Pod of the senescent silique 1. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581897"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581896/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds from the senescent silique 1 / SRR3581896 Seeds from the senescent silique 1"
+    description="36195511 reads. SD.sn1, Seeds from the senescent silique 1. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581896"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581895/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 3 / SRR3581895 Germinating seeds 3"
+    description="33333358 reads. SD.g3, Seeds at third day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581895"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581894/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 2 / SRR3581894 Germinating seeds 2"
+    description="41211170 reads. SD.g2, Seeds at second day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581894"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581893/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 1 / SRR3581893 Germinating seeds 1"
+    description="48571329 reads. SD.g1, Seeds at first day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581893"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581892/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Dry Seeds / SRR3581892 Dry Seeds"
+    description="29214380 reads. SD.d, Dry seeds."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581892"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581891/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpel of 6th and 7th flowers / SRR3581891 Carpel of 6th and 7th flowers"
+    description="26464159 reads. POD.y6-7, Pistils of 6th and 7th flowers (before pollination), ovules and stigma removed. Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581891"
+    foreground="E7FF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581890/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Stigmatic tissue / SRR3581890 Stigmatic tissue"
+    description="31059177 reads. STI, Stigmatic tissue from pistils of 6th and 7th flowers (before pollination). Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581890"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581889/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Ovules from 6th and 7th flowers / SRR3581889 Ovules from 6th and 7th flowers"
+    description="27576535 reads. OV.y6-7, Ovules from 6th and 7th flowers (before pollination). Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581889"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581888/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 5 / SRR3581888 Young seeds 5"
+    description="29762134 reads. SD.y5, Seeds from silique 5. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581888"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581887/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 4 / SRR3581887 Young seeds 4"
+    description="33129392 reads. SD.y4, Seeds from silique 4. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581887"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581886/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 3 / SRR3581886 Young seeds 3"
+    description="30341679 reads. SD.y3, Seeds from silique 3. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581886"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581885/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 2 / SRR3581885 Young seeds 2"
+    description="26955427 reads. SD.y2, Seeds from silique 2. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581885"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581884/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 1 / SRR3581884 Young seeds 1"
+    description="30225753 reads. SD.y1, Seeds from silique 1. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581884"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581883/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 8 / SRR3581883 Silique 8"
+    description="38698058 reads. SL8, Whole silique 8. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581883"
+    foreground="818211"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581882/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 7 / SRR3581882 Pod of the silique 7"
+    description="31016426 reads. POD7, Pod of the silique 7 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581882"
+    foreground="B2B42A"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581881/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 7 / SRR3581881 Seeds 7"
+    description="38275954 reads. SD7, Seeds from silique 7. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581881"
+    foreground="FECC00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581880/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 6 / SRR3581880 Silique 6"
+    description="38010189 reads. SL6, Whole silique 6. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581880"
+    foreground="818211"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581879/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 5 / SRR3581879 Pod of the silique 5"
+    description="34721279 reads. POD5, Pod of the silique 5 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581879"
+    foreground="B2B42A"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581878/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 5 / SRR3581878 Seeds 5"
+    description="38831601 reads. SD5, Seeds from silique 5. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581878"
+    foreground="FECC00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581877/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 4 / SRR3581877 Silique 4"
+    description="32824962 reads. SL4, Whole silique 4. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581877"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581876/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 3 / SRR3581876 Pod of the silique 3"
+    description="42355531 reads. POD3, Pod of the silique 3 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581876"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581875/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 3 / SRR3581875 Seeds 3"
+    description="54542475 reads. SD3, Seeds from silique 3. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581875"
+    foreground="FE9900"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581874/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 2 / SRR3581874 Silique 2"
+    description="42435214 reads. SL2, Whole silique 2. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581874"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581873/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 1 / SRR3581873 Pod of the silique 1"
+    description="37887799 reads. POD1, Pod of the silique 1 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581873"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581872/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 1 / SRR3581872 Seeds 1"
+    description="36399923 reads. SD1, Seeds from silique 1. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581872"
+    foreground="FE9900"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581871/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Internode / SRR3581871 Internode"
+    description="24142446 reads. IN, First elongated internode (from last rosette leaf to first cauline leaf). All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581871"
+    foreground="99CCFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581870/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Axis of the inflorescence / SRR3581870 Axis of the inflorescence"
+    description="23714285 reads. AX, Axis of the inflorescence without flowers and pedicels. All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581870"
+    foreground="979999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581869/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pedicel / SRR3581869 Pedicel"
+    description="33739493 reads. PED, Pedicel of the first flower. All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581869"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581868/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 19 and following / SRR3581868 Flowers 19 and following"
+    description="26990722 reads. F19+, Whole inflorescence apex from flower 19 to meristem. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581868"
+    foreground="FFFF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581867/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 15-18 / SRR3581867 Flowers 15-18"
+    description="23986695 reads. F15-18, Whole flowers 15, 16, 17 and 18 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581867"
+    foreground="FFFF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581866/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 12-14 / SRR3581866 Flowers 12-14"
+    description="26070400 reads. F12-14, Whole flowers 12, 13 and 14 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581866"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581865/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 9-11 / SRR3581865 Flowers 9-11"
+    description="27971918 reads. F9-11, Whole flowers 9, 10 and 11 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581865"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581864/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 6-8 / SRR3581864 Flowers 6-8"
+    description="23701792 reads. F6-8, Whole flowers 6, 7 and 8 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581864"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581863/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 5 / SRR3581863 Flower 5"
+    description="27900767 reads. F5, Whole flower 5 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581863"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581862/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 4 / SRR3581862 Flower 4"
+    description="25041336 reads. F4, Whole flower 4 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581862"
+    foreground="D3D332"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581861/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 3 / SRR3581861 Flower 3"
+    description="26399883 reads. F3, Whole flower 3 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581861"
+    foreground="D3D332"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581860/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 2 / SRR3581860 Flower 2"
+    description="24581720 reads. F2, Whole flower 2 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581860"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581859/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 1 / SRR3581859 Flower 1"
+    description="21392327 reads. F1, Whole flower 1 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581859"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581858/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Sepals of the young flower / SRR3581858 Sepals of the young flower"
+    description="24573298 reads. F.SP.y, Sepals of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581858"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581857/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Anthers of the young flower / SRR3581857 Anthers of the young flower"
+    description="33513041 reads. F.AN.y, Anthers of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581857"
+    foreground="FF5D5D"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581856/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpels of the young flower / SRR3581856 Carpels of the young flower"
+    description="28526752 reads. F.CA.y, Pistil of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581856"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581855/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Sepals of the mature flower / SRR3581855 Sepals of the mature flower"
+    description="27792918 reads. F.SP.ad, Sepals of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581855"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581854/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Petals of the mature flower / SRR3581854 Petals of the mature flower"
+    description="26393575 reads. F.PT.ad, Petals of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581854"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581853/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Stamen filaments of the mature flower / SRR3581853 Stamen filaments of the mature flower"
+    description="35035317 reads. F.FM.ad, Filaments of stamens of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581853"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581852/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Anthers of the mature flower (F.AN.ad) / SRR3581852 Anthers of the mature flower (F.AN.ad)"
+    description="24086168 reads. F.AN.ad, Anthers of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581852"
+    foreground="FF5D5D"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581851/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpels of the mature flower (before pollination) / SRR3581851 Carpels of the mature flower (before pollination)"
+    description="27458919 reads. F.CA.ad, Pistil of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581851"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581850/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Opened Anthers / SRR3581850 Opened Anthers"
+    description="28916831 reads. F.AN, Anthers of first flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581850"
+    foreground="FF0000"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581849/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein of the senescent leaf / SRR3581849 Leaf Vein of the senescent leaf"
+    description="31588073 reads. L.VN.sn, Midrib of the third leaf. Sample was collected when first silique was completely mature and nearly opened. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581849"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581848/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the senescent leaf / SRR3581848 Leaf Petiole of the senescent leaf"
+    description="27651466 reads. L.PET.sn, Petiole of the third leaf. Sample was collected when first silique was completely mature and nearly opened. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581848"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581847/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf, mature / SRR3581847 Leaf, mature"
+    description="28511439 reads. L.lg, Whole third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581847"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581846/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina of the mature leaf / SRR3581846 Leaf Lamina of the mature leaf"
+    description="26700390 reads. L.LAM.lg, Parts of the leaf blade without veins. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581846"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581845/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein of the mature leaf / SRR3581845 Leaf Vein of the mature leaf"
+    description="24366150 reads. L.VN.lg, Midrib of the third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581845"
+    foreground="007EFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581844/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the mature leaf / SRR3581844 Leaf Petiole of the mature leaf"
+    description="28802252 reads. L.PET.lg, Petiole of the third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581844"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581843/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina, intermediate 2 / SRR3581843 Leaf Lamina, intermediate 2"
+    description="25227588 reads. L.LAM.i2, Parts of the leaf blade without veins. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581843"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581842/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein, intermediate 2 / SRR3581842 Leaf Vein, intermediate 2"
+    description="23529524 reads. L.VN.i2, Midrib of the third leaf. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581842"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581841/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole, intermediate 2 / SRR3581841 Leaf Petiole, intermediate 2"
+    description="25073458 reads. L.PET.i2, Petiole of third leaf. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581841"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581840/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina, intermediate 1 / SRR3581840 Leaf Lamina, intermediate 1"
+    description="23952010 reads. L.LAM.i1, Leaf blade of the third leaf. Sample was harvested at 9th day after germination (5 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581840"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581839/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole, intermediate 1 / SRR3581839 Leaf Petiole, intermediate 1"
+    description="25783851 reads. L.PET.i1, Petiole of the third leaf. Sample was collected at 9th day after germination (5 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581839"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581838/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina of the young leaf / SRR3581838 Leaf Lamina of the young leaf"
+    description="29576153 reads. L.LAM.y, Leaf blade of the third leaf. Sample was collected at 7th day after germination (3 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581838"
+    foreground="98FF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581837/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the young leaf / SRR3581837 Leaf Petiole of the young leaf"
+    description="36029278 reads. L.PET.y, Petiole of the third leaf. Sample was collected at 7th day after germination (3 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581837"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581836/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Root / SRR3581836 Root"
+    description="25349493 reads. R, Root without apex, collected from plants at 7th day after germination."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581836"
+    foreground="BD7740"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581835/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Root Apex / SRR3581835 Root Apex"
+    description="25317998 reads. R.A, Apex of the root, collected from plants at 7th day after germination."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581835"
+    foreground="8E826E"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581834/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Root / SRR3581834 Seedling Root"
+    description="26279423 reads. S.R, Root of one-day old seedling. Immediately before collection seedlings were gently pulled out of soil and washed under fresh water."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581834"
+    foreground="C38C60"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581833/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Cotyledons / SRR3581833 Seedling Cotyledons"
+    description="25579831 reads. S.C, Cotyledons of one-day-old seedling, collected with petioles."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581833"
+    foreground="99FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581831/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Meristem / SRR3581831 Seedling Meristem"
+    description="56258870 reads. S.M, Seedling shoot apical meristem with adjacent tissues."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581831"
+    foreground="979999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581740/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Hypocotyl / SRR3581740 Seedling Hypocotyl"
+    description="25703119 reads. S.H, Hypocotyl of one-day-old seedling from place of the attachment of cotyledons to the beginning of root."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581740"
+    foreground="CCCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581738/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Senescent internode / SRR3581738 Senescent internode"
+    description="31128996 reads. IN.sn, First elongated internode (from last rosette leaf to first cauline leaf). Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581738"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581737/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Senescent silique 2 / SRR3581737 Senescent silique 2"
+    description="28049466 reads. SL.sn2, Whole senescent silique 2. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581737"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581736/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the senescent silique 1 / SRR3581736 Pod of the senescent silique 1"
+    description="24839123 reads. POD.sn1, Pod of the senescent silique 1. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581736"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581735/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds from the senescent silique 1 / SRR3581735 Seeds from the senescent silique 1"
+    description="65011968 reads. SD.sn1, Seeds from the senescent silique 1. Sample was collected when first silique was yellow and ready to open."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581735"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581734/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 3 / SRR3581734 Germinating seeds 3"
+    description="27792880 reads. SD.g3, Seeds at third day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581734"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581733/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 2 / SRR3581733 Germinating seeds 2"
+    description="26730648 reads. SD.g2, Seeds at second day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581733"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581732/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Germinating seeds 1 / SRR3581732 Germinating seeds 1"
+    description="37625701 reads. SD.g1, Seeds at first day after soaking."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581732"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581731/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Dry Seeds / SRR3581731 Dry Seeds"
+    description="27928371 reads. SD.d, Dry seeds."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581731"
+    foreground="F77700"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581730/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpel of 6th and 7th flowers / SRR3581730 Carpel of 6th and 7th flowers"
+    description="33034837 reads. POD.y6-7, Pistils of 6th and 7th flowers (before pollination), ovules and stigma removed. Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581730"
+    foreground="E7FF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581728/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Stigmatic tissue / SRR3581728 Stigmatic tissue"
+    description="32840997 reads. STI, Stigmatic tissue from pistils of 6th and 7th flowers (before pollination). Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581728"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581727/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Ovules from 6th and 7th flowers / SRR3581727 Ovules from 6th and 7th flowers"
+    description="27252357 reads. OV.y6-7, Ovules from 6th and 7th flowers (before pollination). Sample collected at the moment of the abscission of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581727"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581726/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 5 / SRR3581726 Young seeds 5"
+    description="28747670 reads. SD.y5, Seeds from silique 5. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581726"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581724/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 4 / SRR3581724 Young seeds 4"
+    description="29434863 reads. SD.y4, Seeds from silique 4. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581724"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581721/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 3 / SRR3581721 Young seeds 3"
+    description="29406076 reads. SD.y3, Seeds from silique 3. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581721"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581720/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 2 / SRR3581720 Young seeds 2"
+    description="26245834 reads. SD.y2, Seeds from silique 2. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581720"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581719/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Young seeds 1 / SRR3581719 Young seeds 1"
+    description="28130134 reads. SD.y1, Seeds from silique 1. All samples of this series were taken at the moment of abscission of the first flower. Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581719"
+    foreground="FFCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581717/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 8 / SRR3581717 Silique 8"
+    description="37123250 reads. SL8, Whole silique 8. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581717"
+    foreground="818211"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581716/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 7 / SRR3581716 Pod of the silique 7"
+    description="33951538 reads. POD7, Pod of the silique 7 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581716"
+    foreground="B2B42A"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581715/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 7 / SRR3581715 Seeds 7"
+    description="41920138 reads. SD7, Seeds from silique 7. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581715"
+    foreground="FECC00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581714/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 6 / SRR3581714 Silique 6"
+    description="33662478 reads. SL6, Whole silique 6. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581714"
+    foreground="818211"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581713/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 5 / SRR3581713 Pod of the silique 5"
+    description="32861081 reads. POD5, Pod of the silique 5 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581713"
+    foreground="B2B42A"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581712/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 5 / SRR3581712 Seeds 5"
+    description="38839939 reads. SD5, Seeds from silique 5. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581712"
+    foreground="FECC00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581711/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 4 / SRR3581711 Silique 4"
+    description="34617072 reads. SL4, Whole silique 4. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581711"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581710/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 3 / SRR3581710 Pod of the silique 3"
+    description="39292552 reads. POD3, Pod of the silique 3 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581710"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581709/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 3 / SRR3581709 Seeds 3"
+    description="35695398 reads. SD3, Seeds from silique 3. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581709"
+    foreground="FE9900"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581708/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Silique 2 / SRR3581708 Silique 2"
+    description="34942213 reads. SL2, Whole silique 2. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581708"
+    foreground="937326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581707/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pod of the silique 1 / SRR3581707 Pod of the silique 1"
+    description="35719029 reads. POD1, Pod of the silique 1 without seeds. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581707"
+    foreground="929326"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581706/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seeds 1 / SRR3581706 Seeds 1"
+    description="39939490 reads. SD1, Seeds from silique 1. All samples of this series were taken at the moment when first silique is 1-1.5 cm long (corresponds to the moment of the abscission of the 8th flower). Before collection, siliques were washed in RNAlater solution in order to remove pollen."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581706"
+    foreground="FE9900"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581705/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Internode / SRR3581705 Internode"
+    description="24880394 reads. IN, First elongated internode (from last rosette leaf to first cauline leaf). All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581705"
+    foreground="99CCFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581704/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Axis of the inflorescence / SRR3581704 Axis of the inflorescence"
+    description="25021761 reads. AX, Axis of the inflorescence without flowers and pedicels. All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581704"
+    foreground="979999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581703/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Pedicel / SRR3581703 Pedicel"
+    description="24937367 reads. PED, Pedicel of the first flower. All samples are collected at the moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581703"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581702/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 19 and following / SRR3581702 Flowers 19 and following"
+    description="26371932 reads. F19+, Whole inflorescence apex from flower 19 to meristem. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581702"
+    foreground="FFFF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581701/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 15-18 / SRR3581701 Flowers 15-18"
+    description="34895677 reads. F15-18, Whole flowers 15, 16, 17 and 18 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581701"
+    foreground="FFFF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581700/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 12-14 / SRR3581700 Flowers 12-14"
+    description="28062509 reads. F12-14, Whole flowers 12, 13 and 14 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581700"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581699/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 9-11 / SRR3581699 Flowers 9-11"
+    description="28100182 reads. F9-11, Whole flowers 9, 10 and 11 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581699"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581698/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flowers 6-8 / SRR3581698 Flowers 6-8"
+    description="25183376 reads. F6-8, Whole flowers 6, 7 and 8 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581698"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581697/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 5 / SRR3581697 Flower 5"
+    description="24981632 reads. F5, Whole flower 5 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581697"
+    foreground="E8E846"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581696/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 4 / SRR3581696 Flower 4"
+    description="23550388 reads. F4, Whole flower 4 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581696"
+    foreground="D3D332"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581695/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 3 / SRR3581695 Flower 3"
+    description="26802016 reads. F3, Whole flower 3 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581695"
+    foreground="D3D332"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581694/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 2 / SRR3581694 Flower 2"
+    description="22985879 reads. F2, Whole flower 2 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581694"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581693/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Flower 1 / SRR3581693 Flower 1"
+    description="28770706 reads. F1, Whole flower 1 without pedicel. All samples of this series were collected at moment of the anthesis of the first flower."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581693"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581692/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Sepals of the young flower / SRR3581692 Sepals of the young flower"
+    description="26729621 reads. F.SP.y, Sepals of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581692"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581691/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Anthers of the young flower / SRR3581691 Anthers of the young flower"
+    description="33220909 reads. F.AN.y, Anthers of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581691"
+    foreground="FF5D5D"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581690/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpels of the young flower / SRR3581690 Carpels of the young flower"
+    description="27172841 reads. F.CA.y, Pistil of young flower (at stage 9 according to Smyth et al., 1990). Sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581690"
+    foreground="CCFF65"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581689/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Sepals of the mature flower / SRR3581689 Sepals of the mature flower"
+    description="24917953 reads. F.SP.ad, Sepals of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581689"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581688/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Petals of the mature flower / SRR3581688 Petals of the mature flower"
+    description="24360946 reads. F.PT.ad, Petals of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581688"
+    foreground="CBCB32"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581687/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Stamen filaments of the mature flower / SRR3581687 Stamen filaments of the mature flower"
+    description="31455046 reads. F.FM.ad, Filaments of stamens of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581687"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581686/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Anthers of the mature flower (before opening) / SRR3581686 Anthers of the mature flower (before opening)"
+    description="24002772 reads. F.AN.ad, Anthers of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581686"
+    foreground="FF5D5D"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581685/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Carpels of the mature flower (before pollination) / SRR3581685 Carpels of the mature flower (before pollination)"
+    description="25038531 reads. F.CA.ad, Pistil of the third flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581685"
+    foreground="CAFF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581684/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Opened Anthers / SRR3581684 Opened Anthers"
+    description="23709004 reads. F.AN, Anthers of first flower; sample collected at the moment of the anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581684"
+    foreground="FF0000"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581683/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein of the senescent leaf / SRR3581683 Leaf Vein of the senescent leaf"
+    description="27709552 reads. L.VN.sn, Midrib of the third leaf. Sample was collected when first silique was completely mature and nearly opened. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581683"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581682/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the senescent leaf / SRR3581682 Leaf Petiole of the senescent leaf"
+    description="25011736 reads. L.PET.sn, Petiole of the third leaf. Sample was collected when first silique was completely mature and nearly opened. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581682"
+    foreground="0B539C"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581681/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf, mature / SRR3581681 Leaf, mature"
+    description="26534107 reads. L.lg, Whole third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581681"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581680/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina of the mature leaf / SRR3581680 Leaf Lamina of the mature leaf"
+    description="27811903 reads. L.LAM.lg, Parts of the leaf blade without veins. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581680"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581679/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein of the mature leaf / SRR3581679 Leaf Vein of the mature leaf"
+    description="24412871 reads. L.VN.lg, Midrib of the third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581679"
+    foreground="007EFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581678/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the mature leaf / SRR3581678 Leaf Petiole of the mature leaf"
+    description="23194950 reads. L.PET.lg, Petiole of the third leaf. Sample was collected at the moment of anthesis of the first flower. All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581678"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581676/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina, intermediate 2 / SRR3581676 Leaf Lamina, intermediate 2"
+    description="25906509 reads. L.LAM.i2, Parts of the leaf blade without veins. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581676"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581672/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Vein, intermediate 2 / SRR3581672 Leaf Vein, intermediate 2"
+    description="27756105 reads. L.VN.i2, Midrib of the third leaf. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581672"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581639/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole, intermediate 2 / SRR3581639 Leaf Petiole, intermediate 2"
+    description="26833678 reads. L.PET.i2, Petiole of third leaf. Sample was collected at 12th day after germination (10 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581639"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581591/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina, intermediate 1 / SRR3581591 Leaf Lamina, intermediate 1"
+    description="34443595 reads. L.LAM.i1, Leaf blade of the third leaf. Sample was harvested at 9th day after germination (5 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581591"
+    foreground="65CC66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581499/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole, intermediate 1 / SRR3581499 Leaf Petiole, intermediate 1"
+    description="25583924 reads. L.PET.i1, Petiole of the third leaf. Sample was collected at 9th day after germination (5 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581499"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581388/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Lamina of the young leaf / SRR3581388 Leaf Lamina of the young leaf"
+    description="24216702 reads. L.LAM.y, Leaf blade of the third leaf. Sample was collected at 7th day after germination (3 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581388"
+    foreground="98FF66"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581383/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Leaf Petiole of the young leaf / SRR3581383 Leaf Petiole of the young leaf"
+    description="38537539 reads. L.PET.y, Petiole of the third leaf. Sample was collected at 7th day after germination (3 mm leaf). All leaf samples were taken from the third leaf, if other not indicated. Samples were collected at 5 stages: 7 days after germination (young, ~ 3mm in length), 9 days after germination (intermediate 1, ~ 5 mm in length), 12 days after germination (intermediate 2, ~ 10 mm in length), at the moment of anthesis of the first flower (mature leaf) and at the stage of maturation of seeds in first siliques (senescent leaf)."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581383"
+    foreground="00CBFF"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581356/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Root / SRR3581356 Root"
+    description="26593475 reads. R, Root without apex, collected from plants at 7th day after germination."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581356"
+    foreground="BD7740"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581352/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Root Apex / SRR3581352 Root Apex"
+    description="25800474 reads. R.A, Apex of the root, collected from plants at 7th day after germination."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581352"
+    foreground="8E826E"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581347/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Root / SRR3581347 Seedling Root"
+    description="24593131 reads. S.R, Root of one-day old seedling. Immediately before collection seedlings were gently pulled out of soil and washed under fresh water."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581347"
+    foreground="C38C60"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581345/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Cotyledons / SRR3581345 Seedling Cotyledons"
+    description="25384662 reads. S.C, Cotyledons of one-day-old seedling, collected with petioles."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581345"
+    foreground="99FF00"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581346/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Meristem / SRR3581346 Seedling Meristem"
+    description="59057532 reads. S.M, Seedling shoot apical meristem with adjacent tissues."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581346"
+    foreground="979999"
+    max_depth="10"
+    show2tracks="false"
+  />
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/Klepikova/SRR3581336/accepted_hits.bam"
+    title="Developmental transcriptome - Klepikova et al / Seedling Hypocotyl / SRR3581336 Seedling Hypocotyl"
+    description="24497817 reads. S.H, Hypocotyl of one-day-old seedling from place of the attachment of cotyledons to the beginning of root."
+    url="https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR3581336"
+    foreground="CCCC98"
+    max_depth="10"
+    show2tracks="false"
+  />
+</files>
