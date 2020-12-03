@@ -2,6 +2,15 @@
 
 * * *
 
+### Dec. 3, 2020: <a href="./download.html">IGB 9.1.6</a> released
+
+Today we released version 9.1.6 of Integrated Genome Browser.
+
+To review the new features and improvements available in this new version of 
+IGB, visit the <a href="https://wiki.transvar.org/display/ITD/9.1.6">IGB 9.1.6 Release Notes</a>. 
+
+* * *
+
 ### May 29, 2020: <a href="./genome-dashboard">IGB Genomes Dashboard</a>
 
 To make it easier for IGB users to find and load genome versions, we created
