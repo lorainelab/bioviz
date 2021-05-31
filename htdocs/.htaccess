@@ -24,7 +24,7 @@ AddIconByType (IMG,http://ais.habilis.net/icons/glyphicon-picture.svg) image/*
 AddIconByType (SND,http://ais.habilis.net/icons/glyphicon-music.svg) audio/*
 AddIconByType (VID,http://ais.habilis.net/icons/glyphicon-film.svg) video/*
 
-IndexIgnore HEADER.* READER.* *.sh
+IndexIgnore HEADER.* READER.* 
 AddDescription "Tells search engines what to ignore" robots.txt
 AddDescription "Taxonomic and common names for species, shown in IGB species menu" species.txt
 AddDescription "Chromosome synonyms" chromosome.txt
