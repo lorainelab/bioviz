@@ -1,0 +1,41 @@
+#main-container p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+div.input, div.example {
+    padding: 0 20px;
+}
+
+.url {
+    color:#428bca
+}
+
+div#process * {
+    margin: 35px;
+    height: 36px;
+    padding: 6px 12px;
+    margin: 36px;
+}
+
+#activity-indicator {
+    margin: 36px;
+}
+
+div#result {
+    background-color: aliceblue;
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+    margin: 0 30px;
+    width: auto;
+}
+
+#result .row {
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+}
