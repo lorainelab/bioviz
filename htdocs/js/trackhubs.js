@@ -25,7 +25,7 @@ copyIcon.click(() => {
 
 // Close tooltips on outside click
 $('body').click((e) => {
-    let elementClicked = $(e.target)
+    const elementClicked = $(e.target)
     if (!elementClicked.hasClass('info') && !elementClicked.hasClass('tooltip-inner')) {
         $('.info').each((ind, el) => {
             $(el).tooltip('hide')
@@ -33,28 +33,50 @@ $('body').click((e) => {
     }
 })
 
+// Reset validity on URL update
+urlInput[0].addEventListener('keyup', (event) => event.target.setCustomValidity(''))
+
 // Convert UCSC URL
-submitButton.click((event) => {
+submitButton.click(async (event) => {
     activityIndicator.removeClass('d-none')
     submitButton.addClass('d-none')
-    setTimeout(() => {
-        // Validate input URL
-        let form = inputForm[0]
-        if (form.checkValidity() === false) {
-            event.preventDefault()
-            event.stopPropagation()
-            activityIndicator.addClass('d-none')
-            submitButton.removeClass('d-none')
-            form.classList.add('was-validated');
-            return
-        }
-        form.classList.add('was-validated');
-        // Set output URL
-        resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${urlInput[0].value}&fileName=/`
-        // Configure display of elements
+    // Validate input URL
+    const form = inputForm[0]
+    await validHubUrl() ? urlInput[0].setCustomValidity('') : urlInput[0].setCustomValidity('Invalid hub URL')
+    if (form.checkValidity() === false) {
+        event.preventDefault()
+        event.stopPropagation()
         activityIndicator.addClass('d-none')
-        resultContainer.removeClass('d-none')
         submitButton.removeClass('d-none')
-    }, 500)
+        form.classList.add('was-validated')
+        return
+    }
+    form.classList.add('was-validated');
+    // Set output URL
+    resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${urlInput[0].value}&fileName=/`
+    // Configure display of elements
+    activityIndicator.addClass('d-none')
+    resultContainer.removeClass('d-none')
+    submitButton.removeClass('d-none')
     
 })
+
+/**
+ * Verify that the target resource of the input hub URL starts with the word 'hub'.
+ */
+const validHubUrl = async () => {
+    let valid
+    if (urlInput[0].value.trim() != '') {
+        try {
+            const response = await axios.get(urlInput[0].value)
+            if (response.data.split(' ')[0].trim() === 'hub') {
+                valid = true
+            }
+        } catch (error) {
+            valid = false
+        }
+    } else {
+        valid = false
+    }
+    return valid
+}
