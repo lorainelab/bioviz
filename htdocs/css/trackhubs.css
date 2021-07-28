@@ -11,6 +11,10 @@ div.input, div.example {
     padding: 0 20px;
 }
 
+div.table-responsive {
+    padding-left: 20px;
+}
+
 .url {
     color:#428bca
 }
@@ -38,4 +42,40 @@ div#result {
     width: fit-content;
     margin: auto;
     padding: 20px;
+}
+
+.action div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-left: 15px;
+}
+
+.scrollable-fixed-head {
+    overflow-y: auto;
+    height: 500px;
+}
+
+thead tr {
+    position: sticky;
+    top: 0;
+    transform: translate(0, -1px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: white;
+    z-index: 3;
+}
+
+td .row {
+    margin-right: 10px;
+}
+
+td.name, td.action {
+    width: 150px;;
 }

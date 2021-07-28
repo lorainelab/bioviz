@@ -34,7 +34,7 @@
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-auto">
-                <h2>1. Paste a track hub URL</h2> 
+                <h2>Convert custom track hub URL to IGB data source</h2> 
             </div>
             <div class="col px-0">
                 <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
@@ -66,15 +66,40 @@
         </div>
     </div>
     <div id="process" class="text-center">
-        <button id="submit" type="button" class="btn btn-primary">Next</button>
+        <button id="submit" type="button" class="btn btn-primary">Convert</button>
         <img id="activity-indicator" class="d-none" src="images/activity_indicator.gif" alt="Processing request...">
+    </div>
+
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <h2>Browse public UCSC track hubs</h2> 
+            </div>
+            <div class="col px-0">
+                <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+        title='Click on the blue icon of any row in the table below to generate an IGB friendly data source URL associated with the associated USCS track hub. For more details, you may view UCSC public track hubs <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">here</a>.'></i>
+            </div>
+        </div>
+    </div>
+    <div class="scrollable-fixed-head table-responsive">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Organisms</th>
+                <th scope="col">Copy/Convert</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
     </div>
 
     <div class="result d-none">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-auto">
-                    <h2>2. Next, add this URL as a new Quickload data source in IGB</h2> 
+                    <h2>Next, add the URL below as a new data source in IGB</h2> 
                 </div>
                 <div class="col px-0">
                     <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
@@ -88,7 +113,7 @@
                     <p class="url">https://hub.bioviz.org/genome.ucsc.edu/goldenPath/help/examples/hubDirectory/hub.txt</p>
                 </div>
                 <div class="col px-0">
-                    <i id="copy" class="fa fa-clone clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
+                    <i id="copy" class="fa fa-clone clickable result-url-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
                 </div>
             </div>
         </div>
@@ -98,7 +123,7 @@
     <script src="js/renderFooter.js"></script>
   </div>
 
-  <script src="js/trackhubs.js"></script>
+  <script type="module" src="js/trackhubs.js"></script>
   <!-- Google analytics -->
   <script>
     src = "js/googleAnalytics.js"

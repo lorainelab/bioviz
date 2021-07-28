@@ -5,22 +5,107 @@ const exampleFillIcon = $('i#example-fill')
 const activityIndicator = $('img#activity-indicator')
 const resultContainer = $('div.result')
 const resultUrl = $('#result .url')
-const copyIcon = $('i#copy')
 const submitButton = $('button#submit')
 const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
+
+/**
+ * Perform a GET request for a given URL
+ * @param {[string]} url [The URL to be fetched]
+ * @returns {[any]}
+ */
+const getHttpData = async (url) => {
+    try {
+        const response = await axios.get(url)
+        return response.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const addToTable = (hub) => {
+    const row = document.createElement('tr')
+    const name = document.createElement('td')
+    const organisms = document.createElement('td')
+    const actions = document.createElement('td')
+    actions.classList.add('action')
+    name.innerHTML = hub.name
+    organisms.innerHTML = hub.organisms.length != 0  
+        ? hub.organisms.join(', ') 
+        : 'NA'
+    actions.innerHTML = `
+    <div>
+        <div>
+            <i id="copy" class="fa fa-clone clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="" data-original-title="Copied!"></i>
+        </div>
+        <div>
+            <i id="convert" class="fa fa-refresh clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="" data-original-title="Copied!"></i>
+        </div>
+    </div>
+    `
+    row.innerHTML = name.outerHTML + organisms.outerHTML + actions.outerHTML
+    row.dataset.url = hub.url
+    $('tbody')[0].appendChild(row)
+}
+
+// Get track hub data from UCSC
+const saveUcscData = async () => {
+    if (sessionStorage.getItem('hubData') == null) {
+        const hubs = await getHttpData('https://api.genome.ucsc.edu/list/publicHubs')
+        const hubData = await Promise.all(
+            hubs['publicHubs']
+            .map(async (el) => {
+                let hub = {}
+                hub.url = el['hubUrl']
+                hub.name = el['shortLabel']
+                const hubDetails = await getHttpData(`https://api.genome.ucsc.edu/list/hubGenomes?hubUrl=${hub.url.trim()}`)
+                if (hubDetails != undefined) {
+                    hub.organisms = Object.getOwnPropertyNames(hubDetails['genomes'])
+                        .map(el => hubDetails['genomes'][el]['organism'])
+                        // Get unique organisms
+                        .filter((value, index, self) => {return value != null && self.indexOf(value) === index})
+                    addToTable(hub)
+                    return hub
+                }
+            }))
+        sessionStorage.setItem('hubData', JSON.stringify(hubData))
+    } else {
+        const hubData = JSON.parse(sessionStorage.getItem('hubData'))
+        hubData.forEach(hub => {
+            addToTable(hub)
+        })
+    }
+}
+
+saveUcscData()
 
 // Fill input field with sample URL
 exampleFillIcon.click(() => {
     urlInput[0].value = exampleUrl[0].textContent
 })
 
-// Copy output URL to clipboard
-copyIcon.click(() => {
-    navigator.clipboard.writeText(resultUrl[0].textContent)
-    copyIcon.tooltip('show')
+// Copy UCSC hub/output URL to clipboard
+$('i#copy').click((event) => {
+    const classes = event.target.classList.toString().split(' ')
+    if (classes.includes('result-url-copy')) {
+        console.log('hit')
+        navigator.clipboard.writeText(resultUrl[0].textContent)
+    } else if (classes.includes('ucsc-hub-copy')) {
+        console.log('hit')
+        navigator.clipboard.writeText($(event.target).closest('tr')[0].dataset.url)
+    }
+    $(event.target).tooltip('show')
     setTimeout(() => {
-        copyIcon.tooltip('hide')
+        $(event.target).tooltip('hide')
     }, 500)
+})
+
+// Convert public UCSC URL to IGB data source
+$('i#convert').click((event) => {
+    // Set output URL
+    const url = $(event.target).closest('tr')[0].dataset.url
+    resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
+    // Ensure result container is visible
+    resultContainer.removeClass('d-none')
 })
 
 // Close tooltips on outside click
@@ -68,7 +153,7 @@ const validHubUrl = async () => {
     let valid
     if (urlInput[0].value.trim() != '') {
         try {
-            const response = await axios.get(urlInput[0].value)
+            const response = await axios.get(urlInput[0].value, {timeout: 3000})
             if (response.data.split(' ')[0].trim() === 'hub') {
                 valid = true
             }
