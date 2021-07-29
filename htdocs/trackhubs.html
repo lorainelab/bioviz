@@ -75,10 +75,16 @@
             <div class="col-auto">
                 <h2>Browse public UCSC track hubs</h2> 
             </div>
-            <div class="col px-0">
+            <div class="col-auto px-0">
                 <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title='Click on the blue icon of any row in the table below to generate an IGB friendly data source URL associated with the associated USCS track hub. For more details, you may view UCSC public track hubs <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">here</a>.'></i>
+        title='The below table contains a listing of public UCSC <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">track hubs</a>. Use the "copy" button to copy the respective hub URL and the "convert" button to generate an IGB-friendly data source URL.'></i>
             </div>
+            <div class="col input-group mb-3" id="filter">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Filter</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Hub name / organism" aria-label="Hub name / organism" aria-describedby="basic-addon1">
+              </div>
         </div>
     </div>
     <div class="scrollable-fixed-head table-responsive">

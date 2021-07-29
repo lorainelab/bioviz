@@ -6,6 +6,7 @@ const activityIndicator = $('img#activity-indicator')
 const resultContainer = $('div.result')
 const resultUrl = $('#result .url')
 const submitButton = $('button#submit')
+const filterInput = $('#filter input')
 const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
 
 /**
@@ -71,7 +72,9 @@ const saveUcscData = async () => {
     } else {
         const hubData = JSON.parse(sessionStorage.getItem('hubData'))
         hubData.forEach(hub => {
-            addToTable(hub)
+            if (hub) {
+                addToTable(hub)
+            }
         })
     }
 }
@@ -87,10 +90,8 @@ exampleFillIcon.click(() => {
 $('i#copy').click((event) => {
     const classes = event.target.classList.toString().split(' ')
     if (classes.includes('result-url-copy')) {
-        console.log('hit')
         navigator.clipboard.writeText(resultUrl[0].textContent)
     } else if (classes.includes('ucsc-hub-copy')) {
-        console.log('hit')
         navigator.clipboard.writeText($(event.target).closest('tr')[0].dataset.url)
     }
     $(event.target).tooltip('show')
@@ -165,3 +166,34 @@ const validHubUrl = async () => {
     }
     return valid
 }
+
+// Check if all terms in search input match to a particular reference string
+const allQueryTermsMatch = (queryTerms, queryIndex, reference) => {
+    if (queryIndex < queryTerms.length) {
+      if (reference.indexOf(queryTerms[queryIndex]) > -1) {
+        return allQueryTermsMatch(queryTerms, queryIndex + 1, reference);
+      } else {
+          return false
+      }
+    } else {
+      return true
+    }
+  }
+
+  // Display rows in table of public UCSC hubs based on search input
+  const filterPublicHubs = () => {
+      const query = filterInput[0].value.toUpperCase()
+      const tableRowElements = $('tbody tr')
+      for (const el of tableRowElements) {
+        const cols = el.querySelectorAll('td')
+        const reference = cols[0].innerText + ' ' + cols[1].innerText
+        if (allQueryTermsMatch(query.split(' '), 0, reference.toUpperCase())) {
+            el.style.display = ""
+        } else {
+            el.style.display = "none"
+        }
+      }
+  };
+
+// Filter public hub rows based on user input
+filterInput[0].addEventListener('keyup', filterPublicHubs)

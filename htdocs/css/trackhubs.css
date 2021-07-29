@@ -79,3 +79,8 @@ td .row {
 td.name, td.action {
     width: 150px;;
 }
+
+#filter {
+    margin-bottom: 0!important;
+    margin-left: 150px;
+}
