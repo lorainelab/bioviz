@@ -8,6 +8,7 @@ const resultUrl = $('#result .url')
 const submitButton = $('button#submit')
 const filterInput = $('#filter input')
 const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
 /**
  * Perform a GET request for a given URL
@@ -18,9 +19,7 @@ const getHttpData = async (url) => {
     try {
         const response = await axios.get(url)
         return response.data
-    } catch (error) {
-        console.log(error)
-    }
+    } catch (error) {}
 }
 
 const addToTable = (hub) => {
@@ -123,7 +122,7 @@ $('body').click((e) => {
 urlInput[0].addEventListener('keyup', (event) => event.target.setCustomValidity(''))
 
 // Convert UCSC URL
-submitButton.click(async (event) => {
+const convert = async (event) => {
     activityIndicator.removeClass('d-none')
     submitButton.addClass('d-none')
     // Validate input URL
@@ -144,8 +143,14 @@ submitButton.click(async (event) => {
     activityIndicator.addClass('d-none')
     resultContainer.removeClass('d-none')
     submitButton.removeClass('d-none')
-    
+}
+
+inputForm.on('submit', (event) => {
+    event.preventDefault()
+    convert(event)
 })
+
+submitButton.click(event => {convert(event)})
 
 /**
  * Verify that the target resource of the input hub URL starts with the word 'hub'.
@@ -154,7 +159,7 @@ const validHubUrl = async () => {
     let valid
     if (urlInput[0].value.trim() != '') {
         try {
-            const response = await axios.get(urlInput[0].value, {timeout: 3000})
+            const response = await axios.get(CORS_PROXY + urlInput[0].value, {timeout: 3000, headers: {'X-Requested-With': 'https://bioviz.org'}})
             if (response.data.split(' ')[0].trim() === 'hub') {
                 valid = true
             }

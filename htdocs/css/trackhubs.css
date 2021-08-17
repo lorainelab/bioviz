@@ -7,27 +7,37 @@
     cursor: pointer;
 }
 
+#main-container > div.conversion, div.browser {
+    margin-bottom: 40px;
+}
+
 div.input, div.example {
     padding: 0 20px;
 }
 
-div.table-responsive {
-    padding-left: 20px;
+form.converter div.col {
+    padding: 0;
+}
+
+div#process * {
+    height: 36px;
+    margin-right: 20px;
+}
+
+#activity-indicator {
+    padding: 5px;
 }
 
 .url {
     color:#428bca
 }
 
-div#process * {
-    margin: 35px;
-    height: 36px;
-    padding: 6px 12px;
-    margin: 36px;
+#example-fill {
+    padding: 15px;
 }
 
-#activity-indicator {
-    margin: 36px;
+div.table-responsive {
+    padding-left: 20px;
 }
 
 div#result {

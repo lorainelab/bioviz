@@ -31,74 +31,86 @@
 
   <div id="main-container" class="container main-content bar">
     <h1>View UCSC track hubs in Integrated Genome Browser.</h1>
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <h2>Convert custom track hub URL to IGB data source</h2> 
-            </div>
-            <div class="col px-0">
-                <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title='Enter the Web address for a Track Hub hub.txt file. For details, visit track hub <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html">documentation</a>.'></i>
-            </div>
-        </div>
-    </div>
-    <form class="needs-validation">
-        <div class="input">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">URL</span>
+    <div class="conversion">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <h2>Convert custom track hub URL to IGB data source</h2> 
                 </div>
-                <input type="url" class="form-control" aria-label="trackhub url" aria-describedby="basic-addon1" required>
-                <div class="invalid-feedback">
-                    Please provide a valid track hub URL. See the example below for more details.
+                <div class="col px-0">
+                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+            title='Enter the Web address for a Track Hub hub.txt file. For details, visit track hub <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html">documentation</a>.'></i>
                 </div>
             </div>
         </div>
-    </form>
-    <div class="container-fluid example">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <p>Example: <span class="url">https://genome.ucsc.edu/goldenPath/help/examples/hubDirectory/hub.txt</span></p>
+        <form class="needs-validation converter">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="input">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">URL</span>
+                                </div>
+                                <input type="url" class="form-control" aria-label="trackhub url" aria-describedby="basic-addon1" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid track hub URL. See the example below for more details.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div id="process" class="text-center">
+                            <button id="submit" type="button" class="btn btn-primary">Convert</button>
+                            <img id="activity-indicator" class="d-none" src="images/activity_indicator.gif" alt="Processing request...">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col px-0">
-                <i id="example-fill" class="fa fa-level-up clickable" aria-hidden="true"></i>
+        </form>
+        <div class="container-fluid example">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <p>Example: <span class="url">https://genome.ucsc.edu/goldenPath/help/examples/hubDirectory/hub.txt</span></p>
+                </div>
+                <div class="col px-0">
+                    <i id="example-fill" class="fa fa-level-up clickable" aria-hidden="true"></i>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="process" class="text-center">
-        <button id="submit" type="button" class="btn btn-primary">Convert</button>
-        <img id="activity-indicator" class="d-none" src="images/activity_indicator.gif" alt="Processing request...">
     </div>
 
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-auto">
-                <h2>Browse public UCSC track hubs</h2> 
-            </div>
-            <div class="col-auto px-0">
-                <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title='The below table contains a listing of public UCSC <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">track hubs</a>. Use the "copy" button to copy the respective hub URL and the "convert" button to generate an IGB-friendly data source URL.'></i>
-            </div>
-            <div class="col input-group mb-3" id="filter">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">Filter</span>
+    <div class="browser">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <h2>Browse public UCSC track hubs</h2> 
                 </div>
-                <input type="text" class="form-control" placeholder="Hub name / organism" aria-label="Hub name / organism" aria-describedby="basic-addon1">
-              </div>
+                <div class="col-auto px-0">
+                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+            title='The below table contains a listing of public UCSC <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">track hubs</a>. Use the "copy" button to copy the respective hub URL and the "convert" button to generate an IGB-friendly data source URL.'></i>
+                </div>
+                <div class="col input-group mb-3" id="filter">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Filter</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Hub name / organism" aria-label="Hub name / organism" aria-describedby="basic-addon1">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="scrollable-fixed-head table-responsive">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Organisms</th>
-                <th scope="col">Copy/Convert</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+        <div class="scrollable-fixed-head table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Organisms</th>
+                    <th scope="col">Copy/Convert</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="result d-none">
