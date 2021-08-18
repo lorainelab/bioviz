@@ -94,7 +94,7 @@
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Filter</span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Hub name / organism" aria-label="Hub name / organism" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Hub name | organism | genome" aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
@@ -102,12 +102,35 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Organisms</th>
-                    <th scope="col">Copy/Convert</th>
+                    <th scope="col" class="name">Hub Name</th>
+                    <th scope="col" class="organisms-genomes">Organisms and Genomes</th>
+                    <th scope="col" class="expand"></th>
+                    <th scope="col" class="action">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
+                    <template id="row">
+                        <tr>
+                            <td class="name"></td>
+                            <td class="organisms-genomes">
+                                <div></div>
+                            </td>
+                            <td class="expand">
+                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
+                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
+                            </td>
+                            <td class="action">
+                                <div>
+                                    <div>
+                                        <i id="copy" class="fa fa-clone clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Hub URL"></i>
+                                    </div>
+                                    <div>
+                                        <i id="convert" class="fa fa-refresh clickable" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
                 </tbody>
             </table>
         </div>

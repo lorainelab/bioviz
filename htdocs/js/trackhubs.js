@@ -2,11 +2,12 @@ const inputForm = $('form.needs-validation')
 const urlInput = $('.input input')
 const exampleUrl = $('.example .url')
 const exampleFillIcon = $('i#example-fill')
+const submitButton = $('button#submit')
 const activityIndicator = $('img#activity-indicator')
+const filterInput = $('#filter input')
+const templateRow = $('template#row')
 const resultContainer = $('div.result')
 const resultUrl = $('#result .url')
-const submitButton = $('button#submit')
-const filterInput = $('#filter input')
 const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
 const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
@@ -23,28 +24,35 @@ const getHttpData = async (url) => {
 }
 
 const addToTable = (hub) => {
-    const row = document.createElement('tr')
-    const name = document.createElement('td')
-    const organisms = document.createElement('td')
-    const actions = document.createElement('td')
-    actions.classList.add('action')
-    name.innerHTML = hub.name
-    organisms.innerHTML = hub.organisms.length != 0  
-        ? hub.organisms.join(', ') 
-        : 'NA'
-    actions.innerHTML = `
-    <div>
-        <div>
-            <i id="copy" class="fa fa-clone clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="" data-original-title="Copied!"></i>
-        </div>
-        <div>
-            <i id="convert" class="fa fa-refresh clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="" data-original-title="Copied!"></i>
-        </div>
-    </div>
-    `
-    row.innerHTML = name.outerHTML + organisms.outerHTML + actions.outerHTML
-    row.dataset.url = hub.url
-    $('tbody')[0].appendChild(row)
+    const row = templateRow[0].content.cloneNode(true)
+    const td = row.querySelectorAll('td')
+    td[0].innerHTML = hub.name
+    td[1].querySelector('div').innerHTML = hub.organismsGenomes && Object.keys(hub.organismsGenomes).length != 0  
+        ? Object.keys(hub.organismsGenomes).map(organism => `${organism != 'null' ? organism : 'Unknown'} (${hub.organismsGenomes[organism].join(', ')})`).join(', ')
+        : 'Not Available'
+    const table = $('tbody')[0]
+    table.appendChild(row)
+    const tableRows = table.querySelectorAll('tr')
+    tableRows[tableRows.length - 1].dataset.url = hub.url
+    // Show an expand/collapse icon in rows that contain more content than the max row height allows for
+    const organismsGenomesDivs = table.querySelectorAll('td.organisms-genomes div')
+    const lastOrganismsGenomesDiv = organismsGenomesDivs[organismsGenomesDivs.length - 1]
+    if (lastOrganismsGenomesDiv.scrollHeight != lastOrganismsGenomesDiv.clientHeight) {
+        const controlIcons = td[2].querySelectorAll('i')
+        const expandIcon = controlIcons[0]
+        const collapseIcon = controlIcons[1]
+        expandIcon.classList.remove('d-none')
+        expandIcon.addEventListener('click', () => {
+            expandIcon.classList.add('d-none')
+            collapseIcon.classList.remove('d-none')
+            lastOrganismsGenomesDiv.style.maxHeight = 'fit-content'
+        })
+        collapseIcon.addEventListener('click', () => {
+            collapseIcon.classList.add('d-none')
+            expandIcon.classList.remove('d-none')
+            lastOrganismsGenomesDiv.style.maxHeight = '100px'
+        })
+    }
 }
 
 // Get track hub data from UCSC
@@ -57,12 +65,21 @@ const saveUcscData = async () => {
                 let hub = {}
                 hub.url = el['hubUrl']
                 hub.name = el['shortLabel']
+                hub.organismsGenomes = {}
                 const hubDetails = await getHttpData(`https://api.genome.ucsc.edu/list/hubGenomes?hubUrl=${hub.url.trim()}`)
                 if (hubDetails != undefined) {
-                    hub.organisms = Object.getOwnPropertyNames(hubDetails['genomes'])
-                        .map(el => hubDetails['genomes'][el]['organism'])
-                        // Get unique organisms
-                        .filter((value, index, self) => {return value != null && self.indexOf(value) === index})
+                    Object.getOwnPropertyNames(hubDetails['genomes'])
+                        .forEach(genome => {
+                            if (genome) {
+                                const organism = hubDetails['genomes'][genome]['organism']
+                                if (hub.organismsGenomes.hasOwnProperty(organism)) {
+                                    hub.organismsGenomes[organism].push(genome)
+                                } else {
+                                    hub.organismsGenomes[organism] = [genome]
+                                }
+                            }
+                            
+                        })
                     addToTable(hub)
                     return hub
                 }
@@ -121,6 +138,24 @@ $('body').click((e) => {
 // Reset validity on URL update
 urlInput[0].addEventListener('keyup', (event) => event.target.setCustomValidity(''))
 
+// Verify that the target resource of the input hub URL starts with the word 'hub'.
+const validHubUrl = async () => {
+    let valid
+    if (urlInput[0].value.trim() != '') {
+        try {
+            const response = await axios.get(CORS_PROXY + urlInput[0].value, {timeout: 3000, headers: {'X-Requested-With': 'https://bioviz.org'}})
+            if (response.data.split(' ')[0].trim() === 'hub') {
+                valid = true
+            }
+        } catch (error) {
+            valid = false
+        }
+    } else {
+        valid = false
+    }
+    return valid
+}
+
 // Convert UCSC URL
 const convert = async (event) => {
     activityIndicator.removeClass('d-none')
@@ -151,26 +186,6 @@ inputForm.on('submit', (event) => {
 })
 
 submitButton.click(event => {convert(event)})
-
-/**
- * Verify that the target resource of the input hub URL starts with the word 'hub'.
- */
-const validHubUrl = async () => {
-    let valid
-    if (urlInput[0].value.trim() != '') {
-        try {
-            const response = await axios.get(CORS_PROXY + urlInput[0].value, {timeout: 3000, headers: {'X-Requested-With': 'https://bioviz.org'}})
-            if (response.data.split(' ')[0].trim() === 'hub') {
-                valid = true
-            }
-        } catch (error) {
-            valid = false
-        }
-    } else {
-        valid = false
-    }
-    return valid
-}
 
 // Check if all terms in search input match to a particular reference string
 const allQueryTermsMatch = (queryTerms, queryIndex, reference) => {

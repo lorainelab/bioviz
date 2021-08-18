@@ -54,16 +54,38 @@ div#result {
     padding: 20px;
 }
 
-.action div {
+td.expand, td.action {
+    vertical-align: top;
+}
+
+td.organisms-genomes div {
+    max-height: 100px; 
+    overflow: hidden;
+}
+
+th.action {
+    text-align: center;
+    width: 10%;
+}
+
+td.action div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    margin-left: 15px;
+    margin-left: 10px;
+}
+
+table .expand .fa {
+    font-size: 20px;
+}
+
+table .action .fa {
+    font-size: 17px;
 }
 
 .scrollable-fixed-head {
     overflow-y: auto;
-    height: 500px;
+    height: 580px;
 }
 
 thead tr {
