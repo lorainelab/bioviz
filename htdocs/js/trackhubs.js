@@ -59,7 +59,7 @@ const addToTable = (hub) => {
 
 // Get track hub data from UCSC
 const saveUcscData = async () => {
-    if (sessionStorage.getItem('hubData') == null) {
+    if (localStorage.getItem('hubData') == null) {
         const hubs = await getHttpData('https://api.genome.ucsc.edu/list/publicHubs')
         const hubData = await Promise.all(
             hubs['publicHubs']
@@ -86,9 +86,9 @@ const saveUcscData = async () => {
                     return hub
                 }
             }))
-        sessionStorage.setItem('hubData', JSON.stringify(hubData))
+        localStorage.setItem('hubData', JSON.stringify(hubData))
     } else {
-        const hubData = JSON.parse(sessionStorage.getItem('hubData'))
+        const hubData = JSON.parse(localStorage.getItem('hubData'))
         hubData.forEach(hub => {
             if (hub) {
                 addToTable(hub)
