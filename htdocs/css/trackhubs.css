@@ -15,6 +15,16 @@ div.input, div.example {
     padding: 0 20px;
 }
 
+div.example div.example-url {
+    min-inline-size: 60%;
+    overflow-wrap: break-word;
+    max-width: 80vw;
+}
+
+.container-fluid div.row div.title {
+    max-width: 90vw;
+}
+
 form.converter div.col {
     padding: 0;
 }
@@ -46,12 +56,29 @@ div#result {
     border-radius: 0.25rem;
     margin: 0 30px;
     width: auto;
+    max-width: none;
 }
 
 #result .row {
-    width: fit-content;
-    margin: auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#result div.result-url {
+    overflow-wrap: anywhere;
+    max-width: 98%;
+}
+
+#result div.copy-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#result div.copy-icon i {
+    position: absolute;
+    right: 0;
 }
 
 td.expand, td.action {
@@ -112,7 +139,20 @@ td.name, td.action {
     width: 150px;;
 }
 
+.browser .row {
+    position: relative;
+}
+
 #filter {
-    margin-bottom: 0!important;
-    margin-left: 150px;
+    margin: 0 !important;
+    min-width: 420px;
+    max-width: 420px;
+    position: absolute;
+    right: 0;
+}
+
+@media all and (max-width: 930px) {
+    #filter {
+        position: inherit;
+    }
 }
