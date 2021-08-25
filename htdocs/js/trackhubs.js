@@ -53,6 +53,8 @@ const addToTable = (hub) => {
             lastOrganismsGenomesDiv.style.maxHeight = '100px'
         })
     }
+    td[3].querySelector('#copy').addEventListener('click', copyUrl)
+    td[3].querySelector('#convert').addEventListener('click', convertUrl)
 }
 
 // Get track hub data from UCSC
@@ -103,7 +105,7 @@ exampleFillIcon.click(() => {
 })
 
 // Copy UCSC hub/output URL to clipboard
-$('i#copy').click((event) => {
+function copyUrl(event) {
     const classes = event.target.classList.toString().split(' ')
     if (classes.includes('result-url-copy')) {
         navigator.clipboard.writeText(resultUrl[0].textContent)
@@ -114,16 +116,18 @@ $('i#copy').click((event) => {
     setTimeout(() => {
         $(event.target).tooltip('hide')
     }, 500)
-})
+}
+
+$('#result #copy').click(copyUrl)
 
 // Convert public UCSC URL to IGB data source
-$('i#convert').click((event) => {
+function convertUrl(event) {
     // Set output URL
     const url = $(event.target).closest('tr')[0].dataset.url
     resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
     // Ensure result container is visible
     resultContainer.removeClass('d-none')
-})
+}
 
 // Close tooltips on outside click
 $('body').click((e) => {
