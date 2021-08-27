@@ -9,7 +9,6 @@ const templateRow = $('template#row')
 const resultContainer = $('div.result')
 const resultUrl = $('#result .url')
 const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
 /**
  * Perform a GET request for a given URL
@@ -144,22 +143,19 @@ $('body').click((e) => {
 // Reset validity on URL update
 urlInput[0].addEventListener('keyup', (event) => event.target.setCustomValidity(''))
 
-// Verify that the target resource of the input hub URL starts with the word 'hub'.
+// Verify that the hub URL is deemed valid by the UCSC API.
 const validHubUrl = async () => {
-    let valid
-    if (urlInput[0].value.trim() != '') {
+    let hubUrl = urlInput[0].value.trim()
+    if (hubUrl != '') {
         try {
-            const response = await axios.get(CORS_PROXY + urlInput[0].value, {timeout: 3000, headers: {'X-Requested-With': 'https://bioviz.org'}})
-            if (response.data.split(' ')[0].trim() === 'hub') {
-                valid = true
-            }
+            await axios.get(`https://api.genome.ucsc.edu/list/hubGenomes?hubUrl=${hubUrl}`)
+            return true
         } catch (error) {
-            valid = false
+            return false
         }
     } else {
-        valid = false
+        return false
     }
-    return valid
 }
 
 // Convert UCSC URL
