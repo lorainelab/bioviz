@@ -7,23 +7,47 @@
     cursor: pointer;
 }
 
+#main-container > div.conversion, div.browser {
+    margin-bottom: 40px;
+}
+
 div.input, div.example {
     padding: 0 20px;
+}
+
+div.example div.example-url {
+    min-inline-size: 60%;
+    overflow-wrap: break-word;
+    max-width: 80vw;
+}
+
+.container-fluid div.row div.title {
+    max-width: 90vw;
+}
+
+form.converter div.col {
+    padding: 0;
+}
+
+div#process * {
+    height: 36px;
+    margin-right: 20px;
+}
+
+#activity-indicator {
+    padding: 5px;
 }
 
 .url {
     color:#428bca
 }
 
-div#process * {
-    margin: 35px;
-    height: 36px;
-    padding: 6px 12px;
-    margin: 36px;
+#example-fill {
+    padding: 15px;
 }
 
-#activity-indicator {
-    margin: 36px;
+div.table-responsive {
+    padding-left: 20px;
 }
 
 div#result {
@@ -32,10 +56,103 @@ div#result {
     border-radius: 0.25rem;
     margin: 0 30px;
     width: auto;
+    max-width: none;
 }
 
 #result .row {
-    width: fit-content;
-    margin: auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#result div.result-url {
+    overflow-wrap: anywhere;
+    max-width: 98%;
+}
+
+#result div.copy-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#result div.copy-icon i {
+    position: absolute;
+    right: 0;
+}
+
+td.expand, td.action {
+    vertical-align: top;
+}
+
+td.organisms-genomes div {
+    max-height: 100px; 
+    overflow: hidden;
+}
+
+th.action {
+    text-align: center;
+    width: 10%;
+}
+
+td.action div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-left: 10px;
+}
+
+table .expand .fa {
+    font-size: 20px;
+}
+
+table .action .fa {
+    font-size: 17px;
+}
+
+.scrollable-fixed-head {
+    overflow-y: auto;
+    height: 580px;
+}
+
+thead tr {
+    position: sticky;
+    top: 0;
+    transform: translate(0, -1px);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: white;
+    z-index: 3;
+}
+
+td .row {
+    margin-right: 10px;
+}
+
+td.name, td.action {
+    width: 150px;;
+}
+
+.browser .row {
+    position: relative;
+}
+
+#filter {
+    margin: 0 !important;
+    min-width: 420px;
+    max-width: 420px;
+    position: absolute;
+    right: 0;
+}
+
+@media all and (max-width: 930px) {
+    #filter {
+        position: inherit;
+    }
 }
