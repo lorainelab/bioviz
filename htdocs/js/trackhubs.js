@@ -124,7 +124,9 @@ $('#result #copy').click(copyUrl)
 function convertUrl(event) {
     // Set output URL
     const url = $(event.target).closest('tr')[0].dataset.url
-    resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
+    resultUrl[0].textContent = BACKEND_DOMAIN.includes('http')
+        ? `${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
+        : `https://${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
     // Ensure result container is visible
     resultContainer.removeClass('d-none')
 }
