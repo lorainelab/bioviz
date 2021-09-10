@@ -3,12 +3,14 @@ const urlInput = $('.input input')
 const exampleUrl = $('.example .url')
 const exampleFillIcon = $('i#example-fill')
 const submitButton = $('button#submit')
-const activityIndicator = $('img#activity-indicator')
+const validationIndicator = $('.conversion img.activity-indicator')
+const fetchingIndicator = $('.browser img.activity-indicator')
 const filterInput = $('#filter input')
 const templateRow = $('template#row')
-const resultContainer = $('div.result')
+const resultCopy = $('div.result i#copy')
 const resultUrl = $('#result .url')
-const BACKEND_DOMAIN = 'https://127.0.0.1:8000'
+const resultDescription = $('#result p.description')
+const BACKEND_DOMAIN = 'http://127.0.0.1:8000'
 
 /**
  * Perform a GET request for a given URL
@@ -24,46 +26,60 @@ const getHttpData = async (url) => {
 
 const addToTable = (hub) => {
     const row = templateRow[0].content.cloneNode(true)
+    const head = row.querySelector('th')
     const td = row.querySelectorAll('td')
+    head.textContent = hub.number
     td[0].innerHTML = hub.name
-    td[1].querySelector('div').innerHTML = hub.organismsGenomes && Object.keys(hub.organismsGenomes).length != 0  
-        ? Object.keys(hub.organismsGenomes).map(organism => `${organism != 'null' ? organism : 'Unknown'} (${hub.organismsGenomes[organism].join(', ')})`).join(', ')
+    td[1].querySelector('#insert').addEventListener('click', () => {
+        urlInput[0].value = hub.url
+        window.scroll({
+            top: $('div.conversion')[0].getBoundingClientRect().top + window.scrollY - 60,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })  
+    td[1].querySelector('#convert').addEventListener('click', convertUrl)
+    td[2].querySelector('div').innerHTML = hub.organismsGenomes && Object.keys(hub.organismsGenomes).length != 0  
+        ? Object.keys(hub.organismsGenomes)
+            .map((organism, ind) => `${hub.organismsGenomes[organism].join(', ')}
+                ${organism != 'null' ? '(' + organism + ')' : ''}${ind != (Object.keys(hub.organismsGenomes).length - 1) ? '; ' : ''}`).join('')
         : 'Not Available'
     const table = $('tbody')[0]
     table.appendChild(row)
     const tableRows = table.querySelectorAll('tr')
     tableRows[tableRows.length - 1].dataset.url = hub.url
     // Show an expand/collapse icon in rows that contain more content than the max row height allows for
-    const organismsGenomesDivs = table.querySelectorAll('td.organisms-genomes div')
-    const lastOrganismsGenomesDiv = organismsGenomesDivs[organismsGenomesDivs.length - 1]
-    if (lastOrganismsGenomesDiv.scrollHeight != lastOrganismsGenomesDiv.clientHeight) {
-        const controlIcons = td[2].querySelectorAll('i')
+    const genomesDivs = table.querySelectorAll('td.genomes div')
+    const lastGenomeDiv = genomesDivs[genomesDivs.length - 1]
+    if (lastGenomeDiv.scrollHeight != lastGenomeDiv.clientHeight) {
+        const controlIcons = td[3].querySelectorAll('i')
         const expandIcon = controlIcons[0]
         const collapseIcon = controlIcons[1]
         expandIcon.classList.remove('d-none')
         expandIcon.addEventListener('click', () => {
             expandIcon.classList.add('d-none')
             collapseIcon.classList.remove('d-none')
-            lastOrganismsGenomesDiv.style.maxHeight = 'fit-content'
+            lastGenomeDiv.style.maxHeight = 'fit-content'
         })
         collapseIcon.addEventListener('click', () => {
             collapseIcon.classList.add('d-none')
             expandIcon.classList.remove('d-none')
-            lastOrganismsGenomesDiv.style.maxHeight = '100px'
+            lastGenomeDiv.style.maxHeight = '110px'
         })
     }
-    td[3].querySelector('#copy').addEventListener('click', copyUrl)
-    td[3].querySelector('#convert').addEventListener('click', convertUrl)
 }
 
 // Get track hub data from UCSC
 const saveUcscData = async () => {
+    let hubData
     if (localStorage.getItem('hubData') == null) {
+        $('.browser div.fetching')[0].classList.remove('d-none')
         const hubs = await getHttpData('https://api.genome.ucsc.edu/list/publicHubs')
-        const hubData = await Promise.all(
+        hubData = await Promise.all(
             hubs['publicHubs']
-            .map(async (el) => {
+            .map(async (el, ind) => {
                 let hub = {}
+                hub.number = ind + 1
                 hub.url = el['hubUrl']
                 hub.name = el['shortLabel']
                 hub.organismsGenomes = {}
@@ -81,19 +97,19 @@ const saveUcscData = async () => {
                             }
                             
                         })
-                    addToTable(hub)
                     return hub
                 }
             }))
         localStorage.setItem('hubData', JSON.stringify(hubData))
+        $('.browser div.fetching')[0].classList.add('d-none')
     } else {
-        const hubData = JSON.parse(localStorage.getItem('hubData'))
-        hubData.forEach(hub => {
-            if (hub) {
-                addToTable(hub)
-            }
-        })
+        hubData = JSON.parse(localStorage.getItem('hubData'))
     }
+    hubData.forEach(hub => {
+        if (hub) {
+            addToTable(hub)
+        }
+    })
 }
 
 saveUcscData()
@@ -108,26 +124,33 @@ function copyUrl(event) {
     const classes = event.target.classList.toString().split(' ')
     if (classes.includes('result-url-copy')) {
         navigator.clipboard.writeText(resultUrl[0].textContent)
-    } else if (classes.includes('ucsc-hub-copy')) {
-        navigator.clipboard.writeText($(event.target).closest('tr')[0].dataset.url)
     }
     $(event.target).tooltip('show')
     setTimeout(() => {
         $(event.target).tooltip('hide')
-    }, 500)
+    }, 1000)
 }
 
 $('#result #copy').click(copyUrl)
 
 // Convert public UCSC URL to IGB data source
 function convertUrl(event) {
-    // Set output URL
-    const url = $(event.target).closest('tr')[0].dataset.url
+    // Set output URL and description
+    const closestRow = $(event.target).closest('tr')[0]
+    const url = closestRow.dataset.url
+    const hubName = closestRow.querySelectorAll('td')[0].textContent
+    const hubNumber = closestRow.querySelectorAll('th')[0].textContent
     resultUrl[0].textContent = BACKEND_DOMAIN.includes('http')
         ? `${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
         : `https://${BACKEND_DOMAIN}/rest_api/?hubUrl=${url}&fileName=/`
-    // Ensure result container is visible
-    resultContainer.removeClass('d-none')
+    resultDescription[0].innerHTML = `Public hub ${hubNumber}: <i>${hubName}</i>`
+    resultDescription[0].style.paddingTop = '10px'
+    resultCopy.removeClass('d-none')
+    window.scroll({
+        top: $('#result')[0].getBoundingClientRect().top + window.scrollY - 125,
+        left: 0,
+        behavior: 'smooth'
+    })
 }
 
 // Close tooltips on outside click
@@ -160,7 +183,7 @@ const validHubUrl = async () => {
 
 // Convert UCSC URL
 const convert = async (event) => {
-    activityIndicator.removeClass('d-none')
+    validationIndicator.removeClass('d-none')
     submitButton.addClass('d-none')
     // Validate input URL
     const form = inputForm[0]
@@ -168,17 +191,19 @@ const convert = async (event) => {
     if (form.checkValidity() === false) {
         event.preventDefault()
         event.stopPropagation()
-        activityIndicator.addClass('d-none')
+        validationIndicator.addClass('d-none')
         submitButton.removeClass('d-none')
         form.classList.add('was-validated')
         return
     }
     form.classList.add('was-validated');
-    // Set output URL
+    // Set output URL and description
     resultUrl[0].textContent = `${BACKEND_DOMAIN}/rest_api/?hubUrl=${urlInput[0].value}&fileName=/`
+    resultDescription[0].innerHTML = ''
+    resultDescription[0].style.paddingTop = '0'
     // Configure display of elements
-    activityIndicator.addClass('d-none')
-    resultContainer.removeClass('d-none')
+    validationIndicator.addClass('d-none')
+    resultCopy.removeClass('d-none')
     submitButton.removeClass('d-none')
 }
 
@@ -206,13 +231,13 @@ const allQueryTermsMatch = (queryTerms, queryIndex, reference) => {
   const filterPublicHubs = () => {
       const query = filterInput[0].value.toUpperCase()
       const tableRowElements = $('tbody tr')
-      for (const el of tableRowElements) {
-        const cols = el.querySelectorAll('td')
-        const reference = cols[0].innerText + ' ' + cols[1].innerText
+      for (const row of tableRowElements) {
+        const cols = row.querySelectorAll('td')
+        const reference = cols[0].innerText + ' ' + cols[2].innerText
         if (allQueryTermsMatch(query.split(' '), 0, reference.toUpperCase())) {
-            el.style.display = ""
+            row.classList.remove('d-none')
         } else {
-            el.style.display = "none"
+            row.classList.add('d-none')
         }
       }
   };

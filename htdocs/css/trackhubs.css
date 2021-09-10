@@ -3,12 +3,28 @@
     margin: 0;
 }
 
+#main-container p#description {
+    margin: 0 15px;
+}
+
 .clickable {
     cursor: pointer;
 }
 
-#main-container > div.conversion, div.browser {
-    margin-bottom: 40px;
+div.tooltip i {
+    color: yellow;
+}
+
+div.tooltip i.fa {
+    padding: 0 5px;
+}
+
+div.tooltip a {
+    color: lightblue;
+}
+
+#main-container > div.conversion, div.result {
+    margin-bottom: 20px;
 }
 
 div.input, div.example {
@@ -16,9 +32,12 @@ div.input, div.example {
 }
 
 div.example div.example-url {
-    min-inline-size: 60%;
     overflow-wrap: break-word;
     max-width: 80vw;
+}
+
+#main-container div.example-url p {
+    font-size: 17px;
 }
 
 .container-fluid div.row div.title {
@@ -46,15 +65,11 @@ div#process * {
     padding: 15px;
 }
 
-div.table-responsive {
-    padding-left: 20px;
-}
-
 div#result {
     background-color: aliceblue;
     border: 1px solid lightgray;
     border-radius: 0.25rem;
-    margin: 0 30px;
+    margin: 10px 30px 0 30px;
     width: auto;
     max-width: none;
 }
@@ -62,12 +77,34 @@ div#result {
 #result .row {
     width: 100%;
     margin: 0;
-    padding: 20px 0;
+    padding-top: 20px;
+}
+
+#result p.description {
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+
+#result p.description, #result p.description i {
+    font-size: 14px;
+}
+
+#result div.result-url p {
+    font-size: 17px;
 }
 
 #result div.result-url {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
+    word-break: break-all;
     max-width: 98%;
+    display: flex;
+    align-items: center;
+}
+
+#result p i {
+    font-size: 15px;
+    margin: 0 5px;
+    color: black;
 }
 
 #result div.copy-icon {
@@ -81,25 +118,56 @@ div#result {
     right: 0;
 }
 
+.browser div.fetching {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: fit-content;
+    margin: 20px;
+}
+
+.browser div.fetching img {
+    width: 20px;
+    height: 20px;
+}
+
+table {
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
 td.expand, td.action {
     vertical-align: top;
 }
 
-td.organisms-genomes div {
-    max-height: 100px; 
+td.genomes div {
+    max-height: 110px; 
     overflow: hidden;
+}
+
+thead th.name, th.name {
+    width: 19px !important;
 }
 
 th.action {
     text-align: center;
-    width: 10%;
+    width: 150px;
 }
 
-td.action div {
+td.action div.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
-    margin-left: 10px;
+    margin: 0 5px;
+}
+
+td.action div.grid-item {
+    margin: auto;
+}
+
+table th span {
+    margin-right: 15px;
 }
 
 table .expand .fa {
@@ -108,35 +176,7 @@ table .expand .fa {
 
 table .action .fa {
     font-size: 17px;
-}
-
-.scrollable-fixed-head {
-    overflow-y: auto;
-    height: 580px;
-}
-
-thead tr {
-    position: sticky;
-    top: 0;
-    transform: translate(0, -1px);
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th {
-    background: white;
-    z-index: 3;
-}
-
-td .row {
-    margin-right: 10px;
-}
-
-td.name, td.action {
-    width: 150px;;
+    padding: 5px 10px;
 }
 
 .browser .row {
@@ -145,7 +185,7 @@ td.name, td.action {
 
 #filter {
     margin: 0 !important;
-    min-width: 420px;
+    width: 420px;
     max-width: 420px;
     position: absolute;
     right: 0;
@@ -154,5 +194,12 @@ td.name, td.action {
 @media all and (max-width: 930px) {
     #filter {
         position: inherit;
+    }
+}
+
+@media all and (max-width: 850px) {
+    #filter {
+        min-width: 100%;
+        margin-top: 15px !important;
     }
 }
