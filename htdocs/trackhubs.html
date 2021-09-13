@@ -30,16 +30,17 @@
   <script src="js/renderMenuBar.js"></script>
 
   <div id="main-container" class="container main-content bar">
-    <h1>View UCSC track hubs in Integrated Genome Browser.</h1>
+    <h1>Track Hub Converter</h1>
+    <p id="description">The Track Hub Converter is a tool for converting UCSC track hub URLs into Quickload URLs that can be added as data sources in the Integrated Genome Browser.</p>
     <div class="conversion">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="title col-auto">
-                    <h2>Convert custom track hub URL to IGB data source</h2> 
+                    <h2>Convert track hub to Quickload</h2> 
                 </div>
                 <div class="col px-0">
                     <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='Enter the Web address for a Track Hub hub.txt file. For details, visit track hub <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html">documentation</a>.'></i>
+            title='Enter the web address for a UCSC track hub <i>hub.txt</i> file. Use the example below to try it out! To learn more about the track hub specification, see the <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html" target="_blank" rel="noopener noreferrer">UCSC documentation</a>.'></i>
                 </div>
             </div>
         </div>
@@ -62,7 +63,7 @@
                     <div class="col-auto">
                         <div id="process" class="text-center">
                             <button id="submit" type="button" class="btn btn-primary">Convert</button>
-                            <img id="activity-indicator" class="d-none" src="images/activity_indicator.gif" alt="Processing request...">
+                            <img class="d-none activity-indicator" src="images/activity_indicator.gif" alt="Processing request...">
                         </div>
                     </div>
                 </div>
@@ -71,12 +72,37 @@
         <div class="container-fluid example">
             <div class="row align-items-center">
                 <div class="col-auto example-url">
-                    <p>Example: <span class="url">https://genome.ucsc.edu/goldenPath/help/examples/hubDirectory/hub.txt</span></p>
+                    <p>Example: <span class="url">https://hgdownload.soe.ucsc.edu/hubs/plants/hub.txt</span></p>
                 </div>
                 <div class="col px-0">
                     <i id="example-fill" class="fa fa-level-up clickable" aria-hidden="true"></i>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="result">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-auto title">
+                    <h2>Next, add the URL below as a new data source in IGB</h2> 
+                </div>
+                <div class="col px-0">
+                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+        title="In IGB, click <i>Settings > Data Sources > Add</i>, and paste in this URL. For more information on this process, see the <a href='https://wiki.transvar.org/display/igbman/Data+Sources+Tab' target='_blank' rel='noopener noreferrer'>IGB User's Guide</a>."></i>
+                </div>
+            </div>
+        </div>
+        <div id="result" class="container">
+            <div class="row align-items-center">
+                <div class="col result-url col-auto">
+                    <p class="url">Use the input field above to generate a Quickload URL, or click a convert icon (<i class="fa fa-refresh" aria-hidden="true"></i>) in the table below.</p>
+                </div>
+                <div class="col copy-icon px-0">
+                    <i id="copy" class="fa fa-clone clickable result-url-copy d-none" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
+                </div>
+            </div>
+            <p class="description"></p>
         </div>
     </div>
 
@@ -88,7 +114,7 @@
                 </div>
                 <div class="col-auto px-0">
                     <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='The below table contains a listing of public UCSC <a href="https://genome-euro.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">track hubs</a>. Use the "copy" button to copy the respective hub URL and the "convert" button to generate an IGB-friendly data source URL.'></i>
+            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>.'></i>
                 </div>
                 <div class="col input-group mb-3" id="filter">
                     <div class="input-group-prepend">
@@ -99,64 +125,51 @@
             </div>
         </div>
         <div class="scrollable-fixed-head table-responsive">
-            <table class="table table-striped">
+            <div class="d-none fetching">
+                <div>
+                    <p>Fetching public track hub data from UCSC. Please wait...</p>
+                </div>
+                <div>
+                    <img class="activity-indicator" src="images/activity_indicator.gif" alt="Processing request...">
+                </div>
+            </div>
+            <table class="table">
                 <thead>
                 <tr>
+                    <th scope="col" class="number">#</th>
                     <th scope="col" class="name">Hub Name</th>
-                    <th scope="col" class="organisms-genomes">Organisms and Genomes</th>
+                    <th scope="col" class="action"><span>Actions</span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+                        title='Click the <i class="fa fa-level-up" aria-hidden="true"></i> icon to insert the track hub URL into the conversion box. Or click the <i class="fa fa-refresh" aria-hidden="true"></i> icon to directly generate a Quickload URL.'></i></th>
+                    <th scope="col" class="genomes">Genome Versions</th>
                     <th scope="col" class="expand"></th>
-                    <th scope="col" class="action">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                     <template id="row">
                         <tr>
+                            <th scope="row"></th>
                             <td class="name"></td>
-                            <td class="organisms-genomes">
-                                <div></div>
-                            </td>
-                            <td class="expand">
-                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
-                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
-                            </td>
                             <td class="action">
-                                <div>
-                                    <div>
-                                        <i id="copy" class="fa fa-clone clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Hub URL"></i>
+                                <div class="grid">
+                                    <div class="grid-item">
+                                        <i id="insert" class="fa fa-level-up clickable ucsc-hub-insert" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Hub URL"></i>
                                     </div>
                                     <div>
                                         <i id="convert" class="fa fa-refresh clickable" aria-hidden="true"></i>
                                     </div>
                                 </div>
                             </td>
+                            <td class="genomes">
+                                <div></div>
+                            </td>
+                            <td class="expand">
+                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
+                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
+                            </td>
                         </tr>
                     </template>
                 </tbody>
             </table>
-        </div>
-    </div>
-
-    <div class="result d-none">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-auto title">
-                    <h2>Next, add the URL below as a new data source in IGB</h2> 
-                </div>
-                <div class="col px-0">
-                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title='In IGB, choose Settings > Data Sources, and paste the URL. Need more help? Watch this <a href="https://www.youtube.com/channel/UC0DA2d3YdbQ55ljkRKHRBkg">video</a>.'></i>
-                </div>
-            </div>
-        </div>
-        <div id="result" class="container">
-            <div class="row align-items-center">
-                <div class="col result-url col-auto">
-                    <p class="url"></p>
-                </div>
-                <div class="col copy-icon px-0">
-                    <i id="copy" class="fa fa-clone clickable result-url-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
-                </div>
-            </div>
         </div>
     </div>
 
