@@ -27,30 +27,18 @@ div.tooltip a {
     margin-bottom: 20px;
 }
 
-div.input, div.example {
-    padding: 0 20px;
+::placeholder {
+    color: darkgray!important;
+    opacity: 0.75!important;
+    font-style: italic;
 }
 
-div.example div.example-url {
-    overflow-wrap: break-word;
-    max-width: 80vw;
+:-ms-input-placeholder {
+    color: darkgray!important;
 }
 
-#main-container div.example-url p {
-    font-size: 17px;
-}
-
-.container-fluid div.row div.title {
-    max-width: 90vw;
-}
-
-form.converter div.col {
-    padding: 0;
-}
-
-div#process * {
-    height: 36px;
-    margin-right: 20px;
+::-ms-input-placeholder {
+    color: darkgray!important;
 }
 
 #activity-indicator {
@@ -59,10 +47,6 @@ div#process * {
 
 .url {
     color:#428bca
-}
-
-#example-fill {
-    padding: 15px;
 }
 
 div#result {
@@ -189,6 +173,16 @@ table .action .fa {
     max-width: 420px;
     position: absolute;
     right: 0;
+}
+
+#filter #cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-35px, 0);
+    color: gray;
+    padding: 10px;
+    z-index: 1000;
 }
 
 @media all and (max-width: 930px) {
