@@ -1,0 +1,119 @@
+#main-container p {
+    font-size: 18px;
+    margin: 0;
+}
+
+#main-container p#description {
+    margin: 0 15px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+div.tooltip i {
+    color: yellow;
+}
+
+div.tooltip i.fa {
+    padding: 0 5px;
+}
+
+div.tooltip a {
+    color: lightblue;
+}
+
+#main-container > div.conversion, div.result {
+    margin-bottom: 20px;
+}
+
+div.input, div.example {
+    padding: 0 20px;
+}
+
+div.example div.example-url {
+    overflow-wrap: break-word;
+    max-width: 80vw;
+}
+
+#main-container div.example-url p {
+    font-size: 17px;
+}
+
+.container-fluid div.row div.title {
+    max-width: 90vw;
+}
+
+form.converter div.col {
+    padding: 0;
+}
+
+div#process * {
+    height: 36px;
+    margin-right: 20px;
+}
+
+#activity-indicator {
+    padding: 5px;
+}
+
+.url {
+    color:#428bca
+}
+
+#example-fill {
+    padding: 15px;
+}
+
+div#result {
+    background-color: aliceblue;
+    border: 1px solid lightgray;
+    border-radius: 0.25rem;
+    margin: 10px 30px 0 30px;
+    width: auto;
+    max-width: none;
+}
+
+#result .row {
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+
+#result p.description {
+    margin-left: 15px;
+    padding-bottom: 20px;
+}
+
+#result p.description, #result p.description i {
+    font-size: 14px;
+}
+
+#result div.result-url p {
+    font-size: 17px;
+}
+
+#result div.result-url {
+    overflow-wrap: break-word;
+    word-break: break-all;
+    max-width: 98%;
+    display: flex;
+    align-items: center;
+}
+
+#result p i {
+    font-size: 15px;
+    margin: 0 5px;
+    color: black;
+}
+
+#result div.copy-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#result div.copy-icon i {
+    position: absolute;
+    right: 0;
+}
