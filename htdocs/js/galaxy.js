@@ -25,8 +25,8 @@ $(window).on("load", (function() {
   initializeIgbStatus();
   var version = $.url().param('version');
   var source = $.url().attr('source');
-  var parser = new UAParser();
-  if (parser.getBrowser().name == "Safari" && igbIsRunning) {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari && igbIsRunning) {
     var query_url = $.url().param('query_url');
     query_url = 'http://localhost:7085/igbStatusCheck?' + 'query_url' + '=' + query_url;
     var reqTimeout = setTimeout(function() {
@@ -66,6 +66,9 @@ $(window).on("load", (function() {
       $("#error-container").removeClass("d-none");
     }
   } else {
+    if (location.protocol !== 'https:' && !isSafari) {
+      location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
     $("#main-container").removeClass("d-none");
     var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
     $("#bookmarkUrl").val(bookmarkUrl);
