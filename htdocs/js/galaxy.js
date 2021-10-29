@@ -68,20 +68,21 @@ $(window).on("load", (function() {
   } else {
     if (location.protocol !== 'https:' && !isSafari) {
       location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    }
-    $("#main-container").removeClass("d-none");
-    var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
-    $("#bookmarkUrl").val(bookmarkUrl);
-    loadBookmark(bookmarkUrl);
-    $("#customLaunchBtn").click(function() {
-      downloadURL($("#jarName").val());
-    });
-    if (source.endsWith('galaxy.html')) {
-      $("#main-container").hide();
-      $("#bridge-info-container").removeClass("d-none");
-    } else if (version == null || version.length === 0 || version == '?') {
-      $("#main-container").hide();
-      $("#error-container").removeClass("d-none");
+    } else {
+      $("#main-container").removeClass("d-none");
+      var bookmarkUrl = 'http://localhost:7085/igbGalaxyDataView' + window.location.search;
+      $("#bookmarkUrl").val(bookmarkUrl);
+      loadBookmark(bookmarkUrl);
+      $("#customLaunchBtn").click(function() {
+        downloadURL($("#jarName").val());
+      });
+      if (source.endsWith('galaxy.html')) {
+        $("#main-container").hide();
+        $("#bridge-info-container").removeClass("d-none");
+      } else if (version == null || version.length === 0 || version == '?') {
+        $("#main-container").hide();
+        $("#error-container").removeClass("d-none");
+      }
     }
   }
 
