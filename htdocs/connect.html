@@ -73,14 +73,16 @@
 
       <div class="row">
         <div class="col-md text-center">
-	  <!--
+	  <!-- Comment button and any child elements to stop users from logging in using this page -->
           <button onclick="window.location.href = 'https://connect.bioviz.org';" class="btn btn-primary" id="connectLogin">
             <h3>
               Sign in with your CyVerse ID
             </h3>
           </button>
-	  -->
+	  <!-- Uncomment h3 tag when you comment button above -->
+	  <!--
 	  <h3>We're sorry! BioViz <em>Connect</em> is temporarily unavailable while we diagnose and fix a technical problem. Please check back in a few hours.</h3>
+	  --> 
         </div>
       </div>
       <div class="row">
@@ -100,15 +102,28 @@
             <img class="img-responsive center-block" src="images/connect/homeSmall.png" alt="BioViz Connect Home Layout" />
           </a>
         </div>
-        <div class="col-md text-center">
+        <div class="col-md">
+	  <br>
           <p>
-            <br>
-            BioViz <em>Connect</em> is a new way to view and interact with data files in your CyVerse account. 
-            Now you can view your data files in IGB with a click of button. You can also add IGB-specific meta-data
-	    to files, such as genome version and track color, and make notes on your files. Last but not least, you
-	    can use BioViz Connect to make new files, such as new types of genome coverage graphs, and then view
-	    those files in IGB with a simple button click. 
-            <br>
+            BioViz <em>Connect</em> is a new way to view and interact with data files in your CyVerse account. It shows exactly
+	    the same files and folders you see when you're logged into CyVerse Discovery Environment, but with
+	    extra attributes and buttons specific to visualizing these data in Integrated Genome Browser, as shown above.
+	    </p>
+	    <p>
+	    For example, BioViz <em>Connect</em> displays a "View in IGB" button next each file that IGB can open and display. When you click the "View in IGB" button,
+	    IGB will load the data file so that you can visualize and interact with it.
+	    </p>
+	    <p>
+            When logged in to BioViz <em>Connect</em>, you can add IGB-specific meta-data
+	    to files, such track color, that will control how the data file looks in IGB. You can specify the genome version for a file, which ensures that when
+	    you open it in IGB, the gene models and other datasets important for interpreting your data are available for loading. Bioviz <em>Connect</em> lets you add notes
+	    to files and also make entirely new files useful for visual analysis, such as genome coverage graphs, and then view
+	    those files in IGB by clicking the "View in IGB" button. 
+            </p>
+	  <p>
+	    <b>How this works</b>: Bioviz <em>Connect</em> works by exchanging messages with what are called "endpoints" (Web addresses) managed by the Terrain API, the same infrastructure that CyVerse Discovery Environment uses. In fact, Bioviz <em>Connect</em> and Discovery Environment are nothing but different ways of listing and presenting files in your Cyverse account Home folder and other locations your user identity has access to.
+	  </p>
+	  <p>However, this means that BioViz Connect only works if the "endpoints" are working! If you use BioViz <em>Connect</em> and notice weird behavior, one possible reason is that CyVerse is undergoing maintenance or an outage. Use the link below to check the CyVerse maintenance schedule. Also, please let us know by emailing nfreese@uncc.edu (Nowlan Freese), aloraine@uncc.edu (Ann Loraine) and kraveend@uncc.edu (Karthik Raveendran).
           </p>
         </div>
       </div>
