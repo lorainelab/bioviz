@@ -23,11 +23,16 @@ var igbIsRunning = false;
 var igb_params = {};
 
 $(window).on("load", function(e) {
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   var source = $.url().attr('source');
-  if (source.endsWith('bar.html')) {
-    $("#noParametersBlock").removeClass("d-none");
+  if(location.protocol === 'https:' && isSafari){
+    location.replace(`http:${location.href.substring(location.protocol.length)}`);
   } else {
-    contactIgb();
+    if (source.endsWith('bar.html')) {
+      $("#noParametersBlock").removeClass("d-none");
+    } else {
+      contactIgb();
+    }
   }
 });
 
