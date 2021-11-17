@@ -6,7 +6,7 @@
 
 Today we released version 9.1.8 of Integrated Genome Browser.
 
-For a list of new features and improvements, see <a href="https://wiki.transvar.org/display/ITD/9.1.8">IGB 9.1.8 Release Notes</a>. 
+For a list of new features and improvements, see IGB 9.1.8 Release Notes. 
 
 * * *
 
@@ -15,7 +15,7 @@ For a list of new features and improvements, see <a href="https://wiki.transvar.
 Today we released version 9.1.6 of Integrated Genome Browser.
 
 To review the new features and improvements available in this new version of 
-IGB, visit the <a href="https://wiki.transvar.org/display/ITD/9.1.6">IGB 9.1.6 Release Notes</a>. 
+IGB, visit the IGB 9.1.6 Release Notes. 
 
 * * *
 
@@ -128,7 +128,7 @@ IGB 9.1.0 is now available for download!
 
 #### New features and improvements: ####
 
-* **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
+* **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide for more details.
 * **New genome versions.** New genomes added to the IGB Quickload data sharing system include _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes. If you would like more to be added, just let us know!
 * **Better feedback when things go wrong.** We improved the error and alert messages you see when IGB can't read your files for some reason. We hope this will help you figure out the problem yourself or gives us information that will help us solve the problems for you.
 * **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB.
@@ -137,7 +137,7 @@ IGB 9.1.0 is now available for download!
 * **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform.
 * **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community.
 
-For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
+For more info about IGB 9.1.0, please see IGB 9.1.0 Release Documentation.
 
 * * *
 
@@ -171,7 +171,7 @@ A new version of IGB is available that fixes some errors present in
 * We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.bioviz.org/browse/IGBF-1218))
 * We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.bioviz.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.bioviz.org/browse/IGBF-1154)), and several more.
 
-For the full list with links to detailed notes and more, see [IGB 9.0.1 Release Documentation](https://wiki.transvar.org/display/ITD/9.0.1).
+For the full list with links to detailed notes and more, see IGB 9.0.1 Release Documentation.
 
 #### Other Highlights: ####
 
@@ -202,7 +202,7 @@ use to create stunning new visualizations for new types of genomic data.
 
 Today we released IGB 9.0.0, a major version release that includes API improvements, performance improvements, and bug fixes.
 
-* New Menu API (see [developers guide](https://wiki.transvar.org/display/igbdevelopers))
+* New Menu API (see developers guide)
 * Better support for narrowPeak files - from ChIP-Seq experiments ([IGBF-1115](https://jira.bioviz.org/browse/IGBF-1115))
 * Performance improvements when working with large Quickload sites ([IGBF-1114](https://jira.bioviz.org/browse/IGBF-1114))
 * Fixing caching error when IGB closes during download ([IGBF-1110](https://jira.bioviz.org/browse/IGBF-1110))
@@ -388,7 +388,7 @@ and bug fixes.
 *   Fix for bug in the fasta parser ([IGBF-540](https://jira.bioviz.org/browse/IGBF-540))
 *   Annotation Font Label Options panel added to allow user to control the behavior of font label rendering ([IGBF-784](https://jira.bioviz.org/browse/IGBF-784))
 *   Export Image widget has been updated and several small bugs were resolved ([IGBF-719](https://jira.bioviz.org/browse/IGBF-719), [IGBF-755](https://jira.bioviz.org/browse/IGBF-755), [IGBF-719](https://jira.bioviz.org/browse/IGBF-719))
-*   IGB developer's guide updated to include examples of how to get started developing IGB plugins ([Developer's Guide](https://wiki.transvar.org/display/igbdevelopers/IGB%27s+Modular+Architecture))
+*   IGB developer's guide updated to include examples of how to get started developing IGB plugins (Developer's Guide)
 
 * * *
 ### May 12, 2015: IGB 8.3.4 released
