@@ -6,7 +6,7 @@
 
 Today we released version 9.1.8 of Integrated Genome Browser.
 
-For a list of new features and improvements, see <a href="https://wiki.transvar.org/display/ITD/9.1.8">IGB 9.1.8 Release Notes</a>. 
+For a list of new features and improvements, see IGB 9.1.8 Release Notes. 
 
 * * *
 
@@ -15,7 +15,7 @@ For a list of new features and improvements, see <a href="https://wiki.transvar.
 Today we released version 9.1.6 of Integrated Genome Browser.
 
 To review the new features and improvements available in this new version of 
-IGB, visit the <a href="https://wiki.transvar.org/display/ITD/9.1.6">IGB 9.1.6 Release Notes</a>. 
+IGB, visit the IGB 9.1.6 Release Notes. 
 
 * * *
 
@@ -128,7 +128,7 @@ IGB 9.1.0 is now available for download!
 
 #### New features and improvements: ####
 
-* **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide [here](https://wiki.transvar.org/display/igbman/Soft-clipped+reads) for more details.
+* **Visualize soft-clipped alignment regions.** IGB now makes it much easier to notice when alignments have "soft-clipped" regions on the ends of the alignment. Soft-clip visualizations can make it much easier to notice re-arrangments or other structural variations. They can also show when adapter sequences have not been well-trimmed prior to alignment. As with everything else in IGB, you can also customize how soft-clipped regions appear. And, of course, they are clickable, making it easy to copy soft-clipped sequences into other tools for further analysis. Check out the user's guide for more details.
 * **New genome versions.** New genomes added to the IGB Quickload data sharing system include _Daphnia magna_ (Jan 2019, Apr 2010), _Daphnia pulex_ (Sep 2016, Feb 2011), _Anguilla rostrata_ (Oct 2016), and _Caenorhabditis elegans_ (Feb 2013) genomes. If you would like more to be added, just let us know!
 * **Better feedback when things go wrong.** We improved the error and alert messages you see when IGB can't read your files for some reason. We hope this will help you figure out the problem yourself or gives us information that will help us solve the problems for you.
 * **Info for Data Sources.** We added a new "info" button to the Data Sources table (in IGB Preferences) to help you manage and understand Quickload sites you may be adding to IGB.
@@ -137,7 +137,7 @@ IGB 9.1.0 is now available for download!
 * **Better versioning transparency.** Now, when you run IGB, you can select **Help > About IGB** to find out which particular IGB version (called "commit hash") you are running. This is mainly a convenience for developers working with the IGB platform.
 * **IGB App Store.** Starting with IGB 9.1.0, we have added an all-new <a href="https://apps.bioviz.org">IGB App Store</a> to the list of IGB App repositories. The App Store will be a place for App developers to upload and share their IGB extensions - called "Apps" - with the larger community.
 
-For more info about IGB 9.1.0, please see see [IGB 9.1.0 Release Documentation](https://wiki.transvar.org/display/ITD/9.1.0).
+For more info about IGB 9.1.0, please see IGB 9.1.0 Release Documentation.
 
 * * *
 
@@ -165,13 +165,13 @@ A new version of IGB is available that fixes some errors present in
 
 #### New features and improvements: ####
 
-* IGB now allows decimal values in "Filter by Score" filtering functions for BAM, BED, etc (annotation) tracks  ([IGBF-1204](https://jira.transvar.org/browse/IGBF-1204))
-* We improved aspects of IGB's heatmap-related features. We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. ([IGBF-1205](https://jira.transvar.org/browse/IGBF-1205)) Also new in IGB 9.0.1: heatmap settings for tracks will now persist between sessions. ([IGBF-1126](https://jira.transvar.org/browse/IGBF-1126))
-* Working with the [Renaissance Computing Institute](http://renci.org/) and the and the [SciDas.org project](http://scidas.org/), we added new data delivery Quickload sites to take advantage of top-speed data transfers provided by RENCI for users. ([IGBF-1200](https://jira.transvar.org/browse/IGBF-1200))
-* We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.transvar.org/browse/IGBF-1218))
-* We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.transvar.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.transvar.org/browse/IGBF-1154)), and several more.
+* IGB now allows decimal values in "Filter by Score" filtering functions for BAM, BED, etc (annotation) tracks  ([IGBF-1204](https://jira.bioviz.org/browse/IGBF-1204))
+* We improved aspects of IGB's heatmap-related features. We added a new heatmap color pallette fine-tuned for bisulfite sequencing data. ([IGBF-1205](https://jira.bioviz.org/browse/IGBF-1205)) Also new in IGB 9.0.1: heatmap settings for tracks will now persist between sessions. ([IGBF-1126](https://jira.bioviz.org/browse/IGBF-1126))
+* Working with the [Renaissance Computing Institute](http://renci.org/) and the and the [SciDas.org project](http://scidas.org/), we added new data delivery Quickload sites to take advantage of top-speed data transfers provided by RENCI for users. ([IGBF-1200](https://jira.bioviz.org/browse/IGBF-1200))
+* We also worked with the [Bio-Analytic Resource](http://bar.utoronto.ca) to add "View in IGB" links to BAR Web pages to IGB, similar to how Galaxy users can flow and view their data into IGB. You can also browse BAR RNA-Seq data sets in IGB thanks to a new Quickload site, which is hosted on RENCI but flows data from Amazon S3 ([IGBF-1218](https://jira.bioviz.org/browse/IGBF-1218))
+* We fixed a number of errors in IGB, such as a bug in how IGB displays data from Oxford Nanopore long read sequences ([IGBF-1173](https://jira.bioviz.org/browse/IGBF-1173)), an error in running NCBI Blast from IGB ([IGBF-1154](https://jira.bioviz.org/browse/IGBF-1154)), and several more.
 
-For the full list with links to detailed notes and more, see [IGB 9.0.1 Release Documentation](https://wiki.transvar.org/display/ITD/9.0.1).
+For the full list with links to detailed notes and more, see IGB 9.0.1 Release Documentation.
 
 #### Other Highlights: ####
 
@@ -202,11 +202,11 @@ use to create stunning new visualizations for new types of genomic data.
 
 Today we released IGB 9.0.0, a major version release that includes API improvements, performance improvements, and bug fixes.
 
-* New Menu API (see [developers guide](https://wiki.transvar.org/display/igbdevelopers))
-* Better support for narrowPeak files - from ChIP-Seq experiments ([IGBF-1115](https://jira.transvar.org/browse/IGBF-1115))
-* Performance improvements when working with large Quickload sites ([IGBF-1114](https://jira.transvar.org/browse/IGBF-1114))
-* Fixing caching error when IGB closes during download ([IGBF-1110](https://jira.transvar.org/browse/IGBF-1110))
-* Fixing exception when sorting the Size column in the Cache tab ([IGBF-1111](https://jira.transvar.org/browse/IGBF-1111))
+* New Menu API (see developers guide)
+* Better support for narrowPeak files - from ChIP-Seq experiments ([IGBF-1115](https://jira.bioviz.org/browse/IGBF-1115))
+* Performance improvements when working with large Quickload sites ([IGBF-1114](https://jira.bioviz.org/browse/IGBF-1114))
+* Fixing caching error when IGB closes during download ([IGBF-1110](https://jira.bioviz.org/browse/IGBF-1110))
+* Fixing exception when sorting the Size column in the Cache tab ([IGBF-1111](https://jira.bioviz.org/browse/IGBF-1111))
 
 * * *
 ### April 2016 - Two new IGB papers published
@@ -222,8 +222,8 @@ The journal Bioinformatics has published two new papers on IGB and IGB Apps:
 
 Today we released IGB 8.5.4, a minor release that includes only cosmetic changes
 
-* App Manager Menu Item added ([IGBF-1104](https://jira.transvar.org/browse/IGBF-1104))
-* Reorder welcome screen species ([IGBF-1105](https://jira.transvar.org/browse/IGBF-1105))
+* App Manager Menu Item added ([IGBF-1104](https://jira.bioviz.org/browse/IGBF-1104))
+* Reorder welcome screen species ([IGBF-1105](https://jira.bioviz.org/browse/IGBF-1105))
 
 * * *
 
@@ -231,11 +231,11 @@ Today we released IGB 8.5.4, a minor release that includes only cosmetic changes
 
 Today we released IGB 8.5.3, a minor release that includes a few minor bug fixes
 
-* Adding Synonym File removes Data Sources Tab ([IGBF-1077](https://jira.transvar.org/browse/IGBF-1077))
-* "i" button should not be shown if optional url attribute not present ([IGBF-1068](https://jira.transvar.org/browse/IGBF-1068))
-* Opening a file by dragging-and-dropping causes freezing on Mac ([IGBF-1079](https://jira.transvar.org/browse/IGBF-1079))
-* Find Junctions Only Counting Single-mapping reads ([IGBF-1031](https://jira.transvar.org/browse/IGBF-1031))
-* VCF parsing error when average quality is empty string ([IGBF-1101](https://jira.transvar.org/browse/IGBF-1101))
+* Adding Synonym File removes Data Sources Tab ([IGBF-1077](https://jira.bioviz.org/browse/IGBF-1077))
+* "i" button should not be shown if optional url attribute not present ([IGBF-1068](https://jira.bioviz.org/browse/IGBF-1068))
+* Opening a file by dragging-and-dropping causes freezing on Mac ([IGBF-1079](https://jira.bioviz.org/browse/IGBF-1079))
+* Find Junctions Only Counting Single-mapping reads ([IGBF-1031](https://jira.bioviz.org/browse/IGBF-1031))
+* VCF parsing error when average quality is empty string ([IGBF-1101](https://jira.bioviz.org/browse/IGBF-1101))
 
 * * *
 
@@ -266,43 +266,43 @@ We'll post links to slides and videos as soon as they're available.
 
 Today we released IGB 8.5.2, a minor release that includes several bug fixes and a few small new features.
 
-* Disable ability to store empty passwords on dataproviders  ([IGBF-1060](https://jira.transvar.org/browse/IGBF-1060))
-* Improve error handling around data provider credentials ([IGBF-1051](https://jira.transvar.org/browse/IGBF-1051))
-* Clearing data set fails when refreshing QL server on genomes with many contigs ([IGBF-1061](https://jira.transvar.org/browse/IGBF-1061))
-* Symloaders not handling non-bed formats properly ([IGBF-1059](https://jira.transvar.org/browse/IGBF-1059))
-* Insertion glyph not shown correctly ([IGBF-1057](https://jira.transvar.org/browse/IGBF-1057))
-* Protannot paxml not recalled correctly ([IGBF-1001](https://jira.transvar.org/browse/IGBF-1001))
-* Do not allow user to set Max Cache size lower than the current cache size ([IGBF-1019](https://jira.transvar.org/browse/IGBF-1019))
-* Exception generated when trying to install an updatable plugin ([IGBF-1043](https://jira.transvar.org/browse/IGBF-1043))
-* Exception generated when trying to install an updatable plugin ([IGBF-1018](https://jira.transvar.org/browse/IGBF-1018))
-* Race condition vulnerability in bottom tabholder ([IGBF-1056](https://jira.transvar.org/browse/IGBF-1056))
+* Disable ability to store empty passwords on dataproviders  ([IGBF-1060](https://jira.bioviz.org/browse/IGBF-1060))
+* Improve error handling around data provider credentials ([IGBF-1051](https://jira.bioviz.org/browse/IGBF-1051))
+* Clearing data set fails when refreshing QL server on genomes with many contigs ([IGBF-1061](https://jira.bioviz.org/browse/IGBF-1061))
+* Symloaders not handling non-bed formats properly ([IGBF-1059](https://jira.bioviz.org/browse/IGBF-1059))
+* Insertion glyph not shown correctly ([IGBF-1057](https://jira.bioviz.org/browse/IGBF-1057))
+* Protannot paxml not recalled correctly ([IGBF-1001](https://jira.bioviz.org/browse/IGBF-1001))
+* Do not allow user to set Max Cache size lower than the current cache size ([IGBF-1019](https://jira.bioviz.org/browse/IGBF-1019))
+* Exception generated when trying to install an updatable plugin ([IGBF-1043](https://jira.bioviz.org/browse/IGBF-1043))
+* Exception generated when trying to install an updatable plugin ([IGBF-1018](https://jira.bioviz.org/browse/IGBF-1018))
+* Race condition vulnerability in bottom tabholder ([IGBF-1056](https://jira.bioviz.org/browse/IGBF-1056))
 
 * * *
 ### November 30, 2015: IGB 8.5.1 released
 
 Today we released IGB 8.5.1, a minor release that includes a single bug fix.
 
-* Remote Wig File loading fails ([IGBF-1046](https://jira.transvar.org/browse/IGBF-1046))
+* Remote Wig File loading fails ([IGBF-1046](https://jira.bioviz.org/browse/IGBF-1046))
 
 * * *
 ### November 20, 2015: IGB 8.5.0 released
 
 Today we released IGB 8.5.0, a major release that includes many new features and improvements.
 
-* Introduced support for narrowPeak and broadPeak file formats ([IGBF-1005](https://jira.transvar.org/browse/IGBF-1005))
-* Introduced a new caching system to improve performance and speed up data access of commonly accessed files ([IGBF-442](https://jira.transvar.org/browse/IGBF-442))
-* Introduced a App Manager created with JavaFx ([IGBF-959](https://jira.transvar.org/browse/IGBF-959))
+* Introduced support for narrowPeak and broadPeak file formats ([IGBF-1005](https://jira.bioviz.org/browse/IGBF-1005))
+* Introduced a new caching system to improve performance and speed up data access of commonly accessed files ([IGBF-442](https://jira.bioviz.org/browse/IGBF-442))
+* Introduced a App Manager created with JavaFx ([IGBF-959](https://jira.bioviz.org/browse/IGBF-959))
 <div>
 <a href="images/appmanager.png" data-lightbox="example-1"><img src="images/appmanager.png" alt="image-1" style="width:100%; height:auto"/></a>
 </div>
-* Added a bundled JRE for the linux distribution ([IGBF-1000](https://jira.transvar.org/browse/IGBF-1000))
-* Added support for a new index attribute to the quickload annots.xml file tag ([IGBF-445](https://jira.transvar.org/browse/IGBF-445))
-* Improved error handling of broken quickload servers ([IGBF-808](https://jira.transvar.org/browse/IGBF-808))
-* Introduced support for unsorted bed files ([IGBF-1020](https://jira.transvar.org/browse/IGBF-1020))
-* Enable javafx file chooser in custom genome dialog ([IGBF-795](https://jira.transvar.org/browse/IGBF-795))
-* Make the "Save Password" checkbox checked by default ([IGBF-802](https://jira.transvar.org/browse/IGBF-802))
-* Implement weight for items under Tools menu ([IGBF-841](https://jira.transvar.org/browse/IGBF-841))
-* Refactor image export service to support plugins ([IGBF-974](https://jira.transvar.org/browse/IGBF-974))
+* Added a bundled JRE for the linux distribution ([IGBF-1000](https://jira.bioviz.org/browse/IGBF-1000))
+* Added support for a new index attribute to the quickload annots.xml file tag ([IGBF-445](https://jira.bioviz.org/browse/IGBF-445))
+* Improved error handling of broken quickload servers ([IGBF-808](https://jira.bioviz.org/browse/IGBF-808))
+* Introduced support for unsorted bed files ([IGBF-1020](https://jira.bioviz.org/browse/IGBF-1020))
+* Enable javafx file chooser in custom genome dialog ([IGBF-795](https://jira.bioviz.org/browse/IGBF-795))
+* Make the "Save Password" checkbox checked by default ([IGBF-802](https://jira.bioviz.org/browse/IGBF-802))
+* Implement weight for items under Tools menu ([IGBF-841](https://jira.bioviz.org/browse/IGBF-841))
+* Refactor image export service to support plugins ([IGBF-974](https://jira.bioviz.org/browse/IGBF-974))
 
 * * *
 ### September 15, 2015: New IGB paper
@@ -324,7 +324,7 @@ in the [ProtAnnot](http://bit.ly/1M9DQ5X) pre-print.
 
 Today we released IGB 8.4.4, a minor release that includes a patch for performance degrading while zooming into very large gene models with annotation labels set to "none".
 
-* High level zoom on large genes is causing lag if label set to "none"  ([IGBF-933](https://jira.transvar.org/browse/IGBF-933))
+* High level zoom on large genes is causing lag if label set to "none"  ([IGBF-933](https://jira.bioviz.org/browse/IGBF-933))
 
 * * *
 ### September 2, 2015: IGB 8.4.3 released
@@ -333,25 +333,25 @@ Today we released IGB 8.4.3, a minor release that includes a few enhancements to
 A noteworthy patch is included for a serious bug in Ubuntu which causes the JVM to crash whenever a file chooser widget was presented for loading local files.
 We have reverted to using a non-native file chooser on Ubuntu as a workaround.
 
-* IGB returns to default chromosome after removing any track. (local files only)  ([IGBF-915](https://jira.transvar.org/browse/IGBF-915))
-* Remove checkboxes from bottom of plug-ins tab ([IGBF-914](https://jira.transvar.org/browse/IGBF-914))
-* Bookmark module activation fails if menu depth exceeds 4 levels ([IGBF-903](https://jira.transvar.org/browse/IGBF-903))
-* UriUtils does not properly handling http 500 response if initial validation returns 200 ([IGBF-902](https://jira.transvar.org/browse/IGBF-902))
-* "Customize..." action should open to the "Tracks" tab in Preferences ([IGBF-882](https://jira.transvar.org/browse/IGBF-882))
-* Restore JFileChooser and revert use of AWT FileDialog for Ubuntu ([IGBF-872](https://jira.transvar.org/browse/IGBF-872))
-* Allow .svg export always, even Whole Frame ([IGBF-779](https://jira.transvar.org/browse/IGBF-779))
+* IGB returns to default chromosome after removing any track. (local files only)  ([IGBF-915](https://jira.bioviz.org/browse/IGBF-915))
+* Remove checkboxes from bottom of plug-ins tab ([IGBF-914](https://jira.bioviz.org/browse/IGBF-914))
+* Bookmark module activation fails if menu depth exceeds 4 levels ([IGBF-903](https://jira.bioviz.org/browse/IGBF-903))
+* UriUtils does not properly handling http 500 response if initial validation returns 200 ([IGBF-902](https://jira.bioviz.org/browse/IGBF-902))
+* "Customize..." action should open to the "Tracks" tab in Preferences ([IGBF-882](https://jira.bioviz.org/browse/IGBF-882))
+* Restore JFileChooser and revert use of AWT FileDialog for Ubuntu ([IGBF-872](https://jira.bioviz.org/browse/IGBF-872))
+* Allow .svg export always, even Whole Frame ([IGBF-779](https://jira.bioviz.org/browse/IGBF-779))
 
 * * *
 ### August 10, 2015: IGB 8.4.2 released
 
 Today we released IGB 8.4.2, a minor release which includes a variety of small bug fixes and user experience improvements.  This release also introduces a new plugin to our "Optional" plugins repository: the *ProtAnnot* plugin.  This plugin integrates a viewer which is designed to make it easy to see how alternative mRNA structures affect the various protein products encoded at a locus. We will be releasing a video tutorial soon to demonstrate the functionality of this new plugin.
 
-* Improve user feedback when adding broken quickload sites ([IGBF-808](https://jira.transvar.org/browse/IGBF-808))
-* Local species.txt is parsed incorrectly ([IGBF-796](https://jira.transvar.org/browse/IGBF-796))
-* Spaces getting converted to "%20" in Data Sources table ([IGBF-748](https://jira.transvar.org/browse/IGBF-748))
-* Editing URL of secured quickoad sites causes strange behavior in IGB including the inability to remove a data source ([IGBF-868](https://jira.transvar.org/browse/IGBF-868))
-* Not selecting "Save Password" checkbox when adding two secured Quickoad sites causes too many popups to appear during a session ([IGBF-866](https://jira.transvar.org/browse/IGBF-866))
-* Working with multiple secure quickload sites causes authentication popup to trigger unexpectedly ([IGBF-840](https://jira.transvar.org/browse/IGBF-840))
+* Improve user feedback when adding broken quickload sites ([IGBF-808](https://jira.bioviz.org/browse/IGBF-808))
+* Local species.txt is parsed incorrectly ([IGBF-796](https://jira.bioviz.org/browse/IGBF-796))
+* Spaces getting converted to "%20" in Data Sources table ([IGBF-748](https://jira.bioviz.org/browse/IGBF-748))
+* Editing URL of secured quickoad sites causes strange behavior in IGB including the inability to remove a data source ([IGBF-868](https://jira.bioviz.org/browse/IGBF-868))
+* Not selecting "Save Password" checkbox when adding two secured Quickoad sites causes too many popups to appear during a session ([IGBF-866](https://jira.bioviz.org/browse/IGBF-866))
+* Working with multiple secure quickload sites causes authentication popup to trigger unexpectedly ([IGBF-840](https://jira.bioviz.org/browse/IGBF-840))
 
 * * *
 
@@ -368,10 +368,10 @@ impacts caused by mutations. The paper can be found at [http://bit.ly/1MpYkKH] (
 Today we released IGB 8.4.1, a minor release which resolves one significant regression in the IGB 8.4.0 release related to failing to properly preserve the track order.
 We have also included a few more minor improvements with this release.
 
-*   Track Order is reverting to load order on chromosome change ([IGBF-793](https://jira.transvar.org/browse/IGBF-793))
-*   The wrong column in species.txt used for species combobox ([IGBF-789](https://jira.transvar.org/browse/IGBF-789))
-*   It's not possible to edit QL URL when it's "not responding" ([IGBF-788](https://jira.transvar.org/browse/IGBF-788))
-*   It is possible to incorrectly persist a dataprovider's preference node ([IGBF-790](https://jira.transvar.org/browse/IGBF-790))
+*   Track Order is reverting to load order on chromosome change ([IGBF-793](https://jira.bioviz.org/browse/IGBF-793))
+*   The wrong column in species.txt used for species combobox ([IGBF-789](https://jira.bioviz.org/browse/IGBF-789))
+*   It's not possible to edit QL URL when it's "not responding" ([IGBF-788](https://jira.bioviz.org/browse/IGBF-788))
+*   It is possible to incorrectly persist a dataprovider's preference node ([IGBF-790](https://jira.bioviz.org/browse/IGBF-790))
 
 * * *
 ### July 6, 2015: IGB 8.4.0 released
@@ -381,65 +381,65 @@ The improvements included in this release have mostly been aimed at enhancing th
 and making our code base more developer friendly; however, the release also contains many usability improvements
 and bug fixes.
 
-*   DataProvider API introduced as a full replacement for SeverTypeI ([IGBF-663](https://jira.transvar.org/browse/IGBF-663))
-*   IGB Quickload rewritten as a DataProvider implementation ([IGBF-783](https://jira.transvar.org/browse/IGBF-783))
-*   Das rewritten as a DataProvider implementation ([IGBF-578](https://jira.transvar.org/browse/IGBF-578))
-*   Das2 support restored as a DataProvider implementation ([IGBF-579](https://jira.transvar.org/browse/IGBF-579))
-*   Fix for bug in the fasta parser ([IGBF-540](https://jira.transvar.org/browse/IGBF-540))
-*   Annotation Font Label Options panel added to allow user to control the behavior of font label rendering ([IGBF-784](https://jira.transvar.org/browse/IGBF-784))
-*   Export Image widget has been updated and several small bugs were resolved ([IGBF-719](https://jira.transvar.org/browse/IGBF-719), [IGBF-755](https://jira.transvar.org/browse/IGBF-755), [IGBF-719](https://jira.transvar.org/browse/IGBF-719))
-*   IGB developer's guide updated to include examples of how to get started developing IGB plugins ([Developer's Guide](https://wiki.transvar.org/display/igbdevelopers/IGB%27s+Modular+Architecture))
+*   DataProvider API introduced as a full replacement for SeverTypeI ([IGBF-663](https://jira.bioviz.org/browse/IGBF-663))
+*   IGB Quickload rewritten as a DataProvider implementation ([IGBF-783](https://jira.bioviz.org/browse/IGBF-783))
+*   Das rewritten as a DataProvider implementation ([IGBF-578](https://jira.bioviz.org/browse/IGBF-578))
+*   Das2 support restored as a DataProvider implementation ([IGBF-579](https://jira.bioviz.org/browse/IGBF-579))
+*   Fix for bug in the fasta parser ([IGBF-540](https://jira.bioviz.org/browse/IGBF-540))
+*   Annotation Font Label Options panel added to allow user to control the behavior of font label rendering ([IGBF-784](https://jira.bioviz.org/browse/IGBF-784))
+*   Export Image widget has been updated and several small bugs were resolved ([IGBF-719](https://jira.bioviz.org/browse/IGBF-719), [IGBF-755](https://jira.bioviz.org/browse/IGBF-755), [IGBF-719](https://jira.bioviz.org/browse/IGBF-719))
+*   IGB developer's guide updated to include examples of how to get started developing IGB plugins (Developer's Guide)
 
 * * *
 ### May 12, 2015: IGB 8.3.4 released
 
 Today we released IGB 8.3.4, a minor release which includes bug fixes and some improvements:
 
-*   Graph Track Operations Usability Enhancements ([IGBF-635](https://jira.transvar.org/browse/IGBF-635))
-*   Remove parameter input option for what should be hardcoded Track "Operators" ([IGBF-393](https://jira.transvar.org/browse/IGBF-393))
-*   Examine and fix the synonym error in the C. elegans genome ([IGBF-538](https://jira.transvar.org/browse/IGBF-538))
-*   Change the text in the MM8 genome from "March" to "Feb" ([IGBF-551](https://jira.transvar.org/browse/IGBF-551))
-*   Create a nested folder inside the IGB.zip distribution ([IGBF-583](https://jira.transvar.org/browse/IGBF-583))
-*   Fix "select" and "selectfeature" scripting commands, and update "loadmode" documentation to reflect actual options available ([IGBF-598](https://jira.transvar.org/browse/IGBF-598))
-*   Remove Track Operation text and punctuation in Graph tab ([IGBF-606](https://jira.transvar.org/browse/IGBF-606))
-*   Bed Symloader does not properly parse bedDetail type when the number of columns is less than 14 ([IGBF-619](https://jira.transvar.org/browse/IGBF-619))
-*   Remove Input parameter box for Sqrt Graph Track Operation ([IGBF-643](https://jira.transvar.org/browse/IGBF-643))
-*   Change minimum requirement for Residue Search to 1 character ([IGBF-644](https://jira.transvar.org/browse/IGBF-644))
-*   Subtract Track Operation Works Differently if Commas are used in the Value ([IGBF-648](https://jira.transvar.org/browse/IGBF-648))
-*   Selecting "Make Track" in the Graph Thresholds Dialogue generates an exception ([IGBF-610](https://jira.transvar.org/browse/IGBF-610))
+*   Graph Track Operations Usability Enhancements ([IGBF-635](https://jira.bioviz.org/browse/IGBF-635))
+*   Remove parameter input option for what should be hardcoded Track "Operators" ([IGBF-393](https://jira.bioviz.org/browse/IGBF-393))
+*   Examine and fix the synonym error in the C. elegans genome ([IGBF-538](https://jira.bioviz.org/browse/IGBF-538))
+*   Change the text in the MM8 genome from "March" to "Feb" ([IGBF-551](https://jira.bioviz.org/browse/IGBF-551))
+*   Create a nested folder inside the IGB.zip distribution ([IGBF-583](https://jira.bioviz.org/browse/IGBF-583))
+*   Fix "select" and "selectfeature" scripting commands, and update "loadmode" documentation to reflect actual options available ([IGBF-598](https://jira.bioviz.org/browse/IGBF-598))
+*   Remove Track Operation text and punctuation in Graph tab ([IGBF-606](https://jira.bioviz.org/browse/IGBF-606))
+*   Bed Symloader does not properly parse bedDetail type when the number of columns is less than 14 ([IGBF-619](https://jira.bioviz.org/browse/IGBF-619))
+*   Remove Input parameter box for Sqrt Graph Track Operation ([IGBF-643](https://jira.bioviz.org/browse/IGBF-643))
+*   Change minimum requirement for Residue Search to 1 character ([IGBF-644](https://jira.bioviz.org/browse/IGBF-644))
+*   Subtract Track Operation Works Differently if Commas are used in the Value ([IGBF-648](https://jira.bioviz.org/browse/IGBF-648))
+*   Selecting "Make Track" in the Graph Thresholds Dialogue generates an exception ([IGBF-610](https://jira.bioviz.org/browse/IGBF-610))
 
 * * *
 ### May 6, 2015: IGB 8.3.3 released
 
 Today we released IGB 8.3.3, a minor release which includes only a single bug fix:
 
-*   Data Sources become duplicated when re-enabling server or refreshing server ([IGBF-498](https://jira.transvar.org/browse/IGBF-498))
+*   Data Sources become duplicated when re-enabling server or refreshing server ([IGBF-498](https://jira.bioviz.org/browse/IGBF-498))
 
 * * *
 ### March 30, 2015: IGB 8.3.2 released
 
 Today we released IGB 8.3.2, a minor release which includes bug fixes and some improvements, such as:
 
-*   Add support for other FASTA file extensions ([IGBF-414](https://jira.transvar.org/browse/IGBF-414))
-*   Open Custom Genome improvements ([IGBF-479](https://jira.transvar.org/browse/IGBF-479))
-*   Refactor and simplify Open File feature ([IGBF-377](https://jira.transvar.org/browse/IGBF-377))
-*   Update Bundled JRE to resolve intermittent crashes on Mac OS X ([IGBF-380](https://jira.transvar.org/browse/IGBF-380))
-*   Add "delete all tracks" IGB scripting command) ([IGBF-472](https://jira.transvar.org/browse/IGBF-472))
-*   Bed Parser Minor Improvements to resolve issues related to optional bin field ([IGBF-512](https://jira.transvar.org/browse/IGBF-512))
-*   GFF3 Tooltip duplicates removed ([IGBF-513](https://jira.transvar.org/browse/IGBF-513))
-*   Advanced Search Tab "Gene Name" column should be renamed to Title and mapped to correct property ([IGBF-514](https://jira.transvar.org/browse/IGBF-514))
+*   Add support for other FASTA file extensions ([IGBF-414](https://jira.bioviz.org/browse/IGBF-414))
+*   Open Custom Genome improvements ([IGBF-479](https://jira.bioviz.org/browse/IGBF-479))
+*   Refactor and simplify Open File feature ([IGBF-377](https://jira.bioviz.org/browse/IGBF-377))
+*   Update Bundled JRE to resolve intermittent crashes on Mac OS X ([IGBF-380](https://jira.bioviz.org/browse/IGBF-380))
+*   Add "delete all tracks" IGB scripting command) ([IGBF-472](https://jira.bioviz.org/browse/IGBF-472))
+*   Bed Parser Minor Improvements to resolve issues related to optional bin field ([IGBF-512](https://jira.bioviz.org/browse/IGBF-512))
+*   GFF3 Tooltip duplicates removed ([IGBF-513](https://jira.bioviz.org/browse/IGBF-513))
+*   Advanced Search Tab "Gene Name" column should be renamed to Title and mapped to correct property ([IGBF-514](https://jira.bioviz.org/browse/IGBF-514))
 
 ### February 23, 2015: IGB 8.3.1 released
 
 Today we released IGB 8.3.1, a minor release which includes several bug fixes and small improvements
 
-*   Added Customize option back to track label context menu ([IGBF-379](https://jira.transvar.org/browse/IGBF-379))
-*   Open File Diaolog modifications made for native look and feel ([IGBF-377](https://jira.transvar.org/browse/IGBF-377))
-*   Search indexing problem with GFF file format vs. BED-detail ([IGBF-23](https://jira.transvar.org/browse/IGBF-23))
-*   Moved igb-command-socket module into optional plugins ([IGBF-417](https://jira.transvar.org/browse/IGBF-417))
-*   Genome load mode doesn’t indicate loading has happened for chromosomes for which there was no data ([IGBF-378](https://jira.transvar.org/browse/IGBF-378))
-*   Set home as default location for Open File dialogs ([IGBF-405](https://jira.transvar.org/browse/IGBF-405))
-*   Nothing appears above Annotations when labeling by "Title" ([IGBF-387](https://jira.transvar.org/browse/IGBF-387))
+*   Added Customize option back to track label context menu ([IGBF-379](https://jira.bioviz.org/browse/IGBF-379))
+*   Open File Diaolog modifications made for native look and feel ([IGBF-377](https://jira.bioviz.org/browse/IGBF-377))
+*   Search indexing problem with GFF file format vs. BED-detail ([IGBF-23](https://jira.bioviz.org/browse/IGBF-23))
+*   Moved igb-command-socket module into optional plugins ([IGBF-417](https://jira.bioviz.org/browse/IGBF-417))
+*   Genome load mode doesn’t indicate loading has happened for chromosomes for which there was no data ([IGBF-378](https://jira.bioviz.org/browse/IGBF-378))
+*   Set home as default location for Open File dialogs ([IGBF-405](https://jira.bioviz.org/browse/IGBF-405))
+*   Nothing appears above Annotations when labeling by "Title" ([IGBF-387](https://jira.bioviz.org/browse/IGBF-387))
 
 * * *
 
@@ -448,22 +448,22 @@ Today we released IGB 8.3.1, a minor release which includes several bug fixes an
 Today we released IGB 8.3.0, a milestone major release for the IGB project introducing native platform installers for Windows, Mac, and Linux.  This release does not contain any new major features,
 but does include many bug fixes.
 
-*   Create Native Installers ([IGBF-347](https://jira.transvar.org/browse/IGBF-347))
-*   Improve current filter for paired data ([IGBF-326](https://jira.transvar.org/browse/IGBF-326))
-*   Dragging a file over an icon in the toolbar generates a NullPointerException ([IGBF-333](https://jira.transvar.org/browse/IGBF-333))
-*   Sliced View tab intron selection causing an error ([IGBF-351](https://jira.transvar.org/browse/IGBF-351))
-*   Ensembl External Viewer is Not Using Current Genome Version after URL change ([IGBF-354](https://jira.transvar.org/browse/IGBF-354))
-*   Remove "Accept Network Connections" popup when launching IGB on a Mac ([IGBF-358](https://jira.transvar.org/browse/IGBF-358))
-*   Right-clicking on track label when no data has been loaded generates an exception ([IGBF-346](https://jira.transvar.org/browse/IGBF-346))
-*   Fix and Organize Developer Plugins ([IGBF-352](https://jira.transvar.org/browse/IGBF-352))
-*   Fix NPE in Merge Annotation Operator Development Plugin ([IGBF-361](https://jira.transvar.org/browse/IGBF-361))
-*   Tooltips are not displaying on Windows;generates a "BadLocationException" ([IGBF-336](https://jira.transvar.org/browse/IGBF-336))
-*   Bottom of tooltips box may be cutoff ([IGBF-304](https://jira.transvar.org/browse/IGBF-304))
-*   Put "cigar", "mapq", and "id" in all caps in tooltips/selection info ([IGBF-330](https://jira.transvar.org/browse/IGBF-330))
-*   Typing zero into Export Image size parameter box causes annoying question mark to appear ([IGBF-252](https://jira.transvar.org/browse/IGBF-252))
-*   Remove "Do you want to run script" dialog ([IGBF-273](https://jira.transvar.org/browse/IGBF-273))
-*   Hovering across gene models in HG16 prints harmless stacktrace, which should be a warning or silenced ([IGBF-355](https://jira.transvar.org/browse/IGBF-355))
-*   Selecting the "Axis" option while Selecting Tracks under the Edit menu generates a null pointer exception ([IGBF-357](https://jira.transvar.org/browse/IGBF-357))
+*   Create Native Installers ([IGBF-347](https://jira.bioviz.org/browse/IGBF-347))
+*   Improve current filter for paired data ([IGBF-326](https://jira.bioviz.org/browse/IGBF-326))
+*   Dragging a file over an icon in the toolbar generates a NullPointerException ([IGBF-333](https://jira.bioviz.org/browse/IGBF-333))
+*   Sliced View tab intron selection causing an error ([IGBF-351](https://jira.bioviz.org/browse/IGBF-351))
+*   Ensembl External Viewer is Not Using Current Genome Version after URL change ([IGBF-354](https://jira.bioviz.org/browse/IGBF-354))
+*   Remove "Accept Network Connections" popup when launching IGB on a Mac ([IGBF-358](https://jira.bioviz.org/browse/IGBF-358))
+*   Right-clicking on track label when no data has been loaded generates an exception ([IGBF-346](https://jira.bioviz.org/browse/IGBF-346))
+*   Fix and Organize Developer Plugins ([IGBF-352](https://jira.bioviz.org/browse/IGBF-352))
+*   Fix NPE in Merge Annotation Operator Development Plugin ([IGBF-361](https://jira.bioviz.org/browse/IGBF-361))
+*   Tooltips are not displaying on Windows;generates a "BadLocationException" ([IGBF-336](https://jira.bioviz.org/browse/IGBF-336))
+*   Bottom of tooltips box may be cutoff ([IGBF-304](https://jira.bioviz.org/browse/IGBF-304))
+*   Put "cigar", "mapq", and "id" in all caps in tooltips/selection info ([IGBF-330](https://jira.bioviz.org/browse/IGBF-330))
+*   Typing zero into Export Image size parameter box causes annoying question mark to appear ([IGBF-252](https://jira.bioviz.org/browse/IGBF-252))
+*   Remove "Do you want to run script" dialog ([IGBF-273](https://jira.bioviz.org/browse/IGBF-273))
+*   Hovering across gene models in HG16 prints harmless stacktrace, which should be a warning or silenced ([IGBF-355](https://jira.bioviz.org/browse/IGBF-355))
+*   Selecting the "Axis" option while Selecting Tracks under the Edit menu generates a null pointer exception ([IGBF-357](https://jira.bioviz.org/browse/IGBF-357))
 
 
 * * *
@@ -478,7 +478,7 @@ We are planning to release native installers for Windows/Mac/Linux very soon and
 
 Today we released IGB 8.2.3 which resolves a small bug with IGB's cache system.
 
-*   File name too long IOException from igbquickload server ([IGBF-342](https://jira.transvar.org/browse/IGBF-342))
+*   File name too long IOException from igbquickload server ([IGBF-342](https://jira.bioviz.org/browse/IGBF-342))
 
 * * *
 
@@ -486,7 +486,7 @@ Today we released IGB 8.2.3 which resolves a small bug with IGB's cache system.
 
 Today we released IGB 8.2.2.  This release includes resolutions for the following issues:
 
-*   Fix startup bug affecting users running IGB from bash script ([IGBF-341](https://jira.transvar.org/browse/IGBF-341))
+*   Fix startup bug affecting users running IGB from bash script ([IGBF-341](https://jira.bioviz.org/browse/IGBF-341))
 
 * * *
 
@@ -494,12 +494,12 @@ Today we released IGB 8.2.2.  This release includes resolutions for the followin
 
 Today we released IGB 8.2.1.  This release included resolutions for the following issues:
 
-*   Bam Flag Interpreter does not properly handle combinations of flag values ([IGBF-321](https://jira.transvar.org/browse/IGBF-321))
-*   Misleading message after opening a Custom Genome ([IGBF-306](https://jira.transvar.org/browse/IGBF-306))
-*   Reorganize the tooltip info for Paired-End data ([IGBF-327](https://jira.transvar.org/browse/IGBF-327))
-*   Prevent "zoom in to see your data" popup when loading reference sequence ([IGBF-318](https://jira.transvar.org/browse/IGBF-318))
-*   "Copy Bookmark URL" under the Bookmarks menu does not copy the URL for the selected bookmark ([IGBF-311](https://jira.transvar.org/browse/IGBF-311))
-*   Disable "+/-" checkbox under the Annotation tab when "Show as Paired" is enabled ([IGBF-320](https://jira.transvar.org/browse/IGBF-320))
+*   Bam Flag Interpreter does not properly handle combinations of flag values ([IGBF-321](https://jira.bioviz.org/browse/IGBF-321))
+*   Misleading message after opening a Custom Genome ([IGBF-306](https://jira.bioviz.org/browse/IGBF-306))
+*   Reorganize the tooltip info for Paired-End data ([IGBF-327](https://jira.bioviz.org/browse/IGBF-327))
+*   Prevent "zoom in to see your data" popup when loading reference sequence ([IGBF-318](https://jira.bioviz.org/browse/IGBF-318))
+*   "Copy Bookmark URL" under the Bookmarks menu does not copy the URL for the selected bookmark ([IGBF-311](https://jira.bioviz.org/browse/IGBF-311))
+*   Disable "+/-" checkbox under the Annotation tab when "Show as Paired" is enabled ([IGBF-320](https://jira.bioviz.org/browse/IGBF-320))
 
 * * *
 
