@@ -1,3 +1,8 @@
+#main-container {
+    width: 1600px;
+    max-width: 100vw;
+}
+
 #main-container p {
     font-size: 18px;
     margin: 0;
@@ -13,6 +18,11 @@
 
 div.tooltip i {
     color: yellow;
+}
+
+div.tooltip img {
+    height: 20px;
+    width: 20px;
 }
 
 div.tooltip i.fa {
@@ -49,59 +59,6 @@ div.tooltip a {
     color:#428bca
 }
 
-div#result {
-    background-color: aliceblue;
-    border: 1px solid lightgray;
-    border-radius: 0.25rem;
-    margin: 10px 30px 0 30px;
-    width: auto;
-    max-width: none;
-}
-
-#result .row {
-    width: 100%;
-    margin: 0;
-    padding-top: 20px;
-}
-
-#result p.description {
-    margin-left: 15px;
-    padding-bottom: 20px;
-}
-
-#result p.description, #result p.description i {
-    font-size: 14px;
-}
-
-#result div.result-url p {
-    font-size: 17px;
-}
-
-#result div.result-url {
-    overflow-wrap: break-word;
-    word-break: break-all;
-    max-width: 98%;
-    display: flex;
-    align-items: center;
-}
-
-#result p i {
-    font-size: 15px;
-    margin: 0 5px;
-    color: black;
-}
-
-#result div.copy-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-#result div.copy-icon i {
-    position: absolute;
-    right: 0;
-}
-
 .browser div.fetching {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -130,6 +87,10 @@ td.genomes div {
     overflow: hidden;
 }
 
+td.genomes .organism {
+    color: blueviolet;
+}
+
 thead th.name, th.name {
     width: 19px !important;
 }
@@ -140,14 +101,20 @@ th.action {
 }
 
 td.action div.grid {
+    width: fit-content;
+    font-size: 18px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin: 0 5px;
+    grid-gap: 30px;
+    margin: 0 15px;
 }
 
 td.action div.grid-item {
     margin: auto;
+}
+
+td.action span.quickload-copy {
+    color: #db6963;   
 }
 
 table th span {
@@ -167,12 +134,21 @@ table .action .fa {
     position: relative;
 }
 
+table img.igb-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
 #filter {
-    margin: 0 !important;
-    width: 420px;
-    max-width: 420px;
-    position: absolute;
-    right: 0;
+    width: 500px;
+    height: 50px;
+    padding: 0;
+    margin: 50px auto;
+} 
+
+#filter input {
+    height: auto;
 }
 
 #filter #cancel {
@@ -185,15 +161,10 @@ table .action .fa {
     z-index: 1000;
 }
 
-@media all and (max-width: 930px) {
+@media all and (max-width: 450px) {
     #filter {
-        position: inherit;
-    }
-}
-
-@media all and (max-width: 850px) {
-    #filter {
-        min-width: 100%;
-        margin-top: 15px !important;
-    }
+        width: 100vw;
+        margin-left: 10px
+    ;
+    } 
 }

@@ -33,30 +33,15 @@
     <h1>Public UCSC Trackhub Converter</h1>
     <p id="description">This is a tool for browsing and converting public UCSC Trackhubs into Quickload data sources that can be loaded in the Integrated Genome Browser.</p>
 
-    <div class="result">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-auto title">
-                    <h2>Converted Trackhub URL</h2> 
-                </div>
-                <div class="col px-0">
-                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title="After converting a trackhub URL, click the <i class='fa fa-clone' aria-hidden='true'></i> icon next to the output Quickload URL to copy it. In IGB, click <i>Settings > Data Sources > Add</i>, and paste in this URL. For more information on this process, see the IGB User's Guide."></i>
-                </div>
-            </div>
+    <div class="col input-group mb-3" id="filter">
+        <div class="input-group-prepend">
+           <span class="input-group-text">
+           <span class="fa fa-search"></span>
+           </span>
         </div>
-        <div id="result" class="container">
-            <div class="row align-items-center">
-                <div class="col result-url col-auto">
-                    <p class="url">Use the convert icon (<i class="fa fa-refresh" aria-hidden="true"></i>) in the table below to convert a UCSC Trackhub to an IGB Quickload.</p>
-                </div>
-                <div class="col copy-icon px-0">
-                    <i id="copy" class="fa fa-clone clickable result-url-copy d-none" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
-                </div>
-            </div>
-            <p class="description"></p>
-        </div>
-    </div>
+        <input type="text" class="form-control" placeholder="Hub name | organism | genome" aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
+        <span id="cancel" class="fa fa-times"></span>
+     </div>
 
     <div class="browser">
         <div class="container-fluid">
@@ -66,16 +51,7 @@
                 </div>
                 <div class="col-auto px-0">
                     <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>.'></i>
-                </div>
-                <div class="col input-group mb-3" id="filter">
-                    <div class="input-group-prepend">
-                    <span class="input-group-text">
-                        <span class="fa fa-search"></span>
-                    </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Hub name | organism | genome" aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
-                    <span id="cancel" class="fa fa-times"></span>
+            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>. To view the data each contains in IGB, use the <i class="quickload-copy" aria-hidden="true">Q</i> icon copy the respective Quickload URL and add it to your Data Sources in IGB. The <img src="/htdocs/images/open_in_genome_browser.png">icon can be used to open genomes belonging to an added trackhub in IGB.'></i>
                 </div>
             </div>
         </div>
@@ -93,8 +69,9 @@
                 <tr>
                     <th scope="col" class="number">#</th>
                     <th scope="col" class="name">Hub Name</th>
-                    <th scope="col" class="action"><span>Actions</span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-                        title='Click the <i class="fa fa-clone" aria-hidden="true"></i> icon to copy the track hub URL. Click the <i class="fa fa-refresh" aria-hidden="true"></i> icon to generate a Quickload URL.'></i></th>
+                    <th scope="col" class="description">Description</th>
+                    <th scope="col" class="action"><span>Copy URL</span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+                        title='Click the <i class="quickload-copy" aria-hidden="true">Q</i> icon to copy the converted Quickload URL. Click the <i class="ucsc-hub-copy" aria-hidden="true">U</i> icon to view the original hub URL.'></i></th>
                     <th scope="col" class="genomes">Genome Versions</th>
                     <th scope="col" class="expand"></th>
                 </tr>
@@ -104,13 +81,14 @@
                         <tr>
                             <th scope="row"></th>
                             <td class="name"></td>
+                            <td class="description"></td>
                             <td class="action">
                                 <div class="grid">
-                                    <div class="grid-item">
-                                        <i id="copy" class="fa fa-clone clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Hub URL"></i>
-                                    </div>
                                     <div>
-                                        <i id="convert" class="fa fa-refresh clickable" aria-hidden="true"></i>
+                                        <span class="copyable clickable quickload-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Quickload URL">Q</span>
+                                    </div>
+                                    <div class="grid-item">
+                                        <span class="copyable clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied UCSC URL">U</span>
                                     </div>
                                 </div>
                             </td>
