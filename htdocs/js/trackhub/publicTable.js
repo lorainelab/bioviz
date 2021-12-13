@@ -47,7 +47,7 @@ function addToTable(hub) {
                     }
                     const igbGenomeVersion = igbOrganismGenomes[organism][ucscGenomeInd]
                     if (igbGenomeVersion !== 'None') {
-                        igbLink.setAttribute('href', `https://${BACKEND_DOMAIN}/IGBControl?version=${igbGenomeVersion}`);
+                        igbLink.setAttribute('href', `http://localhost:7085/IGBControl?version=${igbGenomeVersion}`);
                         genomeVersions += igbLink.outerHTML;
                     }
                     genomeVersions += '<br>';
@@ -130,7 +130,7 @@ async function saveIgbGenomes() {
         return;
     }
     const genomes = hubData.map(el => el.organismsGenomes);
-    const igbOrganismGenomes = (await postHttpRequest(`http://localhost:8000/api/igbGenomeVersions`, {ucscGenomes: JSON.stringify(genomes)}));
+    const igbOrganismGenomes = (await postHttpRequest(`https://${BACKEND_DOMAIN}/api/igbGenomeVersions`, {ucscGenomes: JSON.stringify(genomes)}));
     igbOrganismGenomes.forEach((_, ind) => {
         hubData[ind]['igbOrganismGenomes'] = igbOrganismGenomes[ind];
     })
