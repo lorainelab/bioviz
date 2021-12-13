@@ -1,4 +1,4 @@
-import { convertURL, handleTooltips } from './util.js';
+import { BACKEND_DOMAIN, convertURL, handleTooltips } from './util.js';
 
 const filterInput = $('#filter input');
 const filterCancel = $('#filter #cancel');
@@ -47,7 +47,7 @@ function addToTable(hub) {
                     }
                     const igbGenomeVersion = igbOrganismGenomes[organism][ucscGenomeInd]
                     if (igbGenomeVersion !== 'None') {
-                        igbLink.setAttribute('href', `http://localhost:7085/IGBControl?version=${igbGenomeVersion}`);
+                        igbLink.setAttribute('href', `https://${BACKEND_DOMAIN}/IGBControl?version=${igbGenomeVersion}`);
                         genomeVersions += igbLink.outerHTML;
                     }
                     genomeVersions += '<br>';
