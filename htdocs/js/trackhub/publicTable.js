@@ -130,7 +130,8 @@ async function saveIgbGenomes() {
         return;
     }
     const genomes = hubData.map(el => el.organismsGenomes);
-    const igbOrganismGenomes = (await postHttpRequest(`https://${BACKEND_DOMAIN}/api/igbGenomeVersions`, {ucscGenomes: JSON.stringify(genomes)}));
+    const baseUrl = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
+    const igbOrganismGenomes = (await postHttpRequest(`${baseUrl}/api/igbGenomeVersions`, {ucscGenomes: genomes}));
     igbOrganismGenomes.forEach((_, ind) => {
         hubData[ind]['igbOrganismGenomes'] = igbOrganismGenomes[ind];
     })
