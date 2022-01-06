@@ -3,13 +3,16 @@ import { BACKEND_DOMAIN, convertURL, handleTooltips } from './util.js';
 const filterInput = $('#filter input');
 const filterCancel = $('#filter #cancel');
 const templateRow = $('template#row');
+const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
 
 // Perform a GET request for a given URL
 async function getHttpRequest(url) {
   try {
     const response = await axios.get(url);
     return response.data;
-  } catch (error) {}
+  } catch (error) {
+      console.log(`Error: Fetching data at ${url} failed.`);
+  }
 }
 
 async function postHttpRequest(url, body) {
@@ -19,123 +22,147 @@ async function postHttpRequest(url, body) {
   } catch (error) {}
 }
 
-// Add a trackhub as a row to the table
-function addToTable(hub) {
-  const row = templateRow[0].content.cloneNode(true);
-  const head = row.querySelector('th');
-  const td = row.querySelectorAll('td');
-  head.textContent = hub.number;
-  td[0].innerHTML = hub.name;
-  td[1].innerHTML = hub.description;
-  td[2].querySelectorAll('.copyable').forEach(copyableEl => {
-      copyableEl.addEventListener('click', copyUrl);
-  });
-  td[3].querySelector('div').innerHTML =
-    hub.organismsGenomes && Object.keys(hub.organismsGenomes).length != 0
-      ? Object.keys(hub.organismsGenomes)
-          .map(organism => {
-                let genomeVersions = '';
-                const igbLink = document.createElement('img');
-                igbLink.setAttribute('src', '/htdocs/images/open_in_genome_browser.png')
-                igbLink.setAttribute('class', 'igb-icon clickable');
-                const ucscGenomes = hub.organismsGenomes[organism];
-                const igbOrganismGenomes = hub.igbOrganismGenomes;
-                for (const ucscGenomeInd in ucscGenomes) {
-                    genomeVersions += ucscGenomes[ucscGenomeInd];
-                    if (organism != 'null') {
-                        genomeVersions += ` (<span class="organism">${organism}</span>)`;
-                    }
-                    const igbGenomeVersion = igbOrganismGenomes[organism][ucscGenomeInd]
-                    if (igbGenomeVersion !== 'None') {
-                        igbLink.setAttribute('href', `http://localhost:7085/IGBControl?version=${igbGenomeVersion}`);
-                        genomeVersions += igbLink.outerHTML;
-                    }
-                    genomeVersions += '<br>';
-                }
-                return genomeVersions;
-            }
-          )
-          .join('')
-      : 'Not Available';
-  const table = $('tbody')[0];
-  table.appendChild(row);
-  const tableRows = table.querySelectorAll('tr');
-  tableRows[tableRows.length - 1].dataset.url = hub.url;
-  // Show an expand/collapse icon in rows that contain more content than the max row height allows for
-  const genomesDivs = table.querySelectorAll('td.genomes div');
-  const lastGenomeDiv = genomesDivs[genomesDivs.length - 1];
-  if (lastGenomeDiv.scrollHeight != lastGenomeDiv.clientHeight) {
-    const controlIcons = td[4].querySelectorAll('i');
-    const expandIcon = controlIcons[0];
-    const collapseIcon = controlIcons[1];
-    expandIcon.classList.remove('d-none');
-    expandIcon.addEventListener('click', () => {
-      expandIcon.classList.add('d-none');
-      collapseIcon.classList.remove('d-none');
-      lastGenomeDiv.style.maxHeight = 'fit-content';
-    });
-    collapseIcon.addEventListener('click', () => {
-      collapseIcon.classList.add('d-none');
-      expandIcon.classList.remove('d-none');
-      lastGenomeDiv.style.maxHeight = '110px';
-    });
-  }
-}
-
-// Get track hub data from UCSC
-async function saveUcscData() {
-  if (localStorage.getItem('hubData') == null) {
-    $('.browser div.fetching')[0].classList.remove('d-none');
-    const hubs = await getHttpRequest(
-      'https://api.genome.ucsc.edu/list/publicHubs'
-    );
-    let hubData = await Promise.all(
-      hubs['publicHubs'].map(async (el, ind) => {
-        let hub = {};
-        hub.number = ind + 1;
-        hub.url = el['hubUrl'];
-        hub.name = el['shortLabel'];
-        hub.description = el['longLabel'];
-        hub.organismsGenomes = {};
-        const hubDetails = await getHttpRequest(
-          `https://api.genome.ucsc.edu/list/hubGenomes?hubUrl=${hub.url.trim()}`
-        );
-        if (hubDetails != undefined) {
-          Object.getOwnPropertyNames(hubDetails['genomes']).forEach(
-            (genome) => {
-              if (genome) {
-                const organism = hubDetails['genomes'][genome]['organism'];
-                if (hub.organismsGenomes.hasOwnProperty(organism)) {
-                  hub.organismsGenomes[organism].push(genome);
-                } else {
-                  hub.organismsGenomes[organism] = [genome];
-                }
-              }
-            }
-          );
-          return hub;
-        }
-      })
-    );
-    hubData = hubData.filter(el => el != null)
-    localStorage.setItem('hubData', JSON.stringify(hubData));
-    $('.browser div.fetching')[0].classList.add('d-none');
-  }
-}
-
-// Save IGB genome version data
-async function saveIgbGenomes() {
-    const hubData = JSON.parse(localStorage.getItem('hubData'));
-    if (hubData[0].igbOrganismGenomes !== undefined) {
+async function renderTable() {
+    let hubData = JSON.parse(localStorage.getItem('hubData'));
+    if (hubData) {
+        initializeTable(hubData.length);
+        hubData.forEach((hub, ind) => {
+            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
+        })
         return;
     }
-    const genomes = hubData.map(el => el.organismsGenomes);
-    const baseUrl = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
-    const igbOrganismGenomes = (await postHttpRequest(`${baseUrl}/api/igbGenomeVersions`, {ucscGenomes: genomes}));
-    igbOrganismGenomes.forEach((_, ind) => {
-        hubData[ind]['igbOrganismGenomes'] = igbOrganismGenomes[ind];
-    })
+    const pubHubs = await getPublicHubs();
+    initializeTable(pubHubs.length);
+    hubData = Array(pubHubs.length);
+    await Promise.all(
+        pubHubs.map(async (pubHub, ind) => {
+            let hub = {};
+            hub.number = ind + 1;
+            hub.url = pubHub['hubUrl'];
+            hub.name = pubHub['shortLabel'];
+            hub.description = pubHub['longLabel'];
+            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            hub.organismsGenomes = {};
+            const genomeData = await getGenomeData(hub.url);
+            if (genomeData) {
+                Object.keys(genomeData).forEach(genome => {
+                    const organism = genomeData[genome]['organism'];
+                    if (hub.organismsGenomes.hasOwnProperty(organism)) {
+                        hub.organismsGenomes[organism].push(genome);
+                    } else {
+                        hub.organismsGenomes[organism] = [genome];
+                    }
+                })
+                hub.igbOrganismsGenomes = await getIgbGenomes(hub.organismsGenomes);
+            } else {
+                // TODO: hide rows that don't have genome data? currently genome column is set as 'trackhub unreachable'
+            }
+            finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
+            hubData[ind] = hub;
+        })
+    )
     localStorage.setItem('hubData', JSON.stringify(hubData));
+}
+
+async function getPublicHubs() {
+    return (await getHttpRequest(
+        'https://api.genome.ucsc.edu/list/publicHubs'
+      ))['publicHubs'];
+}
+
+async function getGenomeData(hubUrl) {
+    const requestUrl = `https://api.genome.ucsc.edu/list/hubGenomes?hubUrl=${hubUrl.trim()}`;
+    const res = (await getHttpRequest(requestUrl))
+    return res ? res['genomes'] : null
+}
+
+function initializeTable(numRows) {
+    [...Array(numRows)].forEach((_, ind) => {
+        const table = $('tbody')[0];
+        const row = templateRow[0].content.cloneNode(true);
+        table.appendChild(row);
+    })
+}
+
+function initializeRow(number, url, name, description, rowInd) {
+    const row = document.querySelectorAll('tbody tr')[rowInd];
+    const dataCols = row.querySelectorAll('td');
+    const genomesDiv = row.querySelector('td.genomes div');
+    row.querySelector('th').textContent = number;
+    row.dataset.url = url;
+    dataCols[0].textContent = name;
+    dataCols[1].textContent = description;
+    dataCols[2].querySelectorAll('.copyable').forEach(copyableEl => {
+        copyableEl.addEventListener('click', copyUrl);
+    });
+    const collapsedHeight = row.querySelector('td.name').offsetHeight - 5;
+    genomesDiv.style.height = `${collapsedHeight}px`;
+    genomesDiv.dataset.collapsedHeight = collapsedHeight;
+}
+
+async function getIgbGenomes(organismsGenomes) {
+    return (await postHttpRequest(`${BACKEND_BASE_URL}/api/igbGenomeVersions`, {ucscGenomes: [organismsGenomes]}))[0];
+}
+
+function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
+    const row = document.querySelectorAll('tbody tr')[rowInd];
+    const genomesDiv = row.querySelector('td.genomes div');
+    const controlIcons = row.querySelectorAll('td.expand i');
+    if (Object.keys(organismsGenomes).length === 0) {
+        genomesDiv.textContent = 'Trackhub Unreachable';
+        genomesDiv.style.color = 'red';
+        return;
+    }
+    // Update genome column
+    genomesDiv.innerHTML = Object.keys(organismsGenomes)
+        .map(organism => {
+            let genomeVersions = '';
+            const ucscGenomes = organismsGenomes[organism];
+            const igbGenomes = igbOrganismsGenomes[organism];
+            for (const genomeInd in ucscGenomes) {
+                const igbGenomeVersion = igbGenomes[genomeInd]
+                if (igbGenomeVersion !== 'None') {
+                    genomeVersions += igbGenomes[genomeInd]
+                } else {
+                    genomeVersions += ucscGenomes[genomeInd];
+                }
+                if (organism.toLowerCase() !== 'null') {
+                    genomeVersions += ` (<span class="organism">${organism}</span>)`;
+                }
+                if (igbGenomeVersion !== 'None') {
+                    const openInIgb = document.createElement('img');
+                    openInIgb.setAttribute('src', '/images/open_in_genome_browser.png')
+                    openInIgb.setAttribute('class', 'igb-icon clickable');
+                    openInIgb.addEventListener('click', () => {
+                        getHttpRequest('http://localhost:7085/bringIGBToFront');
+                        getHttpRequest(`http://localhost:7085/IGBControl?version=${igbGenomeVersion}`);
+                    });
+                    genomeVersions += openInIgb.outerHTML;
+                }
+                genomeVersions += '<br>';
+            }
+            return genomeVersions;
+        }
+        )
+        .join('')
+    // Add column expansion toggle icon, if needed
+    if (genomesDiv.scrollHeight != genomesDiv.clientHeight) {
+        const expandIcon = controlIcons[0];
+        const collapseIcon = controlIcons[1];
+        expandIcon.classList.remove('d-none');
+        expandIcon.addEventListener('click', () => {
+            expandIcon.classList.add('d-none');
+            collapseIcon.classList.remove('d-none');
+            genomesDiv.style.height = 'fit-content';
+        });
+        collapseIcon.addEventListener('click', () => {
+            const collapsedHeight = genomesDiv.dataset.collapsedHeight
+            collapseIcon.classList.add('d-none');
+            expandIcon.classList.remove('d-none');
+            genomesDiv.style.height = `${collapsedHeight}px`;
+        });
+    }
 }
 
 // Copy UCSC hub/output URL to clipboard
@@ -175,7 +202,8 @@ function filterPublicHubs() {
     const name = row.querySelector('td.name').innerText;
     const description = row.querySelector('td.description').innerText;
     const genomes = row.querySelector('td.genomes div').innerText;
-    const reference = name + ' ' + description + ' ' + genomes
+    const hubUrl = row.dataset.url;
+    const reference = `${name} ${description} ${genomes} ${hubUrl}`
     if (allQueryTermsMatch(query.split(' '), 0, reference.toUpperCase())) {
       row.classList.remove('d-none');
     } else {
@@ -194,22 +222,10 @@ filterCancel.on('click', (event) => {
 });
 
 async function main() {
+    // Initialize bootstrap tooltips
     handleTooltips();
-    await saveUcscData();
-    await saveIgbGenomes();
-    const hubData = JSON.parse(localStorage.getItem('hubData'));
-    hubData.forEach((hub) => {
-        if (hub) {
-            addToTable(hub);
-        }
-    });
-    document.querySelectorAll('img.igb-icon').forEach(img => {
-        img.addEventListener('click', event => {
-            const url = event.target.getAttribute('href');
-            getHttpRequest('http://localhost:7085/bringIGBToFront');
-            getHttpRequest(url);
-        });
-    });
+    // Save and render quick-loading UCSC hub data
+    await renderTable();
 }
 
 main();

@@ -51,25 +51,13 @@ div.tooltip a {
     color: darkgray!important;
 }
 
-#activity-indicator {
-    padding: 5px;
-}
-
 .url {
     color:#428bca
 }
 
-.browser div.fetching {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    width: fit-content;
-    margin: 20px;
-}
-
-.browser div.fetching img {
-    width: 20px;
-    height: 20px;
+.activity-indicator {
+    width: 1.5em;
+    height: 1.5em;
 }
 
 table {
@@ -83,7 +71,6 @@ td.expand, td.action {
 }
 
 td.genomes div {
-    max-height: 110px; 
     overflow: hidden;
 }
 
@@ -128,6 +115,10 @@ table .expand .fa {
 table .action .fa {
     font-size: 17px;
     padding: 5px 10px;
+}
+
+th.genomes {
+    width: 350px;
 }
 
 .browser .row {
