@@ -132,12 +132,9 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                 }
                 if (igbGenomeVersion !== 'None') {
                     const openInIgb = document.createElement('img');
-                    openInIgb.setAttribute('src', '/images/open_in_genome_browser.png')
+                    openInIgb.setAttribute('src', '/images/open_in_genome_browser.png');
                     openInIgb.setAttribute('class', 'igb-icon clickable');
-                    openInIgb.addEventListener('click', () => {
-                        getHttpRequest('http://localhost:7085/bringIGBToFront');
-                        getHttpRequest(`http://localhost:7085/IGBControl?version=${igbGenomeVersion}`);
-                    });
+                    openInIgb.dataset.igbGenomeVersion = igbGenomeVersion;
                     genomeVersions += openInIgb.outerHTML;
                 }
                 genomeVersions += '<br>';
@@ -146,6 +143,14 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         }
         )
         .join('')
+    // Open supported genomes in IGB
+    genomesDiv.querySelectorAll('img.igb-icon').forEach(el => {
+        el.addEventListener('click', (event) => {
+            console.log(`opening ${event.target.dataset.igbGenomeVersion} in IGB`);
+            getHttpRequest('http://localhost:7085/bringIGBToFront');
+            getHttpRequest(`http://localhost:7085/IGBControl?version=${event.target.dataset.igbGenomeVersion}`);
+        });
+    })
     // Add column expansion toggle icon, if needed
     if (genomesDiv.scrollHeight != genomesDiv.clientHeight) {
         const expandIcon = controlIcons[0];
