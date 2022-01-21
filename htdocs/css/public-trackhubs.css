@@ -74,10 +74,6 @@ td.genomes div {
     overflow: hidden;
 }
 
-td.genomes .organism {
-    color: blueviolet;
-}
-
 thead th.name, th.name {
     width: 19px !important;
 }
