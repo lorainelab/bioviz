@@ -123,12 +123,9 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
             for (const genomeInd in ucscGenomes) {
                 const igbGenomeVersion = igbGenomes[genomeInd]
                 if (igbGenomeVersion !== 'None') {
-                    genomeVersions += igbGenomes[genomeInd]
+                    genomeVersions += `${ucscGenomes[genomeInd]} (${igbGenomes[genomeInd]})`
                 } else {
                     genomeVersions += ucscGenomes[genomeInd];
-                }
-                if (organism.toLowerCase() !== 'null') {
-                    genomeVersions += ` (<span class="organism">${organism}</span>)`;
                 }
                 if (igbGenomeVersion !== 'None') {
                     const openInIgb = document.createElement('img');
