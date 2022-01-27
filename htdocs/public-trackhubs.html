@@ -30,6 +30,23 @@
   <script src="js/renderMenuBar.js"></script>
 
   <div id="main-container" class="container main-content bar">
+    <div class="modal fade" id="igb-not-running" tabindex="-1" role="dialog" aria-labelledby="igb-not-running-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="igb-not-running-label">IGB is not Running</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <p>Start IGB to open this genome version in IGB.</p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+      
     <h1>Public UCSC Trackhub Converter</h1>
     <p id="description">This is a tool for browsing and converting public UCSC Trackhubs into Quickload data sources that can be loaded in the Integrated Genome Browser.</p>
 
@@ -51,7 +68,7 @@
                 </div>
                 <div class="col-auto px-0">
                     <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>. To view the data each contains in IGB, use the <i class="quickload-copy" aria-hidden="true">Q</i> icon copy the respective Quickload URL and add it to your Data Sources in IGB. The <img src="/images/open_in_genome_browser.png">icon can then be used to open genomes belonging to an added trackhub in IGB.'></i>
+            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>. To view the data each contains in IGB, use the <i class="quickload-copy" aria-hidden="true">Q</i> icon copy the respective Quickload URL and add it to your Data Sources in IGB. The <i aria-hidden="true">Open in IGB</i> link can then be used to open genomes belonging to an added trackhub in IGB.'></i>
                 </div>
             </div>
         </div>
