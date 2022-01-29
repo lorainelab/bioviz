@@ -12,6 +12,9 @@ async function getHttpRequest(url) {
     return response.data;
   } catch (error) {
       console.log(`Error: Fetching data at ${url} failed.`);
+      if (url.includes('igbStatusCheck')) {
+          throw error;
+      }
   }
 }
 
@@ -128,11 +131,11 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                     genomeVersions += ucscGenomes[genomeInd];
                 }
                 if (igbGenomeVersion !== 'None') {
-                    const openInIgb = document.createElement('img');
-                    openInIgb.setAttribute('src', '/images/open_in_genome_browser.png');
-                    openInIgb.setAttribute('class', 'igb-icon clickable');
+                    const openInIgb = document.createElement('a');
+                    openInIgb.textContent = 'Open in IGB';
+                    openInIgb.setAttribute('class', 'open-in-igb clickable');
                     openInIgb.dataset.igbGenomeVersion = igbGenomeVersion;
-                    genomeVersions += openInIgb.outerHTML;
+                    genomeVersions += ' ' + openInIgb.outerHTML;
                 }
                 genomeVersions += '<br>';
             }
@@ -141,11 +144,20 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         )
         .join('')
     // Open supported genomes in IGB
-    genomesDiv.querySelectorAll('img.igb-icon').forEach(el => {
+    genomesDiv.querySelectorAll('a.open-in-igb').forEach(el => {
         el.addEventListener('click', (event) => {
-            console.log(`opening ${event.target.dataset.igbGenomeVersion} in IGB`);
-            getHttpRequest('http://localhost:7085/bringIGBToFront');
-            getHttpRequest(`http://localhost:7085/IGBControl?version=${event.target.dataset.igbGenomeVersion}`);
+            console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
+            getHttpRequest('http://localhost:7085/igbStatusCheck')
+            .then(res => {
+                console.log(res);
+                getHttpRequest('http://localhost:7085/bringIGBToFront');
+                getHttpRequest(`http://localhost:7085/IGBControl?version=${event.target.dataset.igbGenomeVersion}`);
+            })
+            .catch(() => {
+                console.error('IGB is not running');
+                $('#igb-not-running').modal();
+            });
+
         });
     })
     // Add column expansion toggle icon, if needed

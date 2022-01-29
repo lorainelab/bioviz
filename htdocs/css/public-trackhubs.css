@@ -3,6 +3,15 @@
     max-width: 100vw;
 }
 
+.modal-dialog {
+    margin: 40vh auto;
+}
+
+.modal-dialog p {
+    position: absolute;
+    left: 1rem;
+}
+
 #main-container p {
     font-size: 18px;
     margin: 0;
@@ -121,9 +130,9 @@ th.genomes {
     position: relative;
 }
 
-table img.igb-icon {
-    width: 20px;
-    height: 20px;
+table a.open-in-igb {
+    text-decoration:underline;
+    color: blue;
     margin-left: 5px;
 }
 
