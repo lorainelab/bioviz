@@ -161,7 +161,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         });
     })
     // Add column expansion toggle icon, if needed
-    if (genomesDiv.scrollHeight != genomesDiv.clientHeight) {
+    if (genomesDiv.scrollHeight >= genomesDiv.clientHeight + 20) {
         const expandIcon = controlIcons[0];
         const collapseIcon = controlIcons[1];
         expandIcon.classList.remove('d-none');
