@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <div id="TopMenu"></div>
+ <div id="TopMenu"></div>
   <script src="js/renderMenuBar.js"></script>
 
   <div id="main-container" class="container main-content bar">
@@ -46,9 +46,13 @@
             </div>
         </div>
     </div>
-      
-    <h1>Public UCSC Trackhub Converter</h1>
-    <p id="description">This is a tool for browsing and converting public UCSC Trackhubs into Quickload data sources that can be loaded in the Integrated Genome Browser.</p>
+
+    <center><h1>View UCSC Track Hubs in Integrated Genome Browser
+    <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true" title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span>
+    </sup></small>
+    </h1>
+    </center>
+
 
     <div class="col input-group mb-3" id="filter">
         <div class="input-group-prepend">
@@ -56,22 +60,20 @@
            <span class="fa fa-search"></span>
            </span>
         </div>
-        <input type="text" class="form-control" placeholder="Hub name | organism | genome" aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="Hub name | organism | genome" aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">&nbsp;
         <span id="cancel" class="fa fa-times"></span>
-     </div>
+        <div id ="info" class="form-text"> Want more info? &nbsp;<a href= ""><u>Play video</u></a></div>
+    </div>
+
+
 
     <div class="browser">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="title col-auto">
-                    <h2>Browse public UCSC track hubs</h2> 
-                </div>
-                <div class="col-auto px-0">
-                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='The table below lists the publicly available track hubs provided by <a href="https://genome.ucsc.edu/cgi-bin/hgHubConnect#publicHubs">UCSC</a>. To view the data each contains in IGB, use the <i class="quickload-copy" aria-hidden="true">Q</i> icon copy the respective Quickload URL and add it to your Data Sources in IGB. The <i aria-hidden="true">Open in IGB</i> link can then be used to open genomes belonging to an added trackhub in IGB.'></i>
-                </div>
+                <div class="title col-auto"></div>
             </div>
         </div>
+    </div>
         <div class="scrollable-fixed-head table-responsive">
             <table class="table">
                 <thead>
@@ -79,8 +81,8 @@
                     <th scope="col" class="number">#</th>
                     <th scope="col" class="name">Hub Name</th>
                     <th scope="col" class="description">Description</th>
-                    <th scope="col" class="action"><span>Copy URL</span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-                        title='Click the <i class="quickload-copy" aria-hidden="true">Q</i> icon to copy the converted Quickload URL. Click the <i class="ucsc-hub-copy" aria-hidden="true">U</i> icon to view the original hub URL.'></i></th>
+                    <th scope="col" class="action"><span>Copy URL<i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+                        title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span></th>
                     <th scope="col" class="genomes">Genome Versions</th>
                     <th scope="col" class="expand"></th>
                 </tr>
@@ -118,9 +120,10 @@
         </div>
     </div>
 
+
     <div id="footer" class="container"></div>
     <script src="js/renderFooter.js"></script>
-  </div>
+
 
   <script type="module" src="js/trackhub/publicTable.js"></script>
   <!-- Google analytics -->
