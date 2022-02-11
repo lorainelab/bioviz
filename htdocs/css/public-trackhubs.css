@@ -106,7 +106,7 @@ td.action div.grid-item {
 }
 
 td.action span.quickload-copy {
-    color: #db6963;   
+    color: #db6963;
 }
 
 table th span {
@@ -137,11 +137,11 @@ table a.open-in-igb {
 }
 
 #filter {
-    width: 500px;
+    width: 1000px;
     height: 50px;
-    padding: 0;
+    padding: 10px;
     margin: 50px auto;
-} 
+}
 
 #filter input {
     height: auto;
@@ -162,5 +162,5 @@ table a.open-in-igb {
         width: 100vw;
         margin-left: 10px
     ;
-    } 
+    }
 }
