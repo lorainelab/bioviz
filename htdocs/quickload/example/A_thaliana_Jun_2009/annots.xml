@@ -1,0 +1,11 @@
+<files>
+  <file
+    name="http://s3.amazonaws.com/iplant-cdn/iplant/home/araport/rnaseq_bam/aerial/ERR274310/accepted_hits.bam"
+    title="Araport 11 RNA-seq data / Aerial part of long-day-grown 4-leaf-stage seedling with mock (NaCl) treatment / ERR274310 Aerial part of long-day-grown 4-leaf-stage seedling with mock (NaCl) treatment"
+    description="29098868 reads. E-MTAB-1668:24hCS-RNA"
+    url="https://www.ncbi.nlm.nih.gov/Traces/sra/?run=ERR274310"
+    foreground="64CC65"
+    max_depth="10"
+    show2tracks="false"
+  />
+ 
