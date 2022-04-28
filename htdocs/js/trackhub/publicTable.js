@@ -29,9 +29,10 @@ async function postHttpRequest(url, body) {
 async function renderTable() {
     let hubData = JSON.parse(localStorage.getItem('hubData'));
     if (hubData) {
+        
         initializeTable(hubData.length);
         hubData.forEach((hub, ind) => {
-            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
             finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
         })
         return;
@@ -46,7 +47,8 @@ async function renderTable() {
             hub.url = pubHub['hubUrl'];
             hub.name = pubHub['shortLabel'];
             hub.description = pubHub['longLabel'];
-            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            hub.descriptionUrl = pubHub['descriptionUrl'];
+            initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
             hub.organismsGenomes = {};
             const genomeData = await getGenomeData(hub.url);
             if (genomeData) {
@@ -89,14 +91,19 @@ function initializeTable(numRows) {
     })
 }
 
-function initializeRow(number, url, name, description, rowInd) {
+function initializeRow(number, url, name, description, descriptionUrl, rowInd) {
     const row = document.querySelectorAll('tbody tr')[rowInd];
     const dataCols = row.querySelectorAll('td');
     const genomesDiv = row.querySelector('td.genomes div');
+    const descLink = document.createElement('a');
+    descLink.setAttribute('href', descriptionUrl);
+    descLink.setAttribute('target', "_blank");
+    descLink.innerHTML="<i class='fa fa-external-link clickable'></i>";
     row.querySelector('th').textContent = number;
     row.dataset.url = url;
     dataCols[0].textContent = name;
     dataCols[1].textContent = description;
+    dataCols[1].innerHTML+= " "+descLink.outerHTML
     dataCols[2].querySelectorAll('.copyable').forEach(copyableEl => {
         copyableEl.addEventListener('click', copyUrl);
     });
