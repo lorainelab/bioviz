@@ -135,6 +135,11 @@ table a.open-in-igb {
     color: blue;
     margin-left: 5px;
 }
+table a.open-in-ucsc {
+    text-decoration:underline;
+    color: blue;
+    margin-left: 5px;
+}
 
 #filter {
     width: 600px;

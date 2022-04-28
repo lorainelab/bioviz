@@ -5,6 +5,7 @@ const filterCancel = $('#filter #cancel');
 const templateRow = $('template#row');
 const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
 
+const UCSC_BROWSER_URL = "https://genome.ucsc.edu/cgi-bin/hgTracks"
 // Perform a GET request for a given URL
 async function getHttpRequest(url) {
   try {
@@ -28,9 +29,10 @@ async function postHttpRequest(url, body) {
 async function renderTable() {
     let hubData = JSON.parse(localStorage.getItem('hubData'));
     if (hubData) {
+        
         initializeTable(hubData.length);
         hubData.forEach((hub, ind) => {
-            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
             finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
         })
         return;
@@ -45,7 +47,8 @@ async function renderTable() {
             hub.url = pubHub['hubUrl'];
             hub.name = pubHub['shortLabel'];
             hub.description = pubHub['longLabel'];
-            initializeRow(hub.number, hub.url, hub.name, hub.description, ind);
+            hub.descriptionUrl = pubHub['descriptionUrl'];
+            initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
             hub.organismsGenomes = {};
             const genomeData = await getGenomeData(hub.url);
             if (genomeData) {
@@ -88,14 +91,19 @@ function initializeTable(numRows) {
     })
 }
 
-function initializeRow(number, url, name, description, rowInd) {
+function initializeRow(number, url, name, description, descriptionUrl, rowInd) {
     const row = document.querySelectorAll('tbody tr')[rowInd];
     const dataCols = row.querySelectorAll('td');
     const genomesDiv = row.querySelector('td.genomes div');
+    const descLink = document.createElement('a');
+    descLink.setAttribute('href', descriptionUrl);
+    descLink.setAttribute('target', "_blank");
+    descLink.innerHTML="<i class='fa fa-external-link clickable'></i>";
     row.querySelector('th').textContent = number;
     row.dataset.url = url;
     dataCols[0].textContent = name;
     dataCols[1].textContent = description;
+    dataCols[1].innerHTML+= " "+descLink.outerHTML
     dataCols[2].querySelectorAll('.copyable').forEach(copyableEl => {
         copyableEl.addEventListener('click', copyUrl);
     });
@@ -135,8 +143,17 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                     openInIgb.textContent = 'Open in IGB';
                     openInIgb.setAttribute('class', 'open-in-igb clickable');
                     openInIgb.dataset.igbGenomeVersion = igbGenomeVersion;
+                    openInIgb.title="Show this genome assembly version in Integrated Genome Browser. Requires starting IGB first."
                     genomeVersions += ' ' + openInIgb.outerHTML;
                 }
+                 //Add "Open in UCSC" link
+                 let ucscGenomeVersion= ucscGenomes[genomeInd]
+                 const openInUCSC = document.createElement('a');
+                 openInUCSC.textContent = 'Open in UCSC';
+                 openInUCSC.setAttribute('class', 'open-in-ucsc clickable');
+                 openInUCSC.dataset.ucscGenomeVersion = ucscGenomeVersion;
+                 openInUCSC.title = "View track hub data for this assembly in the UCSC genome browser"
+                 genomeVersions += ' ' + openInUCSC.outerHTML;
                 genomeVersions += '<br>';
             }
             return genomeVersions;
@@ -159,6 +176,16 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
             });
 
         });
+    })
+    //Open supported genomes in UCSC
+    genomesDiv.querySelectorAll('a.open-in-ucsc').forEach(el => {
+      el.addEventListener('click', (event) => {
+        let ucscViewURL = UCSC_BROWSER_URL+"?genome="+event.target.dataset.ucscGenomeVersion
+        ucscViewURL+='&position=lastDbPos'
+        ucscViewURL+="&hubUrl="+event.target.closest('tr').dataset.url
+        window.open(ucscViewURL, '_blank');
+        console.log(`Opening`+ ucscViewURL+` in UCSC browser`);
+      });
     })
     // Add column expansion toggle icon, if needed
     if (genomesDiv.scrollHeight >= genomesDiv.clientHeight + 20) {
