@@ -136,7 +136,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                     openInIgb.textContent = 'Open in IGB';
                     openInIgb.setAttribute('class', 'open-in-igb clickable');
                     openInIgb.dataset.igbGenomeVersion = igbGenomeVersion;
-                    openInIgb.title="Click to open this genome version in IGB browser"
+                    openInIgb.title="Show this genome assembly version in Integrated Genome Browser. Requires starting IGB first."
                     genomeVersions += ' ' + openInIgb.outerHTML;
                 }
                  //Add "Open in UCSC" link
@@ -145,7 +145,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                  openInUCSC.textContent = 'Open in UCSC';
                  openInUCSC.setAttribute('class', 'open-in-ucsc clickable');
                  openInUCSC.dataset.ucscGenomeVersion = ucscGenomeVersion;
-                 openInUCSC.title = "Click to open this genome version in UCSC browser"
+                 openInUCSC.title = "View track hub data for this assembly in the UCSC genome browser"
                  genomeVersions += ' ' + openInUCSC.outerHTML;
                 genomeVersions += '<br>';
             }
