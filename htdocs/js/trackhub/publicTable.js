@@ -195,13 +195,13 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         expandIcon.addEventListener('click', () => {
             expandIcon.classList.add('d-none');
             collapseIcon.classList.remove('d-none');
-            genomesDiv.style.height = 'fit-content';
+            // genomesDiv.style.height = 'fit-content';
         });
         collapseIcon.addEventListener('click', () => {
             const collapsedHeight = genomesDiv.dataset.collapsedHeight
             collapseIcon.classList.add('d-none');
             expandIcon.classList.remove('d-none');
-            genomesDiv.style.height = `${collapsedHeight}px`;
+            // genomesDiv.style.height = `${collapsedHeight}px`;
         });
     }
 }
