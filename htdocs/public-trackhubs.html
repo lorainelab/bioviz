@@ -48,7 +48,11 @@
     </div>
 
     <center><h1>View UCSC Track Hubs in Integrated Genome Browser
-    <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true" title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span>
+    <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" 
+        data-trigger="click" data-placement="right" data-html="true" 
+        title='BioViz Trackhub Connect is based on the
+        <a target ="_blank" href="https://genome.ucsc.edu/cgi-bin/hgHubConnect"> UCSC Track Data Hubs</a> page.'></i>
+        </span>
     </sup></small>
     </h1>
     </center>
@@ -79,22 +83,22 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col" class="number col-1">#</th>
+                    <th scope="col" class="number">#</th>
                     <th scope="col" class="name col-1">Hub Name</th>
-                    <th scope="col" class="description col-3" style>Description</th>
-                    <th scope="col" class="action col-1"><span>Copy URL<i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+                    <th scope="col" class="description col-6" style>Description</th>
+                    <th scope="col" class="action col-1"><span>Copy URL<i class="fa fa-question-circle info clickable " style="padding:0" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
                         title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span></th>
-                    <th scope="col" class="genomes col-5">Genome Versions</th>
-                    <th scope="col" class="expand col-1"></th>
+                    <th scope="col" class="expand"></th>
+                    <th scope="col" class="genomes col-4">Genome Versions</th>
                 </tr>
                 </thead>
                 <tbody>
                     <template id="row">
                         <tr>
-                            <th scope="row"></th>
-                            <td class="name"></td>
-                            <td class="description"></td>
-                            <td class="action">
+                            <th scope="row "></th>
+                            <td class="name col-1"></td>
+                            <td class="description col-6"></td>
+                            <td class="action col-1">
                                 <div class="grid">
                                     <div>
                                         <span class="copyable clickable quickload-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Quickload URL">Q</span>
@@ -104,15 +108,15 @@
                                     </div>
                                 </div>
                             </td>
-                            <td class="genomes">
+                            <td class="expand">
+                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
+                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
+                            </td>
+                            <td class="genomes col-4">
                                 <div>
                                     <img class="activity-indicator" src="images/activity_indicator.gif" alt="Processing request...">
                                 </div>
                                 <div></div>
-                            </td>
-                            <td class="expand">
-                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
-                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
                             </td>
                         </tr>
                     </template>
