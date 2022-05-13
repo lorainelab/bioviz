@@ -27,9 +27,17 @@ async function postHttpRequest(url, body) {
 }
 
 async function renderTable() {
+  
+    if(window.performance.getEntriesByType("navigation")[0].type=="reload"){
+      console.log(window.performance.getEntriesByType("navigation")[0].type)
+      loadData();
+      return;
+    }
     let hubData = JSON.parse(localStorage.getItem('hubData'));
-    if (hubData) {
-        
+    let lastUpdated = localStorage.getItem("lastUpdated")
+    if(lastUpdated)
+      $("#lastUpdateStamp").html("Data last updated on "+lastUpdated)
+    if (hubData) {        
         initializeTable(hubData.length);
         hubData.forEach((hub, ind) => {
             initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
@@ -37,40 +45,46 @@ async function renderTable() {
         })
         return;
     }
-    const pubHubs = await getPublicHubs();
-    initializeTable(pubHubs.length);
-    hubData = Array(pubHubs.length);
-    await Promise.all(
-        pubHubs.map(async (pubHub, ind) => {
-            let hub = {};
-            hub.number = ind + 1;
-            hub.url = pubHub['hubUrl'];
-            hub.name = pubHub['shortLabel'];
-            hub.description = pubHub['longLabel'];
-            hub.descriptionUrl = pubHub['descriptionUrl'];
-            initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
-            hub.organismsGenomes = {};
-            const genomeData = await getGenomeData(hub.url);
-            if (genomeData) {
-                Object.keys(genomeData).forEach(genome => {
-                    const organism = genomeData[genome]['organism'];
-                    if (hub.organismsGenomes.hasOwnProperty(organism)) {
-                        hub.organismsGenomes[organism].push(genome);
-                    } else {
-                        hub.organismsGenomes[organism] = [genome];
-                    }
-                })
-                hub.igbOrganismsGenomes = await getIgbGenomes(hub.organismsGenomes);
-            } else {
-                // TODO: hide rows that don't have genome data? currently genome column is set as 'trackhub unreachable'
-            }
-            finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
-            hubData[ind] = hub;
-        })
-    )
-    localStorage.setItem('hubData', JSON.stringify(hubData));
+    loadData()
 }
 
+async function loadData(){
+  let dateStamp = new Date();
+  localStorage.setItem("lastUpdated", dateStamp.toString())
+  $("#lastUpdateStamp").html("Data last updated on "+dateStamp.toString())
+  const pubHubs = await getPublicHubs();
+  initializeTable(pubHubs.length);
+  let hubData = Array(pubHubs.length);
+  await Promise.all(
+      pubHubs.map(async (pubHub, ind) => {
+          let hub = {};
+          hub.number = ind + 1;
+          hub.url = pubHub['hubUrl'];
+          hub.name = pubHub['shortLabel'];
+          hub.description = pubHub['longLabel'];
+          hub.descriptionUrl = pubHub['descriptionUrl'];
+          initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
+          hub.organismsGenomes = {};
+          const genomeData = await getGenomeData(hub.url);
+          if (genomeData) {
+              Object.keys(genomeData).forEach(genome => {
+                  const organism = genomeData[genome]['organism'];
+                  if (hub.organismsGenomes.hasOwnProperty(organism)) {
+                      hub.organismsGenomes[organism].push(genome);
+                  } else {
+                      hub.organismsGenomes[organism] = [genome];
+                  }
+              })
+              hub.igbOrganismsGenomes = await getIgbGenomes(hub.organismsGenomes);
+          } else {
+              // TODO: hide rows that don't have genome data? currently genome column is set as 'trackhub unreachable'
+          }
+          finalizeRow(hub.organismsGenomes, hub.igbOrganismsGenomes, ind);
+          hubData[ind] = hub;
+      })
+  )
+  localStorage.setItem('hubData', JSON.stringify(hubData));
+}
 async function getPublicHubs() {
     return (await getHttpRequest(
         'https://api.genome.ucsc.edu/list/publicHubs'

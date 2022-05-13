@@ -148,6 +148,15 @@ table a.open-in-ucsc {
 
 }
 
+.refresh{
+    font-size: 12px;
+    color:grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+}
+
 #filter input {
     height: auto;
 }
@@ -161,7 +170,6 @@ table a.open-in-ucsc {
     padding: 10px;
     z-index: 1000;
 }
-
 @media all and (max-width: 450px) {
     #filter {
         width: 100vw;
