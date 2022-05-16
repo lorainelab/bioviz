@@ -47,7 +47,10 @@ async function renderTable() {
     }
     loadData()
 }
-
+$(".refresh").click(function(){
+  $(".table > tbody").html("")
+  loadData();
+})
 async function loadData(){
   let dateStamp = new Date();
   localStorage.setItem("lastUpdated", dateStamp.toString())
