@@ -155,7 +155,7 @@ table a.open-in-ucsc {
     justify-content: center;
     align-items: center;
     font-family: inherit;
-    cursor: pointer;
+   
 }
 
 #filter input {
