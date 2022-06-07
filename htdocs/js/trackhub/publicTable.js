@@ -29,7 +29,6 @@ async function postHttpRequest(url, body) {
 async function renderTable() {
   
     if(window.performance.getEntriesByType("navigation")[0].type=="reload"){
-      console.log(window.performance.getEntriesByType("navigation")[0].type)
       loadData();
       return;
     }
@@ -47,10 +46,7 @@ async function renderTable() {
     }
     loadData()
 }
-$(".refresh").click(function(){
-  $(".table > tbody").html("")
-  loadData();
-})
+
 async function loadData(){
   let dateStamp = new Date();
   localStorage.setItem("lastUpdated", dateStamp.toString())
@@ -212,13 +208,13 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         expandIcon.addEventListener('click', () => {
             expandIcon.classList.add('d-none');
             collapseIcon.classList.remove('d-none');
-            // genomesDiv.style.height = 'fit-content';
+            genomesDiv.style.height = 'fit-content';
         });
         collapseIcon.addEventListener('click', () => {
             const collapsedHeight = genomesDiv.dataset.collapsedHeight
             collapseIcon.classList.add('d-none');
             expandIcon.classList.remove('d-none');
-            // genomesDiv.style.height = `${collapsedHeight}px`;
+            genomesDiv.style.height = `${collapsedHeight}px`;
         });
     }
 }
