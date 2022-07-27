@@ -86,8 +86,8 @@
                     <th scope="col" class="number">#</th>
                     <th scope="col" class="name col-1">Hub Name</th>
                     <th scope="col" class="description col-6" style>Description</th>
-                    <th scope="col" class="action col-1"><span>Copy URL<i class="fa fa-question-circle info clickable " style="padding:0" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-                        title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span></th>
+                    <th scope="col" class="action col-2"><span>Actions<i class="fa fa-question-circle info clickable ml-1 " style="padding:0" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
+                        title='Click <i class="ucsc-hub-copy">Add to IGB</i> to add the Trackhub data source to IGB. Click <i class="fa fa-clone ucsc-hub-copy" aria-hidden="true"></i> to copy the original Track Hub URL.'></i></span></th>
                     <th scope="col" class="expand"></th>
                     <th scope="col" class="genomes col-4">Genome Versions</th>
                 </tr>
@@ -98,15 +98,9 @@
                             <th scope="row "></th>
                             <td class="name col-1"></td>
                             <td class="description col-6"></td>
-                            <td class="action col-1">
-                                <div class="grid">
-                                    <div>
-                                        <span class="copyable clickable quickload-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Quickload URL">Q</span>
-                                    </div>
-                                    <div class="grid-item">
-                                        <span class="copyable clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied UCSC URL">U</span>
-                                    </div>
-                                </div>
+                            <td class="action col-2 text-center">
+                                <button class="btn btn-sm btn-secondary copyable quickload-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Added">Add to IGB</button>
+                                <i class="fa fa-clone copyable clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied UCSC URL"></i>
                             </td>
                             <td class="expand">
                                 <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>

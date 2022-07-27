@@ -4,7 +4,7 @@ const filterInput = $('#filter input');
 const filterCancel = $('#filter #cancel');
 const templateRow = $('template#row');
 const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
-
+var quickload_btns;
 const UCSC_BROWSER_URL = "https://genome.ucsc.edu/cgi-bin/hgTracks"
 // Perform a GET request for a given URL
 async function getHttpRequest(url) {
@@ -27,7 +27,6 @@ async function postHttpRequest(url, body) {
 }
 
 async function renderTable() {
-  
     if(window.performance.getEntriesByType("navigation")[0].type=="reload"){
       loadData();
       return;
@@ -36,7 +35,7 @@ async function renderTable() {
     let lastUpdated = localStorage.getItem("lastUpdated")
     if(lastUpdated)
       $("#lastUpdateStamp").html("Data last updated on "+lastUpdated)
-    if (hubData) {        
+    if (hubData) {
         initializeTable(hubData.length);
         hubData.forEach((hub, ind) => {
             initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
@@ -185,7 +184,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
             })
             .catch(() => {
                 console.error('IGB is not running');
-                $('#igb-not-running').modal();
+                igbMessageBoardModal("IGB is not running:","Start IGB and try again");
             });
 
         });
@@ -220,10 +219,11 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
 }
 
 // Copy UCSC hub/output URL to clipboard
+
 function copyUrl(event) {
   const classes = event.target.classList.toString().split(' ');
   if (classes.includes('quickload-copy')) {
-    navigator.clipboard.writeText(convertURL(event.target.closest('tr').dataset.url));
+      addDataSourceToIGB(event.target.closest('tr').dataset.url);
   } else if (classes.includes('ucsc-hub-copy')) {
     navigator.clipboard.writeText(event.target.closest('tr').dataset.url);
   } else {
@@ -234,7 +234,45 @@ function copyUrl(event) {
     $(event.target).tooltip('hide');
   }, 1000);
 }
+async function addDataSourceToIGB(quickloadurl){
+     var xmlHttp = new XMLHttpRequest();
+     xmlHttp.open("GET", quickloadurl.trim(), false);
+     // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
+     xmlHttp.send(null);
+        var name = "";
 
+        var txtArray = xmlHttp.responseText.toString().split("\n");
+        for(let key in txtArray){
+
+            if(txtArray[key].includes("shortLabel")){
+                name = txtArray[key].replace("shortLabel ","").replace(" ","%20")
+            }
+        }
+        var builtURL = "http://127.0.0.1:7085/igbDataSource?"
+        builtURL += "quickloadurl=" +  convertURL(quickloadurl).replace("&","%26");
+        builtURL += "&quickloadname=" + name
+        xmlHttp.open( "GET", builtURL, false );
+        // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
+        xmlHttp.send( null );
+        if(xmlHttp.status!=200){
+            if(xmlHttp.status==404){
+                igbMessageBoardModal("Could not add to IGB","Start IGB and try again",false)
+                console.error(xmlHttp.response)
+
+            }else if(xmlHttp.status==403){
+                igbMessageBoardModal("Could not add to IGB","The connection could not be established. Please restart IGB and try again.",false)
+                console.error("The connection could not be established. Please restart IGB and try again.")
+            }
+            else{
+                igbMessageBoardModal("Could not add to IGB","Please restart IGB and try again",false)
+                console.error(xmlHttp.response)
+            }
+        }else{
+            //Placeholder
+            igbMessageBoardModal("Added to IGB","Please go to the Data Sources tab in the IGB Preferences window to verify.",true)
+            console.log(xmlHttp.response+": Data source added to IGB")
+        }
+}
 // Check if all terms in search input match to a particular reference string
 function allQueryTermsMatch(queryTerms, queryIndex, reference) {
   if (queryIndex < queryTerms.length) {
@@ -246,6 +284,20 @@ function allQueryTermsMatch(queryTerms, queryIndex, reference) {
   } else {
     return true;
   }
+}
+function igbMessageBoardModal(title,message){
+    const igbmodaltitle = $('#igb-message-board-label')
+    const igbmodalfooter = $('.modal-body #igb-modal-body')
+    const igbmessageboard = $('#igb-message-board')
+    var icon=""
+    if(success){
+        icon = "<i class='fa fa-check text-success mr-2'></i>"
+    }else{
+        icon = "<i class='fa fa-xmark text-danger mr-2'></i>"
+    }
+    igbmodaltitle.html(icon+title);
+    igbmodalfooter.html(message);
+    igbmessageboard.modal();
 }
 
 // Display rows in table of public UCSC hubs based on search input
@@ -280,6 +332,7 @@ async function main() {
     handleTooltips();
     // Save and render quick-loading UCSC hub data
     await renderTable();
+
 }
 
 main();

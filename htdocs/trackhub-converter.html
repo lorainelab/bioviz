@@ -30,6 +30,25 @@
   <script src="js/renderMenuBar.js"></script>
 
   <div id="main-container" class="container main-content bar">
+      <div class="modal fade" id="igb-message-board" tabindex="-1" role="dialog" aria-labelledby="igb-message-board-label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="igb-message-board-label"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p id="igb-modal-body"></p>
+                  </div>
+                  <div class="modal-footer">
+                      <p id="igb-modal-footer"></p>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
     <h1>Manual Track Hub Converter</h1>
     <p id="description">This is a tool for manually converting a UCSC trackhub into a Quickload data source that can be used in the Integrated Genome Browser.</p>
     <div class="conversion">
@@ -95,12 +114,16 @@
         </div>
         <div id="result" class="container">
             <div class="row align-items-center">
-                <div class="col result-url col-auto">
+                <div class="col col-9 result-url col-auto">
                     <p class="url">Use the input field above to generate a Quickload URL.</p>
                 </div>
                 <div class="col copy-icon px-0">
                     <i id="copy" class="fa fa-clone clickable result-url-copy d-none" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
                 </div>
+                <div class="col-2">
+                    <button id="addSource" class="btn btn-primary d-none add-data-sources ml-2">Add to IGB</button>
+                </div>
+
             </div>
             <p class="description"></p>
         </div>
