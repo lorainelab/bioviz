@@ -176,15 +176,17 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
     genomesDiv.querySelectorAll('a.open-in-igb').forEach(el => {
         el.addEventListener('click', (event) => {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
+            igbMessageToast("Opening in IGB","Establishing connection with IGB...","cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 console.log(res);
+                addDataSourceToIGB(event.target.closest('tr').dataset.url)
                 getHttpRequest('http://localhost:7085/bringIGBToFront');
                 getHttpRequest(`http://localhost:7085/IGBControl?version=${event.target.dataset.igbGenomeVersion}`);
             })
             .catch(() => {
-                console.error('IGB is not running');
-                igbMessageBoardModal("IGB is not running:","Start IGB and try again");
+                // console.error('IGB is not running');
+                igbMessageToast("IGB is not running:","Start IGB to open this genome version in IGB.");
             });
 
         });
@@ -219,7 +221,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
 }
 
 // Copy UCSC hub/output URL to clipboard
-
+// Obselete since IGBF-3147
 function copyUrl(event) {
   const classes = event.target.classList.toString().split(' ');
   if (classes.includes('quickload-copy')) {
@@ -237,13 +239,10 @@ function copyUrl(event) {
 async function addDataSourceToIGB(quickloadurl){
      var xmlHttp = new XMLHttpRequest();
      xmlHttp.open("GET", quickloadurl.trim(), false);
-     // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
      xmlHttp.send(null);
         var name = "";
-
         var txtArray = xmlHttp.responseText.toString().split("\n");
         for(let key in txtArray){
-
             if(txtArray[key].includes("shortLabel")){
                 name = txtArray[key].replace("shortLabel ","").replace(" ","%20")
             }
@@ -256,21 +255,16 @@ async function addDataSourceToIGB(quickloadurl){
         xmlHttp.send( null );
         if(xmlHttp.status!=200){
             if(xmlHttp.status==404){
-                igbMessageBoardModal("Could not add to IGB","Start IGB and try again",false)
-                console.error(xmlHttp.response)
+                igbMessageToast("Could not add to IGB","Start IGB to open this genome version in IGB. ")
 
             }else if(xmlHttp.status==403){
-                igbMessageBoardModal("Could not add to IGB","The connection could not be established. Please restart IGB and try again.",false)
-                console.error("The connection could not be established. Please restart IGB and try again.")
+                igbMessageToast("Could not add to IGB","The connection could not be established. Please restart IGB and try again.")
             }
             else{
-                igbMessageBoardModal("Could not add to IGB","Please restart IGB and try again",false)
-                console.error(xmlHttp.response)
+                igbMessageToast("Could not add to IGB","Please restart IGB and try again")
             }
         }else{
-            //Placeholder
-            igbMessageBoardModal("Added to IGB","Please go to the Data Sources tab in the IGB Preferences window to verify.",true)
-            console.log(xmlHttp.response+": Data source added to IGB")
+            igbMessageToast("Success!","Genome is loading in IGB","check-circle")
         }
 }
 // Check if all terms in search input match to a particular reference string
@@ -285,19 +279,24 @@ function allQueryTermsMatch(queryTerms, queryIndex, reference) {
     return true;
   }
 }
-function igbMessageBoardModal(title,message){
-    const igbmodaltitle = $('#igb-message-board-label')
-    const igbmodalfooter = $('.modal-body #igb-modal-body')
-    const igbmessageboard = $('#igb-message-board')
-    var icon=""
+function igbMessageToast(title,message,success){
+    var toastIcon = ""
+    var toastTitle = $('#igb-toast .toast-title')
+    var toastSmall = $('#igb-toast .toast-small')
+    var toastBody = $('#igb-toast .toast-body')
+
     if(success){
-        icon = "<i class='fa fa-check text-success mr-2'></i>"
+        toastIcon = "<i class='fa fa-check-circle fa-lg text-success mr-2'></i>"
+        if(success === "cog"){
+            toastIcon = "<i class='fas fa-cog fa-spin mr-2 fa-lg'></i>"
+        }
     }else{
-        icon = "<i class='fa fa-xmark text-danger mr-2'></i>"
+        toastIcon = "<i class='fas fa-exclamation-triangle fa-lg text-danger mr-2'></i>"
     }
-    igbmodaltitle.html(icon+title);
-    igbmodalfooter.html(message);
-    igbmessageboard.modal();
+
+    toastTitle.html(toastIcon+title)
+    toastBody.html(message)
+    $("#igb-toast").toast("show")
 }
 
 // Display rows in table of public UCSC hubs based on search input

@@ -2,64 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Welcome to the Manual Trackhub Converter</title>
-  <meta name="description" content="View UCSC track hubs in IGB">
-  <meta name="author" content="Loraine Lab">
-  <meta name="viewport" content="width=device-width">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css?v=1.3">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/trackhub-converter.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    //   Enable all tooltips
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+    <title>Welcome to the Manual Trackhub Converter</title>
+    <meta name="description" content="View UCSC track hubs in IGB">
+    <meta name="author" content="Loraine Lab">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/trackhub-converter.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //   Enable all tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
-  </script>
+    </script>
 </head>
 
 <body>
-  <div id="TopMenu"></div>
-  <script src="js/renderMenuBar.js"></script>
+<div id="TopMenu"></div>
+<script src="js/renderMenuBar.js"></script>
 
-  <div id="main-container" class="container main-content bar">
-      <div class="modal fade" id="igb-message-board" tabindex="-1" role="dialog" aria-labelledby="igb-message-board-label" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="igb-message-board-label"></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                      <p id="igb-modal-body"></p>
-                  </div>
-                  <div class="modal-footer">
-                      <p id="igb-modal-footer"></p>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-              </div>
-          </div>
-      </div>
+<div id="main-container" class="container main-content bar">
+    <div id="igb-message-board" class="toast" role="alert" data-autohide="true" data-delay="10000"
+         style="position: fixed; bottom: 10px; right: 50px; z-index: 99">
+        <div class="toast-header">
+            <strong class="mr-auto toast-title"></strong>
+            <small class="toast-small"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+
+        </div>
+    </div>
+
     <h1>Manual Track Hub Converter</h1>
-    <p id="description">This is a tool for manually converting a UCSC trackhub into a Quickload data source that can be used in the Integrated Genome Browser.</p>
+    <p id="description">This is a tool for manually converting a UCSC trackhub into a Quickload data source that can be
+        used in the Integrated Genome Browser.</p>
     <div class="conversion">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="title col-auto">
-                    <h2>Convert track hub to Quickload</h2> 
+                    <h2>Convert track hub to Quickload</h2>
                 </div>
                 <div class="col px-0">
-                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-            title='Enter the web address for a UCSC track hub <i>hub.txt</i> file. Use the example below to try it out! To learn more about the track hub specification, see the <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html" target="_blank" rel="noopener noreferrer">UCSC documentation</a>.'></i>
+                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip"
+                       data-trigger="click" data-placement="right" data-html="true"
+                       title='Enter the web address for a UCSC track hub <i>hub.txt</i> file. Use the example below to try it out! To learn more about the track hub specification, see the <a href="https://genome.ucsc.edu/goldenpath/help/hgTrackHubHelp.html" target="_blank" rel="noopener noreferrer">UCSC documentation</a>.'></i>
                 </div>
             </div>
         </div>
@@ -72,7 +75,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">URL</span>
                                 </div>
-                                <input type="url" class="form-control" aria-label="trackhub url" aria-describedby="basic-addon1" required>
+                                <input type="url" class="form-control" aria-label="trackhub url"
+                                       aria-describedby="basic-addon1" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid track hub URL. See the example below for more details.
                                 </div>
@@ -82,7 +86,8 @@
                     <div class="col-auto">
                         <div id="process" class="text-center">
                             <button id="submit" type="button" class="btn btn-primary">Convert</button>
-                            <img class="d-none activity-indicator" src="images/activity_indicator.gif" alt="Processing request...">
+                            <img class="d-none activity-indicator" src="images/activity_indicator.gif"
+                                 alt="Processing request...">
                         </div>
                     </div>
                 </div>
@@ -104,40 +109,45 @@
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-auto title">
-                    <h2>Converted Trackhub URL</h2> 
+                    <h2>Converted Trackhub URL</h2>
                 </div>
                 <div class="col px-0">
-                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-        title="In IGB, click <i>Settings > Data Sources > Add</i>, and paste in this URL. For more information on this process, see the IGB User's Guide</a>."></i>
+                    <i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip"
+                       data-trigger="click" data-placement="right" data-html="true"
+                       title="In IGB, click <i>Settings > Data Sources > Add</i>, and paste in this URL. For more information on this process, see the IGB User's Guide</a>."></i>
                 </div>
             </div>
         </div>
-        <div id="result" class="container">
-            <div class="row align-items-center">
-                <div class="col col-9 result-url col-auto">
-                    <p class="url">Use the input field above to generate a Quickload URL.</p>
+        <div class="row">
+            <div id="result" class="col-9 container">
+                <div class="row align-items-center">
+                    <div class="col col-9 result-url col-auto">
+                        <p class="url">Use the input field above to generate a Quickload URL.</p>
+                    </div>
+                    <div class="col copy-icon px-0">
+                        <i id="copy" class="fa fa-clone clickable result-url-copy d-none" aria-hidden="true"
+                           data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px"
+                           title="Copied!"></i>
+                    </div>
                 </div>
-                <div class="col copy-icon px-0">
-                    <i id="copy" class="fa fa-clone clickable result-url-copy d-none" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" title="Copied!"></i>
-                </div>
-                <div class="col-2">
-                    <button id="addSource" class="btn btn-primary d-none add-data-sources ml-2">Add to IGB</button>
-                </div>
-
+                <p class="description"></p>
             </div>
-            <p class="description"></p>
+            <div id="addSourceDiv" class="col-2 box-release-info d-none text-center">
+                <p class="mb-1 text-align-center" style="font-size: 12px" >To add this trackhub url as data source to IGB, click on the button below</p>
+                <button id="addSource" class="btn btn-sm btn-primary add-data-sources ml-2">Add to IGB</button>
+            </div>
         </div>
     </div>
 
     <div id="footer" class="container"></div>
     <script src="js/renderFooter.js"></script>
-  </div>
+</div>
 
-  <script type="module" src="js/trackhub/manualConverter.js"></script>
-  <!-- Google analytics -->
-  <script>
+<script type="module" src="js/trackhub/manualConverter.js"></script>
+<!-- Google analytics -->
+<script>
     src = "js/googleAnalytics.js"
-  </script>
+</script>
 
 </body>
 
