@@ -2,58 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Welcome to the Public Trackhub Converter</title>
-  <meta name="description" content="View UCSC track hubs in IGB">
-  <meta name="author" content="Loraine Lab">
-  <meta name="viewport" content="width=device-width">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css?v=1.3">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/public-trackhubs.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script>
-    //   Enable all tooltips
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+    <title>Welcome to the Public Trackhub Converter</title>
+    <meta name="description" content="View UCSC track hubs in IGB">
+    <meta name="author" content="Loraine Lab">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?v=1.3">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/public-trackhubs.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        //   Enable all tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
-  </script>
+    </script>
 </head>
 
 <body>
- <div id="TopMenu"></div>
-  <script src="js/renderMenuBar.js"></script>
+<div id="TopMenu"></div>
+<script src="js/renderMenuBar.js"></script>
 
-  <div id="main-container" class="container main-content bar">
-    <div class="modal fade" id="igb-not-running" tabindex="-1" role="dialog" aria-labelledby="igb-not-running-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="igb-not-running-label">IGB is not Running</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<div id="main-container" class="container main-content bar">
+    <div id="igb-toast" class="toast" role="alert" data-autohide="true" data-delay="10000"
+         style="position: fixed; bottom: 10px; right: 50px; z-index: 99">
+        <div class="toast-header">
+            <strong class="mr-auto toast-title"></strong>
+            <small class="toast-small"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-footer">
-                <p>Start IGB to open this genome version in IGB.</p>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-            </div>
+            </button>
+        </div>
+        <div class="toast-body">
+
         </div>
     </div>
-
     <center><h1>View UCSC Track Hubs in Integrated Genome Browser
-    <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip" 
-        data-trigger="click" data-placement="right" data-html="true" 
-        title='BioViz Trackhub Connect is based on the
+        <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip"
+                             data-trigger="click" data-placement="right" data-html="true"
+                             title='BioViz Trackhub Connect is based on the
         <a target ="_blank" href="https://genome.ucsc.edu/cgi-bin/hgHubConnect"> UCSC Track Data Hubs</a> page.'></i>
         </span>
-    </sup></small>
+        </sup></small>
     </h1>
     </center>
 
@@ -64,12 +66,12 @@
            <span class="fa fa-search"></span>
            </span>
         </div>
-        <input type="text" class="form-control"  aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" aria-label="Hub name | organism | genome"
+               aria-describedby="basic-addon1">
         <span id="cancel" class="fa fa-times"></span>
-       
+
     </div>
     <center class="refresh m-0"><span id="lastUpdateStamp"></span></center>
-
 
 
     <div class="browser">
@@ -79,62 +81,64 @@
             </div>
         </div>
     </div>
-        <div class="scrollable-fixed-head table-responsive">
-            <table class="table">
-                <thead>
+    <div class="scrollable-fixed-head table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col" class="number">#</th>
+                <th scope="col" class="name col-2">Hub Name</th>
+                <th scope="col" class="description col-5" style>Description</th>
+                <th scope="col" class="expand"></th>
+                <th scope="col" class="genomes col-4">Genome Versions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <template id="row">
                 <tr>
-                    <th scope="col" class="number">#</th>
-                    <th scope="col" class="name col-1">Hub Name</th>
-                    <th scope="col" class="description col-6" style>Description</th>
-                    <th scope="col" class="action col-1"><span>Copy URL<i class="fa fa-question-circle info clickable " style="padding:0" aria-hidden="true" data-toggle="tooltip" data-trigger="click" data-placement="right" data-html="true"
-                        title='Click <i class="quickload-copy" aria-hidden="true"><b>Q</b></i> to copy the Quickload URL for pasting into IGB. Click <i class="ucsc-hub-copy" aria-hidden="true"><b>U</b></i> to copy the original Track Hub URL.'></i></span></th>
-                    <th scope="col" class="expand"></th>
-                    <th scope="col" class="genomes col-4">Genome Versions</th>
+                    <th scope="row "></th>
+                    <td class="name col-2">
+                        <div class="namePlace">
+                            hub_name_placeholder
+
+                        </div>
+                        <div>
+                            <button class='datasource btn btn-sm p-0'><i
+                                    class="fas fa-plus btn-outline-info p-1 rounded-circle"></i></button>
+                            <button class="btn btn-sm quickload-copy p-0 " data-toggle="tooltip" data-placement="right" data-trigger="click" title="Quickload URl Copied!">
+                                <i class="fas fa-link btn-outline-info p-1"></i>
+                            </button>
+                        </div>
+
+                    </td>
+                    <td class="description col-5"></td>
+                    <td class="expand">
+                        <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
+                        <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
+                    </td>
+                    <td class="genomes col-4">
+                        <div>
+                            <img class="activity-indicator" src="images/activity_indicator.gif"
+                                 alt="Processing request...">
+                        </div>
+                        <div></div>
+                    </td>
                 </tr>
-                </thead>
-                <tbody>
-                    <template id="row">
-                        <tr>
-                            <th scope="row "></th>
-                            <td class="name col-1"></td>
-                            <td class="description col-6"></td>
-                            <td class="action col-1">
-                                <div class="grid">
-                                    <div>
-                                        <span class="copyable clickable quickload-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied Quickload URL">Q</span>
-                                    </div>
-                                    <div class="grid-item">
-                                        <span class="copyable clickable ucsc-hub-copy" aria-hidden="true" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-offset="0, 5px" data-original-title="Copied UCSC URL">U</span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="expand">
-                                <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
-                                <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
-                            </td>
-                            <td class="genomes col-4">
-                                <div>
-                                    <img class="activity-indicator" src="images/activity_indicator.gif" alt="Processing request...">
-                                </div>
-                                <div></div>
-                            </td>
-                        </tr>
-                    </template>
-                </tbody>
-            </table>
-        </div>
+            </template>
+            </tbody>
+        </table>
     </div>
+</div>
 
 
-    <div id="footer" class="container"></div>
-    <script src="js/renderFooter.js"></script>
+<div id="footer" class="container"></div>
+<script src="js/renderFooter.js"></script>
 
 
-  <script type="module" src="js/trackhub/publicTable.js"></script>
-  <!-- Google analytics -->
-  <script>
+<script type="module" src="js/trackhub/publicTable.js"></script>
+<!-- Google analytics -->
+<script>
     src = "js/googleAnalytics.js"
-  </script>
+</script>
 
 </body>
 
