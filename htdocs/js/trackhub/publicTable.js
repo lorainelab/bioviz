@@ -4,7 +4,7 @@ const filterInput = $('#filter input');
 const filterCancel = $('#filter #cancel');
 const templateRow = $('template#row');
 const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
-var quickload_btns;
+
 const UCSC_BROWSER_URL = "https://genome.ucsc.edu/cgi-bin/hgTracks"
 // Perform a GET request for a given URL
 async function getHttpRequest(url) {
@@ -27,6 +27,7 @@ async function postHttpRequest(url, body) {
 }
 
 async function renderTable() {
+  
     if(window.performance.getEntriesByType("navigation")[0].type=="reload"){
       loadData();
       return;
@@ -35,7 +36,7 @@ async function renderTable() {
     let lastUpdated = localStorage.getItem("lastUpdated")
     if(lastUpdated)
       $("#lastUpdateStamp").html("Data last updated on "+lastUpdated)
-    if (hubData) {
+    if (hubData) {        
         initializeTable(hubData.length);
         hubData.forEach((hub, ind) => {
             initializeRow(hub.number, hub.url, hub.name, hub.description, hub.descriptionUrl, ind);
@@ -176,17 +177,15 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
     genomesDiv.querySelectorAll('a.open-in-igb').forEach(el => {
         el.addEventListener('click', (event) => {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
-            igbMessageToast("Opening in IGB","Establishing connection with IGB...","cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 console.log(res);
-                addDataSourceToIGB(event.target.closest('tr').dataset.url)
                 getHttpRequest('http://localhost:7085/bringIGBToFront');
                 getHttpRequest(`http://localhost:7085/IGBControl?version=${event.target.dataset.igbGenomeVersion}`);
             })
             .catch(() => {
-                // console.error('IGB is not running');
-                igbMessageToast("IGB is not running:","Start IGB to open this genome version in IGB.");
+                console.error('IGB is not running');
+                $('#igb-not-running').modal();
             });
 
         });
@@ -221,11 +220,10 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
 }
 
 // Copy UCSC hub/output URL to clipboard
-// Obselete since IGBF-3147
 function copyUrl(event) {
   const classes = event.target.classList.toString().split(' ');
   if (classes.includes('quickload-copy')) {
-      addDataSourceToIGB(event.target.closest('tr').dataset.url);
+    navigator.clipboard.writeText(convertURL(event.target.closest('tr').dataset.url));
   } else if (classes.includes('ucsc-hub-copy')) {
     navigator.clipboard.writeText(event.target.closest('tr').dataset.url);
   } else {
@@ -236,37 +234,7 @@ function copyUrl(event) {
     $(event.target).tooltip('hide');
   }, 1000);
 }
-async function addDataSourceToIGB(quickloadurl){
-     var xmlHttp = new XMLHttpRequest();
-     xmlHttp.open("GET", quickloadurl.trim(), false);
-     xmlHttp.send(null);
-        var name = "";
-        var txtArray = xmlHttp.responseText.toString().split("\n");
-        for(let key in txtArray){
-            if(txtArray[key].includes("shortLabel")){
-                name = txtArray[key].replace("shortLabel ","").replace(" ","%20")
-            }
-        }
-        var builtURL = "http://127.0.0.1:7085/igbDataSource?"
-        builtURL += "quickloadurl=" +  convertURL(quickloadurl).replace("&","%26");
-        builtURL += "&quickloadname=" + name
-        xmlHttp.open( "GET", builtURL, false );
-        // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
-        xmlHttp.send( null );
-        if(xmlHttp.status!=200){
-            if(xmlHttp.status==404){
-                igbMessageToast("Could not add to IGB","Start IGB to open this genome version in IGB. ")
 
-            }else if(xmlHttp.status==403){
-                igbMessageToast("Could not add to IGB","The connection could not be established. Please restart IGB and try again.")
-            }
-            else{
-                igbMessageToast("Could not add to IGB","Please restart IGB and try again")
-            }
-        }else{
-            igbMessageToast("Success!","Genome is loading in IGB","check-circle")
-        }
-}
 // Check if all terms in search input match to a particular reference string
 function allQueryTermsMatch(queryTerms, queryIndex, reference) {
   if (queryIndex < queryTerms.length) {
@@ -278,25 +246,6 @@ function allQueryTermsMatch(queryTerms, queryIndex, reference) {
   } else {
     return true;
   }
-}
-function igbMessageToast(title,message,success){
-    var toastIcon = ""
-    var toastTitle = $('#igb-toast .toast-title')
-    var toastSmall = $('#igb-toast .toast-small')
-    var toastBody = $('#igb-toast .toast-body')
-
-    if(success){
-        toastIcon = "<i class='fa fa-check-circle fa-lg text-success mr-2'></i>"
-        if(success === "cog"){
-            toastIcon = "<i class='fas fa-cog fa-spin mr-2 fa-lg'></i>"
-        }
-    }else{
-        toastIcon = "<i class='fas fa-exclamation-triangle fa-lg text-danger mr-2'></i>"
-    }
-
-    toastTitle.html(toastIcon+title)
-    toastBody.html(message)
-    $("#igb-toast").toast("show")
 }
 
 // Display rows in table of public UCSC hubs based on search input
@@ -331,7 +280,6 @@ async function main() {
     handleTooltips();
     // Save and render quick-loading UCSC hub data
     await renderTable();
-
 }
 
 main();
