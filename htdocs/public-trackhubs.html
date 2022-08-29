@@ -66,12 +66,12 @@
            <span class="fa fa-search"></span>
            </span>
         </div>
-        <input type="text" class="form-control"  aria-label="Hub name | organism | genome" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" aria-label="Hub name | organism | genome"
+               aria-describedby="basic-addon1">
         <span id="cancel" class="fa fa-times"></span>
-       
+
     </div>
     <center class="refresh m-0"><span id="lastUpdateStamp"></span></center>
-
 
 
     <div class="browser">
@@ -86,8 +86,8 @@
             <thead>
             <tr>
                 <th scope="col" class="number">#</th>
-                <th scope="col" class="name col-1">Hub Name</th>
-                <th scope="col" class="description col-6" style>Description</th>
+                <th scope="col" class="name col-2">Hub Name</th>
+                <th scope="col" class="description col-5" style>Description</th>
                 <th scope="col" class="expand"></th>
                 <th scope="col" class="genomes col-4">Genome Versions</th>
             </tr>
@@ -96,8 +96,21 @@
             <template id="row">
                 <tr>
                     <th scope="row "></th>
-                    <td class="name col-1"></td>
-                    <td class="description col-6"></td>
+                    <td class="name col-2">
+                        <div class="namePlace">
+                            hub_name_placeholder
+
+                        </div>
+                        <div>
+                            <button class='datasource btn btn-sm p-0'><i
+                                    class="fas fa-plus btn-outline-info p-1 rounded-circle"></i></button>
+                            <button class="btn btn-sm quickload-copy p-0 " data-toggle="tooltip" data-placement="right" data-trigger="click" title="Quickload URl Copied!">
+                                <i class="fas fa-link btn-outline-info p-1"></i>
+                            </button>
+                        </div>
+
+                    </td>
+                    <td class="description col-5"></td>
                     <td class="expand">
                         <i class="d-none fa fa-plus-square-o clickable" aria-hidden="true" title="Expand Row"></i>
                         <i class="d-none fa fa-minus-square-o clickable" aria-hidden="true" title="Collapse Row"></i>
