@@ -93,4 +93,15 @@
     } else {
       $('.navbar .btn-group').show();
     }
+    var navbar = document.getElementsByClassName("navbar-collapse")
+    $(document).on("click",function(e){
+      if(!navbar[0].contains(e.target)){
+        $(navbar[0]).collapse("hide");
+        $(navbar[0]).removeClass("show");
+      }
+    })
+    $(navbar).on("mouseleave",function(e){
+        $(navbar[0]).collapse("hide");
+        $(navbar[0]).removeClass("show");
+    })
   </script>
