@@ -15,12 +15,11 @@
 }
 
 .navbar .container {
-  height: -webkit-fill-available;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   padding: 0;
 }
 
-.navbar .contaienr, .nav {
+.navbar .container, .nav {
   align-items: center;
 }
 
@@ -134,7 +133,7 @@
     height: 100%;
   }
 
-  .navbar .contaienr, .nav {
+  .navbar .container, .nav {
     align-items: baseline;
   }
 
