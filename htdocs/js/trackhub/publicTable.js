@@ -243,7 +243,9 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
 
 // Copy UCSC hub/output URL to clipboard
 function copyUrl(event) {
-    navigator.clipboard.writeText(buildQuickloadUrl(event));
+    var quickloadurl = "https://translate.bioviz.org/api/?hubUrl="+event.target.closest('tr').dataset.url+"&filePath=/";
+    console.log(quickloadurl)
+    navigator.clipboard.writeText(quickloadurl);
 }
 
 function buildQuickloadUrl(event) {
@@ -254,30 +256,39 @@ function buildQuickloadUrl(event) {
     builtURL += "&quickloadname=" + shortlabel.replaceAll(" ", "%20")
     return builtURL
 }
+
 async function addDataSourceToIGB(event) {
     var xmlHttp = new XMLHttpRequest();
     igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
-    xmlHttp.open("GET", buildQuickloadUrl(event), false);
-    // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
-    try {
-        xmlHttp.send(null);
-    } catch (e) {
-        igbMessageToast("Could not add to IGB", "Start IGB to open this genome version in IGB. ")
-    }
-    if (xmlHttp.status != 200) {
-        if (xmlHttp.status == 404) {
-            igbMessageToast("Could not add to IGB", "Start IGB to open this genome version in IGB. ")
-
-        } else if (xmlHttp.status == 403) {
-            igbMessageToast("Could not add to IGB", "The connection could not be established. Please restart IGB and try again.")
+    getHttpRequest('http://localhost:7085/igbStatusCheck')
+        .then(res => {
+            var version = res.split("=")[1].trim()
+            var status = true
+            if(version == "true" || parseInt(version.split(".")[2])<10){
+                igbMessageToast("Could not add to IGB ", "Please update IGB to latest version")
+                status = false
+            }else{
+                status = true
             }
-            else{
-            igbMessageToast("Could not add to IGB", "Please restart IGB and try again")
-        }
-    } else {
-        igbMessageToast("Success!", "Genome is loading in IGB", "check-circle")
-    }
+            if(status) {
+                xmlHttp.open("GET", buildQuickloadUrl(event), false);
+                try {
+                    xmlHttp.send(null);
+                } catch (e) {
+                    igbMessageToast("IGB is not running", " Please start IGB")
+                }
+                if (xmlHttp.status != 200) {
+                    igbMessageToast("IGB is not running", " Please start IGB")
+                } else {
+                    igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
+                }
+            }
+
+        }).catch((e)=>{
+            igbMessageToast("IGB is not running.", "Please start IGB");
+    })
 }
+
 // Check if all terms in search input match to a particular reference string
 function allQueryTermsMatch(queryTerms, queryIndex, reference) {
     if (queryIndex < queryTerms.length) {

@@ -45,36 +45,45 @@ async function addDataSourceToIGB(event) {
     const classes = event.target.classList.toString().split(' ')
 
     if (classes.includes('add-data-sources')) {
-        igbMessageToast("Adding data source", "Check the Data sources tab in IGB Preferences window", "cog")
+        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
         getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
-                console.log(res);
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.open("GET", urlInput[0].value.trim().replace("http://localhost:8000", "https://translate.bioviz.org"), false);
-                // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
-                xmlHttp.send(null);
-                var name = "";
-                var txtArray = xmlHttp.responseText.toString().split("\n");
-                for (let key in txtArray) {
-                    if (txtArray[key].includes("shortLabel")) {
-                        name = txtArray[key].replace("shortLabel ", "").replace(" ", "%20")
-                    }
+                var version = res.split("=")[1].trim()
+                var status = true
+                if(version == "true" || parseInt(version.split(".")[2])<10){
+                    igbMessageToast("Could not add to IGB ", "Please update IGB to latest version.")
+                    status = false
+                }else{
+                    status = true
                 }
+                if(status) {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.open("GET", urlInput[0].value.trim().replace("http://localhost:8000", "https://translate.bioviz.org"), false);
+                    // xmlHttp.setRequestHeader("Access-Control-Allow-Origin","*")
+                    xmlHttp.send(null);
+                    var name = "";
+                    var txtArray = xmlHttp.responseText.toString().split("\n");
+                    for (let key in txtArray) {
+                        if (txtArray[key].includes("shortLabel")) {
+                            name = txtArray[key].replace("shortLabel ", "").replace(" ", "%20")
+                        }
+                    }
 
-                var builtURL = "http://127.0.0.1:7085/igbDataSource?"
-                builtURL += "quickloadurl=" + resultUrl[0].textContent.replace("&", "%26");
-                builtURL += "&quickloadname=" + name
-                xmlHttp.open("GET", builtURL, false);
-                xmlHttp.send(null);
-                if (xmlHttp.status != 200) {
-                    igbMessageToast("IGB is not running:", "Start IGB and try again")
-                } else {
-                    igbMessageToast("Added to IGB", "To verify, check the Data Sources tab in the IGB Preferences window.", "check-circle")
+                    var builtURL = "http://127.0.0.1:7085/igbDataSource?"
+                    builtURL += "quickloadurl=" + resultUrl[0].textContent.replace("&", "%26");
+                    builtURL += "&quickloadname=" + name
+                    xmlHttp.open("GET", builtURL, false);
+                    xmlHttp.send(null);
+                    if (xmlHttp.status != 200) {
+                        igbMessageToast("IGB is not running:", "Please start IGB.")
+                    } else {
+                        igbMessageToast("Success!", "Adding data source to IGB...", "check-circle")
+                    }
                 }
             })
             .catch(() => {
                 // console.error('IGB is not running');
-                igbMessageToast("IGB is not running:", "Start IGB to open this genome version in IGB.");
+                igbMessageToast("IGB is not running:", "Please start IGB.");
             });
     }
 }
