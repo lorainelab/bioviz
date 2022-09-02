@@ -547,12 +547,6 @@ img.largeImage {
   border-color: #ccc;
 }
 
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
 .marginBottom25 {
   margin-bottom: 25px;
 }
