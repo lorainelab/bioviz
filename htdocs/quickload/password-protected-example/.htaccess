@@ -1,0 +1,4 @@
+AuthUserFile /var/www/bioviz/htdocs/quickload/password-protected-example/.htpasswd
+AuthName "password-protected-example"
+AuthType Basic
+require valid-user
