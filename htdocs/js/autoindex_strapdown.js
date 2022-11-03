@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Create a script element to fetch Strapdown.js.
 	strapdown = document.createElement('script');
-	strapdown.setAttribute('src', conf.strapdown ? conf.strapdown : 'https://bitbucket.org/lorainelab/strapdown.js/downloads/strapdown.min.v3173.js');
+	strapdown.setAttribute('src', conf.strapdown ? conf.strapdown : 'https://bitbucket.org/lorainelab/strapdown.js/raw/main/strapdown.verbose.js');
 
 	// Create an XMP element for Strapdown.js to process.
 	xmp = document.createElement('xmp'),
