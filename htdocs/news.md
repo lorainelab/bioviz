@@ -2,11 +2,19 @@
 
 * * *
 
+### November 3, 2022: <a href="./download.html">IGB 9.1.10</a> released
+
+Today we released version 9.1.10 of Integrated Genome Browser.
+
+For a list of new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/9.1.10">IGB 9.1.10 Release Notes</a>. 
+
+* * *
+
 ### June 1, 2021: <a href="./download.html">IGB 9.1.8</a> released
 
 Today we released version 9.1.8 of Integrated Genome Browser.
 
-For a list of new features and improvements, see IGB 9.1.8 Release Notes. 
+For a list of new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/9.1.8">IGB 9.1.8 Release Notes</a>. 
 
 * * *
 
@@ -15,7 +23,7 @@ For a list of new features and improvements, see IGB 9.1.8 Release Notes.
 Today we released version 9.1.6 of Integrated Genome Browser.
 
 To review the new features and improvements available in this new version of 
-IGB, visit the IGB 9.1.6 Release Notes. 
+IGB, visit the <a href="https://wiki.bioviz.org/confluence/display/ITD/9.1.6">IGB 9.1.6 Release Notes</a>. 
 
 * * *
 

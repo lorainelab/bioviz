@@ -1,0 +1,4 @@
+AuthUserFile /var/www/bioviz/htdocs/quickload/redirect-example/.htpasswd
+AuthName "redirect-example"
+AuthType Basic
+require valid-user
