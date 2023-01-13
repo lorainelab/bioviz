@@ -48,7 +48,7 @@
 }
 
 .nav li a {
-  color: #c1c1c1;
+  color: darkgray;
   text-decoration: none;
   padding: 15px 0 15px 0;
 }
@@ -188,4 +188,7 @@
     background-color: #db6963;
     border-color: #db6963;
 }
-
+.prominent-item{
+  font-size: large;
+  color: lightblue !important;
+}
