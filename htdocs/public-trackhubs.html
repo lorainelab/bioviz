@@ -34,7 +34,7 @@
             }else if(userAgent.match(/opr\//i)){
             }else if(userAgent.match(/edg/i)){
             }else if(userAgent.match(/safari/i)){
-                alert("Using Safari can cause your experience to be slow or error-prone. We suggest visiting our page in a different browser, such as Chrome")
+                $("#alerts").removeClass("d-none")
             }
         })
 
@@ -58,6 +58,9 @@
         <div class="toast-body">
 
         </div>
+    </div>
+    <div class="alert alert-danger d-none" role="alert" id="alerts">
+        <p class="text-center">Using Safari can cause your experience to be slow or error-prone. We suggest visiting our page in a different browser, such as Chrome</p>
     </div>
     <center><h1>View UCSC Track Hubs in Integrated Genome Browser
         <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip"
