@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle cursorpointer">About<b class="caret"></b></a>
+          <a href="#" data-toggle="dropdown" style="font-size: medium" class="dropdown-toggle cursorpointer">About</a>
           <ul class="dropdown-menu">
             <li class="cursorpointer">
               <a href="overview.html">Overview</a>
@@ -28,11 +28,11 @@
             </li>
           </ul>
         </li>
-        <li class="cursorpointer">
-          <a href="help.html">Help</a>
+        <li class="dropdown">
+          <a href="help.html" style="font-size: medium">Help</a>
         </li>
         <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle cursorpointer">Developers<b class="caret"></b></a>
+          <a href="#" data-toggle="dropdown" style="font-size: medium" class="dropdown-toggle cursorpointer">Developers</a>
           <ul class="dropdown-menu">
             <li class="cursorpointer">
               <a href="http://bitbucket.org/lorainelab/integrated-genome-browser">IGB git repository on Bitbucket</a>
@@ -51,14 +51,28 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="./genome-dashboard">
-            <font size=+1 color="lightblue"><b>IGB Genomes</b></font>
-          </a>
+        <li class="dropdown">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle cursorpointer prominent-item" >Tools</a>
+          <ul class="dropdown-menu">
+            <li class="cursorpointer">
+              <a href="./genome-dashboard">View IGB Genomes</a>
+            </li>
+            <li class="cursorpointer">
+              <a href="./public-trackhubs.html">View UCSC Trackhubs</a>
+            </li>
+            <li class="cursorpointer">
+              <a href="https://translate.bioviz.org/">Trackhub-Quickload Converter</a>
+            </li>
+          </ul>
         </li>
+<!--        <li>-->
+<!--          <a href="./genome-dashboard">-->
+<!--            <font size=+1 color="lightblue"><b>IGB Genomes</b></font>-->
+<!--          </a>-->
+<!--        </li>-->
         <li>
-          <a href="https://apps.bioviz.org">
-            <font size=+1 color="lightblue"><b>Apps for IGB</b></font>
+          <a class="prominent-item" href="https://apps.bioviz.org">
+            Apps for IGB
           </a>
         </li>
 <!--
@@ -69,8 +83,8 @@
         </li>
 -->
         <li class="last">
-          <a href="connect.html">
-            <font size=+1 color="lightblue"><b>BioViz <em>Connect</em></b></font>
+          <a class="prominent-item" href="connect.html">
+            BioViz <em>Connect</em>
           </a>
         </li>
       </ul>
