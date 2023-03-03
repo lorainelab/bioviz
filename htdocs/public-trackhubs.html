@@ -27,7 +27,17 @@
         //   Enable all tooltips
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
+        // Check if Safari browser is used
+            let userAgent = window.navigator.userAgent.toLowerCase();
+            if(userAgent.match(/chrome|chromium|crios/i)){
+            }else if(userAgent.match(/firefox|fxios/i)){
+            }else if(userAgent.match(/opr\//i)){
+            }else if(userAgent.match(/edg/i)){
+            }else if(userAgent.match(/safari/i)){
+                alert("Using Safari can cause your experience to be slow or error-prone. We suggest visiting our page in a different browser, such as Chrome")
+            }
         })
+
     </script>
 </head>
 
