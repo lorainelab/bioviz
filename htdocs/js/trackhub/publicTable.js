@@ -258,35 +258,40 @@ function buildQuickloadUrl(event) {
 }
 
 async function addDataSourceToIGB(event) {
-    var xmlHttp = new XMLHttpRequest();
-    igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
-    getHttpRequest('http://localhost:7085/igbStatusCheck')
-        .then(res => {
-            var version = res.split("=")[1].trim()
-            var status = true
-            if(version == "true" || parseInt(version.split(".")[2])<10){
-                igbMessageToast("Could not add to IGB ", "Please update IGB to latest version")
-                status = false
-            }else{
-                status = true
-            }
-            if(status) {
-                xmlHttp.open("GET", buildQuickloadUrl(event), false);
-                try {
-                    xmlHttp.send(null);
-                } catch (e) {
-                    igbMessageToast("IGB is not running", " Please start IGB")
-                }
-                if (xmlHttp.status != 200) {
-                    igbMessageToast("IGB is not running", " Please start IGB")
+    if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
+        var xmlHttp = new XMLHttpRequest();
+        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+        getHttpRequest('http://localhost:7085/igbStatusCheck')
+            .then(res => {
+                var version = res.split("=")[1].trim()
+                var status = true
+                if (version == "true" || parseInt(version.split(".")[2]) < 10) {
+                    igbMessageToast("Could not add to IGB ", "Please update IGB to latest version")
+                    status = false
                 } else {
-                    igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
+                    status = true
                 }
-            }
+                if (status) {
+                    xmlHttp.open("GET", buildQuickloadUrl(event), false);
+                    try {
+                        xmlHttp.send(null);
+                    } catch (e) {
+                        igbMessageToast("IGB is not running", " Please start IGB")
+                    }
+                    if (xmlHttp.status != 200) {
+                        igbMessageToast("IGB is not running", " Please start IGB")
+                    } else {
+                        igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
+                    }
+                }
 
-        }).catch((e)=>{
+            }).catch((e) => {
             igbMessageToast("IGB is not running.", "Please start IGB");
-    })
+        })
+    }else{
+        $('#unsupportedBrowserDialog').modal('toggle');
+        return
+    }
 }
 
 // Check if all terms in search input match to a particular reference string
