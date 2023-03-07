@@ -32,6 +32,22 @@
 </head>
 
 <body>
+<div class="modal fade" id="unsupportedBrowserDialog" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Unsupported Web browser</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                To open a genome in IGB, use a different Web browser: Firefox, Chrome, or Edge.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary mt-2" data-dismiss="modal" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="TopMenu"></div>
 <script src="js/renderMenuBar.js"></script>
 
@@ -49,6 +65,7 @@
 
         </div>
     </div>
+
     <center><h1>View UCSC Track Hubs in Integrated Genome Browser
         <small><sup><span><i class="fa fa-question-circle info clickable" aria-hidden="true" data-toggle="tooltip"
                              data-trigger="click" data-placement="right" data-html="true"
