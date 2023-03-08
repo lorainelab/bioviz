@@ -197,6 +197,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
     // Open supported genomes in IGB
     genomesDiv.querySelectorAll('a.open-in-igb').forEach(el => {
         el.addEventListener('click', (event) => {
+            if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
             igbMessageToast("Opening in IGB", "Establishing connection with IGB...", "cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
@@ -209,7 +210,10 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                     // console.error('IGB is not running');
                     igbMessageToast("IGB is not running:", "Start IGB to open this genome version in IGB.");
                 });
-
+            }else{
+                $('#unsupportedBrowserDialog').modal('toggle');
+                return
+            }
         });
     })
     //Open supported genomes in UCSC
