@@ -76,19 +76,27 @@
     </h1>
     </center>
 
-
-    <div class="col input-group mb-3 mx-auto" id="filter">
-        <div class="input-group-prepend">
+    <div class="row" style="height:100px">
+        <div class="col "></div>
+        <div class="col input-group " id="filter">
+            <div class="input-group-prepend">
            <span class="input-group-text">
            <span class="fa fa-search"></span>
            </span>
+            </div>
+            <input type="text" class="form-control" aria-label="Hub name | organism | genome"
+                   aria-describedby="basic-addon1">
+            <span id="cancel" class="fa fa-times"></span>
+            <div class="refresh m-0"><span id="lastUpdateStamp" class="justify-content-center"></span></div>
         </div>
-        <input type="text" class="form-control" aria-label="Hub name | organism | genome"
-               aria-describedby="basic-addon1">
-        <span id="cancel" class="fa fa-times"></span>
 
+        <div class="col d-flex justify-content-center align-items-center">
+            <a id="helping" class="text-center link"
+               href="https://wiki.bioviz.org/confluence/display/igbman/View+UCSC+Track+Hubs+in+IGB">Need help?<i class="fa fa-arrow-right ml-2"></i></a>
+        </div>
     </div>
-    <center class="refresh m-0"><span id="lastUpdateStamp"></span></center>
+
+
 
 
     <div class="browser">
