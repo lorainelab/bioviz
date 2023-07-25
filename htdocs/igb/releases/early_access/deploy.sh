@@ -7,7 +7,6 @@ base="https://bitbucket.org/lorainelab/integrated-genome-browser/downloads"
 for installer in $installers;
 do
     url="$base/$installer"
-    cmd="wget -O $installer $url"
+    cmd="wget -O IGB-$installer $url"
     $cmd
-    mv $installer IGB-$installer
 done
