@@ -16,4 +16,7 @@ $(window).on("load", function(e) {
   if (os == "Mac OS X" || os == "Mac OS") {
     $("#osxDownload .btn").removeClass('d-none');
   }
+  if (os == "Mac OS X" || os == "Mac OS") {
+    $("#earlyAccessMac").removeClass('d-none');
+  }
 });
