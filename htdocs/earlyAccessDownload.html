@@ -35,7 +35,7 @@
       <div class="col-md text-center">
         <center>
           <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
-          <form id="linuxDownload" method="get" action="/igb/releases/early_access/IGB-master.sh">
+          <form id="linuxDownload" method="get" action="/igb/releases/early_access/IGB-main-JDK8.sh">
             <button class="btn btn-custom btn-download d-none">
               <h2>
                 <span class="fa fa-cloud-download"></span>
@@ -45,7 +45,7 @@
           </form>
         </center>
         <center>
-          <form id="osxDownload" method="get" action="/igb/releases/early_access/IGB-master.dmg">
+          <form id="osxDownload" method="get" action="/igb/releases/early_access/IGB-main-JDK8.dmg">
             <button class="btn btn-custom btn-download d-none">
               <h2>
                 <span class="fa fa-cloud-download"></span>
@@ -55,34 +55,21 @@
           </form>
         </center>
         <center>
-          <form id="windows64Download" method="get" action="/igb/releases/early_access/IGB-master.exe">
+          <form id="windows64Download" method="get" action="/igb/releases/early_access/IGB-main-JDK8.exe">
             <button class="btn btn-custom btn-download d-none">
               <h2>
                 <span class="fa fa-cloud-download"></span>
                 &nbsp;Windows 64 bit
-
               </h2>
             </button>
           </form>
         </center>
-        <center>
-          <form id="windows32Download" class="hide" style="padding-top: 5px;" method="get" action="/igb/releases/early_access/IGB-master-32bit.exe">
-            <button class="btn btn-custom btn-download d-none" data-toggle="tooltip" data-placement="right"
-              title="Please consider upgrading your system to a 64 bit processor so you can take advantage of the larger amount of memory available to 64 bit Java Virtual Machines. This will allow you to work with larger data sets and will improve your performance when using IGB.">
-              <h2>
-                <span class="fa fa-cloud-download"></span>
-                &nbsp;Windows 32 bit
-              </h2>
-            </button>
-          </form>
-        </center>
-
       </div>
     </div>
     <div class="col-md text-center">
       <p>
         Click
-        <a href="download.html">here</a> for the released (and fully tested) version of IGB.
+        <a href="download.html">here</a> for the released and tested version of IGB.
       </p>
     </div>
     <div class="row">
@@ -101,9 +88,46 @@
         </div>
       </div>
     </div>
+    <div class="row d-none" id="earlyAccessMac">
+      <div id="Notarization" class="col-md text-center">
+        <div class="panel panel-default panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" style="font-size: 2em;">
+              Install Early Access IGB on Mac
+            </h3>
+          </div>
+          <div class="panel-body">
+            <p>The Early Access installer for Mac is not notarized. To install this unnotarized version, do the following steps.</p>
+            <ol>
+              <p>
+                <li><strong>Right-click</strong> and select <strong>Open</strong> on the .dmg file.</li><br>
+                <img src="images/earlyAccess/earlyAccess_dmg.png" alt="Right-click IGB .dmg file">
+              </p>
+              <p><br>
+                <li><strong>Right-click</strong> on the IGB icon and select <strong>Open</strong>.</li><br>
+                <img src="images/earlyAccess/earlyAccess_openInstaller.png" alt="Right-click IGB installer">
+              </p>
+              <p><br>
+                <li>Click <strong>OK</strong> if a popup appears saying IGB can't be opened.</li><br>
+                <img src="images/earlyAccess/earlyAccess_warning.png" alt="Right-click IGB installer">
+              </p>
+              <p><br>
+                <li><strong>Right-click</strong> on the IGB icon again and select <strong>Open</strong>.</li><br>
+                <img src="images/earlyAccess/earlyAccess_openInstaller.png" alt="Right-click IGB installer">
+              </p>
+              <p><br>
+                <li>Click the <strong>Open</strong> button. The IGB installer should start.</li><br>
+                <img src="images/earlyAccess/earlyAccess_startInstaller.png" alt="Click on Open button">
+              </p>
+                <li>Follow the installer instructions from here.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
     <hr>
     <div id="footer" class="container"></div>
-    <script src="js/renderFooter.js"></script>>
+    <script src="js/renderFooter.js"></script>
     </div>
   </div>
 
@@ -111,7 +135,7 @@
   </script>
   <!-- Download based on OS -->
   <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
-  < <!-- Show download button based on OS -->
+    <!-- Show download button based on OS -->
     <script src="js/renderDownloadButton.js"></script>
     <!-- Google analytics -->
     <script>
