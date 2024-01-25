@@ -19,7 +19,7 @@ To update or add content:
 * clone your fork to your preferred development environment
 * make a branch on your clone and edit 
 * push the branch to your fork
-* issue a pull request from your branch to master on the team (main) repo
+* issue a pull request from your branch to the main development branch (main) on the team (main) repo
 
 For testing and review, deploy your branch on a staging site. Include a link to the staging site in your pull request.
 
