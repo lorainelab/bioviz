@@ -269,7 +269,8 @@ async function addDataSourceToIGB(event) {
             .then(res => {
                 var version = res.split("=")[1].trim()
                 var status = true
-                if (version == "true" || parseInt(version.split(".")[2]) < 10) {
+                var version_parts = version.split(".").map(Number);
+                if(version == "true" || ((version_parts[0] <= 9)&&(version_parts[1] <= 1)&&(version_parts[2]<10))){
                     igbMessageToast("Could not add to IGB ", "Please update IGB to latest version")
                     status = false
                 } else {
