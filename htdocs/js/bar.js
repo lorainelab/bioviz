@@ -70,7 +70,7 @@ function contactIgb() {
 function loadData() {
   var query_elements = parseQuery(location.search.substring(1));
   var server_url = query_elements['server_url']; // any Quickload site URL
-  var bar_quickload_url = "http://lorainelab-quickload.scidas.org/bar/"
+  var bar_quickload_url = "http://bioviz.org/quickload/bar/"
   if (server_url.match(/bar/i)) {
     // requires exact match to Quickload site as appears in IGB Preferences > Data Sources
     igb_params['server_url'] = bar_quickload_url;
