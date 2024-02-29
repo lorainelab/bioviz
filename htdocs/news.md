@@ -1,6 +1,10 @@
 # IGB NEWS
 
 * * *
+### Feburary 22, 2024: NCRC Research Notes(formerly CHEM101)
+<a href="/images/pdf/IGB_poster_Chem101.pdf"><img src="/images/chem101_poster.png" alt="POSTER image"></a>
+
+* * *
 
 ### November 3, 2022: <a href="./download.html">IGB 9.1.10</a> released
 
