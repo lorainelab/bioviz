@@ -1,8 +1,19 @@
 # IGB NEWS
 
 * * *
-### Feburary 22, 2024: NCRC Research Notes(formerly CHEM101)
-<a href="/images/pdf/IGB_poster_Chem101.pdf"><img src="/images/chem101_poster.png" alt="POSTER image"></a>
+### February 22, 2024: NCRC Research Notes
+
+Last week, we had the opportunity to present a poster at Research Notes (formerly CHEM101) on the North Carolina
+Research Campus (NCRC). The poster provided an overview of RNA-Seq and ChIP-Seq visual data analyses in IGB, as well as
+some of the genomic data stores that IGB can use to stream data for visualization. If you'd like to view the full
+poster, click on the image below.
+
+<style>
+.posters {
+max-width: 100%
+}
+</style>
+<a href="images/pdf/CHEM101_IGB_Poster.pdf"><img src="images/CHEM101_IGB_Poster.png" class="posters" alt="Poster image"></a>
 
 * * *
 
@@ -33,8 +44,7 @@ IGB, visit the <a href="https://wiki.bioviz.org/confluence/display/ITD/9.1.6">IG
 
 ### May 29, 2020: <a href="./genome-dashboard">IGB Genomes Dashboard</a>
 
-To make it easier for IGB users to find and load genome versions, we created
-a <a href="./genome-dashboard">IGB Genomes</a>, which shows you every species and
+To make it easier for IGB users to find and load genome versions, we created <a href="./genome-dashboard">IGB Genomes</a>, which shows you every species and
 genome assembly version available to load into IGB.
 
 UNC Charlotte graduate students Sameer Shanbhag (CS MS) and later Philip Badzuh
