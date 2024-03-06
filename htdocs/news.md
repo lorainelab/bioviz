@@ -2,6 +2,30 @@
 
 * * *
 
+### March 6, 2024: <a href="./download.html">IGB 10.0.0</a> released
+
+Today we released version 10.0.0 of Integrated Genome Browser.
+
+For a list of new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/10.0.0">IGB 10.0.0 Release Notes</a>.
+
+* * *
+
+### February 22, 2024: NCRC Research Notes
+
+Last week, we had the opportunity to present a poster at Research Notes (formerly CHEM101) on the North Carolina
+Research Campus (NCRC). The poster provided an overview of RNA-Seq and ChIP-Seq visual data analyses in IGB, as well as
+some of the genomic data stores that IGB can use to stream data for visualization. If you'd like to view the full
+poster, click on the image below.
+
+<style>
+.posters {
+max-width: 100%
+}
+</style>
+<a href="images/pdf/CHEM101_IGB_Poster.pdf"><img src="images/CHEM101_IGB_Poster.png" class="posters" alt="Poster image"></a>
+
+* * *
+
 ### November 3, 2022: <a href="./download.html">IGB 9.1.10</a> released
 
 Today we released version 9.1.10 of Integrated Genome Browser.
@@ -29,8 +53,7 @@ IGB, visit the <a href="https://wiki.bioviz.org/confluence/display/ITD/9.1.6">IG
 
 ### May 29, 2020: <a href="./genome-dashboard">IGB Genomes Dashboard</a>
 
-To make it easier for IGB users to find and load genome versions, we created
-a <a href="./genome-dashboard">IGB Genomes</a>, which shows you every species and
+To make it easier for IGB users to find and load genome versions, we created <a href="./genome-dashboard">IGB Genomes</a>, which shows you every species and
 genome assembly version available to load into IGB.
 
 UNC Charlotte graduate students Sameer Shanbhag (CS MS) and later Philip Badzuh
