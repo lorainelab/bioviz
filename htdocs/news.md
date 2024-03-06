@@ -1,6 +1,15 @@
 # IGB NEWS
 
 * * *
+
+### March 6, 2024: <a href="./download.html">IGB 10.0.0</a> released
+
+Today we released version 10.0.0 of Integrated Genome Browser.
+
+For a list of new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/10.0.0">IGB 10.0.0 Release Notes</a>.
+
+* * *
+
 ### February 22, 2024: NCRC Research Notes
 
 Last week, we had the opportunity to present a poster at Research Notes (formerly CHEM101) on the North Carolina
