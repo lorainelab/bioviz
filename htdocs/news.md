@@ -2,11 +2,19 @@
 
 * * *
 
-### March 6, 2024: <a href="./download.html">IGB 10.0.0</a> released
+### March 6, 2024: <a href="./download.html">IGB 10.0.0</a> Released
 
-Today we released version 10.0.0 of Integrated Genome Browser.
+Today, we released version 10.0.0 of Integrated Genome Browser.
 
-For a list of new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/10.0.0">IGB 10.0.0 Release Notes</a>.
+##### New Features and Improvements:
+* Fixed an issue where the IGB installer would disappear during installation.
+* Fixed an issue where IGB would crash unexpectedly.
+* Added support for CRAM files.
+* Added support for nucleotide symbols when searching for residues in the Advanced Search tab.
+* Exons are now numbered ("block number") when using the tooltips or Selection Info tab.
+* Updated list of restriction enzymes.
+
+For a complete list of the new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/10.0.0">IGB 10.0.0 Release Notes</a>.
 
 * * *
 
