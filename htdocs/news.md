@@ -25,6 +25,9 @@ This new version of IGB uses the most up-to-date, stable version of
 the Java language - JDK 21. In addition to updating the Java that IGB
 uses, we also updated nearly every third-party library IGB is using.
 
+Thanks to these updates, you may notice some subtle improvements in
+your experience using IGB - such as faster data loading and more efficient
+use of computer memory. 
 
 ##### New Features and Improvements:
 
