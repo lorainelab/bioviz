@@ -2,17 +2,37 @@
 
 * * *
 
-### March 6, 2024: <a href="./download.html">IGB 10.0.0</a> Released
+### May 6, 2024: IGB 10.0.1 "bug fix" release
+
+Today, we released version 10.0.1 of Integrated Genome Browser.
+
+This new "bug fix" version of IGB fixes two major issues reported by the IGB community since the IGB 10.0.0 release:
+
+* Users reported not being able to open "bigwig" format files with space characters either in the file name itself or in one or more folders contain the files. This is now fixed.
+* We also fixed a problem with IGB's "color by" visual analytics feature. The heatmap editor was not launching when required. This is also now fixed.
+
+* * *
+
+### March 6, 2024: IGB 10.0.0 Released
 
 Today, we released version 10.0.0 of Integrated Genome Browser.
 
+This new release included several new features (see below), but by far
+the most significant aspect of this new version of IGB is probably
+going to be invisible to most IGB users.
+
+This new version of IGB uses the most up-to-date, stable version of
+the Java language - JDK 21. In addition to updating the Java that IGB
+uses, we also updated nearly every third-party library IGB is using.
+
+
 ##### New Features and Improvements:
-* Fixed an issue where the IGB installer would disappear during installation.
-* Fixed an issue where IGB would crash unexpectedly.
-* Added support for CRAM files.
-* Added support for nucleotide symbols when searching for residues in the Advanced Search tab.
-* Exons are now numbered ("block number") when using the tooltips or Selection Info tab.
-* Updated list of restriction enzymes.
+
+* IGB can now open and display data from CRAM files, a sequence alignment data format like BAM, but smaller. 
+* Sequence pattern search in IGB's Advanced Search tab now handles nucleotide ambiguity codes (e.g., Y = C or T). This is especially useful when searching for possible recognition sites for transcriptional regulators.
+* IGB now reports "block number" in tooltips and Selection Info tabbed panel for Annotation tracks. 
+* We updated IGB's list of restriction enzymes and their recognition sites.
+* Bug fixes: We corrected issues in which IGB or the IGB installer would crash or disappear
 
 For a complete list of the new features and improvements, see <a href="https://wiki.bioviz.org/confluence/display/ITD/10.0.0">IGB 10.0.0 Release Notes</a>.
 
@@ -20,10 +40,14 @@ For a complete list of the new features and improvements, see <a href="https://w
 
 ### February 22, 2024: NCRC Research Notes
 
-Last week, we had the opportunity to present a poster at Research Notes (formerly CHEM101) on the North Carolina
-Research Campus (NCRC). The poster provided an overview of RNA-Seq and ChIP-Seq visual data analyses in IGB, as well as
-some of the genomic data stores that IGB can use to stream data for visualization. If you'd like to view the full
-poster, click on the image below.
+We presented our work in poster format at the Research Notes (formerly
+CHEM101) meeting on the North Carolina Research Campus (NCRC).
+
+The poster showed how you can visually analyze RNA-Seq and ChIP-Seq
+alignments and coverage graphs data in IGB. It also showed genomic
+data stores IGB uses to retrieve data for visualization.
+
+To see the poster, click the image below:
 
 <style>
 .posters {
