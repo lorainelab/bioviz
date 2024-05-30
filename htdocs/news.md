@@ -57,7 +57,7 @@ To see the poster, click the image below:
 max-width: 100%
 }
 </style>
-<a href="images/pdf/CHEM101_IGB_Poster.pdf"><img src="images/CHEM101_IGB_Poster.png" class="posters" alt="Poster image"></a>
+<a href="images/pdf/2024-03-01-NCRCRN.pdf"><img src="images/2024-03-01-NCRCRN.png" class="posters" alt="Poster image"></a>
 
 * * *
 
