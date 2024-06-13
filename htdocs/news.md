@@ -1,5 +1,14 @@
 # IGB NEWS
 
+### June 11, 2024: Virtual Workshop - Plant Biology 2024
+
+We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load 
+RNA-Seq alignment data, visualize mutations and gene expression differences, and save reproducible, high-quality images 
+for their next publication.
+
+You can access the resources we used during this workshop as well as various practice materials by clicking on the 
+following link and enrolling in our Canvas course: https://canvas.instructure.com/courses/9522993
+
 * * *
 
 ### May 6, 2024: IGB 10.0.1 "bug fix" release
