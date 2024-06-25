@@ -199,7 +199,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         el.addEventListener('click', (event) => {
             if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
-            igbMessageToast("Opening in IGB", "Establishing connection with IGB...", "cog")
+            igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
                 .then(res => {
                     console.log(res);
@@ -208,7 +208,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                 })
                 .catch(() => {
                     // console.error('IGB is not running');
-                    igbMessageToast("IGB is not running:", "Start IGB to open this genome version in IGB.");
+                    $('#igbNotRunningModal').modal('toggle');
                 });
             }else{
                 $('#unsupportedBrowserDialog').modal('toggle');
@@ -281,17 +281,17 @@ async function addDataSourceToIGB(event) {
                     try {
                         xmlHttp.send(null);
                     } catch (e) {
-                        igbMessageToast("IGB is not running", " Please start IGB")
+                        $('#igbNotRunningModal').modal('toggle');
                     }
                     if (xmlHttp.status != 200) {
-                        igbMessageToast("IGB is not running", " Please start IGB")
+                        $('#igbNotRunningModal').modal('toggle');
                     } else {
-                        igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
+                        $('#igbNotRunningModal').modal('toggle');
                     }
                 }
 
             }).catch((e) => {
-            igbMessageToast("IGB is not running.", "Please start IGB");
+            $('#igbNotRunningModal').modal('toggle');
         })
     }else{
         $('#unsupportedBrowserDialog').modal('toggle');

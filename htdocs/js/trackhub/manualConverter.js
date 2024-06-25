@@ -76,7 +76,7 @@ async function addDataSourceToIGB(event) {
                     xmlHttp.open("GET", builtURL, false);
                     xmlHttp.send(null);
                     if (xmlHttp.status != 200) {
-                        igbMessageToast("IGB is not running:", "Please start IGB.")
+                        $('#igbNotRunningModal').modal('toggle');
                     } else {
                         igbMessageToast("Success!", "Adding data source to IGB...", "check-circle")
                     }
@@ -84,7 +84,7 @@ async function addDataSourceToIGB(event) {
             })
             .catch(() => {
                 // console.error('IGB is not running');
-                igbMessageToast("IGB is not running:", "Please start IGB.");
+                $('#igbNotRunningModal').modal('toggle');
             });
     }
 }
