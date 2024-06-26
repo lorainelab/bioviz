@@ -6,6 +6,7 @@ const templateRow = $('template#row');
 const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
 const UCSC_BROWSER_URL = "https://genome.ucsc.edu/cgi-bin/hgTracks"
 // Perform a GET request for a given URL
+
 async function getHttpRequest(url) {
     try {
         const response = await axios.get(url);
@@ -199,7 +200,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         el.addEventListener('click', (event) => {
             if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
-            igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+            igbMessageToast("Connecting...", "Connecting to IGB", "cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
                 .then(res => {
                     console.log(res);
@@ -264,7 +265,7 @@ function buildQuickloadUrl(event) {
 async function addDataSourceToIGB(event) {
     if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
         var xmlHttp = new XMLHttpRequest();
-        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+        igbMessageToast("Connecting...", "Connecting to IGB", "cog")
         getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 var version = res.split("=")[1].trim()
@@ -286,7 +287,7 @@ async function addDataSourceToIGB(event) {
                     if (xmlHttp.status != 200) {
                         $('#igbNotRunningModal').modal('toggle');
                     } else {
-                        $('#igbNotRunningModal').modal('toggle');
+                        igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
                     }
                 }
 

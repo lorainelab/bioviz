@@ -39,14 +39,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">To view a genome, start IGB</h5>
+                <h5 class="modal-title">Please start IGB</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-footer">
                 <p>Don't have IGB? No problem!</p>
-                <a type="button" class="btn btn-custom btn-danger" target="_blank" onclick="window.location=igb_url" style="color:white">
+                <a type="button" class="btn btn-custom btn-danger" target="_blank" onclick="window.location=igb_url_download" style="color:white">
                     Install IGB &nbsp;&nbsp;
                     <i class="fa fa-download">
                     </i></a>
@@ -162,8 +162,10 @@
     <div id="footer" class="container"></div>
     <script src="js/renderFooter.js"></script>
 </div>
-
+<script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
+<script src="js/renderDownloadButton.js"></script>
 <script type="module" src="js/trackhub/manualConverter.js"></script>
+<!--<script src="js/renderDownloadButton.js"></script>-->
 <!-- Google analytics -->
 <script>
     src = "js/googleAnalytics.js"

@@ -45,7 +45,7 @@ async function addDataSourceToIGB(event) {
     const classes = event.target.classList.toString().split(' ')
 
     if (classes.includes('add-data-sources')) {
-        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+        igbMessageToast("Connecting...", "Connecting to IGB", "cog")
         getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 var version = res.split("=")[1].trim()
