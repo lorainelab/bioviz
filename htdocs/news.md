@@ -66,7 +66,7 @@ To see the poster, click the image below:
 max-width: 100%
 }
 </style>
-<a href="images/pdf/2024-03-01-NCRCRN.pdf"><img src="images/2024-03-01-NCRCRN.png" class="posters" alt="Poster image"></a>
+<a href="images/pdf/2024-02-22-NCRCRN.pdf"><img src="images/2024-02-22-NCRCRN.png" class="posters" alt="Poster image"></a>
 
 * * *
 
