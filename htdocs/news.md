@@ -11,6 +11,23 @@ following link and enrolling in our Canvas course: https://canvas.instructure.co
 
 * * *
 
+### July 1, 2024: 2024 Galaxy Community Conference (GCC2024)
+
+Last week, our data manager and trainer, Paige Kulzer, presented a short talk and poster (see below) at the Galaxy Community
+Conference in Brno, Czech Republic.
+
+Her talk, titled "Using Galaxy and Integrated Genome Browser to study tardigrade biology", highlighted the importance of
+maintaining genomic visualization resources for non-model organisms, especially in the context of conservation and
+emerging model systems, as well as the ongoing integration between Galaxy and the Integrated Genome Browser.
+
+If there are any species with annotated genomes that you would like to see represented in IGB, especially those that may
+still be relatively understudied, let us know! We want to continue adding support for these species so that scientists can
+visualize and understand their data better.
+
+<img src="images/GCC2024_PaigeAtPoster.jpg" alt="image-1" style="width:50%; height:auto"/>
+
+* * *
+
 ### May 6, 2024: IGB 10.0.1 "bug fix" release
 
 Today, we released version 10.0.1 of Integrated Genome Browser.
