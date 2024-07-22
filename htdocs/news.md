@@ -1,13 +1,17 @@
 # IGB NEWS
 
-### July 19, 2024: Society for Developmental Biology (SDB) 83rd Annual Meeting
+* * *
 
-We recently presented a poster at the SDB 83rd Annual Meeting in Atlanta, Georgia. This poster showcased the addition of
-two tardigrade genomes (_Hypsibius exemplaris_ and _Ramazzottius varieornatus_) as well as the addition of tardigrade
-RNA-Seq datasets to the Integrated Genome Browser.
+### July 19, 2024: Society for Developmental Biology (SDB) 83rd Annual Meeting
+Paige Kulzer and Dr. Nowlan Freese recently traveled to Atlanta, Georgia to represent IGB at the SDB 83rd Annual 
+Meeting. Paige presented a poster which showcased the addition of two tardigrade genomes (_Hypsibius exemplaris_ and _Ramazzottius varieornatus_) 
+as well as the addition of several tardigrade RNA-Seq datasets to the Integrated Genome Browser.
+
+Paige and Nowlan also hosted an exhibitor booth at the conference which featured IGB stickers and postcards showcasing various types of sequencing data in the browser. 
+These were designed with the help of a masters student in our lab, Dylan Marrotte.
 
 <div>
-<a href="images/SDB2024_PaigeAtPoster.png"><img src="images/SDB2024_PaigeAtPoster.png" alt="PaigeAtPoster" style="width:50%; height:auto"/></a><a href="images/SDB2024_PaigeAtBooth.png"><img src="images/SDB2024_PaigeAtBooth.png" alt="PaigeAtBooth" style="width:50%; height:auto"/></a>
+<a href="images/SDB2024_PaigeAtPoster.png"><img src="images/SDB2024_PaigeAtPoster.png" alt="PaigeAtPoster" style="width:50%; height:auto"/></a><a href="images/SDB2024_PaigeAtBooth.png"><img src="images/SDB2024_PaigeAtBooth.png" alt="PaigeAtBooth" style="width:50%; height:auto"/></a><br/><br/>
 </div>
 
 * * *
@@ -33,11 +37,11 @@ visualize and understand their data better.
 
 ### June 11, 2024: Virtual Workshop - Plant Biology 2024
 
-We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load 
-RNA-Seq alignment data, visualize mutations and gene expression differences, and save reproducible, high-quality images 
+We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load
+RNA-Seq alignment data, visualize mutations and gene expression differences, and save reproducible, high-quality images
 for their next publication.
 
-You can access the resources we used during this workshop as well as various practice materials by clicking on the 
+You can access the resources we used during this workshop as well as various practice materials by clicking on the
 following link and enrolling in our Canvas course: https://canvas.instructure.com/courses/9522993
 
 * * *
