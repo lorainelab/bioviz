@@ -1,5 +1,17 @@
 # IGB NEWS
 
+### July 19, 2024: Society for Developmental Biology (SDB) 83rd Annual Meeting
+
+We recently presented a poster at the SDB 83rd Annual Meeting in Atlanta, Georgia. This poster showcased the addition of
+two tardigrade genomes (_Hypsibius exemplaris_ and _Ramazzottius varieornatus_) as well as the addition of tardigrade
+RNA-Seq datasets to the Integrated Genome Browser.
+
+<div>
+<a href="images/SDB2024_PaigeAtPoster.png"><img src="images/SDB2024_PaigeAtPoster.png" alt="PaigeAtPoster" style="width:50%; height:auto"/></a><a href="images/SDB2024_PaigeAtBooth.png"><img src="images/SDB2024_PaigeAtBooth.png" alt="PaigeAtBooth" style="width:50%; height:auto"/></a>
+</div>
+
+* * *
+
 ### June 11, 2024: Virtual Workshop - Plant Biology 2024
 
 We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load 
