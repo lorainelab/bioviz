@@ -45,7 +45,7 @@ async function addDataSourceToIGB(event) {
     const classes = event.target.classList.toString().split(' ')
 
     if (classes.includes('add-data-sources')) {
-        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+        igbMessageToast("Connecting...", "Connecting to IGB", "cog")
         getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 var version = res.split("=")[1].trim()
@@ -76,7 +76,7 @@ async function addDataSourceToIGB(event) {
                     xmlHttp.open("GET", builtURL, false);
                     xmlHttp.send(null);
                     if (xmlHttp.status != 200) {
-                        igbMessageToast("IGB is not running:", "Please start IGB.")
+                        $('#igbNotRunningModal').modal('toggle');
                     } else {
                         igbMessageToast("Success!", "Adding data source to IGB...", "check-circle")
                     }
@@ -84,7 +84,7 @@ async function addDataSourceToIGB(event) {
             })
             .catch(() => {
                 // console.error('IGB is not running');
-                igbMessageToast("IGB is not running:", "Please start IGB.");
+                $('#igbNotRunningModal').modal('toggle');
             });
     }
 }

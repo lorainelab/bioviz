@@ -6,6 +6,7 @@ const templateRow = $('template#row');
 const BACKEND_BASE_URL = BACKEND_DOMAIN.includes("http") ? BACKEND_DOMAIN : `https://${BACKEND_DOMAIN}`
 const UCSC_BROWSER_URL = "https://genome.ucsc.edu/cgi-bin/hgTracks"
 // Perform a GET request for a given URL
+
 async function getHttpRequest(url) {
     try {
         const response = await axios.get(url);
@@ -199,7 +200,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
         el.addEventListener('click', (event) => {
             if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
             console.log(`Opening ${event.target.dataset.igbGenomeVersion} in IGB`);
-            igbMessageToast("Opening in IGB", "Establishing connection with IGB...", "cog")
+            igbMessageToast("Connecting...", "Connecting to IGB", "cog")
             getHttpRequest('http://localhost:7085/igbStatusCheck')
                 .then(res => {
                     console.log(res);
@@ -208,7 +209,7 @@ function finalizeRow(organismsGenomes, igbOrganismsGenomes, rowInd) {
                 })
                 .catch(() => {
                     // console.error('IGB is not running');
-                    igbMessageToast("IGB is not running:", "Start IGB to open this genome version in IGB.");
+                    $('#igbNotRunningModal').modal('toggle');
                 });
             }else{
                 $('#unsupportedBrowserDialog').modal('toggle');
@@ -264,7 +265,7 @@ function buildQuickloadUrl(event) {
 async function addDataSourceToIGB(event) {
     if (navigator.userAgent.indexOf("Chrome") > -1 || navigator.userAgent.indexOf("Firefox") > -1 || navigator.userAgent.indexOf("Edg") > -1) {
         var xmlHttp = new XMLHttpRequest();
-        igbMessageToast("Connecting...", "Trying to find IGB open in the system", "cog")
+        igbMessageToast("Connecting...", "Connecting to IGB", "cog")
         getHttpRequest('http://localhost:7085/igbStatusCheck')
             .then(res => {
                 var version = res.split("=")[1].trim()
@@ -281,17 +282,17 @@ async function addDataSourceToIGB(event) {
                     try {
                         xmlHttp.send(null);
                     } catch (e) {
-                        igbMessageToast("IGB is not running", " Please start IGB")
+                        $('#igbNotRunningModal').modal('toggle');
                     }
                     if (xmlHttp.status != 200) {
-                        igbMessageToast("IGB is not running", " Please start IGB")
+                        $('#igbNotRunningModal').modal('toggle');
                     } else {
                         igbMessageToast("Success!", "Adding data source to IGB", "check-circle")
                     }
                 }
 
             }).catch((e) => {
-            igbMessageToast("IGB is not running.", "Please start IGB");
+            $('#igbNotRunningModal').modal('toggle');
         })
     }else{
         $('#unsupportedBrowserDialog').modal('toggle');
