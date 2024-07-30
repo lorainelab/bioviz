@@ -12,17 +12,6 @@ RNA-Seq datasets to the Integrated Genome Browser.
 
 * * *
 
-### June 11, 2024: Virtual Workshop - Plant Biology 2024
-
-We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load 
-RNA-Seq alignment data, visualize mutations and gene expression differences, and save reproducible, high-quality images 
-for their next publication.
-
-You can access the resources we used during this workshop as well as various practice materials by clicking on the 
-following link and enrolling in our Canvas course: https://canvas.instructure.com/courses/9522993
-
-* * *
-
 ### July 1, 2024: 2024 Galaxy Community Conference (GCC2024)
 
 Last week, our data manager and trainer, Paige Kulzer, presented a short talk and poster (see below) at the Galaxy Community
@@ -36,7 +25,20 @@ If there are any species with annotated genomes that you would like to see repre
 still be relatively understudied, let us know! We want to continue adding support for these species so that scientists can
 visualize and understand their data better.
 
-<img src="images/GCC2024_PaigeAtPoster.jpg" alt="image-1" style="width:50%; height:auto"/>
+**Note**: Our poster was a tad over-sized (oops!) and therefore hard to read, but you can click the image below to view the poster as a PDF.
+
+<a href="images/pdf/GCC2024-Poster-Final.pdf"><img style="width: auto; height: 600px;" src="images/GCC2024_PaigeAtPoster.jpg" alt="GCC2024-PaigeAtPoster"/></a><br/>
+
+* * *
+
+### June 11, 2024: Virtual Workshop - Plant Biology 2024
+
+We recently presented a virtual workshop demonstrating how researchers can use the Integrated Genome Browser to load 
+RNA-Seq alignment data, visualize mutations and gene expression differences, and save reproducible, high-quality images 
+for their next publication.
+
+You can access the resources we used during this workshop as well as various practice materials by clicking on the 
+following link and enrolling in our Canvas course: https://canvas.instructure.com/courses/9522993
 
 * * *
 
