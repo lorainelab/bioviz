@@ -27,5 +27,4 @@ $(window).on("load", function(e) {
   if (os == "Mac OS X" || os == "Mac OS") {
     $("#earlyAccessMac").removeClass('d-none');
   }
-  alert(window.igb_url_download)
 });
