@@ -2,6 +2,17 @@
 
 * * *
 
+### September 9, 2024: The 2024 Biomedical Sciences Symposium
+Dr. Nowlan Freese presented a short talk earlier this week at the 2024 Biomedical Sciences Symposium at UNC Charlotte Center City.
+
+His talk, titled "Visualizing DNA with the Integrated Genome Browser, free and open source", focused on the rapid decline of whole-genome sequencing costs,
+the subsequent rise of direct-to-consumer genetic testing, and the efforts our team has made to support the visualization of personal genomics data that this testing produces.
+
+<a href="https://www.linkedin.com/posts/unc-charlotte-college-of-computing-and-informatics_we-at-the-unc-charlotte-college-of-computing-activity-7239622009817567232--BK3?utm_source=share&utm_medium=member_desktop">Check out this LinkedIn post</a> by the UNC Charlotte College of Computing and Informatics to see all the other talented research faculty 
+from our college that showcased their work at the symposium!
+
+* * *
+
 ### July 19, 2024: Society for Developmental Biology (SDB) 83rd Annual Meeting
 Paige Kulzer and Dr. Nowlan Freese recently traveled to Atlanta, Georgia to represent IGB at the SDB 83rd Annual 
 Meeting. Paige presented a poster which showcased the addition of two tardigrade genomes (_Hypsibius exemplaris_ and _Ramazzottius varieornatus_) 
