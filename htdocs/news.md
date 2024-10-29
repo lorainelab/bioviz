@@ -2,6 +2,36 @@
 
 * * *
 
+### October 21, 2024: The 2024 Biological Sciences Symposium
+Jaya Sravani Sirigineedi, a Computer Science master's student in our lab, recently presented a poster at UNC-Charlotte's Biological Sciences Symposium.
+
+Her project, titled "Adding UCSC Genomes into IGB using REST APIs", focused on the integration of hundreds of genomic resources 
+(including genomes as well as datasets) into the Integrated Genome Browser via a REST API created and maintained by the UCSC Genome Browser. 
+
+
+Her work is critical to keeping IGB up-to-date with the latest genomic resources, a task our team was completing manually until now!
+
+<div>
+<a href="images/2024-10-21-BSS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-21-BSS.jpeg" alt="BSS2024-SravaniAtPoster"/></a><br/>
+</div>
+
+* * *
+
+### October 17, 2024: Bioinformatics Assembly of Students (BiAS) Workshop
+Last week, the Loraine Lab hosted a workshop with BiAS, a graduate student organization on campus aimed at providing resources and 
+support for Bioinformatics students throughout their graduate program. 
+
+The workshop covered the basics of loading and visualizing RNA-Seq data,
+creating and interpreting scaled coverage graphs, and how to visually quality control "seq" data.
+
+Thank you all for coming, and stay tuned for our next BiAS workshop!
+
+<div>
+<a href="images/2024-10-17-BiAS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-17-BiAS.jpeg" alt="IGB-BiAS-Workshop"/></a><br/>
+</div>
+
+* * *
+
 ### September 9, 2024: The 2024 Biomedical Sciences Symposium
 Dr. Nowlan Freese presented a short talk earlier this week at the 2024 Biomedical Sciences Symposium at UNC Charlotte Center City.
 
