@@ -12,7 +12,7 @@ Her project, titled "Adding UCSC Genomes into IGB using REST APIs", focused on t
 Her work is critical to keeping IGB up-to-date with the latest genomic resources, a task our team was completing manually until now!
 
 <div>
-<a href="images/2024-10-21-BSS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-21-BSS.jpeg" alt="BSS2024-SravaniAtPoster"/></a><br/>
+<a href="images/2024-10-21-BSS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-21-BSS.jpeg" alt="BSS2024-SravaniAtPoster"/></a><br/><br/>
 </div>
 
 * * *
@@ -27,7 +27,7 @@ creating and interpreting scaled coverage graphs, and how to visually quality co
 Thank you all for coming, and stay tuned for our next BiAS workshop!
 
 <div>
-<a href="images/2024-10-17-BiAS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-17-BiAS.jpeg" alt="IGB-BiAS-Workshop"/></a><br/>
+<a href="images/2024-10-17-BiAS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-17-BiAS.jpeg" alt="IGB-BiAS-Workshop"/></a><br/><br/>
 </div>
 
 * * *
