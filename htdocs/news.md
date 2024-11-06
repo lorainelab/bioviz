@@ -2,6 +2,20 @@
 
 * * *
 
+### November 1, 2024: American Society of Human Genetics (ASHG) 2024
+Dr. Nowlan Freese and Paige Kulzer will be traveling to the "Mile High City" next week to attend the ASHG 2024 annual meeting in Denver
+where they'll be advertising the upcoming release of IGB version 10.1.0. To get this new version ahead of the release, download the installer from our 
+Early Access page - https://bioviz.org/earlyAccessDownload.html.
+
+We'll be hosting an exhibitor booth to answer all of your IGB-related questions and hand out swag such as stickers, postcards, and more.
+We'll also have two posters on display from 2:30 PM - 4:30 PM MT at the poster session on Friday, November 8. These posters 
+will highlight some of the new features and fixes included in IGB version 10.1.0, as well as why it's important to use
+visualization tools such as IGB to visualize your "Seq" data.
+
+We hope to see you all there!
+
+* * *
+
 ### October 21, 2024: The 2024 Biological Sciences Symposium
 Jaya Sravani Sirigineedi, a Computer Science master's student in our lab, recently presented a poster at UNC-Charlotte's Biological Sciences Symposium.
 
