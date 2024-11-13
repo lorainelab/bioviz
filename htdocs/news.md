@@ -10,7 +10,7 @@ This new version has many new features and improvements.
 
 Highlights include:
 
-* As of this version, IGB can now open and display the contents of CRAM files. This new feature will be particularly helpful for members of the public who used individual genome sequencing services to get their own personal genome sequenced. Using IGB, you can now explore your own personal data, and check for interesting differences between yourself and the canonical reference genome.
+* As of this version, IGB can now open and display the contents of CRAM files. This new feature will be particularly helpful for members of the public who used individual genome sequencing services to get their own personal genome sequenced. This is because popular sequencing services (e.g., Nebula Genomics) share the new sequence data with their customers using the CRAM format, a compact way to distribute genome sequences from people's samples. Thanks to this, you can now open the CRAM file you downloaded from your sequencing service in IGB, and then use IGB to explore your own sequence data in ways no-one dreamed would be possible until very recently. This can be a great way to learn about genome science, and check for interesting differences between yourself, the canonical reference genome, and even data other people have shared with just you or with the public. 
 
 * We added a new data source to IGB - UCSC Genome Browser data tracks. Thanks to this new feature, IGB users can open and display data from the UCSC Genome Browser system. This means that many more data tracks are available than before, as well many more genome assemblies. 
 
