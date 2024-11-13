@@ -2,6 +2,22 @@
 
 * * *
 
+### November 13, 2024: IGB 10.1.0 released today
+
+Today we released Integrated Genome Browser version 10.1.0.
+
+This new version has many new features and improvements.
+
+Highlights include:
+
+* As of this version, IGB can now open and display the contents of CRAM files. This new feature will be particularly helpful for members of the public who used individual genome sequencing services to get their own personal genome sequenced. This is because popular sequencing services (e.g., Nebula Genomics) share the new sequence data with their customers using the CRAM format, a compact way to distribute genome sequences from people's samples. Thanks to this, you can now open the CRAM file you downloaded from your sequencing service in IGB, and then use IGB to explore your own sequence data in ways no-one dreamed would be possible until very recently. This can be a great way to learn about genome science, and check for interesting differences between yourself, the canonical reference genome, and even data other people have shared with just you or with the public. 
+
+* We added a new data source to IGB - UCSC Genome Browser data tracks. Thanks to this new feature, IGB users can open and display data from the UCSC Genome Browser system. This means that many more data tracks are available than before, as well many more genome assemblies. 
+
+* We did, however, have to retire an older data source in this new version of IGB - the DAS (Distributed Annotation Source) data source that provided access to some, but not all, UCSC Genome Browser tracks. We did that because, unfortunately, the UCSC Genome Browser team has expresssed relucantance to continue maintaining and supporting that service. However, if you were using that service and would like to re-activate it in your copy of IGB, we can help. Just let us know and we would be glad to assist!
+
+* * *
+
 ### November 1, 2024: American Society of Human Genetics (ASHG) 2024
 Dr. Nowlan Freese and Paige Kulzer will be traveling to the "Mile High City" next week to attend the ASHG 2024 annual meeting in Denver
 where they'll be advertising the upcoming release of IGB version 10.1.0. To get this new version ahead of the release, download the installer from our 
