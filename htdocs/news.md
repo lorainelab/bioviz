@@ -2,6 +2,17 @@
 
 * * *
 
+### November 15, 2024: ASHG 2024 recap
+ASHG 2024 was a resounding success! Thank you to all the speakers, poster presenters, and fellow exhibitors for putting on a great
+conference. We would also like to thank everyone that stopped by our booth! If you haven't heard back from us yet but you'd like to get in touch, 
+please don't hesitate to send us an email or set up an appointment via our website (https://bioviz.org/help.html).
+
+<div>
+<a href="images/2024-11-15-ASHG.jpeg"><img style="width: auto; height: 600px;" src="images/2024-11-15-ASHG.jpeg" alt="ASHG2024-PaigeAtBooth"/></a><br/><br/>
+</div>
+
+* * *
+
 ### November 13, 2024: IGB 10.1.0 released today
 
 Today we released Integrated Genome Browser version 10.1.0.
