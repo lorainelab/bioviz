@@ -33,37 +33,37 @@
     </div>
     <div class="row">
       <div class="col-md text-center">
-        <center>
+        <div style="text-align: center;">
           <!-- This is not valid html5, but does work in all major browsers... shouldn't be needed but the dom on this page is off in some way, and this hack is saving time on debugging the larger issue with a normal css layout -->
           <form id="linuxDownload" method="get" action="/igb/releases/early_access/IGB-linux-amd64-main.sh">
-            <button class="btn btn-custom btn-download d-none">
+            <button class="btn btn-custom btn-download d-none btn-ga-early-access-download" os-name="Linux">
               <h2>
                 <span class="fa fa-cloud-download"></span>
                 &nbsp;Linux 64 bit
               </h2>
             </button>
           </form>
-        </center>
-        <center>
+        </div>
+        <div style="text-align: center;">
           <form id="osxDownload" method="get" action="/igb/releases/early_access/IGB-macos-universal-main.dmg">
-            <button class="btn btn-custom btn-download d-none">
+            <button class="btn btn-custom btn-download d-none btn-ga-early-access-download" os-name="Mac">
               <h2>
                 <span class="fa fa-cloud-download"></span>
                 &nbsp;Mac OS X
               </h2>
             </button>
           </form>
-        </center>
-        <center>
+        </div>
+        <div style="text-align: center;">
           <form id="windows64Download" method="get" action="/igb/releases/early_access/IGB-windows-amd64-main.exe">
-            <button class="btn btn-custom btn-download d-none">
+            <button class="btn btn-custom btn-download d-none btn-ga-early-access-download" os-name="Windows">
               <h2>
                 <span class="fa fa-cloud-download"></span>
                 &nbsp;Windows 64 bit
               </h2>
             </button>
           </form>
-        </center>
+        </div>
       </div>
     </div>
     <div class="col-md text-center">
@@ -139,6 +139,7 @@
     <script src="js/renderDownloadButton.js"></script>
     <!-- Google analytics -->
   <script src = "js/googleAnalytics.js"></script>
+  <script src="js/sendCustomDownloadGAEvent.js"></script>
 
 </body>
 

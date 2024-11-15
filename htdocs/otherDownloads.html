@@ -41,7 +41,7 @@
           <div class="row">
             <div class="col-md">
               <form id="linuxDownload" method="get" action="igb/releases/current/IGB_unix_current.sh">
-                <button class="btn btn-custom btn-small btn-download">
+                <button class="btn btn-custom btn-small btn-download btn-ga-download" os-name="Linux">
                   <h1>
                     <span class="fa fa-cloud-download"></span>
                     &nbsp;Linux 64 bit
@@ -67,7 +67,7 @@
           <div class="row">
             <div class="col-md">
               <form id="osxDownload" method="get" action="igb/releases/current/IGB_macos_current.dmg">
-                <button class="btn btn-custom btn-small btn-download">
+                <button class="btn btn-custom btn-small btn-download btn-ga-download" os-name="Mac">
                   <h1>
                     <span class="fa fa-cloud-download"></span>
                     &nbsp;Mac OS X
@@ -92,7 +92,7 @@
           <div class="row">
             <div class="col-md">
               <form id="windows64Download" method="get" action="igb/releases/current/IGB_windows-x64_current.exe">
-                <button class="btn btn-custom btn-small btn-download">
+                <button class="btn btn-custom btn-small btn-download btn-ga-download" os-name="Windows">
                   <h1>
                     <span class="fa fa-cloud-download"></span>
                     &nbsp;Windows 64 bit
@@ -161,6 +161,7 @@
   <script src="https://cdn.jsdelivr.net/gh/faisalman/ua-parser-js/src/ua-parser.js"></script>
   <!-- Google analytics -->
   <script src = "js/googleAnalytics.js"></script>
+  <script src="js/sendCustomDownloadGAEvent.js"></script>
 
 </body>
 

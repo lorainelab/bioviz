@@ -9,9 +9,9 @@
 
   // Initialize the dataLayer and gtag function
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
+  window.gtag = function() {
     window.dataLayer.push(arguments);
-  }
+  };
 
   // Set up Google Analytics with the given tracking ID
   gtag('js', new Date());
