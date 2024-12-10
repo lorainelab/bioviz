@@ -43,7 +43,7 @@
     </div>
     <hr />
     <div class="row">
-      <div id="igbIsRunningBlock" class="col-md d-none">
+      <div id="igbIsRunningBlock" class="col-md d-none" ga-page-title="Galaxy bridge - IGB running">
         <div class="panel panel-default panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title" style="font-size: 2em;">
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-      <div id="igbIsNotRunningBlock" class="col-md d-none">
+      <div id="igbIsNotRunningBlock" class="col-md d-none" ga-page-title="Galaxy bridge - IGB not running">
         <div class="panel panel-default panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title" style="font-size: 2em;">
@@ -126,7 +126,7 @@
     <div id="footer" class="container"></div>
     <script src="js/renderFooter.js"></script>
   </div>
-  <div id="fileNotFoundError" class="container main-content d-none">
+  <div id="fileNotFoundError" class="container main-content d-none" ga-page-title="Galaxy bridge - File Not Found">
     <h1 style="font-size: 3em;">Welcome Galaxy User!!</h1>
     <div class="row">
       <div class="col-md alert alert-warning" style="font-size: 2em;">
@@ -144,7 +144,7 @@
       </div>
     </div>
   </div>
-  <div id="error-container" class="container main-content d-none">
+  <div id="error-container" class="container main-content d-none" ga-page-title="Galaxy bridge - Genome Version Not Attached">
     <h1 style="font-size: 4em;">Welcome Galaxy User</h1>
     <div class="row">
       <div class="col-md alert alert-warning" style="font-size: 2em;">
@@ -202,6 +202,7 @@
   </script>
   <!-- Google analytics -->
   <script src = "js/googleAnalytics.js"></script>
+  <script src = "js/sendCustomGalaxyGAEvent.js" defer></script>
 
 </body>
 
