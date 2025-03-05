@@ -1,6 +1,16 @@
 # IGB NEWS
 
 * * *
+### January 30, 2025: Genomics in Action 
+
+Dr. Nowlan Freese gave a talk on the Integrated Genome Browser at the 2025 [Genomics in Action](https://genomics.uoregon.edu/) conference.
+The conference brings together leaders from industry and academia and showcases cutting-edge bioinformatics and data science approaches
+at the University of Oregon. Dr. Freese's talk highlighted some of the growing issues with visualizing large data sets and how
+our work to integrate data sources with IGB aims to solve these problems.
+
+<a href="images/2025-01-30_GenomicsInAction_Logo.png"><img src="images/2025-01-30_GenomicsInAction_Logo.png" class="posters" alt="Poster image"></a>
+
+* * *
 
 ### January 5, 2025: Pacific Symposium on Biocomputing (PSB)
 
