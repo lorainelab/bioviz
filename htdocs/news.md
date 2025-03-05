@@ -2,6 +2,26 @@
 
 * * *
 
+### January 5, 2025: Pacific Symposium on Biocomputing (PSB)
+
+Dr. Nowlan Freese attended the 2025 Pacific Symposium on Biocomputing where he presented our recent work
+on integrating data sources with the Integrated Genome Browser. For example, the work done by Dr. Freese and
+UNC Charlotte master's student Jaya Sravani Sirigineedi to integrate IGB with the UCSC REST API
+has made it possible to view UCSC genome browser tracks and assemblies in IGB.
+Other integrations include [Galaxy](https://usegalaxy.org/), [CyVerse](https://pubmed.ncbi.nlm.nih.gov/36304269/), 
+and the [eFP-Seq Browser](https://pubmed.ncbi.nlm.nih.gov/31350781/).
+
+Dr. Freese's poster was published on [F1000Research](https://doi.org/10.7490/f1000research.1120043.1). To see the poster, click the image below:
+
+<style>
+.posters {
+max-width: 100%
+}
+</style>
+<a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster image"></a>
+
+* * *
+
 ### November 15, 2024: ASHG 2024 recap
 ASHG 2024 was a resounding success! Thank you to all the speakers, poster presenters, and fellow exhibitors for putting on a great
 conference. We would also like to thank everyone that stopped by our booth! If you haven't heard back from us yet but you'd like to get in touch, 
