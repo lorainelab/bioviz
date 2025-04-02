@@ -56,6 +56,10 @@ body .img-responsive {
   width: 100%;
 }
 
+body.support-visible {
+  padding-top: 122px !important;
+}
+
 .button {
   font-size: 13px;
   font-weight: bold;
