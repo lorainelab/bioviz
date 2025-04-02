@@ -1,6 +1,23 @@
 # IGB NEWS
 
 * * *
+### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
+
+Over the weekend, Paige Kulzer presented a short talk and poster at the Southern ASPB Section in Raleigh.
+
+Her talk, titled "Integrated Genome Browser: Software for visualizing and quality-checking genomic data", focused on
+a recent collaboration with a coalition of scientists studying heat stress tolerance in tomato pollination, presenting 
+an overview of their visual RNA-Seq analysis and highlighting IGB features that helped identify sample switching had 
+occurred at the sequencing facility.
+
+Thank you to all the wonderful speakers and presenters for sharing their research this weekend, as well as the conference 
+organizers for putting together such a well-run event.
+
+To view the poster, simply click on the image below!
+
+<a href="images/pdf/2025-03-29_SS-ASPB_Poster.pdf"><img style="width: auto; height: 600px;" src="images/2025-03-29_SS-ASPB.jpeg" alt="SS-ASPB2025-PaigeAtPoster"></a>
+
+* * *
 ### January 30, 2025: Genomics in Action 
 
 Dr. Nowlan Freese gave a talk on the Integrated Genome Browser at the 2025 [Genomics in Action](https://genomics.uoregon.edu/) conference.
