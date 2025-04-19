@@ -15,7 +15,7 @@ organizers for putting together such a well-run event.
 
 To view the poster, simply click on the image below!
 
-<a href="images/pdf/2025-03-29_SS-ASPB_Poster.pdf"><img style="width: auto; height: 600px;" src="images/2025-03-29_SS-ASPB.jpeg" alt="SS-ASPB2025-PaigeAtPoster"></a>
+<a href="images/pdf/2025-03-29_SS-ASPB_Poster.pdf"><img src="images/2025-03-29_SS-ASPB.jpeg" class="responsive-image" alt="SS-ASPB2025-PaigeAtPoster"></a>
 
 * * *
 ### January 30, 2025: Genomics in Action 
@@ -44,6 +44,21 @@ Dr. Freese's poster was published on [F1000Research](https://doi.org/10.7490/f10
 .posters {
 max-width: 100%
 }
+
+.responsive-image {
+max-width: 70%;
+height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-image {
+    max-width: 100%;         
+    height: auto;      
+    object-fit: cover;
+  }
+}
+
+
 </style>
 <a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster image"></a>
 
@@ -55,7 +70,7 @@ conference. We would also like to thank everyone that stopped by our booth! If y
 please don't hesitate to send us an email or set up an appointment via our website (https://bioviz.org/help.html).
 
 <div>
-<a href="images/2024-11-15-ASHG.jpeg"><img style="width: auto; height: 600px;" src="images/2024-11-15-ASHG.jpeg" alt="ASHG2024-PaigeAtBooth"/></a><br/><br/>
+<a href="images/2024-11-15-ASHG.jpeg"><img src="images/2024-11-15-ASHG.jpeg" class="responsive-image" alt="ASHG2024-PaigeAtBooth"/></a><br/><br/>
 </div>
 
 * * *
@@ -100,7 +115,7 @@ Her project, titled "Adding UCSC Genomes into IGB using REST APIs", focused on t
 Her work is critical to keeping IGB up-to-date with the latest genomic resources, a task our team was completing manually until now!
 
 <div>
-<a href="images/2024-10-21-BSS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-21-BSS.jpeg" alt="BSS2024-SravaniAtPoster"/></a><br/><br/>
+<a href="images/2024-10-21-BSS.jpeg"><img src="images/2024-10-21-BSS.jpeg" class="responsive-image" alt="BSS2024-SravaniAtPoster"/></a><br/><br/>
 </div>
 
 * * *
@@ -115,7 +130,7 @@ creating and interpreting scaled coverage graphs, and how to visually quality co
 Thank you all for coming, and stay tuned for our next BiAS workshop!
 
 <div>
-<a href="images/2024-10-17-BiAS.jpeg"><img style="width: auto; height: 600px;" src="images/2024-10-17-BiAS.jpeg" alt="IGB-BiAS-Workshop"/></a><br/><br/>
+<a href="images/2024-10-17-BiAS.jpeg"><img src="images/2024-10-17-BiAS.jpeg" class="responsive-image" alt="IGB-BiAS-Workshop"/></a><br/><br/>
 </div>
 
 * * *
@@ -160,7 +175,7 @@ visualize and understand their data better.
 
 **Note**: Our poster was a tad over-sized (oops!) and therefore hard to read, but you can click the image below to view the poster as a PDF.
 
-<a href="images/pdf/GCC2024-Poster-Final.pdf"><img style="width: auto; height: 600px;" src="images/GCC2024_PaigeAtPoster.jpg" alt="GCC2024-PaigeAtPoster"/></a><br/>
+<a href="images/pdf/GCC2024-Poster-Final.pdf"><img src="images/GCC2024_PaigeAtPoster.jpg" class="responsive-image" alt="GCC2024-PaigeAtPoster"/></a><br/>
 
 * * *
 
