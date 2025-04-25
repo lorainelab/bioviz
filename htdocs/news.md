@@ -1,6 +1,28 @@
 # IGB NEWS
 
 * * *
+### April 9, 2025: BiAS Workshop - Spring Semester
+
+Paige Kulzer hosted an IGB workshop with BiAS, the Bioinformatics Assembly of Students.
+
+The workshop was titled "Visualizing Data in the Integrated Genome Browser (IGB)". We encouraged students to bring their 
+experimental genomic datasets to view in IGB. This was the second workshop we have hosted with BiAS.
+
+Here are some FAQs from the workshop:\
+**Q:** Can I load two genomes at once in IGB?\
+**A:** IGB does not support viewing two genomes at once. However, you can get around this by opening another IGB window to view a second genome. Contact us if you need help.
+
+**Q:** What file format does my data need to be in for IGB?\
+**A:** IGB supports many file formats. See here: [File Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
+
+**Q:** After loading a genome into IGB, can I search for a specific nucleotide sequence?\
+**A:** Yes, IGB lets you search for specific sequences. See here for instructions: [Advanced Search](https://wiki.bioviz.org/confluence/display/igbman/Advanced+Search).
+
+Thank you to everyone that attended and shared their research!
+
+<a href="images/2025-04-09-BiAS-Workshop.jpg"><img src="images/2025-04-09-BiAS-Workshop.jpg" class="responsive-image" alt="BiAS-Workshop-Spring"></a>
+
+* * *
 ### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
 
 Over the weekend, Paige Kulzer presented a short talk and poster at the Southern ASPB Section in Raleigh.
