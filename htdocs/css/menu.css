@@ -180,7 +180,7 @@
 
   .navbar .btn-group {
     padding: 0 0 20px 15px;
-    display: none;
+    display: none !important;
   }
 }
 
