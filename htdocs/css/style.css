@@ -23,7 +23,6 @@
 }
 
 .hero-unit h2 {
-  margin: 0;
   font-family: inherit;
   font-weight: bold;
   color: inherit;
@@ -601,6 +600,21 @@ div#connect button {
   padding-top: 10px;
   background-color: #337ab7;
 }
+
+@media (max-width: 768px) {
+  .responsive-heading {
+    font-size: 1.50rem  !important;
+  }
+  .flexslider {
+    width: 85%;
+  }
+
+  .hero-unit {
+    margin-top: 10px;
+  }
+
+}
+
 
 @media (max-width: 1200px) {
   .ribbon-wrapper {
