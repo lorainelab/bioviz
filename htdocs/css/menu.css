@@ -138,7 +138,7 @@
   }
 
   .nav {
-    margin: 7.5px 0 30px 0;
+    margin: 7.5px 0 65px 0;
   }
 
   .nav li {
@@ -180,6 +180,7 @@
 
   .navbar .btn-group {
     padding: 0 0 20px 15px;
+    display: none;
   }
 }
 
