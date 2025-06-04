@@ -102,10 +102,11 @@
     </div>
   </div>
 </nav>
+<!--
 <div id="support-banner" class="support-banner">
   <p>We need your help! <a href="support.html">Write a letter of support</a> to keep IGB running!</p>
 </div>
-
+-->
   <script>
     // Hide install button when on download page
     if (document.URL.split('/').splice(-1) == "download.html") {
@@ -124,5 +125,6 @@
         $(navbar[0]).collapse("hide");
         $(navbar[0]).removeClass("show");
     })
-  showSupportBannerWhenReady();
+// don't show support banner anymore
+// showSupportBannerWhenReady();
   </script>
