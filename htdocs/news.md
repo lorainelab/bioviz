@@ -1,16 +1,58 @@
 # IGB NEWS
 
 * * *
+
+### June 25, 2025: Tutorial showing how to use IGB to examine single-cell RNA-Seq read alignments
+
+This week Ann attended the 2025 Galaxy Bioconductor Community Conference at Cold Spring Harbor Laboratory. 
+While there, she taught a 1.5 hour tutorial showing how to use Integrated Genome
+Browser to explore alignments of single-cell RNA-Seq reads.
+
+To demonstrate IGB functionality, we used a dataset History we created
+and then made publicly-accessible on the popular UseGalaxy on-line
+workflow system.
+
+You can work through the workshop tutorial yourself by downloading and
+following instructions <a href="https://bit.ly/44xNBe3">in these
+slides</a>.
+
+The single-cell RNA-Seq data set she presented in the workshop is
+available from <a
+href="https://usegalaxy.eu/published/history?id=4c4576748acdc4e0">this
+published (public) Galaxy History</a>.
+
+* * *
+
+### June 12, 2025: We joined Bluesky - please follow our account!
+
+Now that the Bluesky social network has more than 30 million users, including many scientists, we decided to join the network.
+
+If you are on Bluesky, please follow us! But if not, no worries. You can still see our posts.
+
+Check us out at <a href="https://bsky.app/profile/bioviz.bsky.social">@bioviz.bsky.social</a>.
+
+* * *
+
 ### April 9, 2025: BiAS Workshop - Spring Semester
 
 Paige Kulzer hosted an IGB workshop with BiAS, the Bioinformatics Assembly of Students.
 
-The workshop was titled "Visualizing Data in the Integrated Genome Browser (IGB)". We encouraged students to bring their 
-experimental genomic datasets to view in IGB. This was the second workshop we have hosted with BiAS.
+The workshop was titled "Visualizing Data in the Integrated Genome
+Browser (IGB)". We encouraged students to bring their experimental
+genomic datasets to view in IGB. This was the second workshop we have
+hosted with BiAS.
 
-Here are some FAQs from the workshop:\
+Here are three great questions people asked at the workshop, with
+answers:
+
 **Q:** Can I load two genomes at once in IGB?\
-**A:** IGB does not support viewing two genomes at once. However, you can get around this by opening another IGB window to view a second genome. Contact us if you need help.
+**A:** The IGB window can shows only one genome at a time. But, if you want to compare two
+genomes, you can open two instances of IGB! The easiest way to do that
+is to install IGB twice, in two different folders. Then, you can
+launch both of them at the same time. Open one genome in one window
+and another genome in the other window. Then, you can compare what they show. One
+limitation of doing this, however, is that only the first IGB you
+launched will be able to load data from a Galaxy site. 
 
 **Q:** What file format does my data need to be in for IGB?\
 **A:** IGB supports many file formats. See here: [File Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
