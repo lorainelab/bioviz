@@ -20,11 +20,13 @@ $(window).on("load", function(e) {
       window.igb_url_download = base_url+dwnld_dir_curr+"IGB_windows_current.exe";
     }
   }
-  if (os == "Mac OS X" || os == "Mac OS") {
+  if (os == "Mac OS X" || os == "Mac OS" || os == "macOS") {
     $("#osxDownload .btn").removeClass('d-none');
     window.igb_url_download = base_url+dwnld_dir_curr+"IGB_macos_current.dmg"
   }
-  if (os == "Mac OS X" || os == "Mac OS") {
+  // This section is required to show the special instructions for users to run the installer, which is not
+  // notarized and triggers a warning
+  if (os == "Mac OS X" || os == "Mac OS" || os == "macOS") {
     $("#earlyAccessMac").removeClass('d-none');
   }
 });
