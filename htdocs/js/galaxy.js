@@ -62,7 +62,6 @@ $(window).on("load", (function() {
     });
 
     if (version == null || version.length === 0 || version == '?') {
-      $("#main-container").hide();
       $("#error-container").removeClass("d-none");
     }
   } else {
@@ -80,7 +79,6 @@ $(window).on("load", (function() {
         $("#main-container").hide();
         $("#bridge-info-container").removeClass("d-none");
       } else if (version == null || version.length === 0 || version == '?') {
-        $("#main-container").hide();
         $("#error-container").removeClass("d-none");
       }
     }
