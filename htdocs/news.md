@@ -2,6 +2,18 @@
 
 * * *
 
+### July 25, 2025: OUR Summer Research Symposium 2025
+
+Alex Becerril Cruz, an undergraduate researcher working with Dr. Robert Reid in the Department of Bioinformatics, 
+recently presented his summer research project at the Office of Undergraduate Research (OUR) Summer Research Symposium. 
+His poster highlighted the analysis he conducted using Integrated Genome Browser to identify differentially expressed 
+genes in tomatoes undergoing heat stress. We wish Alex all the best in his future research endeavors as he pursues
+a degree in Chemistry!
+
+<a href="images/2025-07-25-OUR.jpeg"><img src="images/2025-07-25-OUR.jpeg" class="responsive-image" alt="OUR-Summer-Research-Symposium-2025"/></a>
+
+* * *
+
 ### June 25, 2025: Tutorial showing how to use IGB to examine single-cell RNA-Seq read alignments
 
 This week Ann attended the 2025 Galaxy Bioconductor Community Conference at Cold Spring Harbor Laboratory. 
