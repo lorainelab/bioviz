@@ -2,6 +2,30 @@
 
 * * *
 
+### October 1, 2025: Upcoming Webinar with AgBioData
+
+We're excited to announce that Paige Kulzer will be hosting a webinar this week with AgBioData, a consortium of agricultural
+biological databases that promote and embody FAIR data principles. The webinar will focus on the Loraine Lab's mission to
+develop free and open-source software for sustainable genomic data accessibility and visualization. A copy of the slides and a recording of the webinar
+will be available on AgBioData's website (agbiodata.org) in case you'd like to watch it after the fact. We hope to see you there!
+
+<a href="images/agbiodata-logo.png"><img src="images/agbiodata-logo.png" class="responsive-image" alt="BSS_2025"></a>
+
+* * *
+
+### September 15, 2025: Charlotte Biomedical Sciences Symposium 2025
+
+Our lab had the pleasure of attending and presenting at this year's Charlotte Biomedical Sciences Symposium!
+Dr. Nowlan Freese gave a talk titled "Single-cell RNA-Seq Visualization in the Integrated Genome Browser," 
+showcasing exciting ongoing work by PhD student Karthik Raveendran. 
+Meanwhile, Paige Kulzer presented a poster highlighting the powerful new scRNA-Seq visualizations that Karthik’s 
+research is making possible. It was a great opportunity to share our progress, connect with other scientists, 
+and get inspired by the incredible work happening here in North Carolina!
+
+<a href="images/2025-09-15-BSS.jpeg"><img src="images/2025-09-15-BSS.jpeg" class="responsive-image" alt="BSS_2025"></a>
+
+* * *
+
 ### July 25, 2025: OUR Summer Research Symposium 2025
 
 Alex Becerril Cruz, an undergraduate researcher working with Dr. Robert Reid in the Department of Bioinformatics, 
