@@ -9,6 +9,8 @@ biological databases that promote and embody FAIR data principles. The webinar w
 develop free and open-source software for sustainable genomic data accessibility and visualization. A copy of the slides and a recording of the webinar
 will be available on AgBioData's website (agbiodata.org) in case you'd like to watch it after the fact. We hope to see you there!
 
+**Update**: A <a href="https://youtu.be/GUvVIOv4SBk?si=AOoBbueBV0WiJOPj">recording of the webinar</a> is now available on YouTube.
+
 <a href="images/agbiodata-logo.png"><img src="images/agbiodata-logo.png" class="responsive-image" alt="BSS_2025"></a>
 
 * * *
@@ -23,6 +25,16 @@ research is making possible. It was a great opportunity to share our progress, c
 and get inspired by the incredible work happening here in North Carolina!
 
 <a href="images/2025-09-15-BSS.jpeg"><img src="images/2025-09-15-BSS.jpeg" class="responsive-image" alt="BSS_2025"></a>
+
+* * *
+
+### July 26, 2025: Plant Biology 2025
+
+Paige Kulzer represented the Loraine Lab at the Plant Biology meeting this year as an exhibitor. The annual conference
+brings together researchers and students alike to share advances in the plant science community. Paige showcased the lab’s 
+latest research projects and connected with scientists from around the world. 
+
+Thank you to everyone that stopped by our booth!
 
 * * *
 
