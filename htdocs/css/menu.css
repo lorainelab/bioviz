@@ -229,3 +229,9 @@
   }
 }
 
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active {
+  background-color: #d6554e;
+  border-color: #d1413a;
+  color: white;
+  text-decoration: bold;
+}
