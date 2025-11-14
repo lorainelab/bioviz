@@ -10,7 +10,7 @@ $(window).on("load", function(e) {
     $("#linuxDownload .btn").removeClass('d-none');
     window.igb_url_download = base_url+dwnld_dir_curr+"IGB_unix_current.sh";
   }
-  if (os == "Windows [Phone/Mobile]" || os == "Windows") {
+  else if (os == "Windows [Phone/Mobile]" || os == "Windows") {
     if (systemConfig.architecture == "amd64" || systemConfig.architecture == "ia64" || systemConfig.architecture == "arm64" || systemConfig.architecture == "irix64" || systemConfig.architecture == "mips64" || systemConfig.architecture == "sparc64") {
       $("#windows64Download .btn").removeClass('d-none');
       window.igb_url_download = base_url+dwnld_dir_curr+"IGB_windows-x64_current.exe";
@@ -20,9 +20,12 @@ $(window).on("load", function(e) {
       window.igb_url_download = base_url+dwnld_dir_curr+"IGB_windows_current.exe";
     }
   }
-  if (os == "Mac OS X" || os == "Mac OS" || os == "macOS") {
+  else if (os == "Mac OS X" || os == "Mac OS" || os == "macOS") {
     $("#osxDownload .btn").removeClass('d-none');
     window.igb_url_download = base_url+dwnld_dir_curr+"IGB_macos_current.dmg"
+  }
+  else {
+    $("#unknownDownload .alert").removeClass('d-none')
   }
   // This section is required to show the special instructions for users to run the installer, which is not
   // notarized and triggers a warning
