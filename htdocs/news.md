@@ -2,6 +2,24 @@
 
 * * *
 
+### January 14, 2026: Today we release IGB 10.2.0
+
+This new version of IGB has many improvements!
+
+These include:
+
+* You can now color-code individual sequence alignments using sequence barcode SAM tags CR, CB and UB. We developed this feature to help users to visualize cell, molecule or cluster affiliation for alignments. This is especially useful for sanity-checking and exploring the results from clustering single-cell genomics data. 
+
+* You can also filter by SAM format tags. This lets you remove non-relevant alignments from the view. This is useful when investigating alignment artifacts or redundancies. It also helps with understanding and investigating splicing pattern anamolies. 
+
+* We also expanded the number of reference genome assemblies can load. You can now load genomes from the UCSC GenArk project after installing the GenArk IGB App.
+
+* We improved IGB's ability to read and display data from the VCF and GFF formats. 
+
+We hope you will like this new version of IGB!
+
+* * *
+
 ### October 1, 2025: Upcoming Webinar with AgBioData
 
 We're excited to announce that Paige Kulzer will be hosting a webinar this week with AgBioData, a consortium of agricultural
@@ -9,30 +27,41 @@ biological databases that promote and embody FAIR data principles. The webinar w
 develop free and open-source software for sustainable genomic data accessibility and visualization. A copy of the slides and a recording of the webinar
 will be available on AgBioData's website (agbiodata.org) in case you'd like to watch it after the fact. We hope to see you there!
 
-**Update**: A <a href="https://youtu.be/GUvVIOv4SBk?si=AOoBbueBV0WiJOPj">recording of the webinar</a> is now available on YouTube.
+**Update**: A <a
+  href="https://youtu.be/GUvVIOv4SBk?si=AOoBbueBV0WiJOPj">recording of
+  the webinar</a> is now available on YouTube.
 
-<a href="images/agbiodata-logo.png"><img src="images/agbiodata-logo.png" class="responsive-image" alt="BSS_2025"></a>
+<a href="images/agbiodata-logo.png"><img
+src="images/agbiodata-logo.png" class="responsive-image"
+alt="BSS_2025"></a>
 
 * * *
 
 ### September 15, 2025: Charlotte Biomedical Sciences Symposium 2025
 
-Our lab had the pleasure of attending and presenting at this year's Charlotte Biomedical Sciences Symposium!
-Dr. Nowlan Freese gave a talk titled "Single-cell RNA-Seq Visualization in the Integrated Genome Browser," 
-showcasing exciting ongoing work by PhD student Karthik Raveendran. 
-Meanwhile, Paige Kulzer presented a poster highlighting the powerful new scRNA-Seq visualizations that Karthik’s 
-research is making possible. It was a great opportunity to share our progress, connect with other scientists, 
-and get inspired by the incredible work happening here in North Carolina!
+Our lab had the pleasure of attending and presenting at this year's
+Charlotte Biomedical Sciences Symposium!  Dr. Nowlan Freese gave a
+talk titled "Single-cell RNA-Seq Visualization in the Integrated
+Genome Browser," showcasing exciting ongoing work by PhD student
+Karthik Raveendran.  Meanwhile, Paige Kulzer presented a poster
+highlighting the powerful new scRNA-Seq visualizations that Karthik’s
+research is making possible. It was a great opportunity to share our
+progress, connect with other scientists, and get inspired by the
+incredible work happening here in North Carolina!
 
-<a href="images/2025-09-15-BSS.jpeg"><img src="images/2025-09-15-BSS.jpeg" class="responsive-image" alt="BSS_2025"></a>
+<a href="images/2025-09-15-BSS.jpeg"><img
+src="images/2025-09-15-BSS.jpeg" class="responsive-image"
+alt="BSS_2025"></a>
 
 * * *
 
 ### July 26, 2025: Plant Biology 2025
 
-Paige Kulzer represented the Loraine Lab at the Plant Biology meeting this year as an exhibitor. The annual conference
-brings together researchers and students alike to share advances in the plant science community. Paige showcased the lab’s 
-latest research projects and connected with scientists from around the world. 
+Paige Kulzer represented the Loraine Lab at the Plant Biology meeting
+this year as an exhibitor. The annual conference brings together
+researchers and students alike to share advances in the plant science
+community. Paige showcased the lab’s latest research projects and
+connected with scientists from around the world.
 
 Thank you to everyone that stopped by our booth!
 
@@ -40,21 +69,28 @@ Thank you to everyone that stopped by our booth!
 
 ### July 25, 2025: OUR Summer Research Symposium 2025
 
-Alex Becerril Cruz, an undergraduate researcher working with Dr. Robert Reid in the Department of Bioinformatics, 
-recently presented his summer research project at the Office of Undergraduate Research (OUR) Summer Research Symposium. 
-His poster highlighted the analysis he conducted using Integrated Genome Browser to identify differentially expressed 
-genes in tomatoes undergoing heat stress. We wish Alex all the best in his future research endeavors as he pursues
+Alex Becerril Cruz, an undergraduate researcher working with
+Dr. Robert Reid in the Department of Bioinformatics, recently
+presented his summer research project at the Office of Undergraduate
+Research (OUR) Summer Research Symposium.  His poster highlighted the
+analysis he conducted using Integrated Genome Browser to identify
+differentially expressed genes in tomatoes undergoing heat stress. We
+wish Alex all the best in his future research endeavors as he pursues
 a degree in Chemistry!
 
-<a href="images/2025-07-25-OUR.jpeg"><img src="images/2025-07-25-OUR.jpeg" class="responsive-image" alt="OUR-Summer-Research-Symposium-2025"/></a>
+<a href="images/2025-07-25-OUR.jpeg"><img
+src="images/2025-07-25-OUR.jpeg" class="responsive-image"
+alt="OUR-Summer-Research-Symposium-2025"/></a>
 
 * * *
 
-### June 25, 2025: Tutorial showing how to use IGB to examine single-cell RNA-Seq read alignments
+### June 25, 2025: Tutorial showing how to use IGB to examine
+    single-cell RNA-Seq read alignments
 
-This week Ann attended the 2025 Galaxy Bioconductor Community Conference at Cold Spring Harbor Laboratory. 
-While there, she taught a 1.5 hour tutorial showing how to use Integrated Genome
-Browser to explore alignments of single-cell RNA-Seq reads.
+This week Ann attended the 2025 Galaxy Bioconductor Community
+Conference at Cold Spring Harbor Laboratory.  While there, she taught
+a 1.5 hour tutorial showing how to use Integrated Genome Browser to
+explore alignments of single-cell RNA-Seq reads.
 
 To demonstrate IGB functionality, we used a dataset History we created
 and then made publicly-accessible on the popular UseGalaxy on-line
@@ -73,17 +109,21 @@ published (public) Galaxy History</a>.
 
 ### June 12, 2025: We joined Bluesky - please follow our account!
 
-Now that the Bluesky social network has more than 30 million users, including many scientists, we decided to join the network.
+Now that the Bluesky social network has more than 30 million users,
+including many scientists, we decided to join the network.
 
-If you are on Bluesky, please follow us! But if not, no worries. You can still see our posts.
+If you are on Bluesky, please follow us! But if not, no worries. You
+can still see our posts.
 
-Check us out at <a href="https://bsky.app/profile/bioviz.bsky.social">@bioviz.bsky.social</a>.
+Check us out at <a
+href="https://bsky.app/profile/bioviz.bsky.social">@bioviz.bsky.social</a>.
 
 * * *
 
 ### April 9, 2025: BiAS Workshop - Spring Semester
 
-Paige Kulzer hosted an IGB workshop with BiAS, the Bioinformatics Assembly of Students.
+Paige Kulzer hosted an IGB workshop with BiAS, the Bioinformatics
+Assembly of Students.
 
 The workshop was titled "Visualizing Data in the Integrated Genome
 Browser (IGB)". We encouraged students to bring their experimental
@@ -93,97 +133,110 @@ hosted with BiAS.
 Here are three great questions people asked at the workshop, with
 answers:
 
-**Q:** Can I load two genomes at once in IGB?\
-**A:** The IGB window can shows only one genome at a time. But, if you want to compare two
-genomes, you can open two instances of IGB! The easiest way to do that
-is to install IGB twice, in two different folders. Then, you can
-launch both of them at the same time. Open one genome in one window
-and another genome in the other window. Then, you can compare what they show. One
-limitation of doing this, however, is that only the first IGB you
-launched will be able to load data from a Galaxy site. 
+**Q:** Can I load two genomes at once in IGB?\ A:** The IGB window can
+**shows only one genome at a time. But, if you want to compare two
+**genomes, you can open two instances of IGB! The easiest way to do
+**that is to install IGB twice, in two different folders. Then, you
+**can launch both of them at the same time. Open one genome in one
+**window and another genome in the other window. Then, you can compare
+**what they show. One limitation of doing this, however, is that only
+**the first IGB you launched will be able to load data from a Galaxy
+**site.
 
-**Q:** What file format does my data need to be in for IGB?\
-**A:** IGB supports many file formats. See here: [File Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
+**Q:** What file format does my data need to be in for IGB?\ A:** IGB
+**supports many file formats. See here: [File
+**Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
 
-**Q:** After loading a genome into IGB, can I search for a specific nucleotide sequence?\
-**A:** Yes, IGB lets you search for specific sequences. See here for instructions: [Advanced Search](https://wiki.bioviz.org/confluence/display/igbman/Advanced+Search).
+**Q:** After loading a genome into IGB, can I search for a specific
+**nucleotide sequence?\ A:** Yes, IGB lets you search for specific
+**sequences. See here for instructions: [Advanced
+**Search](https://wiki.bioviz.org/confluence/display/igbman/Advanced+Search).
 
 Thank you to everyone that attended and shared their research!
 
-<a href="images/2025-04-09-BiAS-Workshop.jpg"><img src="images/2025-04-09-BiAS-Workshop.jpg" class="responsive-image" alt="BiAS-Workshop-Spring"></a>
+<a href="images/2025-04-09-BiAS-Workshop.jpg"><img
+src="images/2025-04-09-BiAS-Workshop.jpg" class="responsive-image"
+alt="BiAS-Workshop-Spring"></a>
 
-* * *
-### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
+* * * ### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
 
-Over the weekend, Paige Kulzer presented a short talk and poster at the Southern ASPB Section in Raleigh.
+Over the weekend, Paige Kulzer presented a short talk and poster at
+the Southern ASPB Section in Raleigh.
 
-Her talk, titled "Integrated Genome Browser: Software for visualizing and quality-checking genomic data", focused on
-a recent collaboration with a coalition of scientists studying heat stress tolerance in tomato pollination, presenting 
-an overview of their visual RNA-Seq analysis and highlighting IGB features that helped identify sample switching had 
-occurred at the sequencing facility.
+Her talk, titled "Integrated Genome Browser: Software for visualizing
+and quality-checking genomic data", focused on a recent collaboration
+with a coalition of scientists studying heat stress tolerance in
+tomato pollination, presenting an overview of their visual RNA-Seq
+analysis and highlighting IGB features that helped identify sample
+switching had occurred at the sequencing facility.
 
-Thank you to all the wonderful speakers and presenters for sharing their research this weekend, as well as the conference 
-organizers for putting together such a well-run event.
+Thank you to all the wonderful speakers and presenters for sharing
+their research this weekend, as well as the conference organizers for
+putting together such a well-run event.
 
 To view the poster, simply click on the image below!
 
-<a href="images/pdf/2025-03-29_SS-ASPB_Poster.pdf"><img src="images/2025-03-29_SS-ASPB.jpeg" class="responsive-image" alt="SS-ASPB2025-PaigeAtPoster"></a>
+<a href="images/pdf/2025-03-29_SS-ASPB_Poster.pdf"><img
+src="images/2025-03-29_SS-ASPB.jpeg" class="responsive-image"
+alt="SS-ASPB2025-PaigeAtPoster"></a>
 
-* * *
-### January 30, 2025: Genomics in Action 
+* * * ### January 30, 2025: Genomics in Action
 
-Dr. Nowlan Freese gave a talk on the Integrated Genome Browser at the 2025 [Genomics in Action](https://genomics.uoregon.edu/) conference.
-The conference brings together leaders from industry and academia and showcases cutting-edge bioinformatics and data science approaches
-at the University of Oregon. Dr. Freese's talk highlighted some of the growing issues with visualizing large data sets and how
-our work to integrate data sources with IGB aims to solve these problems.
+Dr. Nowlan Freese gave a talk on the Integrated Genome Browser at the
+2025 [Genomics in Action](https://genomics.uoregon.edu/) conference.
+The conference brings together leaders from industry and academia and
+showcases cutting-edge bioinformatics and data science approaches at
+the University of Oregon. Dr. Freese's talk highlighted some of the
+growing issues with visualizing large data sets and how our work to
+integrate data sources with IGB aims to solve these problems.
 
-<a href="images/2025-01-30_GenomicsInAction_Logo.png"><img src="images/2025-01-30_GenomicsInAction_Logo.png" class="posters" alt="Poster image"></a>
+<a href="images/2025-01-30_GenomicsInAction_Logo.png"><img
+src="images/2025-01-30_GenomicsInAction_Logo.png" class="posters"
+alt="Poster image"></a>
 
 * * *
 
 ### January 5, 2025: Pacific Symposium on Biocomputing (PSB)
 
-Dr. Nowlan Freese attended the 2025 Pacific Symposium on Biocomputing where he presented our recent work
-on integrating data sources with the Integrated Genome Browser. For example, the work done by Dr. Freese and
-UNC Charlotte master's student Jaya Sravani Sirigineedi to integrate IGB with the UCSC REST API
-has made it possible to view UCSC genome browser tracks and assemblies in IGB.
-Other integrations include [Galaxy](https://usegalaxy.org/), [CyVerse](https://pubmed.ncbi.nlm.nih.gov/36304269/), 
-and the [eFP-Seq Browser](https://pubmed.ncbi.nlm.nih.gov/31350781/).
+Dr. Nowlan Freese attended the 2025 Pacific Symposium on Biocomputing
+where he presented our recent work on integrating data sources with
+the Integrated Genome Browser. For example, the work done by
+Dr. Freese and UNC Charlotte master's student Jaya Sravani Sirigineedi
+to integrate IGB with the UCSC REST API has made it possible to view
+UCSC genome browser tracks and assemblies in IGB.  Other integrations
+include [Galaxy](https://usegalaxy.org/),
+[CyVerse](https://pubmed.ncbi.nlm.nih.gov/36304269/), and the [eFP-Seq
+Browser](https://pubmed.ncbi.nlm.nih.gov/31350781/).
 
-Dr. Freese's poster was published on [F1000Research](https://doi.org/10.7490/f1000research.1120043.1). To see the poster, click the image below:
+Dr. Freese's poster was published on
+[F1000Research](https://doi.org/10.7490/f1000research.1120043.1). To
+see the poster, click the image below:
 
-<style>
-.posters {
-max-width: 100%
-}
+<style> .posters { max-width: 100% }
 
-.responsive-image {
-max-width: 70%;
-height: auto;
-}
+.responsive-image { max-width: 70%; height: auto; }
 
-@media only screen and (max-width: 600px) {
-  .responsive-image {
-    max-width: 100%;         
-    height: auto;      
-    object-fit: cover;
-  }
-}
+@media only screen and (max-width: 600px) { .responsive-image {
+  max-width: 100%; height: auto; object-fit: cover; } }
 
 
-</style>
-<a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster image"></a>
+</style> <a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img
+src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster
+image"></a>
 
 * * *
 
-### November 15, 2024: ASHG 2024 recap
-ASHG 2024 was a resounding success! Thank you to all the speakers, poster presenters, and fellow exhibitors for putting on a great
-conference. We would also like to thank everyone that stopped by our booth! If you haven't heard back from us yet but you'd like to get in touch, 
-please don't hesitate to send us an email or set up an appointment via our website (https://bioviz.org/help.html).
+### November 15, 2024: ASHG 2024 recap ASHG 2024 was a resounding
+success! Thank you to all the speakers, poster presenters, and fellow
+exhibitors for putting on a great conference. We would also like to
+thank everyone that stopped by our booth! If you haven't heard back
+from us yet but you'd like to get in touch, please don't hesitate to
+send us an email or set up an appointment via our website
+(https://bioviz.org/help.html).
 
-<div>
-<a href="images/2024-11-15-ASHG.jpeg"><img src="images/2024-11-15-ASHG.jpeg" class="responsive-image" alt="ASHG2024-PaigeAtBooth"/></a><br/><br/>
-</div>
+<div> <a href="images/2024-11-15-ASHG.jpeg"><img
+src="images/2024-11-15-ASHG.jpeg" class="responsive-image"
+alt="ASHG2024-PaigeAtBooth"/></a><br/><br/> </div>
 
 * * *
 
