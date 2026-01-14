@@ -8,13 +8,17 @@ This new version of IGB has many improvements!
 
 These include:
 
-* You can now color-code individaul sequence alignments using SAM format tags. We developed this feature to enable users to visualize cell, molecule or cluster affiliation for alignments. This is especially useful for sanity-checking and exploring the results from clustering single-cell genomics data.
+* You can now color-code individual sequence alignments using sequence barcode SAM tags CR, CB and UB. We developed this feature to help users to visualize cell, molecule or cluster affiliation for alignments. This is especially useful for sanity-checking and exploring the results from clustering single-cell genomics data. 
+
 * You can also filter by SAM format tags. This lets you remove non-relevant alignments from the view. This is useful when investigating alignment artifacts or redundancies. It also helps with understanding and investigating splicing pattern anamolies. 
-* We also expanded the number of reference genome assemblies can load. You can now load genomes from the UCSC GenArk project after installing the GenArk IGB App
-* Last but not least, We improved IGB's ability to read and display data from the VCF and GFF formats. This will make it easier for customers of genome sequencing services view their own data in IGB.
 
-We hope you will like this new IGB release! 
+* We also expanded the number of reference genome assemblies can load. You can now load genomes from the UCSC GenArk project after installing the GenArk IGB App.
 
+* We improved IGB's ability to read and display data from the VCF and GFF formats. 
+
+We hope you will like this new version of IGB!
+
+* * *
 
 ### October 1, 2025: Upcoming Webinar with AgBioData
 
@@ -236,7 +240,7 @@ alt="ASHG2024-PaigeAtBooth"/></a><br/><br/> </div>
 
 * * *
 
-### November 13, 2024:IGB 10.1.0 released today
+### November 13, 2024: IGB 10.1.0 released today
 
 Today we released Integrated Genome Browser version 10.1.0.
 
