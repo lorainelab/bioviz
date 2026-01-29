@@ -15,11 +15,19 @@ There, she will be working with single-cell RNA-seq and whole-exome data to char
 
 Although we're sad to see her go, we're wishing Paige all the best in her career!
 
+<a href="images/2025-06-22_EVOL_Paige-poster.jpeg"><img
+src="images/2025-06-22_EVOL_Paige-poster.jpeg" class="responsive-image"
+alt="Paige standing by poster at 2025 Evolution Conference"></a>
+
 * * *
 
 ### January 14, 2026: Today we release IGB 10.2.0
+\
+<a href="images/2026-01-14_10.2.0-release.png"><img
+src="images/2026-01-14_10.2.0-release.png" class="responsive-image"
+alt="IGB 10.2.0 release showing sc-RNA-Seq data"></a>
 
-This new version of IGB has many improvements!
+##### This new version of IGB has many improvements!
 
 These include:
 
@@ -31,11 +39,11 @@ These include:
 
 * We improved IGB's ability to read and display data from the VCF and GFF formats. 
 
-We hope you will like this new version of IGB!
+Get the newest version of IGB on the <a href="./download.html">Downloads</a> page.
 
 * * *
 
-### November 19, 2025: New publication in the Bioinformatics Department
+### November 19, 2025: IGB featured in a Nature Communication article on experimental phage evolution
 
 Dr. Richard Allen White III, a collaborator and fellow professor in the Bioinformatics Department,
 published a paper in Nature Communications today titled, 
@@ -45,6 +53,10 @@ how bacteriophages can be evolved to target the antibiotic-resistant microbes ca
 Integrated Genome Browser to identify the protein that is likely responsible for the improved phage adhesion to bacteria.
 
 The article can be found here: https://doi.org/10.1038/s41467-025-66062-7
+
+<a href="images/2025-11-25_White-bacteriophage.png"><img
+src="images/2025-11-25_White-bacteriophage.png" class="responsive-image"
+alt="IGB image showing mismatch graph"></a>
 
 * * *
 
@@ -131,6 +143,22 @@ The single-cell RNA-Seq data set she presented in the workshop is
 available from <a
 href="https://usegalaxy.eu/published/history?id=4c4576748acdc4e0">this
 published (public) Galaxy History</a>.
+
+* * *
+
+### June 20, 2025: Evolution 2025
+
+Last week Paige and Nowlan traveled to Athens, Georgia to host an IGB booth at the 
+Evolution Conference. Paige gave a talk titled "Overcoming antibiotic resistance: 
+Visualizing the co-evolution of _Klebsiella pneumoniae_ bacteriophages using the Integrated Genome Browser".
+We were also at the IGB booth where we talked with evolutionary scientists and students about how IGB could be used 
+in their research.
+
+Thank you to everyone who came and chatted with us at the conference!
+
+<a href="images/2025-06-20_EVOL_Paige-Talk.jpg"><img
+src="images/2025-06-20_EVOL_Paige-Talk.jpg" class="responsive-image"
+alt="Paige presenting her talk at 2025 Evolution Conference"/></a>
 
 * * *
 
