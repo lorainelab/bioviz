@@ -2,9 +2,32 @@
 
 * * *
 
-### January 14, 2026: Today we release IGB 10.2.0
+### January 30, 2026: Paige's last day
 
-This new version of IGB has many improvements!
+<a href="https://www.linkedin.com/in/paige-kulzer-210b97274/">Paige Kulzer</a>, our Bioinformatics Data Manager and Trainer, will be working her last day this Friday, January 30th. Paige joined the lab
+in 2024 fresh out of her Master's program and has left her mark on various projects during her time with the Loraine Lab.
+You likely saw her leading IGB workshops or presenting our work at industry conferences across the U.S. Behind the scenes, 
+Paige also assisted scientists and collaborators with a wide range of bioinformatic analyses and software development projects. 
+She really enjoyed helping our team of students with software testing tasks and general project management.
+
+Paige will now be working at the Silver Family Blood Cancer Institute of the Lurie Cancer Center as a Bioinformatics Analyst. 
+There, she will be working with single-cell RNA-seq and whole-exome data to characterize the genetic drivers of certain cancers.
+
+Although we're sad to see her go, we're wishing Paige all the best in her career!
+
+<a href="images/2025-06-22_EVOL_Paige-poster.jpeg"><img
+src="images/2025-06-22_EVOL_Paige-poster.jpeg" class="responsive-image"
+alt="Paige standing by poster at 2025 Evolution Conference"></a>
+
+* * *
+
+### January 14, 2026: Today we release IGB 10.2.0
+\
+<a href="images/2026-01-14_10.2.0-release.png"><img
+src="images/2026-01-14_10.2.0-release.png" class="responsive-image"
+alt="IGB 10.2.0 release showing sc-RNA-Seq data"></a>
+
+##### This new version of IGB has many improvements!
 
 These include:
 
@@ -16,7 +39,24 @@ These include:
 
 * We improved IGB's ability to read and display data from the VCF and GFF formats. 
 
-We hope you will like this new version of IGB!
+Get the newest version of IGB on the <a href="./download.html">Downloads</a> page.
+
+* * *
+
+### November 19, 2025: IGB featured in a Nature Communication article on experimental phage evolution
+
+Dr. Richard Allen White III, a collaborator and fellow professor in the Bioinformatics Department,
+published a paper in Nature Communications today titled, 
+"Experimental phage evolution results in expanded host ranges against antibiotic resistant _Klebsiella pneumoniae_ isolates."
+Antibiotic-resistant infections are becoming a major challenge, but Dr. White's work outlines
+how bacteriophages can be evolved to target the antibiotic-resistant microbes causing these infections. He used the 
+Integrated Genome Browser to identify the protein that is likely responsible for the improved phage adhesion to bacteria.
+
+The article can be found here: https://doi.org/10.1038/s41467-025-66062-7
+
+<a href="images/2025-11-25_White-bacteriophage.png"><img
+src="images/2025-11-25_White-bacteriophage.png" class="responsive-image"
+alt="IGB image showing mismatch graph"></a>
 
 * * *
 
@@ -84,8 +124,7 @@ alt="OUR-Summer-Research-Symposium-2025"/></a>
 
 * * *
 
-### June 25, 2025: Tutorial showing how to use IGB to examine
-    single-cell RNA-Seq read alignments
+### June 25, 2025: Tutorial showing how to use IGB to examine single-cell RNA-Seq read alignments
 
 This week Ann attended the 2025 Galaxy Bioconductor Community
 Conference at Cold Spring Harbor Laboratory.  While there, she taught
@@ -104,6 +143,22 @@ The single-cell RNA-Seq data set she presented in the workshop is
 available from <a
 href="https://usegalaxy.eu/published/history?id=4c4576748acdc4e0">this
 published (public) Galaxy History</a>.
+
+* * *
+
+### June 20, 2025: Evolution 2025
+
+Last week Paige and Nowlan traveled to Athens, Georgia to host an IGB booth at the 
+Evolution Conference. Paige gave a talk titled "Overcoming antibiotic resistance: 
+Visualizing the co-evolution of _Klebsiella pneumoniae_ bacteriophages using the Integrated Genome Browser".
+We were also at the IGB booth where we talked with evolutionary scientists and students about how IGB could be used 
+in their research.
+
+Thank you to everyone who came and chatted with us at the conference!
+
+<a href="images/2025-06-20_EVOL_Paige-Talk.jpg"><img
+src="images/2025-06-20_EVOL_Paige-Talk.jpg" class="responsive-image"
+alt="Paige presenting her talk at 2025 Evolution Conference"/></a>
 
 * * *
 
@@ -133,24 +188,20 @@ hosted with BiAS.
 Here are three great questions people asked at the workshop, with
 answers:
 
-**Q:** Can I load two genomes at once in IGB?\ A:** The IGB window can
-**shows only one genome at a time. But, if you want to compare two
-**genomes, you can open two instances of IGB! The easiest way to do
-**that is to install IGB twice, in two different folders. Then, you
-**can launch both of them at the same time. Open one genome in one
-**window and another genome in the other window. Then, you can compare
-**what they show. One limitation of doing this, however, is that only
-**the first IGB you launched will be able to load data from a Galaxy
-**site.
+**Q:** Can I load two genomes at once in IGB?\
+**A:** The IGB window can shows only one genome at a time. But, if you want to compare two
+genomes, you can open two instances of IGB! The easiest way to do that
+is to install IGB twice, in two different folders. Then, you can
+launch both of them at the same time. Open one genome in one window
+and another genome in the other window. Then, you can compare what they show. One
+limitation of doing this, however, is that only the first IGB you
+launched will be able to load data from a Galaxy site.
 
-**Q:** What file format does my data need to be in for IGB?\ A:** IGB
-**supports many file formats. See here: [File
-**Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
+**Q:** What file format does my data need to be in for IGB?\
+**A:** IGB supports many file formats. See here: [File Formats](https://wiki.bioviz.org/confluence/display/igbman/File+Formats#FileFormats-Supportedfileformats).
 
-**Q:** After loading a genome into IGB, can I search for a specific
-**nucleotide sequence?\ A:** Yes, IGB lets you search for specific
-**sequences. See here for instructions: [Advanced
-**Search](https://wiki.bioviz.org/confluence/display/igbman/Advanced+Search).
+**Q:** After loading a genome into IGB, can I search for a specific nucleotide sequence?\
+**A:** Yes, IGB lets you search for specific sequences. See here for instructions: [Advanced Search](https://wiki.bioviz.org/confluence/display/igbman/Advanced+Search).
 
 Thank you to everyone that attended and shared their research!
 
@@ -158,7 +209,9 @@ Thank you to everyone that attended and shared their research!
 src="images/2025-04-09-BiAS-Workshop.jpg" class="responsive-image"
 alt="BiAS-Workshop-Spring"></a>
 
-* * * ### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
+* * * 
+
+### March 29, 2025: Southern ASPB Section (SS-ASPB) 2025
 
 Over the weekend, Paige Kulzer presented a short talk and poster at
 the Southern ASPB Section in Raleigh.
@@ -180,7 +233,9 @@ To view the poster, simply click on the image below!
 src="images/2025-03-29_SS-ASPB.jpeg" class="responsive-image"
 alt="SS-ASPB2025-PaigeAtPoster"></a>
 
-* * * ### January 30, 2025: Genomics in Action
+* * * 
+
+### January 30, 2025: Genomics in Action
 
 Dr. Nowlan Freese gave a talk on the Integrated Genome Browser at the
 2025 [Genomics in Action](https://genomics.uoregon.edu/) conference.
@@ -220,23 +275,22 @@ see the poster, click the image below:
   max-width: 100%; height: auto; object-fit: cover; } }
 
 
-</style> <a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img
-src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster
-image"></a>
+</style>
+<a href="images/pdf/2025-01-05_PSB_Poster.pdf"><img src="images/2025-01-05_PSB_Poster.jpg" class="posters" alt="Poster image"></a>
 
 * * *
 
-### November 15, 2024: ASHG 2024 recap ASHG 2024 was a resounding
-success! Thank you to all the speakers, poster presenters, and fellow
+### November 15, 2024: ASHG 2024 recap 
+ASHG 2024 was a resounding success! Thank you to all the speakers, poster presenters, and fellow
 exhibitors for putting on a great conference. We would also like to
 thank everyone that stopped by our booth! If you haven't heard back
 from us yet but you'd like to get in touch, please don't hesitate to
 send us an email or set up an appointment via our website
 (https://bioviz.org/help.html).
 
-<div> <a href="images/2024-11-15-ASHG.jpeg"><img
-src="images/2024-11-15-ASHG.jpeg" class="responsive-image"
-alt="ASHG2024-PaigeAtBooth"/></a><br/><br/> </div>
+<div>
+<a href="images/2024-11-15-ASHG.jpeg"><img src="images/2024-11-15-ASHG.jpeg" class="responsive-image" alt="ASHG2024-PaigeAtBooth"/></a><br/><br/>
+</div>
 
 * * *
 
